@@ -245,7 +245,7 @@
                 
               
 
-              <time title="Created: 2020-02-16 14:50:14 / Modified: 14:57:55" itemprop="dateCreated datePublished" datetime="2020-02-16T14:50:14+08:00">2020-02-16</time>
+              <time title="Created: 2020-02-16 14:50:14 / Modified: 15:06:37" itemprop="dateCreated datePublished" datetime="2020-02-16T14:50:14+08:00">2020-02-16</time>
             </span>
           
             
@@ -269,8 +269,8 @@
 <ol>
 <li><code>hexo new post &quot;&lt;title&gt;&quot;</code>然后在<code>source/_posts</code>里找到并编辑。</li>
 <li><code>hexo g</code> (hexo generate)，用于生成静态文件</li>
-<li><code>hexo s</code>(hexo server)，用于启动服务器，主要用来本地预览；完成后打开浏览器输入 <code>localhost:4000</code></li>
-<li><code>hexo d</code>(hexo deploy)，用于将本地文件发布到github等git仓库上</li>
+<li><code>hexo s</code> (hexo server)，用于启动服务器，主要用来本地预览；完成后打开浏览器输入 <code>localhost:4000</code></li>
+<li><code>hexo d</code> (hexo deploy)，用于将本地文件发布到github等git仓库上</li>
 </ol>
 
           
@@ -331,7 +331,7 @@
                 
               
 
-              <time title="Created: 2020-02-16 14:36:18 / Modified: 14:50:55" itemprop="dateCreated datePublished" datetime="2020-02-16T14:36:18+08:00">2020-02-16</time>
+              <time title="Created: 2020-02-16 14:36:18 / Modified: 15:05:41" itemprop="dateCreated datePublished" datetime="2020-02-16T14:36:18+08:00">2020-02-16</time>
             </span>
           
             
@@ -430,7 +430,9 @@
 <li>忽略某些文件时，需要编写<code>.gitignore</code>；</li>
 <li><code>.gitignore</code>文件本身要放到版本库里，并且可以对<code>.gitignore</code>做版本管理！</li>
 </ul>
-<h2 id="配置别名"><a href="#配置别名" class="headerlink" title="配置别名"></a>配置别名</h2><p>用st表示status：<code>$ git config --global alias.st status</code><br>很多人都用co表示checkout，ci表示commit，br表示branch：<br>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global alias.co checkout</span><br><span class="line">$ git config --global alias.ci commit</span><br><span class="line">$ git config --global alias.br branch</span><br><span class="line">​</span><br></pre></td></tr></table></figure></p>
+<h2 id="配置别名"><a href="#配置别名" class="headerlink" title="配置别名"></a>配置别名</h2><p>用st表示status：<code>$ git config --global alias.st status</code><br>很多人都用co表示checkout，ci表示commit，br表示branch：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global alias.co checkout</span><br><span class="line">$ git config --global alias.ci commit</span><br><span class="line">$ git config --global alias.br branch</span><br></pre></td></tr></table></figure>
+
 <p>配置一个git last，让其显示最后一次提交信息：<br><code>$ git config --global alias.last &#39;log -1&#39;</code><br><code>--global</code>参数是全局参数，也就是这些命令在这台电脑的所有Git仓库下都有用。</p>
 <h2 id="搭建Git服务器"><a href="#搭建Git服务器" class="headerlink" title="搭建Git服务器"></a>搭建Git服务器</h2><p>使用Source Tree</p>
 
