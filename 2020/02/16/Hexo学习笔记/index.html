@@ -72,7 +72,7 @@
 <meta property="og:site_name" content="匡山读书处">
 <meta property="og:description" content="记录我在使用Hexo时遇到的问题和解决方法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-18T02:56:35.719Z">
+<meta property="og:updated_time" content="2020-02-18T10:12:49.038Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo学习笔记">
 <meta name="twitter:description" content="记录我在使用Hexo时遇到的问题和解决方法。">
@@ -271,7 +271,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-18 10:56:35" itemprop="dateModified" datetime="2020-02-18T10:56:35+08:00">2020-02-18</time>
+                <time title="修改时间：2020-02-18 18:12:49" itemprop="dateModified" datetime="2020-02-18T18:12:49+08:00">2020-02-18</time>
               </span>
             
           
@@ -301,9 +301,17 @@
 </ol>
 <h2 id="显示不出分类、标签问题"><a href="#显示不出分类、标签问题" class="headerlink" title="显示不出分类、标签问题"></a>显示不出分类、标签问题</h2><p>在<code>./source/tags/index.md</code>中添加<code>type: tags</code>字段。<br><code>categories</code>同理。<br>参考博客：<a href="https://blog.csdn.net/Wonz5130/article/details/84666519" target="_blank" rel="noopener">https://blog.csdn.net/Wonz5130/article/details/84666519</a></p>
 <h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p>npm 出现 <code>operation not permitted, mkdir...</code>问题<br>解决办法：以管理员身份运行cmd输入<code>npm -v</code>，然后在git bash中就没问题了。</p>
-<h2 id="主题没加载出来"><a href="#主题没加载出来" class="headerlink" title="主题没加载出来"></a>主题没加载出来</h2><p>我是因为配置文件url配错了，改成原有的配置就OK了。</p>
+<h2 id="主题加载不出"><a href="#主题加载不出" class="headerlink" title="主题加载不出"></a>主题加载不出</h2><p>我是因为配置文件url配错了，改成原有的配置就OK了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: http://yoursite.com</span><br><span class="line">root: /</span><br></pre></td></tr></table></figure>
 
+<h2 id="图片加载不出"><a href="#图片加载不出" class="headerlink" title="图片加载不出"></a>图片加载不出</h2><p>我是引用cnblog的图片链接，刚刚上传那会还能显示图片，过几天就发现图片加载不出。<br>解决方法：<br>在文章头部加上<code>&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;</code>，解决防盗链问题。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo学习笔记</span><br><span class="line">---</span><br><span class="line">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;</span><br></pre></td></tr></table></figure>
+
+<p>参考博客：</p>
+<ul>
+<li><a href="https://qsh5.cn/595.html" target="_blank" rel="noopener">https://qsh5.cn/595.html</a></li>
+<li><a href="https://blog.csdn.net/mqdxiaoxiao/article/details/96770756" target="_blank" rel="noopener">https://blog.csdn.net/mqdxiaoxiao/article/details/96770756</a></li>
+</ul>
 <h2 id="hexo同时部署到码云Gitee"><a href="#hexo同时部署到码云Gitee" class="headerlink" title="hexo同时部署到码云Gitee"></a>hexo同时部署到码云Gitee</h2><p>如何创建一个首页访问地址不带二级目录的 pages，如hongchenglong.gitee.io？<br><strong>需要建立一个与自己个性地址同名的项目</strong>，<br>我的<strong>个性地址</strong>就是<code>https://gitee.com/hongchenglong</code>里的<code>hongchenglong</code><br>参考码云帮助文档：<a href="http://git.mydoc.io/?t=154714&amp;tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">http://git.mydoc.io/?t=154714&amp;tdsourcetag=s_pctim_aiomsg</a><br>码云的速度很快，缺点是每次部署都要去码云Pages手动<strong>更新</strong></p>
 <h2 id="NOTE"><a href="#NOTE" class="headerlink" title="NOTE"></a>NOTE</h2><ol>
 <li>语句含义<br><code>home: / || home</code>中的<code>|| home</code>表示会到自带库里找到home这个图标并展示。</li>
@@ -465,7 +473,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何上传文章"><span class="nav-number">1.</span> <span class="nav-text">如何上传文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示不出分类、标签问题"><span class="nav-number">2.</span> <span class="nav-text">显示不出分类、标签问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm"><span class="nav-number">3.</span> <span class="nav-text">npm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题没加载出来"><span class="nav-number">4.</span> <span class="nav-text">主题没加载出来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo同时部署到码云Gitee"><span class="nav-number">5.</span> <span class="nav-text">hexo同时部署到码云Gitee</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NOTE"><span class="nav-number">6.</span> <span class="nav-text">NOTE</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何上传文章"><span class="nav-number">1.</span> <span class="nav-text">如何上传文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示不出分类、标签问题"><span class="nav-number">2.</span> <span class="nav-text">显示不出分类、标签问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm"><span class="nav-number">3.</span> <span class="nav-text">npm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题加载不出"><span class="nav-number">4.</span> <span class="nav-text">主题加载不出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片加载不出"><span class="nav-number">5.</span> <span class="nav-text">图片加载不出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo同时部署到码云Gitee"><span class="nav-number">6.</span> <span class="nav-text">hexo同时部署到码云Gitee</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NOTE"><span class="nav-number">7.</span> <span class="nav-text">NOTE</span></a></li></ol></div>
             
 
           </div>
