@@ -76,7 +76,7 @@
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215032332010-1516736742.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033101385-1093798650.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033530403-1782330777.png">
-<meta property="og:updated_time" content="2020-02-18T05:50:26.870Z">
+<meta property="og:updated_time" content="2020-02-18T08:27:49.304Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git学习笔记">
 <meta name="twitter:description" content="Git的官方网站：http://git-scm.com学习廖雪峰的Git教程所做笔记。外国网友制作的Git Cheat Sheet">
@@ -276,7 +276,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-18 13:50:26" itemprop="dateModified" datetime="2020-02-18T13:50:26+08:00">2020-02-18</time>
+                <time title="修改时间：2020-02-18 16:27:49" itemprop="dateModified" datetime="2020-02-18T16:27:49+08:00">2020-02-18</time>
               </span>
             
           
@@ -318,7 +318,9 @@
 <li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。</li>
 <li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
 </ul>
-<h2 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h2><p>工作区（Working Directory）：在电脑里能看到的目录。<br>版本库（Repository）：隐藏目录<code>.git</code>。<br>其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针叫<code>HEAD</code>。<br><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200214213914797-1652178625.png" alt><br>文件往Git版本库里添加的时候，是分两步执行的：<br>第一步是用<code>git add</code>把文件添加进去，实际上就是<span style="color:red">把文件修改添加到暂存区</span>；<br>第二步是用<code>git commit</code>提交更改，实际上就是<span style="color:red">把暂存区的所有内容提交到当前分支</span>。<br><strong>需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。</strong></p>
+<h2 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h2><p>工作区（Working Directory）：在电脑里能看到的目录。<br>版本库（Repository）：隐藏目录<code>.git</code>。<br>其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针叫<code>HEAD</code>。</p>
+<p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200214213914797-1652178625.png" alt></p>
+<p>文件往Git版本库里添加的时候，是分两步执行的：<br>第一步是用<code>git add</code>把文件添加进去，实际上就是<span style="color:red">把文件修改添加到暂存区</span>；<br>第二步是用<code>git commit</code>提交更改，实际上就是<span style="color:red">把暂存区的所有内容提交到当前分支</span>。<br><strong>需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。</strong></p>
 <h2 id="管理修改"><a href="#管理修改" class="headerlink" title="管理修改"></a>管理修改</h2><p>为什么Git比其他版本控制系统设计得优秀，因为<strong>Git跟踪并管理的是修改</strong>，而非文件。<br>每次修改，如果不用<code>git add</code>到暂存区，那就不会加入到<code>commit</code>中。</p>
 <h2 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h2><ul>
 <li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- &lt;file&gt;</code>。</li>
@@ -364,7 +366,8 @@
 </ul>
 <h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033101385-1093798650.png" alt></p>
 <p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。<br>解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。<br>用<code>git log --graph</code>命令可以看到分支合并图。</p>
-<h2 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h2><p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033530403-1782330777.png" alt><br>Git分支十分强大，在团队开发中应该充分应用。<br>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。</p>
+<h2 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h2><p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033530403-1782330777.png" alt></p>
+<p>Git分支十分强大，在团队开发中应该充分应用。<br>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。</p>
 <h2 id="Bug分支"><a href="#Bug分支" class="headerlink" title="Bug分支"></a>Bug分支</h2><ul>
 <li>修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；</li>
 <li>当手头工作没有完成时，先把工作现场<code>git stash</code>一下，然后去修复bug，修复后，再<code>git stash pop</code>，回到工作现场；</li>
