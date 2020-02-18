@@ -1,9 +1,9 @@
 ---
 title: Git学习笔记
-date: 
+date: 2020-02-02
 tags: [Git]
 ---
-
+<meta name="referrer" content="no-referrer"/>
 Git的官方网站：http://git-scm.com
 学习[廖雪峰](https://www.liaoxuefeng.com/wiki/896043488029600)的Git教程所做笔记。
 外国网友制作的[Git Cheat Sheet](https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf)
@@ -39,7 +39,12 @@ Git是目前世界上最先进的**分布式版本控制系统**。由Linus使�
 工作区（Working Directory）：在电脑里能看到的目录。
 版本库（Repository）：隐藏目录`.git`。
 其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支`master`，以及指向`master`的一个指针叫`HEAD`。
+
 ![](https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200214213914797-1652178625.png)
+
+
+
+
 文件往Git版本库里添加的时候，是分两步执行的：
 第一步是用`git add`把文件添加进去，实际上就是<span style="color:red">把文件修改添加到暂存区</span>；
 第二步是用`git commit`提交更改，实际上就是<span style="color:red">把暂存区的所有内容提交到当前分支</span>。
@@ -92,7 +97,11 @@ $ git push -u origin master
 # 分支管理
 
 ## 创建于合并分支
+
 ![](https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215032332010-1516736742.png)
+
+
+
 
 - 查看分支：`git branch`
 - 创建分支：`git branch <name>`
@@ -102,14 +111,23 @@ $ git push -u origin master
 - 删除分支：`git branch -d <name>`
 
 ## 解决冲突
+
 ![](https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033101385-1093798650.png)
+
+
+
 
 当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
 解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。
 用`git log --graph`命令可以看到分支合并图。
 
 ## 分支管理策略
+
 ![](https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033530403-1782330777.png)
+
+
+
+
 Git分支十分强大，在团队开发中应该充分应用。
 合并分支时，加上`--no-ff`参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而`fast forward`合并就看不出来曾经做过合并。
 

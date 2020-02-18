@@ -26,12 +26,27 @@ tags: [Hexo]
 npm 出现 `operation not permitted, mkdir...`问题
 解决办法：以管理员身份运行cmd输入`npm -v`，然后在git bash中就没问题了。
 
-## 主题没加载出来
+## 主题加载不出
 我是因为配置文件url配错了，改成原有的配置就OK了。
 ```
 url: http://yoursite.com
 root: /
 ```
+
+## 图片加载不出
+我是引用cnblog的图片链接，刚刚上传那会还能显示图片，过几天就发现图片加载不出。
+解决方法：
+在文章头部加上`<meta name="referrer" content="no-referrer"/>`，解决防盗链问题。
+```
+---
+title: Hexo学习笔记
+---
+<meta name="referrer" content="no-referrer"/>
+```
+参考博客：
+- https://qsh5.cn/595.html
+- https://blog.csdn.net/mqdxiaoxiao/article/details/96770756
+
 ## hexo同时部署到码云Gitee
 如何创建一个首页访问地址不带二级目录的 pages，如hongchenglong.gitee.io？
 **需要建立一个与自己个性地址同名的项目**，
