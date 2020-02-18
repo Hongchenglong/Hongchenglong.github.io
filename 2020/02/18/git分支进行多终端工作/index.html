@@ -74,7 +74,8 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154619708-1227810824.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154951236-1568229660.png">
-<meta property="og:updated_time" content="2020-02-18T08:11:54.158Z">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218161451693-906408523.png">
+<meta property="og:updated_time" content="2020-02-18T08:17:46.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git分支进行多终端工作">
 <meta name="twitter:description" content="最近把原本部署在GitHub上的hexo同时部署到码云上，速度快到飞起。我的Gitee Pages，欢迎来访。  使用hexo，如果换了电脑怎么更新博客？  一个分支hexo用来存放Hexo生成的网站原始的文件，另一个分支master用来存放生成的静态网页。">
@@ -263,7 +264,7 @@
                 
               
 
-              <time title="创建时间：2020-02-18 15:42:15 / 修改时间：16:11:54" itemprop="dateCreated datePublished" datetime="2020-02-18T15:42:15+08:00">2020-02-18</time>
+              <time title="创建时间：2020-02-18 15:42:15 / 修改时间：16:17:46" itemprop="dateCreated datePublished" datetime="2020-02-18T15:42:15+08:00">2020-02-18</time>
             </span>
           
             
@@ -297,10 +298,15 @@
 <li><p>将博客源文件全部复制过来，除了<code>.deploy_git</code>。<br>注意，如果之前克隆过theme中的主题文件，那么应该把主题文件中的<code>.git</code>文件夹删掉，因为<strong>git不能嵌套上传</strong>。</p>
 </li>
 </ol>
-<p>之后上传源文件到码云上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit –m &quot;xxxx&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-<p>发布博客<code>hexo g -d</code></p>
+<ol start="4">
+<li><p>上传源文件到码云上</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit –m &quot;xxxx&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发布博客<code>hexo g -d</code></p>
+</li>
+<li><p>最后手动更新部署<span style="color:red">master</span>分支<br><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218161451693-906408523.png" alt></p>
+</li>
+</ol>
 <p>参考知乎回答：<a href="https://www.zhihu.com/question/21193762/answer/489124966" target="_blank" rel="noopener">https://www.zhihu.com/question/21193762/answer/489124966</a></p>
 
     </div>
