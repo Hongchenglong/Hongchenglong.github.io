@@ -1,0 +1,30 @@
+.back-to-top {
+  background: $b2t-bg-color;
+  bottom: $b2t-position-bottom;
+  box-sizing: border-box;
+  color: $b2t-color;
+  cursor: pointer;
+  font-size: $b2t-font-size;
+  opacity: $b2t-opacity;
+  padding: 0 6px;
+  position: fixed;
+  right: $b2t-position-right;
+  text-align: center;
+  transition-property: bottom;
+  width: hexo-config('back2top.scrollpercent') ? initial : 24px;
+  z-index: $zindex-5;
+  the-transition();
+
+  &:hover {
+    color: $sidebar-highlight;
+  }
+
+  &.back-to-top-on {
+    bottom: $b2t-position-bottom-on;
+  }
+
+  +tablet-mobile() {
+    opacity: $b2t-opacity-hover;
+    right: $b2t-position-right-mobile;
+  }
+}

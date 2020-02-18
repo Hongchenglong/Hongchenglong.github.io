@@ -1,0 +1,7 @@
+body{
+    background:url("http://pw26bim9t.bkt.clouddn.com/00000002.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+}

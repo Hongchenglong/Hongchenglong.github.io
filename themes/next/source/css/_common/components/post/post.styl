@@ -1,0 +1,69 @@
+.post-body {
+  word-wrap();
+  font-family: $font-family-posts;
+
+  span.exturl .fa {
+    font-size: $font-size-small;
+    margin-left: 4px;
+  }
+
+  .image-caption, .figure .caption {
+    color: $grey-dark;
+    font-size: $font-size-small;
+    font-weight: bold;
+    line-height: 1;
+    margin: -20px auto 15px;
+    text-align: center;
+  }
+}
+
+.post-sticky-flag {
+  display: inline-block;
+  transform: rotate(30deg);
+}
+
+.use-motion {
+  if (hexo-config('motion.transition.post_block')) {
+    .post-block, .pagination, .comments {
+      opacity: 0;
+    }
+  }
+
+  if (hexo-config('motion.transition.post_header')) {
+    .post-header {
+      opacity: 0;
+    }
+  }
+
+  if (hexo-config('motion.transition.post_body')) {
+    .post-body {
+      opacity: 0;
+    }
+  }
+
+  if (hexo-config('motion.transition.coll_header')) {
+    .collection-title {
+      opacity: 0;
+    }
+  }
+}
+
+@import 'post-button';
+@import 'post-collapse';
+@import 'post-eof';
+@import 'post-expand';
+@import 'post-gallery';
+@import 'post-meta';
+@import 'post-nav';
+@import 'post-rtl';
+@import 'post-tags';
+@import 'post-title';
+@import 'post-type';
+
+@import 'post-reward' if (hexo-config('reward_settings.enable'));
+
+@import 'post-copyright' if (hexo-config('creative_commons.post'));
+
+@import 'post-widgets' if ((hexo-config('facebook_sdk.enable') && hexo-config('facebook_sdk.like_button')) || (hexo-config('vkontakte_api.enable') && hexo-config('vkontakte_api.like')) || hexo-config('rating.enable') || hexo-config('likely.enable') || (hexo-config('needmoreshare2.enable') && hexo-config('needmoreshare2.postbottom.enable')));
+
+@import 'post-reading_progress' if (hexo-config('reading_progress.enable'));
