@@ -5,12 +5,14 @@ tags: Hexo
 ---
 <meta name="referrer" content="no-referrer"/>
 最近把原本部署在GitHub上的hexo同时部署到码云上，速度快到飞起。
-我的[Gitee Pages](https://hongchenglong.gitee.io)，欢迎来访。
+可做对比，我的[GitHub Pages](https://hongchenglong.github.io)像乌龟一样慢吞吞，我的[Gitee Pages](https://hongchenglong.gitee.io)像兔子一样敏捷。
+
+<!-- more -->
 
 > 使用hexo，如果换了电脑怎么更新博客？
 
 一个分支hexo用来存放Hexo生成的网站原始的文件，另一个分支master用来存放生成的静态网页。
-<!-- more -->
+
 我以操作码云为例。
 
 1. 上传分支
