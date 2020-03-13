@@ -226,6 +226,92 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/13/crontab定时任务/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongchenglong">
+      <meta itemprop="description" content="相信过程">
+      <meta itemprop="image" content="https://images.cnblogs.com/cnblogs_com/oeong/1593757/o_191209052450kongaj.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="匡山读书处">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2020/03/13/crontab定时任务/" class="post-title-link" itemprop="url">crontab定时任务</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-13 10:06:16 / 修改时间：10:22:06" itemprop="dateCreated datePublished" datetime="2020-03-13T10:06:16+08:00">2020-03-13</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <p>Linux的crond定时任务是周期性执行任务的守护进程。</p>
+<ol>
+<li>安装<br><code>yum -y install crontab</code></li>
+<li>启动crond服务<br><code>service crond start</code></li>
+<li>使用<code>crontab -e</code>进行定时任务的编辑<br>格式: <code>分 时 日 月 周 [用户] command</code><br>这里我写入<code>0 * * * * /root/anaconda3/bin/python3 /root/*.py</code>, 表示每天每小时0分时自动执行<code>python3 /root/*.py</code>命令。<br>注意: 设置好运行命令的<strong>绝对路径</strong>和被执行文件的<strong>绝对路径</strong>, 因为crontab本身不具备平时运行的环境变量。</li>
+<li>使用<code>crontab -l</code>查看设置好的定时任务</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/26/Linux学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -731,7 +817,7 @@ Git的官方网站：http://git-scm.com
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
