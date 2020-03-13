@@ -64,18 +64,18 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="Linux的crond定时任务是周期性执行任务的守护进程。  安装yum -y install crontab 启动crond服务service crond start 使用crontab -e进行定时任务的编辑格式: 分 时 日 月 周 [用户] command这里我写入0 * * * * /root/anaconda3/bin/python3 /root/*.py, 表示每天每小时0分时自动执">
+  <meta name="description" content="Linux的crond定时任务是周期性执行任务的守护进程。  安装 yum -y install crontab  启动crond服务 service crond start 查看状态service crond status  使用crontab -e进行定时任务的编辑 格式: 分 时 日 月 周 [用户] command 这里我写入0 * * * * /root/anaconda3/bin/py">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="crontab定时任务">
 <meta property="og:url" content="http://yoursite.com/2020/03/13/crontab定时任务/index.html">
 <meta property="og:site_name" content="匡山读书处">
-<meta property="og:description" content="Linux的crond定时任务是周期性执行任务的守护进程。  安装yum -y install crontab 启动crond服务service crond start 使用crontab -e进行定时任务的编辑格式: 分 时 日 月 周 [用户] command这里我写入0 * * * * /root/anaconda3/bin/python3 /root/*.py, 表示每天每小时0分时自动执">
+<meta property="og:description" content="Linux的crond定时任务是周期性执行任务的守护进程。  安装 yum -y install crontab  启动crond服务 service crond start 查看状态service crond status  使用crontab -e进行定时任务的编辑 格式: 分 时 日 月 周 [用户] command 这里我写入0 * * * * /root/anaconda3/bin/py">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-13T02:22:06.320Z">
+<meta property="og:updated_time" content="2020-03-13T02:24:58.393Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="crontab定时任务">
-<meta name="twitter:description" content="Linux的crond定时任务是周期性执行任务的守护进程。  安装yum -y install crontab 启动crond服务service crond start 使用crontab -e进行定时任务的编辑格式: 分 时 日 月 周 [用户] command这里我写入0 * * * * /root/anaconda3/bin/python3 /root/*.py, 表示每天每小时0分时自动执">
+<meta name="twitter:description" content="Linux的crond定时任务是周期性执行任务的守护进程。  安装 yum -y install crontab  启动crond服务 service crond start 查看状态service crond status  使用crontab -e进行定时任务的编辑 格式: 分 时 日 月 周 [用户] command 这里我写入0 * * * * /root/anaconda3/bin/py">
   <link rel="canonical" href="http://yoursite.com/2020/03/13/crontab定时任务/">
 
 
@@ -260,7 +260,7 @@
                 
               
 
-              <time title="创建时间：2020-03-13 10:06:16 / 修改时间：10:22:06" itemprop="dateCreated datePublished" datetime="2020-03-13T10:06:16+08:00">2020-03-13</time>
+              <time title="创建时间：2020-03-13 10:06:16 / 修改时间：10:24:58" itemprop="dateCreated datePublished" datetime="2020-03-13T10:06:16+08:00">2020-03-13</time>
             </span>
           
             
@@ -281,10 +281,14 @@
       
         <p>Linux的crond定时任务是周期性执行任务的守护进程。</p>
 <ol>
-<li>安装<br><code>yum -y install crontab</code></li>
-<li>启动crond服务<br><code>service crond start</code></li>
-<li>使用<code>crontab -e</code>进行定时任务的编辑<br>格式: <code>分 时 日 月 周 [用户] command</code><br>这里我写入<code>0 * * * * /root/anaconda3/bin/python3 /root/*.py</code>, 表示每天每小时0分时自动执行<code>python3 /root/*.py</code>命令。<br>注意: 设置好运行命令的<strong>绝对路径</strong>和被执行文件的<strong>绝对路径</strong>, 因为crontab本身不具备平时运行的环境变量。</li>
-<li>使用<code>crontab -l</code>查看设置好的定时任务</li>
+<li><p>安装<br> <code>yum -y install crontab</code></p>
+</li>
+<li><p>启动crond服务<br> <code>service crond start</code><br> 查看状态<code>service crond status</code></p>
+</li>
+<li><p>使用<code>crontab -e</code>进行定时任务的编辑<br> 格式: <code>分 时 日 月 周 [用户] command</code><br> 这里我写入<code>0 * * * * /root/anaconda3/bin/python3 /root/*.py</code>, 表示每天每小时0分时自动执行<code>python3 /root/*.py</code>命令。<br> 注意: 设置好运行命令的<strong>绝对路径</strong>和被执行文件的<strong>绝对路径</strong>, 因为crontab本身不具备平时运行的环境变量。</p>
+</li>
+<li><p>使用<code>crontab -l</code>查看设置好的定时任务</p>
+</li>
 </ol>
 
     </div>
