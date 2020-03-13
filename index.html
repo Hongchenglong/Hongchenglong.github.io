@@ -258,7 +258,7 @@
                 
               
 
-              <time title="创建时间：2020-03-13 10:06:16 / 修改时间：10:24:58" itemprop="dateCreated datePublished" datetime="2020-03-13T10:06:16+08:00">2020-03-13</time>
+              <time title="创建时间：2020-03-13 10:06:16 / 修改时间：10:25:39" itemprop="dateCreated datePublished" datetime="2020-03-13T10:06:16+08:00">2020-03-13</time>
             </span>
           
             
@@ -277,20 +277,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
+          <p>Linux的crond定时任务是周期性执行任务的守护进程。</p>
+          <!--noindex-->
           
-            <p>Linux的crond定时任务是周期性执行任务的守护进程。</p>
-<ol>
-<li><p>安装<br> <code>yum -y install crontab</code></p>
-</li>
-<li><p>启动crond服务<br> <code>service crond start</code><br> 查看状态<code>service crond status</code></p>
-</li>
-<li><p>使用<code>crontab -e</code>进行定时任务的编辑<br> 格式: <code>分 时 日 月 周 [用户] command</code><br> 这里我写入<code>0 * * * * /root/anaconda3/bin/python3 /root/*.py</code>, 表示每天每小时0分时自动执行<code>python3 /root/*.py</code>命令。<br> 注意: 设置好运行命令的<strong>绝对路径</strong>和被执行文件的<strong>绝对路径</strong>, 因为crontab本身不具备平时运行的环境变量。</p>
-</li>
-<li><p>使用<code>crontab -l</code>查看设置好的定时任务</p>
-</li>
-</ol>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/03/13/crontab定时任务/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
