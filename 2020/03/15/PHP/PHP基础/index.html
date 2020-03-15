@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="generator" content="Hexo 3.9.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    save_scroll: false,
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "d7dbba2c"
+    });
+  daovoice('update');
+  </script>
+
+  <meta name="description" content="学习菜鸟教程所做的笔记。">
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP基础">
+<meta property="og:url" content="http://yoursite.com/2020/03/15/PHP/PHP基础/index.html">
+<meta property="og:site_name" content="匡山读书处">
+<meta property="og:description" content="学习菜鸟教程所做的笔记。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-03-15T05:16:16.576Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP基础">
+<meta name="twitter:description" content="学习菜鸟教程所做的笔记。">
+  <link rel="canonical" href="http://yoursite.com/2020/03/15/PHP/PHP基础/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>PHP基础 | 匡山读书处</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  <div class="container sidebar-position-left">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">匡山读书处</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">我们都在阴沟里，但仍有人仰望星空。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/15/PHP/PHP基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongchenglong">
+      <meta itemprop="description" content="相信过程">
+      <meta itemprop="image" content="https://images.cnblogs.com/cnblogs_com/oeong/1593757/o_191209052450kongaj.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="匡山读书处">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">PHP基础
+
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-15 00:00:00 / 修改时间：13:16:16" itemprop="dateCreated datePublished" datetime="2020-03-15T00:00:00+08:00">2020-03-15</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>学习<a href="https://www.runoob.com/php/php-tutorial.html" target="_blank" rel="noopener">菜鸟教程</a>所做的笔记。</p>
+<a id="more"></a>
+
+<h2 id="PHP简介"><a href="#PHP简介" class="headerlink" title="PHP简介"></a>PHP简介</h2><p>PHP（全称：PHP：Hypertext Preprocessor，即”PHP：超文本预处理器”）是一种通用开源脚本语言。<br>PHP 代码在服务器上执行，结果以纯 HTML 形式返回给浏览器。</p>
+<h3 id="PHP能做什么？"><a href="#PHP能做什么？" class="headerlink" title="PHP能做什么？"></a>PHP能做什么？</h3><ul>
+<li>PHP 可以生成动态页面内容</li>
+<li>PHP 可以收集表单数据</li>
+<li>PHP 可以添加、删除、修改您的数据库中的数据</li>
+</ul>
+<h2 id="PHP语法"><a href="#PHP语法" class="headerlink" title="PHP语法"></a>PHP语法</h2><p>PHP 脚本以 <?php 开始，以 ?> 结束。<br>PHP 中的每个代码行都必须以分号结束。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &quot;Hello World!&quot;;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="PHP语法-1"><a href="#PHP语法-1" class="headerlink" title="PHP语法"></a>PHP语法</h2><ol>
+<li>定义在函数外部的就是全局变量，它的作用域从定义处一直到文件结尾。</li>
+<li>函数内定义的变量就是局部变量，它的作用域为函数定义范围内。</li>
+<li>函数之间存在作用域互不影响。</li>
+<li>函数内访问全局变量需要 <code>global</code> 关键字或者使用 <code>$GLOBALS[index]</code> 数组</li>
+<li><code>static</code> 关键字使某个局部变量不被删除。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$x=5;</span><br><span class="line">$y=10;</span><br><span class="line"> </span><br><span class="line">function myTest() &#123;</span><br><span class="line">    global $x,$y;</span><br><span class="line">    $y=$x+$y;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">myTest();</span><br><span class="line">echo $y; // 输出 15</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="echo-和-print-语句"><a href="#echo-和-print-语句" class="headerlink" title="echo 和 print 语句"></a>echo 和 print 语句</h2><h2 id="EOF-heredoc-使用说明"><a href="#EOF-heredoc-使用说明" class="headerlink" title="EOF(heredoc) 使用说明"></a>EOF(heredoc) 使用说明</h2><p>PHP 定界符<code>EOF</code> 中是会解析 html 格式内容的，并且在双引号内的内容也有转义效果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$name=&quot;runoob&quot;;</span><br><span class="line">$a= &lt;&lt;&lt;EOF</span><br><span class="line">		&lt;h1&gt;EOF&lt;/h1&gt;</span><br><span class="line">        &quot;abc&quot;$name</span><br><span class="line">        &quot;123&quot;</span><br><span class="line">EOF;</span><br><span class="line">// 结束需要独立一行且前后不能空格</span><br><span class="line">echo $a;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p><code>var_dump()</code> 函数返回变量的数据类型和值</p>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;Toyota&quot;); // 数组</span><br><span class="line">class Car &#123;</span><br><span class="line">  var $color;</span><br><span class="line">  function __construct($color=&quot;green&quot;) &#123;</span><br><span class="line">    $this-&gt;color = $color;</span><br><span class="line">  &#125;</span><br><span class="line">  function what_color() &#123;</span><br><span class="line">    return $this-&gt;color;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="类型比较"><a href="#类型比较" class="headerlink" title="类型比较"></a>类型比较</h2><ul>
+<li>松散比较：使用两个等号 == 比较，只比较值，不比较类型。</li>
+<li>严格比较：用三个等号 === 比较，除了比较值，也比较类型。</li>
+</ul>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>常量值被定义后，在脚本的其他任何地方都不能被改变。<br>bool define ( string $name , mixed $value [, bool $case_insensitive = false ] )</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// true 不区分大小写的常量名</span><br><span class="line">define(&quot;GREETING&quot;, &quot;欢迎&quot;, true);</span><br><span class="line">echo greeting;  // 输出 &quot;欢迎&quot;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="字符串变量"><a href="#字符串变量" class="headerlink" title="字符串变量"></a>字符串变量</h2><p>*<em>并置运算符 *</em>(.) 用于把两个字符串值连接起来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$txt1=&quot;Hello world!&quot;;</span><br><span class="line">$txt2=&quot;What a nice day!&quot;;</span><br><span class="line">echo $txt1 . &quot; &quot; . $txt2;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p>strlen() 函数返回字符串的长度（字节数）。</p>
+<p>strpos() 函数用于在字符串内查找一个字符或一段指定的文本。<br><code>echo strpos(&quot;Hello world!&quot;,&quot;world&quot;);</code></p>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>运算符优先级中，or 和 ||，&amp;&amp; 和 and 都是逻辑运算符，效果一样，但是其优先级却不一样。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// 优先级： &amp;&amp;  &gt;  =  &gt;  and</span><br><span class="line">// 优先级： ||  &gt;  =  &gt;  or</span><br><span class="line"> </span><br><span class="line">$a = 3;</span><br><span class="line">$b = false;</span><br><span class="line">$c = $a or $b;</span><br><span class="line">var_dump($c);          // 这里的 $c 为 int 值3，而不是 boolean 值 true</span><br><span class="line">$d = $a || $b;</span><br><span class="line">var_dump($d);          //这里的 $d 就是 boolean 值 true </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="If…Else"><a href="#If…Else" class="headerlink" title="If…Else"></a>If…Else</h2><h2 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h2><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;Toyota&quot;);</span><br><span class="line">echo &quot;I like &quot; . $cars[0] . &quot;, &quot; . $cars[1] . &quot; and &quot; . $cars[2] . &quot;.&lt;br&gt;&quot;;</span><br><span class="line">echo count($cars);	// 数组长度</span><br><span class="line"></span><br><span class="line">// 关联数组</span><br><span class="line">$age=array(&quot;Peter&quot;=&gt;&quot;35&quot;,&quot;Ben&quot;=&gt;&quot;37&quot;,&quot;Joe&quot;=&gt;&quot;43&quot;);</span><br><span class="line">echo &quot;&lt;br&gt;Peter is &quot; . $age[&apos;Peter&apos;] . &quot; years old.&quot;;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h2><p>sort() - 对数组进行升序排列<br>rsort() - 对数组进行降序排列<br>asort() - 根据关联数组的值，对数组进行升序排列<br>ksort() - 根据关联数组的键，对数组进行升序排列</p>
+<h2 id="超级全局变量"><a href="#超级全局变量" class="headerlink" title="超级全局变量"></a>超级全局变量</h2><p>超级全局变量在PHP 4.1.0之后被启用, 是PHP系统中自带的变量，在一个脚本的全部作用域中都可用。<br><code>$GLOBALS</code> 是PHP的一个超级全局变量组，在一个PHP脚本的全部作用域中都可以访问。<br>$_SERVER 是一个包含了诸如头信息(header)、路径(path)、以及脚本位置(script locations)等等信息的数组。</p>
+<h3 id="REQUEST"><a href="#REQUEST" class="headerlink" title="$_REQUEST"></a>$_REQUEST</h3><p><code>$_REQUEST</code> 用于收集HTML表单提交的数据。<br>当用户通过点击 “Submit” 按钮提交表单数据时, 表单数据将发送至<form>标签中 action 属性中指定的脚本文件。</form></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- $_SERVER[&apos;PHP_SELF&apos;] 获取 当前执行脚本的文件名 --&gt;</span><br><span class="line">&lt;form method=&quot;post&quot; action=&quot;&lt;?php echo $_SERVER[&apos;PHP_SELF&apos;];?&gt;&quot;&gt; </span><br><span class="line">Name: &lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"> </span><br><span class="line">&lt;?php </span><br><span class="line">$name = $_REQUEST[&apos;fname&apos;]; </span><br><span class="line">echo $name; </span><br><span class="line">?&gt;</span><br><span class="line"> </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>$_POST</code>、<code>$_GET</code>同样被广泛应用于收集表单数据。</p>
+<h2 id="While-循环"><a href="#While-循环" class="headerlink" title="While 循环"></a>While 循环</h2><h2 id="For-循环"><a href="#For-循环" class="headerlink" title="For 循环"></a>For 循环</h2><h3 id="foreach-循环"><a href="#foreach-循环" class="headerlink" title="foreach 循环"></a>foreach 循环</h3><p>冒泡排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">	$arr = array(9,8,7,6,5,4,3,2,1);</span><br><span class="line">	for ($i=count($arr)-1; $i&gt;=0; $i--) &#123;</span><br><span class="line">		for ($j= 0; $j&lt;$i; $j++) &#123;</span><br><span class="line">			if($arr[$j] &gt; $arr[$j+1]) &#123;</span><br><span class="line">				$temp = $arr[$j];</span><br><span class="line">				$arr[$j] = $arr[$j+1];</span><br><span class="line">				$arr[$j+1] = $temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	print_r($arr[4]);</span><br></pre></td></tr></table></figure>
+
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">function add($x, $y) &#123;</span><br><span class="line">	return $x + $y;</span><br><span class="line">&#125;</span><br><span class="line">echo &apos;14 + 12 = &apos; . add(14, 12);</span><br></pre></td></tr></table></figure>
+
+<h2 id="魔法常量"><a href="#魔法常量" class="headerlink" title="魔法常量"></a>魔法常量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &apos;该文件位于 &quot; &apos;  . __FILE__ . &apos; &quot; &lt;br&gt;&apos;;</span><br><span class="line">class test &#123;</span><br><span class="line">    function _print() &#123;</span><br><span class="line">        echo &apos;类名为：&apos;  . __CLASS__ . &quot;&lt;br&gt;&quot;;</span><br><span class="line">        echo &apos;函数名为：&apos; . __FUNCTION__ ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">$t = new test();</span><br><span class="line">$t-&gt;_print();</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="命名空间-namespace"><a href="#命名空间-namespace" class="headerlink" title="命名空间(namespace)"></a>命名空间(namespace)</h2><p>PHP 命名空间可以解决以下两类问题：</p>
+<ul>
+<li>用户编写的代码与PHP内部的类/函数/常量或第三方类/函数/常量之间的名字冲突。</li>
+<li>为很长的标识符名称(通常是为了缓解第一类问题而定义的)创建一个别名（或简短）的名称，提高源代码的可读性。</li>
+</ul>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2>
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/PHP/" rel="tag"># PHP</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/03/13/crontab定时任务/" rel="next" title="crontab定时任务">
+                  <i class="fa fa-chevron-left"></i> crontab定时任务
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTk4Mi8yMjQ5Mw=="></div>
+  </div>
+  
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="https://images.cnblogs.com/cnblogs_com/oeong/1593757/o_191209052450kongaj.jpg"
+      alt="Hongchenglong">
+  <p class="site-author-name" itemprop="name">Hongchenglong</p>
+  <div class="site-description motion-element" itemprop="description">相信过程</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+  <div class="links-of-blogroll motion-element links-of-blogroll-block">
+    <div class="links-of-blogroll-title">
+      <i class="fa  fa-fw fa-link"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.cnblogs.com/oeong" title="https://www.cnblogs.com/oeong" rel="noopener" target="_blank">oeong</a>
+        </li>
+      
+    </ul>
+  </div>
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP简介"><span class="nav-number">1.</span> <span class="nav-text">PHP简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP能做什么？"><span class="nav-number">1.1.</span> <span class="nav-text">PHP能做什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP语法"><span class="nav-number">2.</span> <span class="nav-text">PHP语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP语法-1"><span class="nav-number">3.</span> <span class="nav-text">PHP语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echo-和-print-语句"><span class="nav-number">4.</span> <span class="nav-text">echo 和 print 语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EOF-heredoc-使用说明"><span class="nav-number">5.</span> <span class="nav-text">EOF(heredoc) 使用说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">6.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对象"><span class="nav-number">6.1.</span> <span class="nav-text">对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型比较"><span class="nav-number">7.</span> <span class="nav-text">类型比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量"><span class="nav-number">8.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串变量"><span class="nav-number">9.</span> <span class="nav-text">字符串变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符"><span class="nav-number">10.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#If…Else"><span class="nav-number">11.</span> <span class="nav-text">If…Else</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switch"><span class="nav-number">12.</span> <span class="nav-text">Switch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-number">13.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组排序"><span class="nav-number">14.</span> <span class="nav-text">数组排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超级全局变量"><span class="nav-number">15.</span> <span class="nav-text">超级全局变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQUEST"><span class="nav-number">15.1.</span> <span class="nav-text">$_REQUEST</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#While-循环"><span class="nav-number">16.</span> <span class="nav-text">While 循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#For-循环"><span class="nav-number">17.</span> <span class="nav-text">For 循环</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#foreach-循环"><span class="nav-number">17.1.</span> <span class="nav-text">foreach 循环</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">18.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#魔法常量"><span class="nav-number">19.</span> <span class="nav-text">魔法常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名空间-namespace"><span class="nav-number">20.</span> <span class="nav-text">命名空间(namespace)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象"><span class="nav-number">21.</span> <span class="nav-text">面向对象</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Hongchenglong</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.3.0"></script>
+  <script src="/js/motion.js?v=7.3.0"></script>
+
+
+  <script src="/js/affix.js?v=7.3.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.3.0"></script>
+
+
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script>
+<script src="/js/post-details.js?v=7.3.0"></script>
+
+
+    
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+</body>
+</html>
