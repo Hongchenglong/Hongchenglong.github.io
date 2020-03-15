@@ -64,23 +64,19 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="最近把原本部署在GitHub上的hexo同时部署到码云上，速度快到飞起。 可做对比，我的[GitHub Pages](https://hongchenglong.github.io)像乌龟一样慢吞吞，我的[Gitee Pages](https://hongchenglong.gitee.io)像兔子一样敏捷。">
-<meta name="keywords" content="Hexo">
+  <meta name="description" content="学习菜鸟教程所做的PHP表单笔记。">
+<meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git分支进行多终端工作">
-<meta property="og:url" content="http://yoursite.com/2020/02/18/git分支进行多终端工作/index.html">
+<meta property="og:title" content="PHP表单">
+<meta property="og:url" content="http://yoursite.com/2020/03/15/PHP/PHP表单/index.html">
 <meta property="og:site_name" content="匡山读书处">
-<meta property="og:description" content="最近把原本部署在GitHub上的hexo同时部署到码云上，速度快到飞起。 可做对比，我的[GitHub Pages](https://hongchenglong.github.io)像乌龟一样慢吞吞，我的[Gitee Pages](https://hongchenglong.gitee.io)像兔子一样敏捷。">
+<meta property="og:description" content="学习菜鸟教程所做的PHP表单笔记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154619708-1227810824.png">
-<meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154951236-1568229660.png">
-<meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218161451693-906408523.png">
-<meta property="og:updated_time" content="2020-03-15T05:14:37.355Z">
+<meta property="og:updated_time" content="2020-03-15T11:31:06.104Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git分支进行多终端工作">
-<meta name="twitter:description" content="最近把原本部署在GitHub上的hexo同时部署到码云上，速度快到飞起。 可做对比，我的[GitHub Pages](https://hongchenglong.github.io)像乌龟一样慢吞吞，我的[Gitee Pages](https://hongchenglong.gitee.io)像兔子一样敏捷。">
-<meta name="twitter:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154619708-1227810824.png">
-  <link rel="canonical" href="http://yoursite.com/2020/02/18/git分支进行多终端工作/">
+<meta name="twitter:title" content="PHP表单">
+<meta name="twitter:description" content="学习菜鸟教程所做的PHP表单笔记。">
+  <link rel="canonical" href="http://yoursite.com/2020/03/15/PHP/PHP表单/">
 
 
 <script id="page-configurations">
@@ -94,7 +90,7 @@
   };
 </script>
 
-  <title>Git分支进行多终端工作 | 匡山读书处</title>
+  <title>PHP表单 | 匡山读书处</title>
   
 
 
@@ -233,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/18/git分支进行多终端工作/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/15/PHP/PHP表单/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongchenglong">
@@ -247,7 +243,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">Git分支进行多终端工作
+          <h1 class="post-title" itemprop="name headline">PHP表单
 
             
           </h1>
@@ -264,19 +260,11 @@
                 
               
 
-              <time title="创建时间：2020-02-18 15:42:15" itemprop="dateCreated datePublished" datetime="2020-02-18T15:42:15+08:00">2020-02-18</time>
+              <time title="创建时间：2020-03-15 00:00:00 / 修改时间：19:31:06" itemprop="dateCreated datePublished" datetime="2020-03-15T00:00:00+08:00">2020-03-15</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-15 13:14:37" itemprop="dateModified" datetime="2020-03-15T13:14:37+08:00">2020-03-15</time>
-              </span>
             
           
 
@@ -291,38 +279,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <meta name="referrer" content="no-referrer">
-最近把原本部署在GitHub上的hexo同时部署到码云上，速度快到飞起。
-可做对比，我的[GitHub Pages](https://hongchenglong.github.io)像乌龟一样慢吞吞，我的[Gitee Pages](https://hongchenglong.gitee.io)像兔子一样敏捷。
-
+        <p>学习<a href="https://www.runoob.com/php/php-forms.html" target="_blank" rel="noopener">菜鸟教程</a>所做的PHP表单笔记。</p>
 <a id="more"></a>
+<h2 id="表单验证"><a href="#表单验证" class="headerlink" title="表单验证"></a>表单验证</h2><p><code>&lt;form method=&quot;post&quot; action=&quot;&lt;?php echo htmlspecialchars($_SERVER[&quot;PHP_SELF&quot;]);?&gt;&quot;&gt;</code><br><code>$_SERVER[&quot;PHP_SELF&quot;]</code>是超级全局变量，返回当前正在执行脚本的文件名，与 document root相关。所以，<code>$_SERVER[&quot;PHP_SELF&quot;]</code> 会发送表单数据到当前页面，而不是跳转到不同的页面。<br>htmlspecialchars() 函数把一些预定义的字符转换为 HTML 实体。<br>预定义的字符是：</p>
+<ul>
+<li>&amp; （和号） 成为 &amp;</li>
+<li>“ （双引号） 成为 &quot;</li>
+<li>‘ （单引号） 成为 &#039;</li>
+<li>&lt; （小于） 成为 &lt;</li>
+<li>&gt; （大于） 成为 &gt;</li>
+</ul>
+<p><code>$_SERVER[&quot;PHP_SELF&quot;]</code> 变量有可能会被黑客使用！可以通过 htmlspecialchars() 函数来避免被利用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// 定义变量并默认设置为空值</span><br><span class="line">$name = $email = $gender = $comment = $website = &quot;&quot;;</span><br><span class="line">// 通过$_SERVER[&quot;REQUEST_METHOD&quot;]来检测表单是否被提交</span><br><span class="line">if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;)</span><br><span class="line">&#123;</span><br><span class="line">   $name = test_input($_POST[&quot;name&quot;]);</span><br><span class="line">   $gender = test_input($_POST[&quot;gender&quot;]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function test_input($data)</span><br><span class="line">&#123;</span><br><span class="line">   $data = trim($data);  // 去除用户输入数据中不必要的字符 (如：空格，tab，换行)。</span><br><span class="line">   $data = stripslashes($data);  // 去除用户输入数据中的反斜杠 (\)</span><br><span class="line">   $data = htmlspecialchars($data);  // 把一些预定义的字符转换为 HTML 实体。</span><br><span class="line">   return $data;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>使用hexo，如果换了电脑怎么更新博客？</p>
-</blockquote>
-<p>一个分支hexo用来存放Hexo生成的网站原始的文件，另一个分支master用来存放生成的静态网页。</p>
-<p>我以操作码云为例。</p>
-<ol>
-<li>上传分支<br>新建一个hexo分支，点击<strong>管理</strong>，并设为<strong>默认</strong>分支。<br><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154619708-1227810824.png" alt></li>
-</ol>
-<p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154951236-1568229660.png" alt></p>
-<ol start="2">
-<li><p>克隆仓库到本地<br><code>git clone git@gitee.com:hongchenglong/Hongchenglong.git</code></p>
-</li>
-<li><p>将博客源文件全部复制过来，除了<code>.deploy_git</code>。<br>注意，如果之前克隆过theme中的主题文件，那么应该把主题文件中的<code>.git</code>文件夹删掉，因为<strong>git不能嵌套上传</strong>。</p>
-</li>
-</ol>
-<ol start="4">
-<li><p>上传源文件到码云上</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit –m &quot;xxxx&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>发布博客<code>hexo g -d</code></p>
-</li>
-<li><p>最后手动更新部署<span style="color:red">master</span>分支</p>
-</li>
-</ol>
-<p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218161451693-906408523.png" alt></p>
-<p>参考知乎回答：<a href="https://www.zhihu.com/question/21193762/answer/489124966" target="_blank" rel="noopener">https://www.zhihu.com/question/21193762/answer/489124966</a></p>
+<h2 id="必须字段"><a href="#必须字段" class="headerlink" title="必须字段"></a>必须字段</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// 定义变量并默认设为空值</span><br><span class="line">$nameErr = $name = &quot;&quot;;</span><br><span class="line">if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) &#123;</span><br><span class="line">  if (empty($_POST[&quot;name&quot;])) &#123;</span><br><span class="line">    $nameErr = &quot;名字是必需的。&quot;;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    $name = test_input($_POST[&quot;name&quot;]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br><span class="line">&lt;form method=&quot;post&quot; action=&quot;&lt;?php echo htmlspecialchars($_SERVER[&apos;PHP_SELF&apos;]);?&gt;&quot;&gt; </span><br><span class="line">   名字: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;</span><br><span class="line">   &lt;span class=&quot;error&quot;&gt;* &lt;?php echo $nameErr;?&gt;&lt;/span&gt;</span><br><span class="line">   &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Submit&quot;&gt; </span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="验证邮件和URL"><a href="#验证邮件和URL" class="headerlink" title="验证邮件和URL"></a>验证邮件和URL</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if (empty($_POST[&quot;name&quot;])) &#123;</span><br><span class="line">  $nameErr = &quot;Name is required&quot;;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">	 $name = test_input($_POST[&quot;name&quot;]);</span><br><span class="line">	 // 检测名字是否只包含字母跟空格</span><br><span class="line">	 if (!preg_match(&quot;/^[a-zA-Z ]*$/&quot;,$name)) &#123;</span><br><span class="line">	 $nameErr = &quot;只允许字母和空格&quot;; </span><br><span class="line">	 &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="GET-变量"><a href="#GET-变量" class="headerlink" title="$_GET 变量"></a>$_GET 变量</h2><p>预定义的<code>$_GET</code> 变量用于收集来自 <code>method=&quot;get&quot;</code>的表单中的值。</p>
+<p>从带有 GET 方法的表单发送的信息，对任何人都是可见的（会显示在浏览器的地址栏），并且对发送信息的量也有限制。</p>
+<h2 id="POST-变量"><a href="#POST-变量" class="headerlink" title="$_POST 变量"></a>$_POST 变量</h2><p>预定义的 <code>$_POST</code> 变量用于收集来自 <code>method=&quot;post&quot;</code>的表单中的值。</p>
+<p>从带有 POST 方法的表单发送的信息，对任何人都是不可见的（不会显示在浏览器的地址栏），并且对发送信息的量也没有限制。</p>
 
     </div>
 
@@ -338,7 +315,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/PHP/" rel="tag"># PHP</a>
             
           </div>
         
@@ -348,8 +325,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/02/16/Hexo学习笔记/" rel="next" title="Hexo学习笔记">
-                  <i class="fa fa-chevron-left"></i> Hexo学习笔记
+                <a href="/2020/03/13/crontab定时任务/" rel="next" title="crontab定时任务">
+                  <i class="fa fa-chevron-left"></i> crontab定时任务
                 </a>
               
             </div>
@@ -358,8 +335,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2020/02/26/Linux学习笔记/" rel="prev" title="Linux学习笔记">
-                  Linux学习笔记 <i class="fa fa-chevron-right"></i>
+                <a href="/2020/03/15/PHP/PHP基础/" rel="prev" title="PHP基础">
+                  PHP基础 <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -399,8 +376,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -461,6 +447,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#表单验证"><span class="nav-number">1.</span> <span class="nav-text">表单验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#必须字段"><span class="nav-number">2.</span> <span class="nav-text">必须字段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#验证邮件和URL"><span class="nav-number">3.</span> <span class="nav-text">验证邮件和URL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GET-变量"><span class="nav-number">4.</span> <span class="nav-text">$_GET 变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POST-变量"><span class="nav-number">5.</span> <span class="nav-text">$_POST 变量</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
