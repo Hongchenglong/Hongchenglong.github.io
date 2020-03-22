@@ -1,7 +1,8 @@
 ---
 title: Git分支进行多终端工作
 date: 2020-02-18 15:42:15
-tags: Hexo
+tags: [Hexo,Git]
+categories: Hexo
 ---
 <meta name="referrer" content="no-referrer"/>
 最近把原本部署在GitHub上的hexo同时部署到码云上，速度快到飞起。

@@ -2,6 +2,7 @@
 title: Linux学习笔记
 date: 2020-02-26 18:08:33
 tags: Linux
+categories: Linux
 ---
 整理了一些Linux的常用知识，方便之后使用时查阅。
 
@@ -16,17 +17,22 @@ tags: Linux
 ## vi操作
 - 可以编辑文件 `vi <file>  `
 - 插入内容 `p、P`
-- 删除行，删除词 `[n]dd、dw`
-
+- 复制 `[n]yy`
+- 删除行，删除词 `[n]dd、dw、x`
+- 撤销 `u`
+- 跳转某一行 `[n]G`
+- 跳转行的开头`0`、末尾`$`
+`vi /etc/hostname` 改主机名
 `:wq`   强制性写入文件并退出。即使文件没有被修改也强制写入，并更新文件的修改时间。
 `:x`    写入文件并退出。仅当文件被修改时才写入，并更新文件修改时间，否则不会更新文件修改时间。
 
 ## 文件和目录
 文件和文件夹的创建删除
-`mkdir -p <dir/subdir>`  //创建多级目录
-`rm -r <file>`  // 删除多级文件
-`mv <old> <new>`  // 移动和文件更名
-`pwd`查看当前绝对路径
+`mkdir -p <dir/subdir>`  创建多级目录
+`rm -r <file>`   删除多级文件
+`mv <old> <new>`  移动和文件更名
+`pwd ` 查看当前绝对路径
+`cp <file> <file>.bak`  复制、备份文件
 
 ## 常用操作
 cat，more，less，grep，wc –l
@@ -50,7 +56,13 @@ find <dir> -name <文件名> 2>/dev/null  // 查找文件
 grep <查找内容> <文件名>  // 搜索文件内容
 find . | grep passwd
 ls | grep *.txt
+tail -n <file>	// 查看某一文件后n行
 ```
+
+### 安装命令
+Ubuntu用`apt-get`，Centos用`yum`。
+加上`-y`遇到询问时自动yes。
+
 ## 重定向和管道
 
 重定向的符号有两个：>或>>。
@@ -73,6 +85,7 @@ ls | grep *.txt
 sudo adduser <newuser>     
 sudo passwd <newuser>
 ```
+su — Switch User
 切换到指定用户，并且在该用户的家目录中创建文件，再退出这个用户。
 ```
 su newuser 
@@ -130,11 +143,22 @@ shell中，
 /tmp：存放系统运行过程中使用的一些**临时**文件。
 
 ## QUESTION
-1. 可执行文件前为什么要加"./"
+1. 可执行文件前为什么要加`./`？
 "./"表示当前目录下的可执行文件。
 若要在任意目录下访问。
 	1. `chmod +x xx.sh`加上写权限。
 	2. 在`~/.bashrc`中将当前目录加入到`export PATH=$PATH:`后。
+2. FTP是什么？
+FTP就是文件传输协议。用于互联网双向传输，控制文件下载空间在服务器复制文件从本地计算机或本地上传文件复制到服务器上的空间。使用Xshell6中的Xftp6。
+3. 如何将静态页面部署到服务器上？
+在服务器中安装`nginx`，使用`/etc/init.d/nginx start`启动，把`index.html`放在`/usr/share/nginx/html/`之下。
+
+4. `yum install`的`-y`参数是什么意思？
+遇到询问时自动yes。
+
+5. 如何看自己的Linux服务器是多少位的？
+`getconf LONG_BIT`
+
 
 
 

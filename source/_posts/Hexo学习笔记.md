@@ -2,8 +2,11 @@
 title: Hexo学习笔记
 date: 2020-02-16 14:50:14
 tags: [Hexo]
+categories: Hexo
 ---
 记录我在使用Hexo时遇到的问题和解决方法。
+
+> Hexo is a fast, simple & powerful blog framework.
 
 <!-- more -->
 
