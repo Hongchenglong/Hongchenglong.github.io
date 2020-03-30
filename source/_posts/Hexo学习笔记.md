@@ -57,6 +57,9 @@ title: Hexo学习笔记
 参考码云帮助文档：http://git.mydoc.io/?t=154714&tdsourcetag=s_pctim_aiomsg
 码云的速度很快，缺点是每次部署都要去码云Pages手动**更新**
 
+## 设置网站的图标Favicon
+https://www.jianshu.com/p/82c1d33420ba
+
 ## NOTE
 1. 语句含义
 `home: / || home`中的`|| home`表示会到自带库里找到home这个图标并展示。
