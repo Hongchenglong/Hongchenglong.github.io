@@ -3,6 +3,7 @@ title: Linux学习笔记
 date: 2020-02-26 18:08:33
 tags: Linux
 categories: Linux
+top: true
 ---
 整理了一些Linux的常用知识，方便之后使用时查阅。
 
@@ -22,6 +23,7 @@ categories: Linux
 - 撤销 `u`
 - 跳转某一行 `[n]G`
 - 跳转行的开头`0`、末尾`$`
+- 通过:/xxx进行搜索定位，n键查找下一项
 `vi /etc/hostname` 改主机名
 `:wq`   强制性写入文件并退出。即使文件没有被修改也强制写入，并更新文件的修改时间。
 `:x`    写入文件并退出。仅当文件被修改时才写入，并更新文件修改时间，否则不会更新文件修改时间。
@@ -36,7 +38,11 @@ categories: Linux
 
 ## 常用操作
 cat，more，less，grep，wc –l
+cd - 返回上一次目录
 more 命令类似 cat ，不过会以一页一页的形式显示，更方便使用者逐页阅读
+
+
+
 文件的打包和解压： tar cvfz以及对应的tar xvfz 
 c ：创建一个新归档；x ： 从归档中抽取文件。
 v ：显示文件的归档进度；z ：使用 gzip 来压缩 tar 文件。
@@ -57,6 +63,8 @@ grep <查找内容> <文件名>  // 搜索文件内容
 find . | grep passwd
 ls | grep *.txt
 tail -n <file>	// 查看某一文件后n行
+
+ln -s  < source>  <target> // 创建软链接  
 ```
 
 ### 安装命令
@@ -101,6 +109,8 @@ exit
 chmod +x <file>  // 加操作权限
 chmod 777 <file>  // 8进制加满权限
 ```
+
+`chown -R <user>:<group> *`
 ## 进程管理
 编译.c程序，并且将其放在后台进程运行。
 ps命令用于显示当前进程 (process) 的状态。

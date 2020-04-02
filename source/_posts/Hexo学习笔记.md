@@ -69,3 +69,5 @@ https://www.jianshu.com/p/82c1d33420ba
 `hexo clean`
 4. 部署到Gitee上，每次修改都要去码云Pages手动**更新**服务
 5. 初始化一个Hexo，`hexo init <blog>`
+6. 多标签，`tags: [标签1,标签2,标签3]`
+
