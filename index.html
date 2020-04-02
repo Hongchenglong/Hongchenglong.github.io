@@ -443,6 +443,138 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/02/搭建网站时遇到的问题与解决方案/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hongchenglong">
+      <meta itemprop="description" content="相信过程">
+      <meta itemprop="image" content="https://images.cnblogs.com/cnblogs_com/oeong/1593757/o_191209052450kongaj.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="匡山读书处">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2020/04/02/搭建网站时遇到的问题与解决方案/" class="post-title-link" itemprop="url">搭建网站时遇到的问题与解决方案</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-02 23:56:07 / 修改时间：23:57:57" itemprop="dateCreated datePublished" datetime="2020-04-02T23:56:07+08:00">2020-04-02</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/WebSite/" itemprop="url" rel="index"><span itemprop="name">WebSite</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h1 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h1><h2 id="CentOS7安装LAMP"><a href="#CentOS7安装LAMP" class="headerlink" title="CentOS7安装LAMP"></a>CentOS7安装LAMP</h2><p><a href="https://help.aliyun.com/document_detail/50774.html?spm=5176.11065259.1996646101.searchclickresult.65fe1a5640ehqG" target="_blank" rel="noopener">https://help.aliyun.com/document_detail/50774.html?spm=5176.11065259.1996646101.searchclickresult.65fe1a5640ehqG</a></p>
+<h3 id="安装apache"><a href="#安装apache" class="headerlink" title="安装apache"></a>安装apache</h3><p><a href="https://blog.csdn.net/u012965203/article/details/94134619" target="_blank" rel="noopener">https://blog.csdn.net/u012965203/article/details/94134619</a></p>
+<h2 id="Linux下安装anaconda"><a href="#Linux下安装anaconda" class="headerlink" title="Linux下安装anaconda"></a>Linux下安装anaconda</h2><p><a href="https://blog.csdn.net/zaishijizhidian/article/details/81663387" target="_blank" rel="noopener">https://blog.csdn.net/zaishijizhidian/article/details/81663387</a></p>
+<h2 id="apache配置https"><a href="#apache配置https" class="headerlink" title="apache配置https"></a>apache配置https</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@ECS key]# pwd</span><br><span class="line">/usr/local/apache2/conf/key</span><br><span class="line">[root@ECS key]# vim ../extra/httpd-ssl.conf</span><br><span class="line">/usr/local/apache2/bin/apachectl restart 重启</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.jianshu.com/p/63c748bad09e" target="_blank" rel="noopener">https://www.jianshu.com/p/63c748bad09e</a><br><a href="https://blog.csdn.net/qq_36431166/article/details/98631352?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">https://blog.csdn.net/qq_36431166/article/details/98631352?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task</a></p>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h3 id="MYSQL"><a href="#MYSQL" class="headerlink" title="MYSQL"></a>MYSQL</h3><p>[root@ECS ~]# mysql -u root -p    // 进入数据库<br>mysql&gt; set password for root@localhost = password(‘&lt;密码&gt;’);<br>mysql&gt; show databases;    // 显示数据库<br>mysql&gt; use &lt;数据库名&gt;;    // 选择数据库<br>mysql&gt; create database &lt;数据库名&gt;;    // 创建数据库<br>mysql&gt; drop database &lt;数据库名&gt;;    // 删除数据库</p>
+<p>// 创建数据表<br>mysql&gt; create table &lt;数据表名&gt;(<br>    -&gt; id int not null auto_increment,<br>    -&gt; primary key(id)<br>    -&gt; )ENGINE=InnoDB DEFAULT CHARSET=utf8;<br>mysql&gt; drop table &lt;数据表名&gt;;</p>
+<h3 id="ThinkPHP查询数据库时各种条件设置"><a href="#ThinkPHP查询数据库时各种条件设置" class="headerlink" title="ThinkPHP查询数据库时各种条件设置"></a>ThinkPHP查询数据库时各种条件设置</h3><p><a href="https://blog.csdn.net/yexudengzhidao/article/details/54943510" target="_blank" rel="noopener">https://blog.csdn.net/yexudengzhidao/article/details/54943510</a></p>
+<h3 id="MySQL中将日期和时间从日期时间中分离出来"><a href="#MySQL中将日期和时间从日期时间中分离出来" class="headerlink" title="MySQL中将日期和时间从日期时间中分离出来"></a>MySQL中将日期和时间从日期时间中分离出来</h3><p><a href="https://cloud.tencent.com/developer/ask/66839" target="_blank" rel="noopener">https://cloud.tencent.com/developer/ask/66839</a><br><code>select DATE(dateTimeFeild) as Date, TIME(dateTimeFeild) as Time, col2, col3, FROM Table1 ...</code></p>
+<h3 id="mysql查询特定时间段内的数据"><a href="#mysql查询特定时间段内的数据" class="headerlink" title="mysql查询特定时间段内的数据"></a>mysql查询特定时间段内的数据</h3><p><a href="https://blog.csdn.net/EightSwords/article/details/79702101" target="_blank" rel="noopener">https://blog.csdn.net/EightSwords/article/details/79702101</a><br>– 今天<br>select fullName,addedTime from t_user where to_days(addedTime) = to_days(now());   </p>
+<h1 id="ThinkPHP"><a href="#ThinkPHP" class="headerlink" title="ThinkPHP"></a>ThinkPHP</h1><h2 id="php部署问题"><a href="#php部署问题" class="headerlink" title="php部署问题"></a>php部署问题</h2><p>php项目部署到服务器上，无需改ip地址的配置，还是127.0.0.1<br>在Loginout.php中要写入自己的ip</p>
+<h3 id="failed-to-open-stream-Permission-denied-in-错误的解决方法"><a href="#failed-to-open-stream-Permission-denied-in-错误的解决方法" class="headerlink" title="failed to open stream:Permission denied in 错误的解决方法"></a>failed to open stream:Permission denied in 错误的解决方法</h3><p>给runtime以其下面的文件写权限</p>
+<h3 id="Thinkphp5开启调试模式"><a href="#Thinkphp5开启调试模式" class="headerlink" title="Thinkphp5开启调试模式"></a>Thinkphp5开启调试模式</h3><p>在application/config.php中把调试模式改为true</p>
+<h3 id="重定向和跳转要继承Controller"><a href="#重定向和跳转要继承Controller" class="headerlink" title="重定向和跳转要继承Controller"></a>重定向和跳转要继承Controller</h3><h2 id="mkdir-Permission-denied"><a href="#mkdir-Permission-denied" class="headerlink" title="mkdir() Permission denied"></a>mkdir() Permission denied</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 查看apache的用户和用户组</span><br><span class="line">[root@ECS tp5]# ps aux | grep apache 	</span><br><span class="line">[root@ECS htdocs]# chown -R daemon tp5/</span><br><span class="line">[root@ECS htdocs]# chgrp -R daemon tp5/</span><br><span class="line">[root@ECS tp5]# chmod -R 777 runtime/</span><br></pre></td></tr></table></figure>
+
+<h2 id="thinkphp-中html标签加载js-css-img-script的路径问题"><a href="#thinkphp-中html标签加载js-css-img-script的路径问题" class="headerlink" title="thinkphp 中html标签加载js,css,img,script的路径问题"></a>thinkphp 中html标签加载js,css,img,script的路径问题</h2><p>在thinkphp中，路径中不能用”../“表示上一级，而是用正斜杠”/“表示项目根目录<br>D:\phpstudy_pro\WWW\oeong.demo\tp5\public\js\index.js<br>引用<code>&lt;script src=&quot;/tp5/public/js/index.js&quot;&gt;&lt;/script&gt;</code><br><a href="https://blog.csdn.net/luguo0816/article/details/7192482?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">https://blog.csdn.net/luguo0816/article/details/7192482?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task</a></p>
+<h2 id="thinkphp-更换跳转模板"><a href="#thinkphp-更换跳转模板" class="headerlink" title="thinkphp 更换跳转模板"></a>thinkphp 更换跳转模板</h2><p><a href="https://www.cnblogs.com/wenhainan/p/7481723.html" target="_blank" rel="noopener">https://www.cnblogs.com/wenhainan/p/7481723.html</a></p>
+<h2 id="查询数据库"><a href="#查询数据库" class="headerlink" title="查询数据库"></a>查询数据库</h2><p><a href="https://blog.csdn.net/yexudengzhidao/article/details/54943510" target="_blank" rel="noopener">https://blog.csdn.net/yexudengzhidao/article/details/54943510</a></p>
+<p>如果是mac或者linux环境，请确保runtime目录有可写权限</p>
+<p>上面的目录结构和名称是可以改变的，尤其是应用的目录结构，这取决于你的入口文件和配置参数。</p>
+<h2 id="Form-提交表单的时候-避免跳转页面"><a href="#Form-提交表单的时候-避免跳转页面" class="headerlink" title="Form 提交表单的时候 避免跳转页面"></a>Form 提交表单的时候 避免跳转页面</h2><ol>
+<li>target参数、iframe<br><a href="https://blog.csdn.net/h2503652646/article/details/86634345" target="_blank" rel="noopener">https://blog.csdn.net/h2503652646/article/details/86634345</a></li>
+<li>重定向<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> \<span class="title">think</span>\<span class="title">Controller</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> *** <span class="keyword">extends</span> <span class="title">Controller</span> </span>&#123; </span><br><span class="line">	<span class="keyword">public</span> <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">$this</span>-&gt;redirect(<span class="string">"http://localhost:8080/tp5/public/index.php"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>在vi中可以通过:/xxx进行搜索定位，n键查找下一项<br>创建软链接 <code>ln -s  &lt; source&gt;  &lt;target&gt;</code><br>cd - 返回上一次目录<br>在 /usr/local/apache2/conf/httpd.conf中找到User<br><code>chown -R &lt;user&gt;:&lt;group&gt; *</code></p>
+<h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><h2 id="下拉框设置默认值"><a href="#下拉框设置默认值" class="headerlink" title="下拉框设置默认值"></a>下拉框设置默认值</h2><p><a href="https://blog.csdn.net/qq_37117258/article/details/100551443" target="_blank" rel="noopener">https://blog.csdn.net/qq_37117258/article/details/100551443</a></p>
+<h2 id="屏蔽广告"><a href="#屏蔽广告" class="headerlink" title="屏蔽广告"></a>屏蔽广告</h2><p>找到广告所在的div</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#&lt;idname&gt; &#123;</span><br><span class="line">    display: none;</span><br><span class="line">    visibility: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="js实现点击后改变一个css"><a href="#js实现点击后改变一个css" class="headerlink" title="js实现点击后改变一个css"></a>js实现点击后改变一个css</h2><p>document.getElementById(“tbl”).className = “click”;<br>.click, td, th{border: 1px solid black;}</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>VScode格式化代码<br>Shift + Alt + F</p>
+<h2 id="函数和类、属性命名"><a href="#函数和类、属性命名" class="headerlink" title="函数和类、属性命名"></a>函数和类、属性命名</h2><p><strong>类</strong>的命名采用驼峰法（首字母大写），例如 User、UserType，默认不需要添加后缀，例如UserController应该直接命名为User；<br><strong>函数</strong>的命名使用小写字母和下划线（小写字母开头）的方式，例如 get_client_ip；<br><strong>方法</strong>的命名使用驼峰法（首字母小写），例如 getUserName；<br><strong>属性</strong>的命名使用驼峰法（首字母小写），例如 tableName、instance；<br>以双下划线“__”打头的函数或方法作为魔术方法，例如 __call 和 __autoload；</p>
+<h2 id="云服务器ECS与轻量应用服务器的区别"><a href="#云服务器ECS与轻量应用服务器的区别" class="headerlink" title="云服务器ECS与轻量应用服务器的区别"></a>云服务器ECS与轻量应用服务器的区别</h2><ul>
+<li>云服务器ECS（Elastic Compute Service）是一种简单高效、处理能力可弹性伸缩的计算服务。帮助您构建更稳定、安全的应用，提升运维效率，降低IT成本，使您更专注于核心业务创新。</li>
+<li>轻量应用服务器是面向单机应用场景的新一代计算服务，提供应用一键部署、一站式域名解析、网站发布、安全、运维、应用管理等服务。极大地优化了搭建简单应用的体验，降低了入门级用户使用云计算产品的门槛。</li>
+</ul>
+<p>阿里云ECS学生机配置：CPU1核、内存2GB、带宽1Mbps</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/02/PHP/ThinkPHP5-0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1099,7 +1231,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1122,7 +1254,9 @@
         
           
         
-        <span class="site-state-item-count">4</span>
+          
+        
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1147,7 +1281,9 @@
         
           
         
-        <span class="site-state-item-count">5</span>
+          
+        
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
