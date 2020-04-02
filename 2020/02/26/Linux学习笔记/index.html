@@ -72,7 +72,7 @@
 <meta property="og:site_name" content="匡山读书处">
 <meta property="og:description" content="整理了一些Linux的常用知识，方便之后使用时查阅。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-15T11:36:21.349Z">
+<meta property="og:updated_time" content="2020-04-02T03:56:20.087Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux学习笔记">
 <meta name="twitter:description" content="整理了一些Linux的常用知识，方便之后使用时查阅。">
@@ -271,7 +271,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-15 19:36:21" itemprop="dateModified" datetime="2020-03-15T19:36:21+08:00">2020-03-15</time>
+                <time title="修改时间：2020-04-02 11:56:20" itemprop="dateModified" datetime="2020-04-02T11:56:20+08:00">2020-04-02</time>
               </span>
             
           
@@ -317,14 +317,16 @@
 <li>删除行，删除词 <code>[n]dd、dw、x</code></li>
 <li>撤销 <code>u</code></li>
 <li>跳转某一行 <code>[n]G</code></li>
-<li>跳转行的开头<code>0</code>、末尾<code>$</code><br><code>vi /etc/hostname</code> 改主机名<br><code>:wq</code>   强制性写入文件并退出。即使文件没有被修改也强制写入，并更新文件的修改时间。<br><code>:x</code>    写入文件并退出。仅当文件被修改时才写入，并更新文件修改时间，否则不会更新文件修改时间。</li>
+<li>跳转行的开头<code>0</code>、末尾<code>$</code></li>
+<li>通过:/xxx进行搜索定位，n键查找下一项<br><code>vi /etc/hostname</code> 改主机名<br><code>:wq</code>   强制性写入文件并退出。即使文件没有被修改也强制写入，并更新文件的修改时间。<br><code>:x</code>    写入文件并退出。仅当文件被修改时才写入，并更新文件修改时间，否则不会更新文件修改时间。</li>
 </ul>
 <h2 id="文件和目录"><a href="#文件和目录" class="headerlink" title="文件和目录"></a>文件和目录</h2><p>文件和文件夹的创建删除<br><code>mkdir -p &lt;dir/subdir&gt;</code>  创建多级目录<br><code>rm -r &lt;file&gt;</code>   删除多级文件<br><code>mv &lt;old&gt; &lt;new&gt;</code>  移动和文件更名<br><code>pwd</code> 查看当前绝对路径<br><code>cp &lt;file&gt; &lt;file&gt;.bak</code>  复制、备份文件</p>
-<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><p>cat，more，less，grep，wc –l<br>more 命令类似 cat ，不过会以一页一页的形式显示，更方便使用者逐页阅读<br>文件的打包和解压： tar cvfz以及对应的tar xvfz<br>c ：创建一个新归档；x ： 从归档中抽取文件。<br>v ：显示文件的归档进度；z ：使用 gzip 来压缩 tar 文件。<br>f ：当与 -c 选项一起使用时，创建的 tar 文件使用该选项指定的文件名；当与 -x 选项<br>一起使用时，则解除该选项指定的归档。</p>
+<h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><p>cat，more，less，grep，wc –l<br>cd - 返回上一次目录<br>more 命令类似 cat ，不过会以一页一页的形式显示，更方便使用者逐页阅读</p>
+<p>文件的打包和解压： tar cvfz以及对应的tar xvfz<br>c ：创建一个新归档；x ： 从归档中抽取文件。<br>v ：显示文件的归档进度；z ：使用 gzip 来压缩 tar 文件。<br>f ：当与 -c 选项一起使用时，创建的 tar 文件使用该选项指定的文件名；当与 -x 选项<br>一起使用时，则解除该选项指定的归档。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ tar cvfz share.tar.gz /usr/local/share/</span><br><span class="line">$ tar xvfz share.tar.gz -C ./tmp</span><br></pre></td></tr></table></figure>
 
 <p>打包指的是将多个文件和目录集中存储在一个文件中；<br>而压缩则指的是利用算法对文件进行处理，从而达到缩减占用磁盘空间的目的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">echo  // 用于字符串的输出</span><br><span class="line">ls -l f*  // 查看虚拟机上以f开头的设备文件</span><br><span class="line">find &lt;dir&gt; -name &lt;文件名&gt; 2&gt;/dev/null  // 查找文件</span><br><span class="line">grep &lt;查找内容&gt; &lt;文件名&gt;  // 搜索文件内容</span><br><span class="line">find . | grep passwd</span><br><span class="line">ls | grep *.txt</span><br><span class="line">tail -n &lt;file&gt;	// 查看某一文件后n行</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">echo  // 用于字符串的输出</span><br><span class="line">ls -l f*  // 查看虚拟机上以f开头的设备文件</span><br><span class="line">find &lt;dir&gt; -name &lt;文件名&gt; 2&gt;/dev/null  // 查找文件</span><br><span class="line">grep &lt;查找内容&gt; &lt;文件名&gt;  // 搜索文件内容</span><br><span class="line">find . | grep passwd</span><br><span class="line">ls | grep *.txt</span><br><span class="line">tail -n &lt;file&gt;	// 查看某一文件后n行</span><br><span class="line"></span><br><span class="line">ln -s  &lt; source&gt;  &lt;target&gt; // 创建软链接</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h3><p>Ubuntu用<code>apt-get</code>，Centos用<code>yum</code>。<br>加上<code>-y</code>遇到询问时自动yes。</p>
 <h2 id="重定向和管道"><a href="#重定向和管道" class="headerlink" title="重定向和管道"></a>重定向和管道</h2><p>重定向的符号有两个：&gt;或&gt;&gt;。<br>两者的区别是：<br>前者会先清空文件，然后再写入内容；<br>后者会将重定向的内容追加到现有文件的尾部。</p>
@@ -345,6 +347,7 @@
 <p>可以使用chmod为文件增加可执行权限。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x &lt;file&gt;  // 加操作权限</span><br><span class="line">chmod 777 &lt;file&gt;  // 8进制加满权限</span><br></pre></td></tr></table></figure>
 
+<p><code>chown -R &lt;user&gt;:&lt;group&gt; *</code></p>
 <h2 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h2><p>编译.c程序，并且将其放在后台进程运行。<br>ps命令用于显示当前进程 (process) 的状态。<br><code>ps -ef</code>   // 显示所有命令，连带命令行<br><code>kill &lt;id&gt;</code>  // 杀死进程<br>后台进程的启动是用户在输入命令行后加上“&amp;”字符，常用于进程耗时长、用户不着急得到结果的场合。<br>PPID：父进程的进程号。TTY：启动进程的终端号。<br>NI：nice的优先级。PRI：进程的优先级。<br>PRI -&gt; 进程的优先级，大部分系统都是数字越低优先级越高，进程就优先运行 。</p>
 <p>在shell上启动了两个test_loop程序（使用<code>test_loop &amp;</code>），这两个程序都是shell（bash）“生”出来的，即属于shell的子进程。<br>BASH是SHELL的一种，是大多数LINUX发行版默认的SHELL。</p>
 <h2 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h2><p>Shell俗称壳（用来区别于内核），是指“提供使用者使用界面”的软件，就是一个<strong>命令行解释器</strong>。</p>
@@ -517,7 +520,9 @@
         
           
         
-        <span class="site-state-item-count">4</span>
+          
+        
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
