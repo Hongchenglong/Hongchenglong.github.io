@@ -75,7 +75,7 @@
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154619708-1227810824.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154951236-1568229660.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218161451693-906408523.png">
-<meta property="og:updated_time" content="2020-04-02T16:08:09.150Z">
+<meta property="og:updated_time" content="2020-04-03T15:45:04.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git分支进行多终端工作">
 <meta name="twitter:description" content="最近把原本部署在GitHub上的hexo同时部署到码云上，速度快到飞起。可做对比，我的GitHub Pages像乌龟一样慢吞吞，我的Gitee Pages像兔子一样敏捷。">
@@ -275,7 +275,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-03 00:08:09" itemprop="dateModified" datetime="2020-04-03T00:08:09+08:00">2020-04-03</time>
+                <time title="修改时间：2020-04-03 23:45:04" itemprop="dateModified" datetime="2020-04-03T23:45:04+08:00">2020-04-03</time>
               </span>
             
           
@@ -318,11 +318,13 @@
 </ol>
 <p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154951236-1568229660.png" alt></p>
 <ol start="2">
-<li><p>克隆仓库到本地<br><code>git clone git@gitee.com:hongchenglong/Hongchenglong.git</code></p>
-</li>
-<li><p>将博客源文件全部复制过来，除了<code>.deploy_git</code>。<br>注意，如果之前克隆过theme中的主题文件，那么应该把主题文件中的<code>.git</code>文件夹删掉，因为<strong>git不能嵌套上传</strong>。</p>
-</li>
+<li>克隆仓库到本地<br><code>git clone git@gitee.com:hongchenglong/Hongchenglong.git</code></li>
+<li>将博客源文件全部复制过来，除了<code>.deploy_git</code>，因为<code>hexo d</code>上传部署到github的其实是hexo编译后的文件，是用来生成网页的，即<code>.deploy_git</code>里面的文件。</li>
 </ol>
+<p>在<code>.gitignore</code>中加入以下文件，这些文件在别的电脑上需要重新输入命令安装 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure>
+
+<p>注意，如果之前克隆过theme中的主题文件，那么应该把主题文件中的<code>.git</code>文件夹删掉，因为<strong>git不能嵌套上传</strong>。</p>
 <ol start="4">
 <li><p>上传源文件到码云上</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit –m &quot;xxxx&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
