@@ -5,11 +5,14 @@ tags: [Git]
 categories: Git
 top: true
 ---
-<meta name="referrer" content="no-referrer"/>
+
+学习[廖雪峰的Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)所做笔记。
+
 Git的官方网站：http://git-scm.com
-学习[廖雪峰](https://www.liaoxuefeng.com/wiki/896043488029600)的Git教程所做笔记。
+
 外国网友制作的[Git Cheat Sheet](https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf)
 
+<meta name="referrer" content="no-referrer"/>
 <!-- more -->
 
 # Git简介
@@ -96,7 +99,11 @@ $ git push -u origin master
 - 要克隆一个仓库，首先必须知道仓库的地址，然后使用`git clone`命令克隆。
 - Git支持多种协议，包括`https`，但通过`ssh`支持的原生`git`协议速度最快。
 
+
+
 # 分支管理
+
+
 
 ## 创建于合并分支
 
@@ -155,6 +162,8 @@ Git分支十分强大，在团队开发中应该充分应用。
 - `git rebase`操作可以把本地未push的分叉提交历史整理成直线；
 - rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
 
+
+
 # 标签管理
 发布一个版本时，我们通常先在版本库中打一个标签（tag），这样，就唯一确定了打标签时刻的版本。
 tag是一个让人容易记住的有意义的名字，如v1.0，它跟某个commit绑在一起。
@@ -174,10 +183,17 @@ tag是一个让人容易记住的有意义的名字，如v1.0，它跟某个comm
 `git clone git@github.com:<username>/bootstrap.git`
 一定要从自己的账号下clone仓库，这样你才能推送修改。如果从bootstrap的作者的仓库地址git@github.com:twbs/bootstrap.git克隆，因为没有权限，你将不能推送修改。
 
+当你提交一个 Pull Request 的时候，你做的事情是 请求（request） 另一个开发者（比如项目维护者）来 拉取（pull） 你仓库中的一个分支到他们的仓库。
+
+你的仓库会被默认设置为**源仓库**（head fork），被询问指定源分支（compare）、目标仓库（base fork）和目标分支（base）。
+
 ### 小结
 - 在GitHub上，可以任意Fork开源仓库；
 - 自己拥有Fork后的仓库的读写权限；
 - 可以推送pull request给官方仓库来贡献代码。
+
+
+
 
 
 # 使用Gitee
@@ -185,10 +201,17 @@ tag是一个让人容易记住的有意义的名字，如v1.0，它跟某个comm
 用`git remote -v`查看远程库信息。
 由于远程库不能同名，要先删除已有的GitHub远程库。`git remote rm origin`
 再分别关联GitHub和Gitee：
+
 ```bash
 $ git remote add github git@github.com:<server-name>/<repo-name>.git
 $ git remote add gitee git@gitee.com:<server-name>/<repo-name>.git
 ```
+
+或修改远程仓库名:
+```bash
+$ git remote rename origin github
+```
+
 之后推送，使用命令：
 ```bash
 $ git push github master
@@ -196,10 +219,18 @@ $ git push gitee master
 ```
 
 
+
 # 自定义Git
+
 `$ git config --global color.ui true`让Git显示颜色
 
 ## 忽略特殊文件
+```
+/*
+!.gitignore
+```
+忽略根目录下所有文件，除了`.gitignore`
+
 - 忽略某些文件时，需要编写`.gitignore`；
 - `.gitignore`文件本身要放到版本库里，并且可以对`.gitignore`做版本管理！
 
@@ -217,7 +248,17 @@ $ git config --global alias.br branch
 
 ## 搭建Git服务器
 
+
+
 # 使用Source Tree
 
+
+
 # QUESTION
+
+[Git的基本概念/常用命令及实例](https://gitee.com/help/articles/4110#article-header0)
+
 [Git Fork后与源作者同步更新](https://blog.csdn.net/qq1332479771/article/details/56087333)
+
+[如何解决代码冲突](https://gitee.com/help/articles/4194)
+
