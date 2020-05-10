@@ -64,19 +64,19 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="记录我在使用Hexo时遇到的问题和解决方法。  Hexo is a fast, simple &amp;amp; powerful blog framework.">
-<meta name="keywords" content="Hexo">
+  <meta name="description" content="学习廖雪峰的SQL教程所做笔记。">
+<meta name="keywords" content="SQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo学习笔记">
-<meta property="og:url" content="http://yoursite.com/2020/02/16/Hexo_notes/index.html">
+<meta property="og:title" content="SQL_notes">
+<meta property="og:url" content="http://yoursite.com/2020/05/10/SQL_notes/index.html">
 <meta property="og:site_name" content="匡山读书处">
-<meta property="og:description" content="记录我在使用Hexo时遇到的问题和解决方法。  Hexo is a fast, simple &amp;amp; powerful blog framework.">
+<meta property="og:description" content="学习廖雪峰的SQL教程所做笔记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-02T04:05:44.660Z">
+<meta property="og:updated_time" content="2020-05-10T01:20:00.076Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo学习笔记">
-<meta name="twitter:description" content="记录我在使用Hexo时遇到的问题和解决方法。  Hexo is a fast, simple &amp;amp; powerful blog framework.">
-  <link rel="canonical" href="http://yoursite.com/2020/02/16/Hexo_notes/">
+<meta name="twitter:title" content="SQL_notes">
+<meta name="twitter:description" content="学习廖雪峰的SQL教程所做笔记。">
+  <link rel="canonical" href="http://yoursite.com/2020/05/10/SQL_notes/">
 
 
 <script id="page-configurations">
@@ -90,7 +90,7 @@
   };
 </script>
 
-  <title>Hexo学习笔记 | 匡山读书处</title>
+  <title>SQL_notes | 匡山读书处</title>
   
 
 
@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/16/Hexo_notes/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/10/SQL_notes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongchenglong">
@@ -243,7 +243,7 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">Hexo学习笔记
+          <h1 class="post-title" itemprop="name headline">SQL_notes
 
             
           </h1>
@@ -260,19 +260,11 @@
                 
               
 
-              <time title="创建时间：2020-02-16 14:50:14" itemprop="dateCreated datePublished" datetime="2020-02-16T14:50:14+08:00">2020-02-16</time>
+              <time title="创建时间：2020-05-10 09:17:40 / 修改时间：09:20:00" itemprop="dateCreated datePublished" datetime="2020-05-10T09:17:40+08:00">2020-05-10</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-02 12:05:44" itemprop="dateModified" datetime="2020-04-02T12:05:44+08:00">2020-04-02</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -281,7 +273,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a></span>
 
                 
                 
@@ -300,45 +292,43 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>记录我在使用Hexo时遇到的问题和解决方法。</p>
-<blockquote>
-<p>Hexo is a fast, simple &amp; powerful blog framework.</p>
-</blockquote>
+        <p>学习<a href="https://www.liaoxuefeng.com/wiki/1177760294764384" target="_blank" rel="noopener">廖雪峰的SQL教程</a>所做笔记。</p>
 <a id="more"></a>
 
-<h2 id="如何上传文章"><a href="#如何上传文章" class="headerlink" title="如何上传文章"></a>如何上传文章</h2><p>在你博客站点文件夹下右键空白处，选择<code>Git Bash Here</code></p>
-<ol>
-<li><code>hexo new post &quot;&lt;title&gt;&quot;</code>然后在<code>./source/_posts</code>里找到并编辑。</li>
-<li><code>hexo g</code> (hexo generate)，用于生成静态文件</li>
-<li><code>hexo s</code> (hexo server)，用于启动服务器，主要用来本地预览；完成后打开浏览器输入 <code>localhost:4000</code></li>
-<li><code>hexo d</code> (hexo deploy)，用于将本地文件发布到github等git仓库上</li>
-<li>2、4步简写 <code>hexo g -d</code></li>
-<li><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></li>
-</ol>
-<h2 id="显示不出分类、标签问题"><a href="#显示不出分类、标签问题" class="headerlink" title="显示不出分类、标签问题"></a>显示不出分类、标签问题</h2><p>在<code>./source/tags/index.md</code>中添加<code>type: tags</code>字段。<br><code>categories</code>同理。<br>参考博客：<a href="https://blog.csdn.net/Wonz5130/article/details/84666519" target="_blank" rel="noopener">https://blog.csdn.net/Wonz5130/article/details/84666519</a></p>
-<h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p>npm 出现 <code>operation not permitted, mkdir...</code>问题<br>解决办法：以管理员身份运行cmd输入<code>npm -v</code>，然后在git bash中就没问题了。</p>
-<h2 id="主题加载不出"><a href="#主题加载不出" class="headerlink" title="主题加载不出"></a>主题加载不出</h2><p>我是因为配置文件url配错了，改成原有的配置就OK了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: http://yoursite.com</span><br><span class="line">root: /</span><br></pre></td></tr></table></figure>
+<h2 id="关系数据库概述"><a href="#关系数据库概述" class="headerlink" title="关系数据库概述"></a>关系数据库概述</h2><h3 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h3><p>什么是SQL？SQL是<strong>结构化查询语言</strong>的缩写，用来访问和操作数据库系统。SQL语句既可以查询数据库中的数据，也可以添加、更新和删除数据库中的数据，还可以对数据库进行管理和维护操作。不同的数据库，都支持SQL，这样，我们通过学习SQL这一种语言，就可以操作各种不同的数据库。</p>
+<p>本教程约定：<strong>SQL关键字总是大写，以示突出，表名和列名均使用小写</strong>。</p>
+<h2 id="关系模型"><a href="#关系模型" class="headerlink" title="关系模型"></a>关系模型</h2><p>表的每一行称为记录（Record），记录是一个逻辑意义上的数据。<br>表的每一列称为字段（Column），同一个表的每一行记录都拥有相同的若干字段。</p>
+<h3 id="主键"><a href="#主键" class="headerlink" title="主键"></a>主键</h3><p>主键是关系表中记录的唯一标识。主键的选取非常重要：主键不要带有业务含义，而应该使用BIGINT自增或者GUID类型。主键也不应该允许<code>NULL</code>。</p>
+<p>可以使用多个列作为联合主键，但联合主键并不常用。</p>
+<h3 id="外键"><a href="#外键" class="headerlink" title="外键"></a>外键</h3><p>由于外键约束会降低数据库的性能，大部分互联网应用程序为了追求速度，并不设置外键约束，而是仅靠应用程序自身来保证逻辑的正确性。这种情况下，<code>class_id</code>仅仅是一个普通的列，只是它起到了外键的作用而已。</p>
+<h4 id="一对一"><a href="#一对一" class="headerlink" title="一对一"></a>一对一</h4><p>一对一关系是指，一个表的记录对应到另一个表的唯一一个记录。</p>
+<p>一些应用会把一个大表拆成两个一对一的表，目的是把经常读取和不经常读取的字段分开，以获得更高的性能。例如，把一个大的用户表分拆为用户基本信息表<code>user_info</code>和用户详细信息表<code>user_profiles</code>，大部分时候，只需要查询<code>user_info</code>表，并不需要查询<code>user_profiles</code>表，这样就提高了查询速度。</p>
+<h4 id="多对多"><a href="#多对多" class="headerlink" title="多对多"></a>多对多</h4><p>通过一个表的外键关联到另一个表，我们可以定义出一对多关系。</p>
+<p>例如，一个老师可以对应多个班级，一个班级也可以对应多个老师，因此，班级表和老师表存在多对多关系。</p>
+<p>多对多关系实际上是通过两个一对多关系实现的，即通过一个中间表，关联两个一对多关系，就形成了多对多关系。</p>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><p>关系数据库通过外键可以实现一对多、多对多和一对一的关系。外键既可以通过数据库来约束，也可以不设置约束，仅依靠应用程序的逻辑来保证。</p>
+<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>在关系数据库中，如果有上万甚至上亿条记录，在查找记录的时候，想要获得非常快的速度，就需要使用索引。</p>
+<p>索引是关系数据库中对某一列或多个列的值进行预排序的数据结构。通过使用索引，可以让数据库系统不必扫描整个表，而是直接定位到符合条件的记录，这样就大大加快了查询速度。</p>
+<p>如果要经常根据<code>score</code>列进行查询，就可以对<code>score</code>列创建索引：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE students</span><br><span class="line">ADD INDEX idx_score (score);</span><br></pre></td></tr></table></figure>
 
-<h2 id="图片加载不出"><a href="#图片加载不出" class="headerlink" title="图片加载不出"></a>图片加载不出</h2><p>我是引用cnblog的图片链接，刚刚上传那会还能显示图片，过几天就发现图片加载不出。<br>解决方法：<br>在文章头部加上<code>&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;</code>，解决防盗链问题。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo学习笔记</span><br><span class="line">---</span><br><span class="line">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;</span><br></pre></td></tr></table></figure>
-
-<p>参考博客：</p>
-<ul>
-<li><a href="https://qsh5.cn/595.html" target="_blank" rel="noopener">https://qsh5.cn/595.html</a></li>
-<li><a href="https://blog.csdn.net/mqdxiaoxiao/article/details/96770756" target="_blank" rel="noopener">https://blog.csdn.net/mqdxiaoxiao/article/details/96770756</a></li>
-</ul>
-<h2 id="hexo同时部署到码云Gitee"><a href="#hexo同时部署到码云Gitee" class="headerlink" title="hexo同时部署到码云Gitee"></a>hexo同时部署到码云Gitee</h2><p>如何创建一个首页访问地址不带二级目录的 pages，如hongchenglong.gitee.io？<br><strong>需要建立一个与自己个性地址同名的项目</strong>，<br>我的<strong>个性地址</strong>就是<code>https://gitee.com/hongchenglong</code>里的<code>hongchenglong</code><br>参考码云帮助文档：<a href="http://git.mydoc.io/?t=154714&amp;tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">http://git.mydoc.io/?t=154714&amp;tdsourcetag=s_pctim_aiomsg</a><br>码云的速度很快，缺点是每次部署都要去码云Pages手动<strong>更新</strong></p>
-<h2 id="设置网站的图标Favicon"><a href="#设置网站的图标Favicon" class="headerlink" title="设置网站的图标Favicon"></a>设置网站的图标Favicon</h2><p><a href="https://www.jianshu.com/p/82c1d33420ba" target="_blank" rel="noopener">https://www.jianshu.com/p/82c1d33420ba</a></p>
-<h2 id="NOTE"><a href="#NOTE" class="headerlink" title="NOTE"></a>NOTE</h2><ol>
-<li>语句含义<br><code>home: / || home</code>中的<code>|| home</code>表示会到自带库里找到home这个图标并展示。</li>
-<li>改成中文<br>主目录下的配置文件<code>_config.yml</code>中修改language的值，改成<code>language: zh-CN</code></li>
-<li>如果修改过文件内容，需要通过如下命令清除已经生成的静态文件，重新生成！<br><code>hexo clean</code></li>
-<li>部署到Gitee上，每次修改都要去码云Pages手动<strong>更新</strong>服务</li>
-<li>初始化一个Hexo，<code>hexo init &lt;blog&gt;</code></li>
-<li>多标签，<code>tags: [标签1,标签2,标签3]</code></li>
-</ol>
-
+<p>索引的效率取决于索引列的值是否散列，即该<strong>列的值如果越互不相同，那么索引效率越高</strong>。反过来，如果记录的列存在大量相同的值，例如<code>gender</code>列，大约一半的记录值是<code>M</code>，另一半是<code>F</code>，因此，对该列创建索引就没有意义。</p>
+<p>可以对一张表创建多个索引。索引的优点是提高了查询效率，缺点是<strong>在插入、更新和删除记录时，需要同时修改索引</strong>，因此，索引越多，插入、更新和删除记录的速度就越慢。</p>
+<h4 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h4><p>通过对数据库表创建索引，可以提高查询速度。</p>
+<p>通过创建唯一索引，可以保证某一列的值具有唯一性。</p>
+<p>数据库索引对于用户和应用程序来说都是透明的。</p>
+<h2 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h2><h3 id="基本查询"><a href="#基本查询" class="headerlink" title="基本查询"></a>基本查询</h3><p>使用SELECT查询的基本语句SELECT * FROM &lt;表名&gt;可以查询一个表的所有行和所有列的数据。</p>
+<p>SELECT查询的结果是一个二维表。</p>
+<h3 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h3><p>通过<code>WHERE</code>条件查询，可以筛选出符合指定条件的记录，而不是整个表的所有记录。</p>
+<h3 id="投影查询"><a href="#投影查询" class="headerlink" title="投影查询"></a>投影查询</h3><p>使用<code>SELECT *</code>表示查询表的所有列，使用<code>SELECT 列1, 列2, 列3</code>则可以仅返回指定列，这种操作称为投影。</p>
+<p>SELECT语句可以对结果集的列进行重命名。</p>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><p>使用<code>ORDER BY</code>可以对结果集进行排序；</p>
+<p>可以对多列进行升序、倒序排序。</p>
+<h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><p>使用<code>LIMIT &lt;M&gt; OFFSET &lt;N&gt;</code>可以对结果集进行分页，每次查询返回结果集的一部分；</p>
+<p>分页查询需要先确定每页的数量和当前页数，然后确定<code>LIMIT</code>和<code>OFFSET</code>的值。</p>
+<h3 id="聚合查询"><a href="#聚合查询" class="headerlink" title="聚合查询"></a>聚合查询</h3><p>使用SQL提供的聚合查询，我们可以方便地计算总数、合计值、平均值、最大值和最小值；</p>
+<p>聚合查询也可以添加WHERE条件。</p>
+<h2 id="TO-BE-CONTINUED…"><a href="#TO-BE-CONTINUED…" class="headerlink" title="TO BE CONTINUED…"></a>TO BE CONTINUED…</h2>
     </div>
 
     
@@ -353,7 +343,7 @@
           
           <div class="post-tags">
             
-              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+              <a href="/tags/SQL/" rel="tag"># SQL</a>
             
           </div>
         
@@ -363,8 +353,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/02/02/Git_notes/" rel="next" title="Git学习笔记">
-                  <i class="fa fa-chevron-left"></i> Git学习笔记
+                <a href="/2020/04/24/internet_plus/" rel="next" title="互联网+资料收集">
+                  <i class="fa fa-chevron-left"></i> 互联网+资料收集
                 </a>
               
             </div>
@@ -372,10 +362,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2020/02/18/git分支进行多终端工作/" rel="prev" title="Git分支进行多终端工作">
-                  Git分支进行多终端工作 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -540,7 +526,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何上传文章"><span class="nav-number">1.</span> <span class="nav-text">如何上传文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示不出分类、标签问题"><span class="nav-number">2.</span> <span class="nav-text">显示不出分类、标签问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#npm"><span class="nav-number">3.</span> <span class="nav-text">npm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题加载不出"><span class="nav-number">4.</span> <span class="nav-text">主题加载不出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片加载不出"><span class="nav-number">5.</span> <span class="nav-text">图片加载不出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo同时部署到码云Gitee"><span class="nav-number">6.</span> <span class="nav-text">hexo同时部署到码云Gitee</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置网站的图标Favicon"><span class="nav-number">7.</span> <span class="nav-text">设置网站的图标Favicon</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NOTE"><span class="nav-number">8.</span> <span class="nav-text">NOTE</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关系数据库概述"><span class="nav-number">1.</span> <span class="nav-text">关系数据库概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL"><span class="nav-number">1.1.</span> <span class="nav-text">SQL</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系模型"><span class="nav-number">2.</span> <span class="nav-text">关系模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主键"><span class="nav-number">2.1.</span> <span class="nav-text">主键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外键"><span class="nav-number">2.2.</span> <span class="nav-text">外键</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#一对一"><span class="nav-number">2.2.1.</span> <span class="nav-text">一对一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多对多"><span class="nav-number">2.2.2.</span> <span class="nav-text">多对多</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小结"><span class="nav-number">2.2.3.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#索引"><span class="nav-number">2.3.</span> <span class="nav-text">索引</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#小结-1"><span class="nav-number">2.3.1.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询数据"><span class="nav-number">3.</span> <span class="nav-text">查询数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本查询"><span class="nav-number">3.1.</span> <span class="nav-text">基本查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件查询"><span class="nav-number">3.2.</span> <span class="nav-text">条件查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#投影查询"><span class="nav-number">3.3.</span> <span class="nav-text">投影查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-number">3.4.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分页查询"><span class="nav-number">3.5.</span> <span class="nav-text">分页查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚合查询"><span class="nav-number">3.6.</span> <span class="nav-text">聚合查询</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TO-BE-CONTINUED…"><span class="nav-number">4.</span> <span class="nav-text">TO BE CONTINUED…</span></a></li></ol></div>
             
 
           </div>
