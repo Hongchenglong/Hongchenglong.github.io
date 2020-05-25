@@ -64,22 +64,23 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="学习廖雪峰的Git教程所做笔记。 Git的官方网站：http://git-scm.com 外国网友制作的Git Cheat Sheet">
+  <meta name="description" content="学习廖雪峰的Git教程所做笔记。 猴子都能懂的GIT入门、Git的官方网站 外国网友制作的Git Cheat Sheet">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git学习笔记">
 <meta property="og:url" content="http://yoursite.com/2020/02/02/Git_notes/index.html">
 <meta property="og:site_name" content="匡山读书处">
-<meta property="og:description" content="学习廖雪峰的Git教程所做笔记。 Git的官方网站：http://git-scm.com 外国网友制作的Git Cheat Sheet">
+<meta property="og:description" content="学习廖雪峰的Git教程所做笔记。 猴子都能懂的GIT入门、Git的官方网站 外国网友制作的Git Cheat Sheet">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200214213914797-1652178625.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215032332010-1516736742.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033101385-1093798650.png">
+<meta property="og:image" content="https://backlog.com/git-tutorial/cn/img/post/intro/capture_intro5_1_3.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033530403-1782330777.png">
-<meta property="og:updated_time" content="2020-04-06T03:57:30.604Z">
+<meta property="og:updated_time" content="2020-05-25T07:19:31.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git学习笔记">
-<meta name="twitter:description" content="学习廖雪峰的Git教程所做笔记。 Git的官方网站：http://git-scm.com 外国网友制作的Git Cheat Sheet">
+<meta name="twitter:description" content="学习廖雪峰的Git教程所做笔记。 猴子都能懂的GIT入门、Git的官方网站 外国网友制作的Git Cheat Sheet">
 <meta name="twitter:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200214213914797-1652178625.png">
   <link rel="canonical" href="http://yoursite.com/2020/02/02/Git_notes/">
 
@@ -276,7 +277,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-06 11:57:30" itemprop="dateModified" datetime="2020-04-06T11:57:30+08:00">2020-04-06</time>
+                <time title="修改时间：2020-05-25 15:19:31" itemprop="dateModified" datetime="2020-05-25T15:19:31+08:00">2020-05-25</time>
               </span>
             
           
@@ -306,7 +307,7 @@
 
       
         <p>学习<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰的Git教程</a>所做笔记。</p>
-<p>Git的官方网站：<a href="http://git-scm.com" target="_blank" rel="noopener">http://git-scm.com</a></p>
+<p><a href="https://backlog.com/git-tutorial/cn/intro/intro1_1.html" target="_blank" rel="noopener">猴子都能懂的GIT入门</a>、<a href="http://git-scm.com" target="_blank" rel="noopener">Git的官方网站</a></p>
 <p>外国网友制作的<a href="https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf" target="_blank" rel="noopener">Git Cheat Sheet</a></p>
 <meta name="referrer" content="no-referrer">
 <a id="more"></a>
@@ -381,6 +382,8 @@
 </ul>
 <h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033101385-1093798650.png" alt></p>
 <p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。<br>解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。<br>用<code>git log --graph</code>命令可以看到分支合并图。</p>
+<p><img src="https://backlog.com/git-tutorial/cn/img/post/intro/capture_intro5_1_3.png" alt="冲突发生的例子"></p>
+<p>==分割线上方是本地数据库的内容，下方是远程数据库的编辑内容。</p>
 <h2 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h2><p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033530403-1782330777.png" alt></p>
 <p>Git分支十分强大，在团队开发中应该充分应用。<br>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。</p>
 <h2 id="Bug分支"><a href="#Bug分支" class="headerlink" title="Bug分支"></a>Bug分支</h2><ul>
