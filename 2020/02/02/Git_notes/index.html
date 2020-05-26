@@ -76,7 +76,7 @@
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215032332010-1516736742.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033101385-1093798650.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033530403-1782330777.png">
-<meta property="og:updated_time" content="2020-05-26T10:52:29.799Z">
+<meta property="og:updated_time" content="2020-05-26T14:29:52.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git学习笔记">
 <meta name="twitter:description" content="学习廖雪峰的Git教程所做笔记。 猴子都能懂的GIT入门、Git的官方网站 外国网友制作的Git Cheat Sheet">
@@ -276,7 +276,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-26 18:52:29" itemprop="dateModified" datetime="2020-05-26T18:52:29+08:00">2020-05-26</time>
+                <time title="修改时间：2020-05-26 22:29:52" itemprop="dateModified" datetime="2020-05-26T22:29:52+08:00">2020-05-26</time>
               </span>
             
           
@@ -314,8 +314,8 @@
 <h1 id="Git简介"><a href="#Git简介" class="headerlink" title="Git简介"></a>Git简介</h1><p>Git是目前世界上最先进的<strong>分布式版本控制系统</strong>。由Linus使用C写成。</p>
 <h2 id="版本库"><a href="#版本库" class="headerlink" title="版本库"></a>版本库</h2><p>版本库又名仓库，英文名<strong>repository</strong>。<br>初始化一个Git仓库，使用<code>git init</code>命令。<br>添加文件到Git仓库，分两步：</p>
 <ol>
-<li>使用命令<code>git add &lt;file&gt;</code>，注意，可反复多次使用，添加多个文件；</li>
-<li>使用命令<code>git commit -m &quot;&lt;message&gt;&quot;</code>，完成。(-m后面输入的是本次提交的说明)</li>
+<li>使用命令<code>git add</code>，注意，可反复多次使用，添加多个文件；</li>
+<li>使用命令<code>git commit -m &quot;&quot;</code>，完成。(-m后面输入的是本次提交的说明)</li>
 </ol>
 <p>注意：</p>
 <ul>
@@ -329,25 +329,25 @@
 <li>如果<code>git status</code>告诉你有文件被修改过，用<code>git diff</code>可以查看修改内容。</li>
 </ul>
 <h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><ul>
-<li><code>HEAD</code>指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard &lt;commit_id&gt;</code>。</li>
+<li><code>HEAD</code>指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset --hard</code>。</li>
 <li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。</li>
 <li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
 </ul>
 <h2 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h2><p>工作区（Working Directory）：在电脑里能看到的目录。<br>版本库（Repository）：隐藏目录<code>.git</code>。<br>其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支<code>master</code>，以及指向<code>master</code>的一个指针叫<code>HEAD</code>。</p>
-<p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200214213914797-1652178625.png" alt></p>
-<p>文件往Git版本库里添加的时候，是分两步执行的：<br>第一步是用<code>git add</code>把文件添加进去，实际上就是<span style="color:red">把文件修改添加到暂存区</span>；<br>第二步是用<code>git commit</code>提交更改，实际上就是<span style="color:red">把暂存区的所有内容提交到当前分支</span>。<br><strong>需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。</strong></p>
+<p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200214213914797-1652178625.png" alt="img"></p>
+<p>文件往Git版本库里添加的时候，是分两步执行的：<br>第一步是用<code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区；<br>第二步是用<code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支。<br><strong>需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。</strong></p>
 <h2 id="管理修改"><a href="#管理修改" class="headerlink" title="管理修改"></a>管理修改</h2><p>为什么Git比其他版本控制系统设计得优秀，因为<strong>Git跟踪并管理的是修改</strong>，而非文件。<br>每次修改，如果不用<code>git add</code>到暂存区，那就不会加入到<code>commit</code>中。</p>
 <h2 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h2><ul>
-<li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- &lt;file&gt;</code>。</li>
-<li>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD &lt;file&gt;</code>，就回到了场景1，第二步按场景1操作。</li>
-<li>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，使用命令<code>git reset --hard &lt;commit_id&gt;</code>，不过前提是没有推送到远程库。</li>
+<li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout --</code>。</li>
+<li>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD</code>，就回到了场景1，第二步按场景1操作。</li>
+<li>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，使用命令<code>git reset --hard</code>，不过前提是没有推送到远程库。</li>
 </ul>
 <h2 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h2><p>想要在github上面删除，但又不想在本地删除</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -r --cached &lt;file&gt;  <span class="comment"># --cached不会删除本地的file</span></span><br><span class="line">$ git commit -m <span class="string">'delete &lt;file&gt;'</span></span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -r --cached &lt;file&gt;  # --cached不会删除本地的file</span><br><span class="line">$ git commit -m &apos;delete &lt;file&gt;&apos;</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
 
 <h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
-<li><code>git checkout -- &lt;file&gt;</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</li>
-<li>命令<code>git rm &lt;file&gt;</code>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。</li>
+<li><code>git checkout --</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</li>
+<li>命令<code>git rm</code>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。</li>
 </ul>
 <h1 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><p>本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，需要一点设置：</p>
 <ol>
@@ -361,7 +361,7 @@
 </ol>
 <h3 id="为什么GitHub需要SSH-Key呢？"><a href="#为什么GitHub需要SSH-Key呢？" class="headerlink" title="为什么GitHub需要SSH Key呢？"></a>为什么GitHub需要SSH Key呢？</h3><p>因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。</p>
 <h2 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h2><ul>
-<li>要关联一个远程库，使用命令<code>git remote add origin git@github.com:&lt;server-name&gt;/&lt;repo-name&gt;.git</code>；</li>
+<li>要关联一个远程库，使用命令<code>git remote add origin git@github.com:/.git</code>；</li>
 <li>关联后，使用命令<code>git push -u origin master</code>第一次推送master分支的所有内容；</li>
 <li>此后，每次本地提交后，只要有必要，就可以使用命令<code>git push origin master</code>推送最新修改；(远程库的名字就是origin，这是Git默认的叫法)</li>
 <li>分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作。</li>
@@ -370,19 +370,19 @@
 <li>要克隆一个仓库，首先必须知道仓库的地址，然后使用<code>git clone</code>命令克隆。</li>
 <li>Git支持多种协议，包括<code>https</code>，但通过<code>ssh</code>支持的原生<code>git</code>协议速度最快。</li>
 </ul>
-<h1 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><h2 id="创建于合并分支"><a href="#创建于合并分支" class="headerlink" title="创建于合并分支"></a>创建于合并分支</h2><p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215032332010-1516736742.png" alt></p>
+<h1 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h1><h2 id="创建于合并分支"><a href="#创建于合并分支" class="headerlink" title="创建于合并分支"></a>创建于合并分支</h2><p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215032332010-1516736742.png" alt="img"></p>
 <ul>
 <li>查看分支：<code>git branch</code></li>
-<li>创建分支：<code>git branch &lt;name&gt;</code></li>
-<li>切换分支：<code>git checkout &lt;name&gt;</code>或者<code>git switch &lt;name&gt;</code></li>
-<li>创建+切换分支：<code>git checkout -b &lt;name&gt;</code>或者<code>git switch -c &lt;name&gt;</code></li>
-<li>合并某分支到当前分支：<code>git merge &lt;name&gt;</code></li>
-<li>删除分支：<code>git branch -d &lt;name&gt;</code></li>
-<li>删除远程分支：<code>git push origin --delete &lt;name&gt;</code></li>
+<li>创建分支：<code>git branch</code></li>
+<li>切换分支：<code>git checkout</code>或者<code>git switch</code></li>
+<li>创建+切换分支：<code>git checkout -b</code>或者<code>git switch -c</code></li>
+<li>合并某分支到当前分支：<code>git merge</code></li>
+<li>删除分支：<code>git branch -d</code></li>
+<li>删除远程分支：<code>git push origin --delete</code></li>
 </ul>
-<h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033101385-1093798650.png" alt></p>
+<h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033101385-1093798650.png" alt="img"></p>
 <p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。<br>解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。<br>用<code>git log --graph</code>命令可以看到分支合并图。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">本地代码</span><br><span class="line">=======</span><br><span class="line">远程仓库代码</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; commmit id</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">本地代码</span><br><span class="line">=======</span><br><span class="line">远程仓库代码</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; commmit id</span><br></pre></td></tr></table></figure>
 
 <p>Git用<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>，<code>=======</code>，<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>标记出不同分支的内容，==分割线上方是本地数据库的内容，下方是远程数据库的编辑内容。</p>
 <h2 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h2><p>在实际开发中，我们应该按照几个基本原则进行分支管理：</p>
@@ -390,16 +390,16 @@
 <p>那在哪干活呢？干活都在<code>dev</code>分支上，也就是说，<code>dev</code>分支是不稳定的，到某个时候，比如1.0版本发布时，再把<code>dev</code>分支合并到<code>master</code>上，在<code>master</code>分支发布1.0版本；</p>
 <p>你和你的小伙伴们每个人都在<code>dev</code>分支上干活，每个人都有自己的分支，时不时地往<code>dev</code>分支上合并就可以了。</p>
 <p>所以，团队合作的分支看起来就像这样：</p>
-<p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033530403-1782330777.png" alt></p>
+<p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033530403-1782330777.png" alt="img"></p>
 <p>Git分支十分强大，在团队开发中应该充分应用。<br>合并分支时，加上<code>--no-ff</code>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而<code>fast forward</code>合并就看不出来曾经做过合并。</p>
 <h2 id="Bug分支"><a href="#Bug分支" class="headerlink" title="Bug分支"></a>Bug分支</h2><ul>
 <li>修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；</li>
 <li>当手头工作没有完成时，先把工作现场<code>git stash</code>一下，然后去修复bug，修复后，再<code>git stash pop</code>，回到工作现场；</li>
-<li>在master分支上修复的bug，想要合并到当前dev分支，可以用<code>git cherry-pick &lt;commit&gt;</code>命令，把bug提交的修改“复制”到当前分支，避免重复劳动。</li>
+<li>在master分支上修复的bug，想要合并到当前dev分支，可以用<code>git cherry-pick</code>命令，把bug提交的修改“复制”到当前分支，避免重复劳动。</li>
 </ul>
 <h2 id="Feature分支"><a href="#Feature分支" class="headerlink" title="Feature分支"></a>Feature分支</h2><ul>
 <li>开发一个新feature，最好新建一个分支；</li>
-<li>如果要丢弃一个没有被合并过的分支，可以通过<code>git branch -D &lt;name&gt;</code>强行删除。</li>
+<li>如果要丢弃一个没有被合并过的分支，可以通过<code>git branch -D</code>强行删除。</li>
 </ul>
 <h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><p>当你的小伙伴从远程库clone时，默认情况下，你的小伙伴只能看到本地的<code>master</code>分支。可以用<code>git branch</code>命令看看：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
@@ -414,12 +414,12 @@
 <li>如果合并有冲突，则解决冲突，并在本地提交；</li>
 <li>没有冲突或者解决掉冲突后，再用<code>git push origin</code>推送就能成功！</li>
 </ol>
-<p>如果<code>git pull</code>提示<code>no tracking information</code>，则说明本地分支和远程分支的链接关系没有创建，用命令<code>git branch --set-upstream-to  origin/</code>。</p>
+<p>如果<code>git pull</code>提示<code>no tracking information</code>，则说明本地分支和远程分支的链接关系没有创建，用命令<code>git branch --set-upstream-to origin/</code>。</p>
 <p>这就是多人协作的工作模式，一旦熟悉了，就非常简单。</p>
 <h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
 <li>远程库信息，使用<code>git remote -v</code>；</li>
 <li>本地新建的分支如果不推送到远程，对其他人就是不可见的；</li>
-<li>从本地推送分支，使用<code>git push origin &lt;branch-name&gt;</code>，如果推送失败，先用<code>git pull</code>抓取远程的新提交；</li>
+<li>从本地推送分支，使用<code>git push origin</code>，如果推送失败，先用<code>git pull</code>抓取远程的新提交；</li>
 <li>在本地创建和远程分支对应的分支，使用<code>git checkout -b branch-name origin/branch-name</code>，本地和远程分支的名称最好一致；</li>
 <li>建立本地分支和远程分支的关联，使用<code>git branch --set-upstream branch-name origin/branch-name</code>；</li>
 <li>从远程抓取分支，使用<code>git pull</code>，如果有冲突，要先处理冲突。</li>
@@ -430,17 +430,17 @@
 </ul>
 <h1 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h1><p>发布一个版本时，我们通常先在版本库中打一个标签（tag），这样，就唯一确定了打标签时刻的版本。<br>tag是一个让人容易记住的有意义的名字，如v1.0，它跟某个commit绑在一起。</p>
 <h2 id="创建标签"><a href="#创建标签" class="headerlink" title="创建标签"></a>创建标签</h2><ul>
-<li>命令<code>git tag &lt;tagname&gt;</code>用于新建一个标签，默认为<code>HEAD</code>，也可以指定一个commit id；</li>
-<li>命令<code>git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;</code>可以指定标签信息；</li>
+<li>命令<code>git tag</code>用于新建一个标签，默认为<code>HEAD</code>，也可以指定一个commit id；</li>
+<li>命令<code>git tag -a  -m &quot;blablabla...&quot;</code>可以指定标签信息；</li>
 <li>命令<code>git tag</code>可以查看所有标签。</li>
 </ul>
 <h2 id="操作标签"><a href="#操作标签" class="headerlink" title="操作标签"></a>操作标签</h2><ul>
-<li>命令<code>git push origin &lt;tagname&gt;</code>可以推送一个本地标签；</li>
+<li>命令<code>git push origin</code>可以推送一个本地标签；</li>
 <li>命令<code>git push origin --tags</code>可以推送全部未推送过的本地标签；</li>
-<li>命令<code>git tag -d &lt;tagname&gt;</code>可以删除一个本地标签；</li>
-<li>命令<code>git push origin :refs/tags/&lt;tagname&gt;</code>可以删除一个远程标签。</li>
+<li>命令<code>git tag -d</code>可以删除一个本地标签；</li>
+<li>命令<code>git push origin :refs/tags/</code>可以删除一个远程标签。</li>
 </ul>
-<h1 id="使用GitHub"><a href="#使用GitHub" class="headerlink" title="使用GitHub"></a>使用GitHub</h1><p>点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone：<br><code>git clone git@github.com:&lt;username&gt;/bootstrap.git</code><br>一定要从自己的账号下clone仓库，这样你才能推送修改。如果从bootstrap的作者的仓库地址<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:twbs/bootstrap.git克隆，因为没有权限，你将不能推送修改。</p>
+<h1 id="使用GitHub"><a href="#使用GitHub" class="headerlink" title="使用GitHub"></a>使用GitHub</h1><p>点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone：<br><code>git clone git@github.com:/bootstrap.git</code><br>一定要从自己的账号下clone仓库，这样你才能推送修改。如果从bootstrap的作者的仓库地址<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:twbs/bootstrap.git克隆，因为没有权限，你将不能推送修改。</p>
 <p>当你提交一个 Pull Request 的时候，你做的事情是 请求（request） 另一个开发者（比如项目维护者）来 拉取（pull） 你仓库中的一个分支到他们的仓库。</p>
 <p>你的仓库会被默认设置为<strong>源仓库</strong>（head fork），被询问指定源分支（compare）、目标仓库（base fork）和目标分支（base）。</p>
 <h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><ul>
@@ -449,13 +449,13 @@
 <li>可以推送pull request给官方仓库来贡献代码。</li>
 </ul>
 <h1 id="使用Gitee"><a href="#使用Gitee" class="headerlink" title="使用Gitee"></a>使用Gitee</h1><p>如果我们希望体验Git飞一般的速度，可以使用国内的Git托管服务——Gitee（gitee.com）。<br>用<code>git remote -v</code>查看远程库信息。<br>由于远程库不能同名，要先删除已有的GitHub远程库。<code>git remote rm origin</code><br>再分别关联GitHub和Gitee：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add github git@github.com:&lt;server-name&gt;/&lt;repo-name&gt;.git</span><br><span class="line">$ git remote add gitee git@gitee.com:&lt;server-name&gt;/&lt;repo-name&gt;.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add github git@github.com:&lt;server-name&gt;/&lt;repo-name&gt;.git</span><br><span class="line">$ git remote add gitee git@gitee.com:&lt;server-name&gt;/&lt;repo-name&gt;.git</span><br></pre></td></tr></table></figure>
 
 <p>或修改远程仓库名:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rename origin github</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote rename origin github</span><br></pre></td></tr></table></figure>
 
 <p>之后推送，使用命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git push github master</span><br><span class="line">$ git push gitee master</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git push github master</span><br><span class="line">$ git push gitee master</span><br></pre></td></tr></table></figure>
 
 <h1 id="自定义Git"><a href="#自定义Git" class="headerlink" title="自定义Git"></a>自定义Git</h1><p><code>$ git config --global color.ui true</code>让Git显示颜色</p>
 <h2 id="忽略特殊文件"><a href="#忽略特殊文件" class="headerlink" title="忽略特殊文件"></a>忽略特殊文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">!.gitignore</span><br></pre></td></tr></table></figure>
@@ -466,7 +466,7 @@
 <li><code>.gitignore</code>文件本身要放到版本库里，并且可以对<code>.gitignore</code>做版本管理！</li>
 </ul>
 <h2 id="配置别名"><a href="#配置别名" class="headerlink" title="配置别名"></a>配置别名</h2><p>用st表示status：<code>$ git config --global alias.st status</code><br>很多人都用co表示checkout，ci表示commit，br表示branch：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global alias.co checkout</span><br><span class="line">$ git config --global alias.ci commit</span><br><span class="line">$ git config --global alias.br branch</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global alias.co checkout</span><br><span class="line">$ git config --global alias.ci commit</span><br><span class="line">$ git config --global alias.br branch</span><br></pre></td></tr></table></figure>
 
 <p>配置一个git last，让其显示最后一次提交信息：<br><code>$ git config --global alias.last &#39;log -1&#39;</code><br><code>--global</code>参数是全局参数，也就是这些命令在这台电脑的所有Git仓库下都有用。</p>
 <h2 id="搭建Git服务器"><a href="#搭建Git服务器" class="headerlink" title="搭建Git服务器"></a>搭建Git服务器</h2><h1 id="使用Source-Tree"><a href="#使用Source-Tree" class="headerlink" title="使用Source Tree"></a>使用Source Tree</h1><h1 id="QUESTION"><a href="#QUESTION" class="headerlink" title="QUESTION"></a>QUESTION</h1><p><a href="https://gitee.com/help/articles/4110#article-header0" target="_blank" rel="noopener">Git的基本概念/常用命令及实例</a></p>
@@ -574,7 +574,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -630,11 +630,7 @@
         
           
         
-          
-        
-          
-        
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -649,11 +645,7 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <a href="http://www.oeong.xyz" title="http://www.oeong.xyz" rel="noopener" target="_blank">oeong</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="https://www.cnblogs.com/oeong" title="https://www.cnblogs.com/oeong" rel="noopener" target="_blank">博客园</a>
+          <a href="https://www.cnblogs.com/oeong" title="https://www.cnblogs.com/oeong" rel="noopener" target="_blank">oeong</a>
         </li>
       
         <li class="links-of-blogroll-item">

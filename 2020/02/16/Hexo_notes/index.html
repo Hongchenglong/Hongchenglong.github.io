@@ -72,7 +72,7 @@
 <meta property="og:site_name" content="匡山读书处">
 <meta property="og:description" content="记录我在使用Hexo时遇到的问题和解决方法。  Hexo is a fast, simple &amp;amp; powerful blog framework.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-02T04:05:44.660Z">
+<meta property="og:updated_time" content="2020-05-26T14:30:50.419Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo学习笔记">
 <meta name="twitter:description" content="记录我在使用Hexo时遇到的问题和解决方法。  Hexo is a fast, simple &amp;amp; powerful blog framework.">
@@ -271,7 +271,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-02 12:05:44" itemprop="dateModified" datetime="2020-04-02T12:05:44+08:00">2020-04-02</time>
+                <time title="修改时间：2020-05-26 22:30:50" itemprop="dateModified" datetime="2020-05-26T22:30:50+08:00">2020-05-26</time>
               </span>
             
           
@@ -308,7 +308,7 @@
 
 <h2 id="如何上传文章"><a href="#如何上传文章" class="headerlink" title="如何上传文章"></a>如何上传文章</h2><p>在你博客站点文件夹下右键空白处，选择<code>Git Bash Here</code></p>
 <ol>
-<li><code>hexo new post &quot;&lt;title&gt;&quot;</code>然后在<code>./source/_posts</code>里找到并编辑。</li>
+<li><code>hexo new post &quot;&quot;</code>然后在<code>./source/_posts</code>里找到并编辑。</li>
 <li><code>hexo g</code> (hexo generate)，用于生成静态文件</li>
 <li><code>hexo s</code> (hexo server)，用于启动服务器，主要用来本地预览；完成后打开浏览器输入 <code>localhost:4000</code></li>
 <li><code>hexo d</code> (hexo deploy)，用于将本地文件发布到github等git仓库上</li>
@@ -320,7 +320,7 @@
 <h2 id="主题加载不出"><a href="#主题加载不出" class="headerlink" title="主题加载不出"></a>主题加载不出</h2><p>我是因为配置文件url配错了，改成原有的配置就OK了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: http://yoursite.com</span><br><span class="line">root: /</span><br></pre></td></tr></table></figure>
 
-<h2 id="图片加载不出"><a href="#图片加载不出" class="headerlink" title="图片加载不出"></a>图片加载不出</h2><p>我是引用cnblog的图片链接，刚刚上传那会还能显示图片，过几天就发现图片加载不出。<br>解决方法：<br>在文章头部加上<code>&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;</code>，解决防盗链问题。</p>
+<h2 id="图片加载不出"><a href="#图片加载不出" class="headerlink" title="图片加载不出"></a>图片加载不出</h2><p>我是引用cnblog的图片链接，刚刚上传那会还能显示图片，过几天就发现图片加载不出。<br>解决方法：<br>在文章头部加上``，解决防盗链问题。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo学习笔记</span><br><span class="line">---</span><br><span class="line">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;</span><br></pre></td></tr></table></figure>
 
 <p>参考博客：</p>
@@ -335,7 +335,7 @@
 <li>改成中文<br>主目录下的配置文件<code>_config.yml</code>中修改language的值，改成<code>language: zh-CN</code></li>
 <li>如果修改过文件内容，需要通过如下命令清除已经生成的静态文件，重新生成！<br><code>hexo clean</code></li>
 <li>部署到Gitee上，每次修改都要去码云Pages手动<strong>更新</strong>服务</li>
-<li>初始化一个Hexo，<code>hexo init &lt;blog&gt;</code></li>
+<li>初始化一个Hexo，<code>hexo init</code></li>
 <li>多标签，<code>tags: [标签1,标签2,标签3]</code></li>
 </ol>
 
@@ -439,7 +439,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -495,11 +495,7 @@
         
           
         
-          
-        
-          
-        
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -514,11 +510,7 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <a href="http://www.oeong.xyz" title="http://www.oeong.xyz" rel="noopener" target="_blank">oeong</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="https://www.cnblogs.com/oeong" title="https://www.cnblogs.com/oeong" rel="noopener" target="_blank">博客园</a>
+          <a href="https://www.cnblogs.com/oeong" title="https://www.cnblogs.com/oeong" rel="noopener" target="_blank">oeong</a>
         </li>
       
         <li class="links-of-blogroll-item">

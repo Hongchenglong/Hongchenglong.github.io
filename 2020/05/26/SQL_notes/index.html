@@ -68,15 +68,15 @@
 <meta name="keywords" content="SQL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL学习笔记">
-<meta property="og:url" content="http://yoursite.com/2020/05/10/SQL_notes/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/05/26/SQL_notes/index.html">
 <meta property="og:site_name" content="匡山读书处">
 <meta property="og:description" content="学习廖雪峰的SQL教程所做笔记。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-05-26T04:14:17.154Z">
+<meta property="og:updated_time" content="2020-05-26T14:25:38.127Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL学习笔记">
 <meta name="twitter:description" content="学习廖雪峰的SQL教程所做笔记。">
-  <link rel="canonical" href="http://yoursite.com/2020/05/10/SQL_notes/">
+  <link rel="canonical" href="http://yoursite.com/2020/05/26/SQL_notes/">
 
 
 <script id="page-configurations">
@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/10/SQL_notes/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/26/SQL_notes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongchenglong">
@@ -260,19 +260,11 @@
                 
               
 
-              <time title="创建时间：2020-05-10 09:17:40" itemprop="dateCreated datePublished" datetime="2020-05-10T09:17:40+08:00">2020-05-10</time>
+              <time title="创建时间：2020-05-26 22:23:36 / 修改时间：22:25:38" itemprop="dateCreated datePublished" datetime="2020-05-26T22:23:36+08:00">2020-05-26</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-26 12:14:17" itemprop="dateModified" datetime="2020-05-26T12:14:17+08:00">2020-05-26</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -303,6 +295,7 @@
         <p>学习<a href="https://www.liaoxuefeng.com/wiki/1177760294764384" target="_blank" rel="noopener">廖雪峰的SQL教程</a>所做笔记。</p>
 <a id="more"></a>
 
+
 <h2 id="关系数据库概述"><a href="#关系数据库概述" class="headerlink" title="关系数据库概述"></a>关系数据库概述</h2><h3 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h3><p>什么是SQL？SQL是<strong>结构化查询语言</strong>的缩写，用来访问和操作数据库系统。SQL语句既可以查询数据库中的数据，也可以添加、更新和删除数据库中的数据，还可以对数据库进行管理和维护操作。不同的数据库，都支持SQL，这样，我们通过学习SQL这一种语言，就可以操作各种不同的数据库。</p>
 <p>本教程约定：<strong>SQL关键字总是大写，以示突出，表名和列名均使用小写</strong>。</p>
 <h2 id="关系模型"><a href="#关系模型" class="headerlink" title="关系模型"></a>关系模型</h2><p>表的每一行称为记录（Record），记录是一个逻辑意义上的数据。<br>表的每一列称为字段（Column），同一个表的每一行记录都拥有相同的若干字段。</p>
@@ -332,7 +325,7 @@
 <p>SELECT语句可以对结果集的列进行重命名。</p>
 <h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><p>使用<code>ORDER BY</code>可以对结果集进行排序；</p>
 <p>可以对多列进行升序、倒序排序。</p>
-<h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><p>使用<code>LIMIT &lt;M&gt; OFFSET &lt;N&gt;</code>可以对结果集进行分页，每次查询返回结果集的一部分；</p>
+<h3 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h3><p>使用<code>LIMIT  OFFSET</code>可以对结果集进行分页，每次查询返回结果集的一部分；</p>
 <p>分页查询需要先确定每页的数量和当前页数，然后确定<code>LIMIT</code>和<code>OFFSET</code>的值。</p>
 <h3 id="聚合查询"><a href="#聚合查询" class="headerlink" title="聚合查询"></a>聚合查询</h3><p>使用SQL提供的聚合查询，我们可以方便地计算总数、合计值、平均值、最大值和最小值；</p>
 <p>聚合查询也可以添加WHERE条件。</p>
@@ -361,8 +354,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2020/04/24/internet_plus/" rel="next" title="互联网+资料收集">
-                  <i class="fa fa-chevron-left"></i> 互联网+资料收集
+                <a href="/2020/04/02/搭建网站时遇到的问题与解决方案/" rel="next" title="搭建网站时遇到的问题与解决方案">
+                  <i class="fa fa-chevron-left"></i> 搭建网站时遇到的问题与解决方案
                 </a>
               
             </div>
@@ -433,7 +426,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -489,11 +482,7 @@
         
           
         
-          
-        
-          
-        
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -508,11 +497,7 @@
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <a href="http://www.oeong.xyz" title="http://www.oeong.xyz" rel="noopener" target="_blank">oeong</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="https://www.cnblogs.com/oeong" title="https://www.cnblogs.com/oeong" rel="noopener" target="_blank">博客园</a>
+          <a href="https://www.cnblogs.com/oeong" title="https://www.cnblogs.com/oeong" rel="noopener" target="_blank">oeong</a>
         </li>
       
         <li class="links-of-blogroll-item">
