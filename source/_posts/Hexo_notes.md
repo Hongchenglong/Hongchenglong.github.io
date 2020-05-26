@@ -45,7 +45,7 @@ root: /
 
 我是引用cnblog的图片链接，刚刚上传那会还能显示图片，过几天就发现图片加载不出。
 解决方法：
-在文章头部加上``，解决防盗链问题。
+在文章头部加上`<meta name="referrer" content="no-referrer"/>`，解决防盗链问题。
 
 ```
 ---
@@ -80,5 +80,5 @@ https://www.jianshu.com/p/82c1d33420ba
 3. 如果修改过文件内容，需要通过如下命令清除已经生成的静态文件，重新生成！
    `hexo clean`
 4. 部署到Gitee上，每次修改都要去码云Pages手动**更新**服务
-5. 初始化一个Hexo，`hexo init `
+5. 初始化一个Hexo，`hexo init blog`
 6. 多标签，`tags: [标签1,标签2,标签3]`
