@@ -26,7 +26,7 @@ Git是目前世界上最先进的**分布式版本控制系统**。由Linus使�
 添加文件到Git仓库，分两步：
 
 1. 使用命令`git add `，注意，可反复多次使用，添加多个文件；
-2. 使用命令`git commit -m ""`，完成。(-m后面输入的是本次提交的说明)
+2. 使用命令`git commit -m "<message>"`，完成。(-m后面输入的是本次提交的说明)
 
 注意：
 
@@ -39,6 +39,7 @@ Git是目前世界上最先进的**分布式版本控制系统**。由Linus使�
 
 - 要随时掌握工作区的状态，使用`git status`命令。
 - 如果`git status`告诉你有文件被修改过，用`git diff`可以查看修改内容。
+- `git diff`查看文件在工作目录与暂存区的差别。
 
 ## 版本回退
 
@@ -55,8 +56,8 @@ Git是目前世界上最先进的**分布式版本控制系统**。由Linus使�
 ![img](https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200214213914797-1652178625.png)
 
 文件往Git版本库里添加的时候，是分两步执行的：
-第一步是用`git add`把文件添加进去，实际上就是把文件修改添加到暂存区；
-第二步是用`git commit`提交更改，实际上就是把暂存区的所有内容提交到当前分支。
+第一步是用`git add`把文件添加进去，实际上就是把文件修改添加到**暂存区**；
+第二步是用`git commit`提交更改，实际上就是把暂存区的所有内容提交到**当前分支**。
 **需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。**
 
 ## 管理修改
@@ -104,7 +105,7 @@ $ git push -u origin master
 
 ## 添加远程库
 
-- 要关联一个远程库，使用命令`git remote add origin git@github.com:/.git`；
+- 要关联一个远程库，使用命令`git remote add origin git@github.com:<server-name>/<repo-name>.git`；
 - 关联后，使用命令`git push -u origin master`第一次推送master分支的所有内容；
 - 此后，每次本地提交后，只要有必要，就可以使用命令`git push origin master`推送最新修改；(远程库的名字就是origin，这是Git默认的叫法)
 - 分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作。
@@ -178,14 +179,14 @@ Git分支十分强大，在团队开发中应该充分应用。
 
 当你的小伙伴从远程库clone时，默认情况下，你的小伙伴只能看到本地的`master`分支。可以用`git branch`命令看看：
 
-```
+```bash
 $ git branch
 * master
 ```
 
 现在，你的小伙伴要在`dev`分支上开发，就必须创建远程`origin`的`dev`分支到本地，于是他用这个命令创建本地`dev`分支：
 
-```
+```bash
 $ git checkout -b dev origin/dev
 ```
 
@@ -200,8 +201,9 @@ $ git checkout -b dev origin/dev
 
 这就是多人协作的工作模式，一旦熟悉了，就非常简单。
 
-#### 总结
+`git diff a b`，基于a来看b有什么变化。如`-hello`，表示基于a分支，b少了`hello`。
 
+#### 总结
 - 远程库信息，使用`git remote -v`；
 - 本地新建的分支如果不推送到远程，对其他人就是不可见的；
 - 从本地推送分支，使用`git push origin `，如果推送失败，先用`git pull`抓取远程的新提交；
@@ -230,7 +232,7 @@ tag是一个让人容易记住的有意义的名字，如v1.0，它跟某个comm
 - 命令`git push origin `可以推送一个本地标签；
 - 命令`git push origin --tags`可以推送全部未推送过的本地标签；
 - 命令`git tag -d `可以删除一个本地标签；
-- 命令`git push origin :refs/tags/`可以删除一个远程标签。
+- 命令`git push origin: refs/tags/`可以删除一个远程标签。
 
 # 使用GitHub
 
@@ -255,20 +257,20 @@ tag是一个让人容易记住的有意义的名字，如v1.0，它跟某个comm
 由于远程库不能同名，要先删除已有的GitHub远程库。`git remote rm origin`
 再分别关联GitHub和Gitee：
 
-```
+```bash
 $ git remote add github git@github.com:<server-name>/<repo-name>.git
 $ git remote add gitee git@gitee.com:<server-name>/<repo-name>.git
 ```
 
 或修改远程仓库名:
 
-```
+```bash
 $ git remote rename origin github
 ```
 
 之后推送，使用命令：
 
-```
+```bash
 $ git push github master
 $ git push gitee master
 ```
@@ -294,7 +296,7 @@ $ git push gitee master
 用st表示status：`$ git config --global alias.st status`
 很多人都用co表示checkout，ci表示commit，br表示branch：
 
-```
+```bash
 $ git config --global alias.co checkout
 $ git config --global alias.ci commit
 $ git config --global alias.br branch
@@ -317,3 +319,8 @@ $ git config --global alias.br branch
 [如何解决代码冲突](https://gitee.com/help/articles/4194)
 
 [实际项目中如何使用Git做分支管理](https://blog.csdn.net/ShuSheng0007/article/details/80791849)
+
+[git merge：删除我要保留的文件！]()
+切换到dev分支时，删除master分支想保留的文件，需注意，修改master分支中的文件，以便与dev主干中的删除发生合并冲突。
+
+[git diff 命令详解](https://www.jianshu.com/p/80542dc3164e)
