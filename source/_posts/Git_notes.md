@@ -323,4 +323,6 @@ $ git config --global alias.br branch
 [git merge：删除我要保留的文件！]()
 切换到dev分支时，删除master分支想保留的文件，需注意，修改master分支中的文件，以便与dev主干中的删除发生合并冲突。
 
+<span style='color:red'>删除时，需注意`.gitignore`里写的文件</span>。
+
 [git diff 命令详解](https://www.jianshu.com/p/80542dc3164e)

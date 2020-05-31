@@ -63,9 +63,12 @@ grep <查找内容> <文件名>  // 搜索文件内容
 find . | grep passwd
 ls | grep *.txt
 tail -n <file>	// 查看某一文件后n行
-
-ln -s  < source>  <target> // 创建软链接  
 ```
+
+创建软链接 
+`ln -s <source> <target>` 
+如`ln -s /root/htdocs/cqcq/application/index/controller/ ~/controller`
+注意，删除软链接用`rm -rf ~/controller`，而不是`rm -rf ~/controller/`
 
 ### 安装命令
 Ubuntu用`apt-get`，Centos用`yum`。
