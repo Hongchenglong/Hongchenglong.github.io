@@ -64,33 +64,31 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="Linux的crond定时任务是周期性执行任务的守护进程。">
-<meta name="keywords" content="Linux">
-<meta property="og:type" content="article">
-<meta property="og:title" content="crontab定时任务">
-<meta property="og:url" content="http://yoursite.com/2020/03/13/crontab定时任务/index.html">
+  <meta name="description" content="相信过程">
+<meta property="og:type" content="website">
+<meta property="og:title" content="匡山读书处">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="匡山读书处">
-<meta property="og:description" content="Linux的crond定时任务是周期性执行任务的守护进程。">
+<meta property="og:description" content="相信过程">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-05-26T14:02:32.426Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="crontab定时任务">
-<meta name="twitter:description" content="Linux的crond定时任务是周期性执行任务的守护进程。">
-  <link rel="canonical" href="http://yoursite.com/2020/03/13/crontab定时任务/">
+<meta name="twitter:title" content="匡山读书处">
+<meta name="twitter:description" content="相信过程">
+  <link rel="canonical" href="http://yoursite.com/page/2/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
-    isPost: true,
+    isHome: true,
+    isPost: false,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>crontab定时任务 | 匡山读书处</title>
+  <title>匡山读书处</title>
   
 
 
@@ -218,18 +216,17 @@
         <div class="content-wrap">
             
 
-          <div id="content" class="content page-post-detail">
+          <div id="content" class="content page-home">
             
-
-  <div id="posts" class="posts-expand">
-    
+  <section id="posts" class="posts-expand">
+      
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/13/crontab定时任务/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/1998/09/29/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hongchenglong">
@@ -243,8 +240,9 @@
       <header class="post-header">
 
         
-          <h1 class="post-title" itemprop="name headline">crontab定时任务
-
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/1998/09/29/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
             
           </h1>
         
@@ -260,7 +258,7 @@
                 
               
 
-              <time title="创建时间：2020-03-13 10:06:16" itemprop="dateCreated datePublished" datetime="2020-03-13T10:06:16+08:00">2020-03-13</time>
+              <time title="创建时间：1998-09-29 00:00:00" itemprop="dateCreated datePublished" datetime="1998-09-29T00:00:00+08:00">1998-09-29</time>
             </span>
           
             
@@ -275,19 +273,6 @@
               </span>
             
           
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
 
           
 
@@ -300,80 +285,44 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Linux的crond定时任务是周期性执行任务的守护进程。</p>
-<a id="more"></a>
-<ol>
-<li><p>安装<br> <code>yum -y install crontab</code></p>
-</li>
-<li><p>启动crond服务<br> <code>service crond start</code><br> 查看状态<code>service crond status</code></p>
-</li>
-<li><p>使用<code>crontab -e</code>进行定时任务的编辑<br> 格式: <code>分 时 日 月 周 [用户] command</code><br> 这里我写入<code>0 * * * * /root/anaconda3/bin/python3 /root/*.py</code>, 表示每天每小时0分时自动执行<code>python3 /root/*.py</code>命令。<br> 注意: 设置好运行命令的<strong>绝对路径</strong>和被执行文件的<strong>绝对路径</strong>，因为crontab本身不具备平时运行的环境变量。</p>
-</li>
-<li><p>使用<code>crontab -l</code>查看设置好的定时任务</p>
-</li>
-</ol>
-
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/1998/09/29/hello-world/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
     </div>
 
     
     
     
-        
-      
-
       <footer class="post-footer">
-          
-            
-          
-          <div class="post-tags">
-            
-              <a href="/tags/Linux/" rel="tag"># Linux</a>
-            
-          </div>
-        
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-              
-                <a href="/2020/02/26/Linux_notes/" rel="next" title="Linux学习笔记">
-                  <i class="fa fa-chevron-left"></i> Linux学习笔记
-                </a>
-              
-            </div>
-
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2020/03/15/PHP/PHP学习笔记/" rel="prev" title="PHP学习笔记">
-                  PHP学习笔记 <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
+          <div class="post-eof"></div>
         
       </footer>
-    
   </div>
   
   
   
   </article>
 
-  </div>
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 
           </div>
           
-    
-    
-  <div class="comments" id="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTk4Mi8yMjQ5Mw=="></div>
-  </div>
-  
-  
 
         </div>
           
@@ -580,24 +529,7 @@
 
 
   
-  <script src="/js/scrollspy.js?v=7.3.0"></script>
-<script src="/js/post-details.js?v=7.3.0"></script>
-
-
     
-<script>
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-</script>
 
 </body>
 </html>
