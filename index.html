@@ -376,7 +376,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-31 21:55:26" itemprop="dateModified" datetime="2020-05-31T21:55:26+08:00">2020-05-31</time>
+                <time title="修改时间：2021-01-23 12:56:38" itemprop="dateModified" datetime="2021-01-23T12:56:38+08:00">2021-01-23</time>
               </span>
             
           
@@ -672,11 +672,19 @@
                 
               
 
-              <time title="创建时间：2021-01-23 11:06:35 / 修改时间：12:55:06" itemprop="dateCreated datePublished" datetime="2021-01-23T11:06:35+08:00">2021-01-23</time>
+              <time title="创建时间：2021-01-23 11:06:35" itemprop="dateCreated datePublished" datetime="2021-01-23T11:06:35+08:00">2021-01-23</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-24 19:28:24" itemprop="dateModified" datetime="2021-01-24T19:28:24+08:00">2021-01-24</time>
+              </span>
             
           
 
@@ -820,6 +828,35 @@
 <h3 id="常用工具类"><a href="#常用工具类" class="headerlink" title="常用工具类"></a>常用工具类</h3><h4 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h4><p>数学计算</p>
 <h4 id="Random"><a href="#Random" class="headerlink" title="Random"></a>Random</h4><p>创建<code>Random</code>实例时，如果不给定种子，就使用系统当前时间戳作为种子，因此每次运行时，种子不同，得到的<strong>伪随机数</strong>序列就不同。</p>
 <h4 id="SecureRandom"><a href="#SecureRandom" class="headerlink" title="SecureRandom"></a>SecureRandom</h4><p>安全的随机数，真随机数。种子是通过CPU的热噪声、读写磁盘的字节、网络流量等各种随机事件产生的“熵”。</p>
+<h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><h2 id="Java的异常"><a href="#Java的异常" class="headerlink" title="Java的异常"></a>Java的异常</h2><p>Java使用异常来表示错误，并通过<code>try ... catch</code>捕获异常；</p>
+<p>Java的异常是<code>class</code>，并且从<code>Throwable</code>继承；</p>
+<p><code>Error</code>是无需捕获的严重错误，<code>Exception</code>是应该捕获的可处理的错误；</p>
+<p><code>RuntimeException</code>无需强制捕获，非<code>RuntimeException</code>（Checked Exception）需强制捕获，或者用<code>throws</code>声明；</p>
+<p>如果不想写任何<code>try</code>代码，可以直接把<code>main()</code>方法定义为<code>throws Exception</code>。也就声明了可能抛出所有的<code>Exception</code>，因此在内部就无需捕获了。代价就是一旦发生异常，程序会立刻退出。</p>
+<h2 id="捕获异常"><a href="#捕获异常" class="headerlink" title="捕获异常"></a>捕获异常</h2><p>使用<code>try ... catch ... finally</code>时：</p>
+<ul>
+<li>多个<code>catch</code>语句的匹配顺序非常重要，子类必须放在前面；</li>
+<li><code>finally</code>语句保证了有无异常都会执行，它是可选的；</li>
+<li>一个<code>catch</code>语句也可以匹配多个非继承关系的异常。</li>
+</ul>
+<h2 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h2><p>调用<code>printStackTrace()</code>可以打印异常的传播栈，对于调试非常有用；</p>
+<p>捕获异常并再次抛出新的异常时，应该持有原始异常信息；</p>
+<p>通常不要在<code>finally</code>中抛出异常。如果在<code>finally</code>中抛出异常，应该原始异常加入到原有异常中。调用方可通过<code>Throwable.getSuppressed()</code>获取所有添加的<code>Suppressed Exception</code>。</p>
+<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><p>抛出异常时，尽量复用JDK已定义的异常类型；</p>
+<p>自定义异常体系时，推荐从<code>RuntimeException</code>派生“根异常”，再派生出业务异常；</p>
+<p>自定义异常时，应该提供多种构造方法。</p>
+<h2 id="NullPointerException"><a href="#NullPointerException" class="headerlink" title="NullPointerException"></a>NullPointerException</h2><p>空指针异常</p>
+<p>编写业务逻辑时，用空字符串<code>&quot;&quot;</code>表示未填写比<code>null</code>安全得多。</p>
+<h2 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h2><p>断言（Assertion）是一种调试程序的方式。在Java中，使用<code>assert</code>关键字来实现断言。</p>
+<h2 id="JDK-Logging"><a href="#JDK-Logging" class="headerlink" title="JDK Logging"></a>JDK Logging</h2><p>日志是为了替代<code>System.out.println()</code>，可以定义格式，重定向到文件等；</p>
+<p>日志可以存档，便于追踪问题；</p>
+<p>日志记录可以按级别分类，便于打开或关闭某些级别；</p>
+<p>可以根据配置文件调整日志，无需修改代码；</p>
+<p>Java标准库提供了<code>java.util.logging</code>来实现日志功能。</p>
+<h2 id="Commons-Logging"><a href="#Commons-Logging" class="headerlink" title="Commons Logging"></a>Commons Logging</h2><p>和Java标准库提供的日志不同，Commons Logging是一个第三方日志库，它是由Apache创建的日志模块。</p>
+<p>Commons Logging是使用最广泛的日志模块；</p>
+<p>Commons Logging的API非常简单；</p>
+<p>Commons Logging可以自动检测并使用其他日志模块。</p>
 
           
         
