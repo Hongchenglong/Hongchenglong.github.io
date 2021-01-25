@@ -81,7 +81,7 @@ deploy:
   type: git
   repo: 
        gitee: git@gitee.com:hongchenglong/Hongchenglong.git
-       github: git@github.com:Hongchenglong/Hongchenglong.github.io.git
+       github: https://github.com/Hongchenglong/Hongchenglong.github.io.git
   branch: master
 
 # - type: git
