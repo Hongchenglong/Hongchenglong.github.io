@@ -80,6 +80,7 @@ https://www.jianshu.com/p/82c1d33420ba
    主目录下的配置文件`_config.yml`中修改language的值，改成`language: zh-CN`
 3. 如果修改过文件内容，需要通过如下命令清除已经生成的静态文件，重新生成！
    `hexo clean`
-4. 部署到Gitee上，每次修改都要去码云Pages手动**更新**服务
+4. 部署到Gitee上，每次修改都要去码云Pages手动**更新**master分支
 5. 初始化一个Hexo，`hexo init blog`
 6. 多标签，`tags: [标签1,标签2,标签3]`
+7. 写新博客前记得加上`<!-- more -->`

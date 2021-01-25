@@ -326,3 +326,9 @@ $ git config --global alias.br branch
 <span style='color:red'>删除时，需注意`.gitignore`里写的文件</span>。
 
 [git diff 命令详解](https://www.jianshu.com/p/80542dc3164e)
+
+github提交代码却没有显示绿格子
+```bash
+$ git config user.email
+$ git config --global user.email "oeong@foxmail.com"
+```

@@ -4,7 +4,7 @@
 
 # Site
 title: 匡山读书处
-subtitle: 我们都在阴沟里，但仍有人仰望星空。
+subtitle: 世即用我，而我奚以为用
 description: 相信过程
 keywords:
 author: Hongchenglong
@@ -80,8 +80,8 @@ theme: next
 deploy:
   type: git
   repo: 
-       github: git@github.com:Hongchenglong/Hongchenglong.github.io.git
        gitee: git@gitee.com:hongchenglong/Hongchenglong.git
+       github: git@github.com:Hongchenglong/Hongchenglong.github.io.git
   branch: master
 
 # - type: git
