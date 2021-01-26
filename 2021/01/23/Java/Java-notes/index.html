@@ -72,7 +72,7 @@
 <meta property="og:site_name" content="匡山读书处">
 <meta property="og:description" content="Java快速入门Java简介 JDK：Java Development Kit JRE：Java Runtime Environment  简单地说，JRE就是运行Java字节码的虚拟机。但是，如果只有Java源码，要编译成Java字节码，就需要JDK，因为JDK除了包含JRE，还提供了编译器、调试器等开发工具。   二者关系如下： 1234567891011 ┌─    ┌─────────">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-01-25T05:20:36.931Z">
+<meta property="og:updated_time" content="2021-01-26T06:30:53.945Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java_notes">
 <meta name="twitter:description" content="Java快速入门Java简介 JDK：Java Development Kit JRE：Java Runtime Environment  简单地说，JRE就是运行Java字节码的虚拟机。但是，如果只有Java源码，要编译成Java字节码，就需要JDK，因为JDK除了包含JRE，还提供了编译器、调试器等开发工具。   二者关系如下： 1234567891011 ┌─    ┌─────────">
@@ -271,7 +271,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-25 13:20:36" itemprop="dateModified" datetime="2021-01-25T13:20:36+08:00">2021-01-25</time>
+                <time title="修改时间：2021-01-26 14:30:53" itemprop="dateModified" datetime="2021-01-26T14:30:53+08:00">2021-01-26</time>
               </span>
             
           
@@ -298,6 +298,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> ┌─    ┌──────────────────────────────────┐</span><br><span class="line"> │     │     Compiler, debugger, etc.     │</span><br><span class="line"> │     └──────────────────────────────────┘</span><br><span class="line">JDK ┌─ ┌──────────────────────────────────┐</span><br><span class="line"> │  │  │                                  │</span><br><span class="line"> │ JRE │      JVM + Runtime Library       │</span><br><span class="line"> │  │  │                                  │</span><br><span class="line"> └─ └─ └──────────────────────────────────┘</span><br><span class="line">       ┌───────┐┌───────┐┌───────┐┌───────┐</span><br><span class="line">       │Windows││ Linux ││ macOS ││others │</span><br><span class="line">       └───────┘└───────┘└───────┘└───────┘</span><br></pre></td></tr></table></figure>
 
 <h2 id="Java程序基础"><a href="#Java程序基础" class="headerlink" title="Java程序基础"></a>Java程序基础</h2><p><code>int[] ns = new int[5];</code></p>
+<p>对象、数组都是引用数据类型。</p>
 <h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><h4 id="if判断"><a href="#if判断" class="headerlink" title="if判断"></a>if判断</h4><p><code>==</code>表示“引用的<strong>对象</strong>是否相等”，浮点数判断相等不能直接用</p>
 <p>使用<code>equals()</code>判断引用类型<strong>内容</strong>相等，注意避免<code>NullPointerException</code>。</p>
 <h4 id="for-each循环"><a href="#for-each循环" class="headerlink" title="for each循环"></a>for each循环</h4><p><code>for each</code>循环可以直接遍历数组的每个元素；</p>
@@ -444,6 +445,122 @@
 <p>Commons Logging是使用最广泛的日志模块；</p>
 <p>Commons Logging的API非常简单；</p>
 <p>Commons Logging可以自动检测并使用其他日志模块。</p>
+<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p>Java的集合类定义在<code>java.util</code>包中，支持泛型，主要提供了3种集合类，包括<code>List</code>，<code>Set</code>和<code>Map</code>。Java集合使用统一的<code>Iterator</code>遍历，尽量不要使用遗留接口。</p>
+<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p><code>List</code>的行为和数组几乎完全相同。 List是一个接口，而ArrayList是List接口的一个实现类。 </p>
+<p><code>List</code>是按索引顺序访问的长度可变的有序表，优先使用<code>ArrayList</code>而不是<code>LinkedList</code>；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">List&lt;String&gt; list = List.of(<span class="string">"apple"</span>, <span class="string">"pear"</span>, <span class="string">"banana"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>通过<code>Iterator</code>遍历<code>List</code>永远是最高效的方式。并且，由于<code>Iterator</code>遍历是如此常用，所以，Java的<code>for each</code>循环本身就可以帮我们使用<code>Iterator</code>遍历。</p>
+<p><code>List</code>可以和<code>Array</code>相互转换。</p>
+<p>List和Array的区别是什么？</p>
+<ol>
+<li>数组是定长，list是自动增长。</li>
+<li>数组效率高，list效率低。</li>
+</ol>
+<h2 id="编写equals方法"><a href="#编写equals方法" class="headerlink" title="编写equals方法"></a>编写equals方法</h2><p><code>List</code>还提供了<code>boolean contains(Object o)</code>方法来判断<code>List</code>是否包含某个指定元素。此外，<code>int indexOf(Object o)</code>方法可以返回某个元素的索引，如果元素不存在，就返回<code>-1</code>。</p>
+<p>对于引用字段比较，我们使用<code>equals()</code>，对于基本类型字段的比较，我们使用<code>==</code>。</p>
+<p>总结一下<code>equals()</code>方法的正确编写方法：</p>
+<ol>
+<li>先确定实例“相等”的逻辑，即哪些字段相等，就认为实例相等；</li>
+<li>用<code>instanceof</code>判断传入的待比较的<code>Object</code>是不是当前类型，如果是，继续比较，否则，返回<code>false</code>；</li>
+<li>对引用类型用<code>Objects.equals()</code>比较，对基本类型直接用<code>==</code>比较。</li>
+</ol>
+<p>如果不调用<code>List</code>的<code>contains()</code>、<code>indexOf()</code>这些方法，就不必覆写<code>equals()</code>方法。</p>
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p><code>Map</code>是一种映射表，可以通过<code>key</code>快速查找<code>value</code>。无序。</p>
+<p>可以通过<code>for each</code>遍历<code>keySet()</code>，也可以通过<code>for each</code>遍历<code>entrySet()</code>，直接获取<code>key-value</code>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (String key : map.keySet())</span><br><span class="line"><span class="keyword">for</span> (Map.Entry&lt;String, Integer&gt; entry : map.entrySet())</span><br></pre></td></tr></table></figure>
+
+<p>最常用的一种<code>Map</code>实现是<code>HashMap</code>。</p>
+<h2 id="编写equals和hashCode"><a href="#编写equals和hashCode" class="headerlink" title="编写equals和hashCode"></a>编写equals和hashCode</h2><p><code>HashMap</code>之所以能根据<code>key</code>直接拿到<code>value</code>，原因是它内部通过空间换时间的方法，用一个大数组存储所有<code>value</code>，并根据key直接计算出<code>value</code>应该存储在哪个索引</p>
+<p>要正确使用<code>HashMap</code>，作为<code>key</code>的类必须正确覆写<code>equals()</code>和<code>hashCode()</code>方法；</p>
+<p>一个类如果覆写了<code>equals()</code>，就必须覆写<code>hashCode()</code>，并且覆写规则是：</p>
+<ul>
+<li>如果<code>equals()</code>返回<code>true</code>，则<code>hashCode()</code>返回值必须相等；</li>
+<li>如果<code>equals()</code>返回<code>false</code>，则<code>hashCode()</code>返回值尽量不要相等。</li>
+</ul>
+<p>实现<code>hashCode()</code>方法可以通过<code>Objects.hashCode()</code>辅助方法实现。</p>
+<h2 id="EnumMap"><a href="#EnumMap" class="headerlink" title="EnumMap"></a>EnumMap</h2><p>如果<code>Map</code>的key是<code>enum</code>类型，推荐使用<code>EnumMap</code>，既保证速度，也不浪费空间。</p>
+<p>使用<code>EnumMap</code>的时候，根据面向抽象编程的原则，应持有<code>Map</code>接口。</p>
+<h2 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">       ┌───┐</span><br><span class="line">       │Map│</span><br><span class="line">       └───┘</span><br><span class="line">         ▲</span><br><span class="line">    ┌────┴─────┐</span><br><span class="line">    │          │</span><br><span class="line">┌───────┐ ┌─────────┐</span><br><span class="line">│HashMap│ │SortedMap│</span><br><span class="line">└───────┘ └─────────┘</span><br><span class="line">               ▲</span><br><span class="line">               │</span><br><span class="line">          ┌─────────┐</span><br><span class="line">          │ TreeMap │</span><br><span class="line">          └─────────┘</span><br></pre></td></tr></table></figure>
+
+<p><code>SortedMap</code>是接口，它的实现类是<code>TreeMap</code>。创建<code>TreeMap</code>时同时指定一个自定义排序算法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;Person, Integer&gt; map = <span class="keyword">new</span> TreeMap&lt;&gt;(<span class="keyword">new</span> Comparator&lt;Person&gt;() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Person p1, Person p2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> p1.name.compareTo(p2.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><code>SortedMap</code>在遍历时严格按照Key的<strong>顺序</strong>遍历，最常用的实现类是<code>TreeMap</code>；</p>
+<p>作为<code>SortedMap</code>的Key必须实现<code>Comparable</code>接口，或者传入<code>Comparator</code>；</p>
+<p>要严格按照<code>compare()</code>规范实现比较逻辑，否则，<code>TreeMap</code>将不能正常工作。</p>
+<h2 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h2><p>Java集合库提供的<code>Properties</code>用于读写配置文件<code>.properties</code>。<code>.properties</code>文件可以使用UTF-8编码。</p>
+<p>可以从文件系统、classpath或其他任何地方读取<code>.properties</code>文件。</p>
+<p>读写<code>Properties</code>时，注意仅使用<code>getProperty()</code>和<code>setProperty()</code>方法，不要调用继承而来的<code>get()</code>和<code>put()</code>等方法。</p>
+<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><p><code>Set</code>实际上相当于只存储key、不存储value的<code>Map</code>。</p>
+<p><code>Set</code>用于存储不重复的元素集合：</p>
+<ul>
+<li>放入<code>HashSet</code>的元素与作为<code>HashMap</code>的key要求相同；</li>
+<li>放入<code>TreeSet</code>的元素与作为<code>TreeMap</code>的Key要求相同；</li>
+</ul>
+<p>利用<code>Set</code>可以去除重复元素；</p>
+<p>遍历<code>SortedSet</code>按照元素的排序顺序遍历，也可以自定义排序算法。</p>
+<h2 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h2><p>队列<code>Queue</code>实现了一个先进先出（FIFO）的数据结构：</p>
+<ul>
+<li>通过<code>add()</code>/<code>offer()</code>方法将元素添加到队尾；</li>
+<li>通过<code>remove()</code>/<code>poll()</code>从队首获取元素并删除；</li>
+<li>通过<code>element()</code>/<code>peek()</code>从队首获取元素但不删除。</li>
+</ul>
+<p>要避免把<code>null</code>添加到队列，很难确定是取到了<code>null</code>元素还是队列为空。</p>
+<h2 id="PriorityQueue"><a href="#PriorityQueue" class="headerlink" title="PriorityQueue"></a>PriorityQueue</h2><p><code>PriorityQueue</code>实现了一个优先队列：从队首获取元素时，总是获取优先级最高的元素。</p>
+<p><code>PriorityQueue</code>默认按元素比较的顺序排序（必须实现<code>Comparable</code>接口），也可以通过<code>Comparator</code>自定义排序算法（元素就不必实现<code>Comparable</code>接口）。</p>
+<h2 id="Deque"><a href="#Deque" class="headerlink" title="Deque"></a>Deque</h2><p><code>Deque</code>实现了一个双端队列（Double Ended Queue），它可以：</p>
+<ul>
+<li>将元素添加到队尾或队首：<code>addLast()</code>/<code>offerLast()</code>/<code>addFirst()</code>/<code>offerFirst()</code>；</li>
+<li>从队首／队尾获取元素并删除：<code>removeFirst()</code>/<code>pollFirst()</code>/<code>removeLast()</code>/<code>pollLast()</code>；</li>
+<li>从队首／队尾获取元素但不删除：<code>getFirst()</code>/<code>peekFirst()</code>/<code>getLast()</code>/<code>peekLast()</code>；</li>
+<li>总是调用<code>xxxFirst()</code>/<code>xxxLast()</code>以便与<code>Queue</code>的方法区分开；</li>
+<li>避免把<code>null</code>添加到队列。</li>
+</ul>
+<p><code>Deque</code>是一个接口，它的实现类有<code>ArrayDeque</code>和<code>LinkedList</code>。</p>
+<h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><p>栈（Stack）是一种后进先出（LIFO）的数据结构，操作栈的元素的方法有：</p>
+<ul>
+<li>把元素压栈：<code>push(E)</code>；</li>
+<li>把栈顶的元素“弹出”：<code>pop(E)</code>；</li>
+<li>取栈顶元素但不弹出：<code>peek(E)</code>。</li>
+</ul>
+<p>在Java中，我们用<code>Deque</code>可以实现<code>Stack</code>的功能，注意只调用<code>push()</code>/<code>pop()</code>/<code>peek()</code>方法，避免调用<code>Deque</code>的其他方法。</p>
+<p>最后，不要使用遗留类<code>Stack</code>。</p>
+<h2 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h2><p>我们把这种通过<code>Iterator</code>对象遍历集合的模式称为迭代器。</p>
+<p>使用迭代器的好处在于，调用方总是以统一的方式遍历各种集合类型，而不必关系它们内部的存储结构。</p>
+<p><code>Iterator</code>是一种抽象的数据访问模型。使用<code>Iterator</code>模式进行迭代的好处有：</p>
+<ul>
+<li>对任何集合都采用<strong>同一种访问模型</strong>；</li>
+<li>调用者对集合<strong>内部结构</strong>一无所知；</li>
+<li>集合类返回的<code>Iterator</code>对象知道如何迭代。</li>
+</ul>
+<p>Java提供了标准的迭代器模型，即集合类实现<code>java.util.Iterable</code>接口，返回<code>java.util.Iterator</code>实例。</p>
+<h2 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h2><p><code>Collections</code>类提供了一组工具方法来方便使用集合类：</p>
+<ul>
+<li>创建空集合；</li>
+<li>创建单元素集合；</li>
+<li>创建不可变集合；</li>
+<li>排序／洗牌等操作。</li>
+</ul>
+<h1 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h1><p>IO是指Input/Output，即输入和输出。以<strong>内存</strong>为中心：</p>
+<ul>
+<li>Input指从外部读入数据到内存，例如，把文件从磁盘读取到内存，从网络读取数据到内存等等。</li>
+<li>Output指把数据从内存输出到外部，例如，把数据从内存写入到文件，把数据从内存输出到网络等等。</li>
+</ul>
+<p>IO流以<code>byte</code>（字节）为最小单位，因此也称为<em>字节流</em>。</p>
+<p>如果我们需要读写的是字符，并且字符不全是单字节表示的ASCII字符，那么，按照<code>char</code>来读写显然更方便，这种流称为<em>字符流</em>。</p>
+<h4 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h4><p>同步IO是指，读写IO时代码必须等待数据返回后才继续执行后续代码，它的优点是代码编写简单，缺点是CPU执行效率低。</p>
+<p>而异步IO是指，读写IO时仅发出请求，然后立刻执行后续代码，它的优点是CPU执行效率高，缺点是代码编写复杂。</p>
+<h4 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h4><p>IO流是一种流式的数据输入/输出模型：</p>
+<ul>
+<li>二进制数据以<code>byte</code>为最小单位在<code>InputStream</code>/<code>OutputStream</code>中单向流动；</li>
+<li>字符数据以<code>char</code>为最小单位在<code>Reader</code>/<code>Writer</code>中单向流动。</li>
+</ul>
+<p>Java标准库的<code>java.io</code>包提供了同步IO功能：</p>
+<ul>
+<li>字节流接口：<code>InputStream</code>/<code>OutputStream</code>；</li>
+<li>字符流接口：<code>Reader</code>/<code>Writer</code>。</li>
+</ul>
 
     </div>
 
@@ -469,7 +586,7 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2021/01/19/Apache配置https/" rel="next" title="Apache配置https">
+                <a href="/2021/01/19/服务器/Apache配置https/" rel="next" title="Apache配置https">
                   <i class="fa fa-chevron-left"></i> Apache配置https
                 </a>
               
@@ -642,7 +759,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java快速入门"><span class="nav-number">1.</span> <span class="nav-text">Java快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java简介"><span class="nav-number">1.1.</span> <span class="nav-text">Java简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java程序基础"><span class="nav-number">1.2.</span> <span class="nav-text">Java程序基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程控制"><span class="nav-number">1.3.</span> <span class="nav-text">流程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#if判断"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">if判断</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for-each循环"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">for each循环</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组操作"><span class="nav-number">1.4.</span> <span class="nav-text">数组操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历数组"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">遍历数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">排序</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象编程"><span class="nav-number">2.</span> <span class="nav-text">面向对象编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象基础"><span class="nav-number">2.1.</span> <span class="nav-text">面向对象基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">2.1.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法重载"><span class="nav-number">2.1.2.</span> <span class="nav-text">方法重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承"><span class="nav-number">2.1.3.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#区分继承和组合"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">区分继承和组合</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多态"><span class="nav-number">2.1.4.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象类"><span class="nav-number">2.1.5.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口"><span class="nav-number">2.1.6.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态字段和静态方法"><span class="nav-number">2.1.7.</span> <span class="nav-text">静态字段和静态方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包"><span class="nav-number">2.1.8.</span> <span class="nav-text">包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域"><span class="nav-number">2.1.9.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#classpath和jar"><span class="nav-number">2.1.10.</span> <span class="nav-text">classpath和jar</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#小结"><span class="nav-number">2.1.10.1.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java核心类"><span class="nav-number">2.2.</span> <span class="nav-text">Java核心类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串和编码"><span class="nav-number">2.2.1.</span> <span class="nav-text">字符串和编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#StringBuilder"><span class="nav-number">2.2.2.</span> <span class="nav-text">StringBuilder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#StringJoiner"><span class="nav-number">2.2.3.</span> <span class="nav-text">StringJoiner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包装类型"><span class="nav-number">2.2.4.</span> <span class="nav-text">包装类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaBean"><span class="nav-number">2.2.5.</span> <span class="nav-text">JavaBean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举类"><span class="nav-number">2.2.6.</span> <span class="nav-text">枚举类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#纪录类"><span class="nav-number">2.2.7.</span> <span class="nav-text">纪录类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BigInteger"><span class="nav-number">2.2.8.</span> <span class="nav-text">BigInteger</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BigDecimal"><span class="nav-number">2.2.9.</span> <span class="nav-text">BigDecimal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用工具类"><span class="nav-number">2.2.10.</span> <span class="nav-text">常用工具类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Math"><span class="nav-number">2.2.10.1.</span> <span class="nav-text">Math</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Random"><span class="nav-number">2.2.10.2.</span> <span class="nav-text">Random</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SecureRandom"><span class="nav-number">2.2.10.3.</span> <span class="nav-text">SecureRandom</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常处理"><span class="nav-number">3.</span> <span class="nav-text">异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java的异常"><span class="nav-number">3.1.</span> <span class="nav-text">Java的异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#捕获异常"><span class="nav-number">3.2.</span> <span class="nav-text">捕获异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抛出异常"><span class="nav-number">3.3.</span> <span class="nav-text">抛出异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义异常"><span class="nav-number">3.4.</span> <span class="nav-text">自定义异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NullPointerException"><span class="nav-number">3.5.</span> <span class="nav-text">NullPointerException</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#断言"><span class="nav-number">3.6.</span> <span class="nav-text">断言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDK-Logging"><span class="nav-number">3.7.</span> <span class="nav-text">JDK Logging</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Commons-Logging"><span class="nav-number">3.8.</span> <span class="nav-text">Commons Logging</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java快速入门"><span class="nav-number">1.</span> <span class="nav-text">Java快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java简介"><span class="nav-number">1.1.</span> <span class="nav-text">Java简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java程序基础"><span class="nav-number">1.2.</span> <span class="nav-text">Java程序基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程控制"><span class="nav-number">1.3.</span> <span class="nav-text">流程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#if判断"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">if判断</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for-each循环"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">for each循环</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组操作"><span class="nav-number">1.4.</span> <span class="nav-text">数组操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历数组"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">遍历数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">排序</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象编程"><span class="nav-number">2.</span> <span class="nav-text">面向对象编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象基础"><span class="nav-number">2.1.</span> <span class="nav-text">面向对象基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">2.1.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法重载"><span class="nav-number">2.1.2.</span> <span class="nav-text">方法重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承"><span class="nav-number">2.1.3.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#区分继承和组合"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">区分继承和组合</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多态"><span class="nav-number">2.1.4.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象类"><span class="nav-number">2.1.5.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口"><span class="nav-number">2.1.6.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态字段和静态方法"><span class="nav-number">2.1.7.</span> <span class="nav-text">静态字段和静态方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包"><span class="nav-number">2.1.8.</span> <span class="nav-text">包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域"><span class="nav-number">2.1.9.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#classpath和jar"><span class="nav-number">2.1.10.</span> <span class="nav-text">classpath和jar</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#小结"><span class="nav-number">2.1.10.1.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java核心类"><span class="nav-number">2.2.</span> <span class="nav-text">Java核心类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串和编码"><span class="nav-number">2.2.1.</span> <span class="nav-text">字符串和编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#StringBuilder"><span class="nav-number">2.2.2.</span> <span class="nav-text">StringBuilder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#StringJoiner"><span class="nav-number">2.2.3.</span> <span class="nav-text">StringJoiner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包装类型"><span class="nav-number">2.2.4.</span> <span class="nav-text">包装类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaBean"><span class="nav-number">2.2.5.</span> <span class="nav-text">JavaBean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举类"><span class="nav-number">2.2.6.</span> <span class="nav-text">枚举类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#纪录类"><span class="nav-number">2.2.7.</span> <span class="nav-text">纪录类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BigInteger"><span class="nav-number">2.2.8.</span> <span class="nav-text">BigInteger</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BigDecimal"><span class="nav-number">2.2.9.</span> <span class="nav-text">BigDecimal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用工具类"><span class="nav-number">2.2.10.</span> <span class="nav-text">常用工具类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Math"><span class="nav-number">2.2.10.1.</span> <span class="nav-text">Math</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Random"><span class="nav-number">2.2.10.2.</span> <span class="nav-text">Random</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SecureRandom"><span class="nav-number">2.2.10.3.</span> <span class="nav-text">SecureRandom</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常处理"><span class="nav-number">3.</span> <span class="nav-text">异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java的异常"><span class="nav-number">3.1.</span> <span class="nav-text">Java的异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#捕获异常"><span class="nav-number">3.2.</span> <span class="nav-text">捕获异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抛出异常"><span class="nav-number">3.3.</span> <span class="nav-text">抛出异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义异常"><span class="nav-number">3.4.</span> <span class="nav-text">自定义异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NullPointerException"><span class="nav-number">3.5.</span> <span class="nav-text">NullPointerException</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#断言"><span class="nav-number">3.6.</span> <span class="nav-text">断言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDK-Logging"><span class="nav-number">3.7.</span> <span class="nav-text">JDK Logging</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Commons-Logging"><span class="nav-number">3.8.</span> <span class="nav-text">Commons Logging</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合"><span class="nav-number">4.</span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#List"><span class="nav-number">4.1.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写equals方法"><span class="nav-number">4.2.</span> <span class="nav-text">编写equals方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map"><span class="nav-number">4.3.</span> <span class="nav-text">Map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写equals和hashCode"><span class="nav-number">4.4.</span> <span class="nav-text">编写equals和hashCode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EnumMap"><span class="nav-number">4.5.</span> <span class="nav-text">EnumMap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TreeMap"><span class="nav-number">4.6.</span> <span class="nav-text">TreeMap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Properties"><span class="nav-number">4.7.</span> <span class="nav-text">Properties</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set"><span class="nav-number">4.8.</span> <span class="nav-text">Set</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Queue"><span class="nav-number">4.9.</span> <span class="nav-text">Queue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PriorityQueue"><span class="nav-number">4.10.</span> <span class="nav-text">PriorityQueue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deque"><span class="nav-number">4.11.</span> <span class="nav-text">Deque</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack"><span class="nav-number">4.12.</span> <span class="nav-text">Stack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Iterator"><span class="nav-number">4.13.</span> <span class="nav-text">Iterator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collections"><span class="nav-number">4.14.</span> <span class="nav-text">Collections</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IO"><span class="nav-number">5.</span> <span class="nav-text">IO</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#同步和异步"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">同步和异步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小结-1"><span class="nav-number">5.0.0.2.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
