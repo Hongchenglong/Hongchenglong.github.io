@@ -691,7 +691,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-26 14:30:53" itemprop="dateModified" datetime="2021-01-26T14:30:53+08:00">2021-01-26</time>
+                <time title="修改时间：2021-01-27 11:09:46" itemprop="dateModified" datetime="2021-01-27T11:09:46+08:00">2021-01-27</time>
               </span>
             
           
@@ -968,6 +968,7 @@
 <li>Input指从外部读入数据到内存，例如，把文件从磁盘读取到内存，从网络读取数据到内存等等。</li>
 <li>Output指把数据从内存输出到外部，例如，把数据从内存写入到文件，把数据从内存输出到网络等等。</li>
 </ul>
+<p>IO流是一种顺序读写数据的模式，它的特点是单向流动。数据类似自来水一样在水管中流动，所以我们把它称为IO流。</p>
 <p>IO流以<code>byte</code>（字节）为最小单位，因此也称为<em>字节流</em>。</p>
 <p>如果我们需要读写的是字符，并且字符不全是单字节表示的ASCII字符，那么，按照<code>char</code>来读写显然更方便，这种流称为<em>字符流</em>。</p>
 <h4 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h4><p>同步IO是指，读写IO时代码必须等待数据返回后才继续执行后续代码，它的优点是代码编写简单，缺点是CPU执行效率低。</p>
@@ -982,6 +983,69 @@
 <li>字节流接口：<code>InputStream</code>/<code>OutputStream</code>；</li>
 <li>字符流接口：<code>Reader</code>/<code>Writer</code>。</li>
 </ul>
+<h2 id="File"><a href="#File" class="headerlink" title="File"></a>File</h2><p>传入相对路径时，相对路径前面加上当前目录就是绝对路径：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设当前目录是C:\Docs</span></span><br><span class="line">File f1 = <span class="keyword">new</span> File(<span class="string">"sub\\javac"</span>); <span class="comment">// 绝对路径是C:\Docs\sub\javac</span></span><br></pre></td></tr></table></figure>
+
+<p>Java标准库的<code>java.io.File</code>对象表示一个文件或者目录：</p>
+<ul>
+<li>创建<code>File</code>对象本身不涉及IO操作；</li>
+<li>可以获取路径／绝对路径／规范路径：<code>getPath()</code>/<code>getAbsolutePath()</code>/<code>getCanonicalPath()</code>；</li>
+<li>可以获取目录的文件和子目录：<code>list()</code>/<code>listFiles()</code>；</li>
+<li>可以创建或删除文件和目录。</li>
+</ul>
+<h2 id="InputStream"><a href="#InputStream" class="headerlink" title="InputStream"></a>InputStream</h2><p>Java标准库的<code>java.io.InputStream</code>定义了所有输入流的超类：</p>
+<ul>
+<li><code>FileInputStream</code>实现了文件流输入；</li>
+<li><code>ByteArrayInputStream</code>在内存中模拟一个字节流输入。</li>
+</ul>
+<p>总是使用<code>try(resource)</code>来保证<code>InputStream</code>正确关闭。</p>
+<h2 id="OutputStream"><a href="#OutputStream" class="headerlink" title="OutputStream"></a>OutputStream</h2><p>为什么要有<code>flush()</code>？因为向磁盘、网络写入数据的时候，出于效率的考虑，操作系统并不是输出一个字节就立刻写入到文件或者发送到网络，而是把输出的字节先放到内存的一个缓冲区里（本质上就是一个<code>byte[]</code>数组），<strong>等到缓冲区写满了，再一次性写入文件或者网络。</strong></p>
+<p>Java标准库的<code>java.io.OutputStream</code>定义了所有输出流的超类：</p>
+<ul>
+<li><code>FileOutputStream</code>实现了文件流输出；</li>
+<li><code>ByteArrayOutputStream</code>在内存中模拟一个字节流输出。</li>
+</ul>
+<p>某些情况下需要手动调用<code>OutputStream</code>的<code>flush()</code>方法来强制输出缓冲区。</p>
+<p>总是使用<code>try(resource)</code>来保证<code>OutputStream</code>正确关闭。</p>
+<h2 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h2><p>Java的IO标准库使用Filter模式为<code>InputStream</code>和<code>OutputStream</code>增加功能：</p>
+<ul>
+<li>可以把一个<code>InputStream</code>和任意个<code>FilterInputStream</code>组合；</li>
+<li>可以把一个<code>OutputStream</code>和任意个<code>FilterOutputStream</code>组合。</li>
+</ul>
+<p>Filter模式可以在运行期动态增加功能（又称Decorator模式）。</p>
+<h2 id="操作Zip"><a href="#操作Zip" class="headerlink" title="操作Zip"></a>操作Zip</h2><p><code>ZipInputStream</code>可以读取zip格式的流，<code>ZipOutputStream</code>可以把多份数据写入zip包；</p>
+<p>配合<code>FileInputStream</code>和<code>FileOutputStream</code>就可以读写zip文件。</p>
+<h2 id="读取classpath资源"><a href="#读取classpath资源" class="headerlink" title="读取classpath资源"></a>读取classpath资源</h2><p>把资源存储在classpath中可以避免文件路径依赖；</p>
+<p><code>Class</code>对象的<code>getResourceAsStream()</code>可以从classpath中读取指定资源；</p>
+<p>根据classpath读取资源时，需要检查返回的<code>InputStream</code>是否为<code>null</code>。</p>
+<h2 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h2><p>序列化是指把一个Java对象变成二进制内容，本质上就是一个<code>byte[]</code>数组。</p>
+<p>为什么要把Java对象序列化呢？因为序列化后可以把<code>byte[]</code>保存到文件中，或者把<code>byte[]</code>通过网络传输到远程，这样，就相当于把Java对象存储到文件或者通过网络传输出去了。</p>
+<p>可序列化的Java对象必须实现<code>java.io.Serializable</code>接口，类似<code>Serializable</code>这样的空接口被称为“标记接口”（Marker Interface）；</p>
+<p>反序列化时不调用构造方法，可设置<code>serialVersionUID</code>作为版本号（非必需）；</p>
+<p>Java的序列化机制仅适用于Java，如果需要与其它语言交换数据，必须使用通用的序列化方法，例如JSON。</p>
+<h2 id="Reader"><a href="#Reader" class="headerlink" title="Reader"></a>Reader</h2><p><code>Reader</code>是Java的IO库提供的另一个输入流接口。和<code>InputStream</code>的区别是，<code>InputStream</code>是一个字节流，即以<code>byte</code>为单位读取，而<code>Reader</code>是一个字符流，即以<code>char</code>为单位读取。</p>
+<p><code>Reader</code>定义了所有<strong>字符</strong>输入流的超类：</p>
+<ul>
+<li><code>FileReader</code>实现了文件字符流输入，使用时需要指定编码；</li>
+<li><code>CharArrayReader</code>和<code>StringReader</code>可以在内存中模拟一个字符流输入。</li>
+</ul>
+<p><code>Reader</code>是基于<code>InputStream</code>构造的：可以通过<code>InputStreamReader</code>在指定编码的同时将任何<code>InputStream</code>转换为<code>Reader</code>。</p>
+<p>总是使用<code>try (resource)</code>保证<code>Reader</code>正确关闭。</p>
+<h2 id="Writer"><a href="#Writer" class="headerlink" title="Writer"></a>Writer</h2><p><code>Writer</code>定义了所有字符输出流的超类：</p>
+<ul>
+<li><code>FileWriter</code>实现了文件字符流输出；</li>
+<li><code>CharArrayWriter</code>和<code>StringWriter</code>在内存中模拟一个字符流输出。</li>
+</ul>
+<p>使用<code>try (resource)</code>保证<code>Writer</code>正确关闭。</p>
+<p><code>Writer</code>是基于<code>OutputStream</code>构造的，可以通过<code>OutputStreamWriter</code>将<code>OutputStream</code>转换为<code>Writer</code>，转换时需要指定编码。</p>
+<h2 id="PrintStream和PrintWriter"><a href="#PrintStream和PrintWriter" class="headerlink" title="PrintStream和PrintWriter"></a>PrintStream和PrintWriter</h2><p><code>PrintStream</code>是一种<code>FilterOutputStream</code>，它在<code>OutputStream</code>的接口上，额外提供了一些写入各种数据类型的方法。</p>
+<p><code>PrintStream</code>是一种能接收各种数据类型的输出，打印数据时比较方便：</p>
+<ul>
+<li><code>System.out</code>是标准输出；</li>
+<li><code>System.err</code>是标准错误输出。</li>
+</ul>
+<p><code>PrintWriter</code>是基于<code>Writer</code>的输出。</p>
+<h2 id="使用Files"><a href="#使用Files" class="headerlink" title="使用Files"></a>使用Files</h2><p>对于简单的小文件读写操作，可以使用<code>Files</code>工具类简化代码。</p>
 
           
         
