@@ -80,7 +80,7 @@ theme: next
 deploy:
   type: git
   repo: 
-       gitee: git@gitee.com:hongchenglong/Hongchenglong.git
+       gitee: git@gitee.com:oeong/oeong.git
        github: https://github.com/Hongchenglong/Hongchenglong.github.io.git
   branch: master
 
@@ -88,13 +88,4 @@ deploy:
 #   repo: git@github.com:Hongchenglong/Hongchenglong.github.io.git
 #   branch: master
 
-
-
-#- type: git
-#  repo: git@47.103.137.84:/var/repo/blog.git
-  #repo: git@47.103.137.84:/home/git/hexo.git
-#  branch: master
-#- type: git
-#  repo: git@git.dev.tencent.com:oeong/oeong.git
-#  branch: master
 

@@ -72,6 +72,9 @@ title: Hexo学习笔记
 
 https://www.jianshu.com/p/82c1d33420ba
 
+## hexo在添加新文章的时候添加categories
+修改`/scaffolds/post.md`，这是文章模板
+
 ## NOTE
 
 1. 语句含义

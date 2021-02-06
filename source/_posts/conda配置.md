@@ -1,8 +1,9 @@
 ---
-title: {{ title }}
-date: {{ date }}
+title: conda配置
 tags:
-categories: 
+  - null
+date: 2021-02-05 00:00:44
+categories:
 ---
 
 <meta name="referrer" content="no-referrer"/>
