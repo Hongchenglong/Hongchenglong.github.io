@@ -1,306 +1,228 @@
+
+
 <!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
 
 
 
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
-<meta name="generator" content="Hexo 3.9.0">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=7.3.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="相信过程">
+  <meta name="author" content="Hongchenglong">
+  <meta name="keywords" content>
+  <title>ThinkPHP5.0 - 匡山读书处</title>
 
-<link rel="stylesheet" href="/css/main.css?v=7.3.0">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.3.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    save_scroll: false,
-    copycode: {"enable":false,"show_result":false,"style":null},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    }
-  };
-</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 
 
-  <script>
-  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
-  daovoice('init', {
-      app_id: "d7dbba2c"
-    });
-  daovoice('update');
-  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css">
+  <link rel="stylesheet" href="/lib/hint/hint.min.css">
 
-  <meta name="description" content="ThinkPHP5.0官方手册">
-<meta name="keywords" content="PHP,ThinkPHP">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ThinkPHP5.0">
-<meta property="og:url" content="http://yoursite.com/2020/04/02/PHP/ThinkPHP5-0/index.html">
-<meta property="og:site_name" content="匡山读书处">
-<meta property="og:description" content="ThinkPHP5.0官方手册">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-01-25T05:20:36.933Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ThinkPHP5.0">
-<meta name="twitter:description" content="ThinkPHP5.0官方手册">
-  <link rel="canonical" href="http://yoursite.com/2020/04/02/PHP/ThinkPHP5-0/">
+  
+    
+    
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css">
+    
+  
 
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
-  };
-</script>
-
-  <title>ThinkPHP5.0 | 匡山读书处</title>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   
 
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- 自定义样式保持在最底部 -->
 
 
-
-
-
-  <noscript>
-  <style>
-  .use-motion .motion-element,
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
-
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/color-schema.js"></script>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-  <div class="container sidebar-position-left">
-    <div class="headband"></div>
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">匡山读书处</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <p class="site-subtitle">世即用我，而我奚以为用</p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
     </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
   </div>
-</div>
-
-
-<nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
-        <li class="menu-item menu-item-home">
-      
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-archives">
-      
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-tags">
-      
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-categories">
-      
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-  </ul>
-
 </nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="ThinkPHP5.0">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-04-02 11:57" pubdate>
+        2020年4月2日 中午
+      </time>
+    </span>
+  
 </div>
-    </header>
 
+<div class="mt-1">
+  
     
-
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-            
-
-          <div id="content" class="content page-post-detail">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/02/PHP/ThinkPHP5-0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongchenglong">
-      <meta itemprop="description" content="相信过程">
-      <meta itemprop="image" content="https://images.cnblogs.com/cnblogs_com/oeong/1593757/o_191209052450kongaj.jpg">
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.6k 字
     </span>
+  
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="匡山读书处">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">ThinkPHP5.0
-
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-04-02 11:57:42" itemprop="dateCreated datePublished" datetime="2020-04-02T11:57:42+08:00">2020-04-02</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-25 13:20:36" itemprop="dateModified" datetime="2021-01-25T13:20:36+08:00">2021-01-25</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
+  
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
       
-        <p><a href="https://www.kancloud.cn/manual/thinkphp5/118003" target="_blank" rel="noopener">ThinkPHP5.0官方手册</a></p>
+      
+      19
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">ThinkPHP5.0</h1>
+            
+            <div class="markdown-body">
+              <p><a href="https://www.kancloud.cn/manual/thinkphp5/118003" target="_blank" rel="noopener">ThinkPHP5.0官方手册</a></p>
 <a id="more"></a>
 
 <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>ThinkPHP是一个免费开源的，快速、简单的面向对象的轻量级PHP开发框架，是为了敏捷WEB应用开发和简化企业应用开发而诞生的。</p>
@@ -326,374 +248,266 @@
 <h3 id="URL访问"><a href="#URL访问" class="headerlink" title="URL访问"></a>URL访问</h3><p>ThinkPHP5.0在没有启用路由的情况下典型的URL访问规则是：<br><code>http://serverName/index.php（或者其它应用入口文件）/模块/控制器/操作/[参数名/参数值...]</code></p>
 <h3 id="模块设计"><a href="#模块设计" class="headerlink" title="模块设计"></a>模块设计</h3><h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><p>路由的作用是简化URL访问地址，并根据定义的路由类型做出正确的解析。</p>
 <h3 id="域名路由"><a href="#域名路由" class="headerlink" title="域名路由"></a>域名路由</h3><p>ThinkPHP支持完整域名、子域名和IP部署的路由和绑定功能，同时还可以起到简化URL的作用。</p>
-<h2 id="控制器-1"><a href="#控制器-1" class="headerlink" title="控制器"></a>控制器</h2><h3 id="控制器定义"><a href="#控制器定义" class="headerlink" title="控制器定义"></a>控制器定义</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">index</span>\<span class="title">controller</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">index</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'index'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="控制器-1"><a href="#控制器-1" class="headerlink" title="控制器"></a>控制器</h2><h3 id="控制器定义"><a href="#控制器定义" class="headerlink" title="控制器定义"></a>控制器定义</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-keyword">namespace</span> <span class="hljs-title">app</span>\<span class="hljs-title">index</span>\<span class="hljs-title">controller</span>;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Index</span> <br></span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">index</span><span class="hljs-params">()</span><br>    </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">'index'</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>控制器类文件的实际位置是<code>application\index\controller\Index.php</code></p>
-<h3 id="控制器初始化"><a href="#控制器初始化" class="headerlink" title="控制器初始化"></a>控制器初始化</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">index</span>\<span class="title">controller</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Controller</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Index</span> <span class="keyword">extends</span> <span class="title">Controller</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">_initialize</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">'init&lt;br/&gt;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">hello</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'hello'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="控制器初始化"><a href="#控制器初始化" class="headerlink" title="控制器初始化"></a>控制器初始化</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-keyword">namespace</span> <span class="hljs-title">app</span>\<span class="hljs-title">index</span>\<span class="hljs-title">controller</span>;<br><br><span class="hljs-keyword">use</span> <span class="hljs-title">think</span>\<span class="hljs-title">Controller</span>;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Index</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Controller</span><br></span>&#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_initialize</span><span class="hljs-params">()</span><br>    </span>&#123;<br>        <span class="hljs-keyword">echo</span> <span class="hljs-string">'init&lt;br/&gt;'</span>;<br>    &#125;<br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span><span class="hljs-params">()</span><br>    </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">'hello'</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>如果访问<code>http://localhost/index.php/index/Index/hello</code><br>会输出</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">init</span><br><span class="line">hello</span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-attribute">init<br>hello</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="前置操作"><a href="#前置操作" class="headerlink" title="前置操作"></a>前置操作</h3><h3 id="跳转和重定向"><a href="#跳转和重定向" class="headerlink" title="跳转和重定向"></a>跳转和重定向</h3><blockquote>
 <p>重定向和跳转要继承Controller</p>
 </blockquote>
 <h4 id="页面跳转"><a href="#页面跳转" class="headerlink" title="页面跳转"></a>页面跳转</h4><p>系统的\think\Controller类内置了两个跳转方法<code>success</code>和<code>error</code>，用于页面跳转提示。</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ($result) &#123;</span><br><span class="line">    <span class="comment">//设置成功后跳转页面的地址，默认的返回页面是$_SERVER['HTTP_REFERER']</span></span><br><span class="line">    <span class="keyword">$this</span>-&gt;success(<span class="string">'新增成功'</span>, <span class="string">'User/list'</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">//错误页面的默认跳转页面是返回前一页，通常不需要设置</span></span><br><span class="line">    <span class="keyword">$this</span>-&gt;error(<span class="string">'新增失败'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-keyword">if</span> ($result) &#123;<br>    <span class="hljs-comment">//设置成功后跳转页面的地址，默认的返回页面是$_SERVER['HTTP_REFERER']</span><br>    <span class="hljs-keyword">$this</span>-&gt;success(<span class="hljs-string">'新增成功'</span>, <span class="hljs-string">'User/list'</span>);<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-comment">//错误页面的默认跳转页面是返回前一页，通常不需要设置</span><br>    <span class="hljs-keyword">$this</span>-&gt;error(<span class="hljs-string">'新增失败'</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h4 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h4><p>\think\Controller类的redirect方法可以实现页面的重定向功能。<br>$this-&gt;redirect(“<a href="http://localhost:8080/tp5/public/index.php&quot;" target="_blank" rel="noopener">http://localhost:8080/tp5/public/index.php&quot;</a>);</p>
 <h2 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h2><h3 id="请求信息"><a href="#请求信息" class="headerlink" title="请求信息"></a>请求信息</h3><p>如果要获取当前的请求信息，可以使用\think\Request类<br><code>$request = Request::instance();</code><br>或助手函数<code>$request = request();</code></p>
-<h3 id="输入变量"><a href="#输入变量" class="headerlink" title="输入变量"></a>输入变量</h3><h4 id="获取POST变量"><a href="#获取POST变量" class="headerlink" title="获取POST变量"></a>获取POST变量</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Request::instance()-&gt;post(<span class="string">'name'</span>); <span class="comment">// 获取某个post变量</span></span><br><span class="line">Request::instance()-&gt;post(); <span class="comment">// 获取经过过滤的全部post变量</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入变量"><a href="#输入变量" class="headerlink" title="输入变量"></a>输入变量</h3><h4 id="获取POST变量"><a href="#获取POST变量" class="headerlink" title="获取POST变量"></a>获取POST变量</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php">Request::instance()-&gt;post(<span class="hljs-string">'name'</span>); <span class="hljs-comment">// 获取某个post变量</span><br>Request::instance()-&gt;post(); <span class="hljs-comment">// 获取经过过滤的全部post变量</span><br></code></pre></td></tr></table></figure>
 
-<h4 id="获取SESSION变量"><a href="#获取SESSION变量" class="headerlink" title="获取SESSION变量"></a>获取SESSION变量</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Request::instance()-&gt;session(<span class="string">'user_id'</span>); <span class="comment">// 获取某个session变量</span></span><br><span class="line">Request::instance()-&gt;session(); <span class="comment">// 获取全部的session变量</span></span><br></pre></td></tr></table></figure>
+<h4 id="获取SESSION变量"><a href="#获取SESSION变量" class="headerlink" title="获取SESSION变量"></a>获取SESSION变量</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php">Request::instance()-&gt;session(<span class="hljs-string">'user_id'</span>); <span class="hljs-comment">// 获取某个session变量</span><br>Request::instance()-&gt;session(); <span class="hljs-comment">// 获取全部的session变量</span><br></code></pre></td></tr></table></figure>
 
-<h4 id="获取Cookie变量"><a href="#获取Cookie变量" class="headerlink" title="获取Cookie变量"></a>获取Cookie变量</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Request::instance()-&gt;cookie(<span class="string">'user_id'</span>); <span class="comment">// 获取某个cookie变量</span></span><br><span class="line">Request::instance()-&gt;cookie(); <span class="comment">// 获取全部的cookie变量</span></span><br></pre></td></tr></table></figure>
+<h4 id="获取Cookie变量"><a href="#获取Cookie变量" class="headerlink" title="获取Cookie变量"></a>获取Cookie变量</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php">Request::instance()-&gt;cookie(<span class="hljs-string">'user_id'</span>); <span class="hljs-comment">// 获取某个cookie变量</span><br>Request::instance()-&gt;cookie(); <span class="hljs-comment">// 获取全部的cookie变量</span><br></code></pre></td></tr></table></figure>
 
 <h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h3><h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><p>支持query（查询操作）和execute（写入操作）方法</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Db::query(<span class="string">'select * from think_user where id=?'</span>,[<span class="number">8</span>]);</span><br><span class="line">Db::execute(<span class="string">'insert into think_user (id, name) values (?, ?)'</span>,[<span class="number">8</span>,<span class="string">'thinkphp'</span>]);</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php">Db::query(<span class="hljs-string">'select * from think_user where id=?'</span>,[<span class="hljs-number">8</span>]);<br>Db::execute(<span class="hljs-string">'insert into think_user (id, name) values (?, ?)'</span>,[<span class="hljs-number">8</span>,<span class="hljs-string">'thinkphp'</span>]);<br></code></pre></td></tr></table></figure>
 
 <h3 id="查询构造器"><a href="#查询构造器" class="headerlink" title="查询构造器"></a>查询构造器</h3><h4 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h4><p>查询一个数据使用：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// table方法必须指定完整的数据表名</span></span><br><span class="line">Db::table(<span class="string">'think_user'</span>)-&gt;where(<span class="string">'id'</span>,<span class="number">1</span>)-&gt;find();</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">// table方法必须指定完整的数据表名</span><br>Db::table(<span class="hljs-string">'think_user'</span>)-&gt;where(<span class="hljs-string">'id'</span>,<span class="hljs-number">1</span>)-&gt;find();<br></code></pre></td></tr></table></figure>
 
 <p>查询数据集使用：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Db::table(<span class="string">'think_user'</span>)-&gt;where(<span class="string">'status'</span>,<span class="number">1</span>)-&gt;select();</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">Db::table(<span class="hljs-string">'think_user'</span>)-&gt;where(<span class="hljs-string">'status'</span>,<span class="hljs-number">1</span>)-&gt;select();<br></code></pre></td></tr></table></figure>
 
 <h4 id="添加数据"><a href="#添加数据" class="headerlink" title="添加数据"></a>添加数据</h4><p>添加一条数据</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$data = [<span class="string">'foo'</span> =&gt; <span class="string">'bar'</span>, <span class="string">'bar'</span> =&gt; <span class="string">'foo'</span>];</span><br><span class="line">Db::table(<span class="string">'think_user'</span>)-&gt;insert($data);</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php">$data = [<span class="hljs-string">'foo'</span> =&gt; <span class="hljs-string">'bar'</span>, <span class="hljs-string">'bar'</span> =&gt; <span class="hljs-string">'foo'</span>];<br>Db::table(<span class="hljs-string">'think_user'</span>)-&gt;insert($data);<br></code></pre></td></tr></table></figure>
 
 <p>添加多条数据</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$data = [</span><br><span class="line">    [<span class="string">'foo'</span> =&gt; <span class="string">'bar'</span>, <span class="string">'bar'</span> =&gt; <span class="string">'foo'</span>],</span><br><span class="line">    [<span class="string">'foo'</span> =&gt; <span class="string">'bar1'</span>, <span class="string">'bar'</span> =&gt; <span class="string">'foo1'</span>],</span><br><span class="line">    [<span class="string">'foo'</span> =&gt; <span class="string">'bar2'</span>, <span class="string">'bar'</span> =&gt; <span class="string">'foo2'</span>]</span><br><span class="line">];</span><br><span class="line">Db::name(<span class="string">'user'</span>)-&gt;insertAll($data);</span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs php">$data = [<br>    [<span class="hljs-string">'foo'</span> =&gt; <span class="hljs-string">'bar'</span>, <span class="hljs-string">'bar'</span> =&gt; <span class="hljs-string">'foo'</span>],<br>    [<span class="hljs-string">'foo'</span> =&gt; <span class="hljs-string">'bar1'</span>, <span class="hljs-string">'bar'</span> =&gt; <span class="hljs-string">'foo1'</span>],<br>    [<span class="hljs-string">'foo'</span> =&gt; <span class="hljs-string">'bar2'</span>, <span class="hljs-string">'bar'</span> =&gt; <span class="hljs-string">'foo2'</span>]<br>];<br>Db::name(<span class="hljs-string">'user'</span>)-&gt;insertAll($data);<br></code></pre></td></tr></table></figure>
 
 <h4 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a>更新数据</h4><p><code>Db::table(&#39;think_user&#39;)-&gt;where(&#39;id&#39;, 1)-&gt;update([&#39;name&#39; =&gt; &#39;thinkphp&#39;]);</code></p>
-<h4 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据主键删除</span></span><br><span class="line">Db::table(<span class="string">'think_user'</span>)-&gt;delete(<span class="number">1</span>);</span><br><span class="line">Db::table(<span class="string">'think_user'</span>)-&gt;delete([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 条件删除    </span></span><br><span class="line">Db::table(<span class="string">'think_user'</span>)-&gt;where(<span class="string">'id'</span>,<span class="number">1</span>)-&gt;delete();</span><br><span class="line">Db::table(<span class="string">'think_user'</span>)-&gt;where(<span class="string">'id'</span>,<span class="string">'&lt;'</span>,<span class="number">10</span>)-&gt;delete();</span><br></pre></td></tr></table></figure>
+<h4 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">// 根据主键删除</span><br>Db::table(<span class="hljs-string">'think_user'</span>)-&gt;delete(<span class="hljs-number">1</span>);<br>Db::table(<span class="hljs-string">'think_user'</span>)-&gt;delete([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]);<br><br><span class="hljs-comment">// 条件删除    </span><br>Db::table(<span class="hljs-string">'think_user'</span>)-&gt;where(<span class="hljs-string">'id'</span>,<span class="hljs-number">1</span>)-&gt;delete();<br>Db::table(<span class="hljs-string">'think_user'</span>)-&gt;where(<span class="hljs-string">'id'</span>,<span class="hljs-string">'&lt;'</span>,<span class="hljs-number">10</span>)-&gt;delete();<br></code></pre></td></tr></table></figure>
 
 <h2 id="视图-1"><a href="#视图-1" class="headerlink" title="视图"></a>视图</h2><p>继承\think\Controller类</p>
-<h3 id="模板渲染"><a href="#模板渲染" class="headerlink" title="模板渲染"></a>模板渲染</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不带任何参数 自动定位当前操作的模板文件</span></span><br><span class="line"><span class="keyword">return</span> <span class="keyword">$this</span>-&gt;fetch();</span><br></pre></td></tr></table></figure>
+<h3 id="模板渲染"><a href="#模板渲染" class="headerlink" title="模板渲染"></a>模板渲染</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">// 不带任何参数 自动定位当前操作的模板文件</span><br><span class="hljs-keyword">return</span> <span class="hljs-keyword">$this</span>-&gt;fetch();<br></code></pre></td></tr></table></figure>
 
 <h2 id="模板"><a href="#模板" class="headerlink" title="模板"></a>模板</h2><h3 id="包含文件"><a href="#包含文件" class="headerlink" title="包含文件"></a>包含文件</h3><p>{include file=’模版文件1,模版文件2,…’ /}</p>
 <h3 id="内置标签"><a href="#内置标签" class="headerlink" title="内置标签"></a>内置标签</h3><p>volist标签通常用于查询数据集（select方法）的结果输出，通常模型的select方法返回的结果是一个二维数组，可以直接使用volist标签进行输出。</p>
 <h3 id="资源文件加载"><a href="#资源文件加载" class="headerlink" title="资源文件加载"></a>资源文件加载</h3><p>传统方式的导入外部JS和CSS文件的方法是直接在模板文件使用：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">'text/javascript'</span> src=<span class="string">'/static/js/common.js'</span>&gt;</span><br><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> type=<span class="string">"text/css"</span> href=<span class="string">"/static/css/style.css"</span> /&gt;</span><br></pre></td></tr></table></figure>
-    </div>
-
-    
-    
-    
-        
-      
-
-      <footer class="post-footer">
-          
-            
-          
-          <div class="post-tags">
-            
-              <a href="/tags/PHP/" rel="tag"># PHP</a>
-            
-              <a href="/tags/ThinkPHP/" rel="tag"># ThinkPHP</a>
-            
-          </div>
-        
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php">&lt;script type=<span class="hljs-string">'text/javascript'</span> src=<span class="hljs-string">'/static/js/common.js'</span>&gt;<br>&lt;link rel=<span class="hljs-string">"stylesheet"</span> type=<span class="hljs-string">"text/css"</span> href=<span class="hljs-string">"/static/css/style.css"</span> /&gt;<br></code></pre></td></tr></table></figure>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/PHP/">PHP</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/PHP/">PHP</a>
+                    
+                      <a class="hover-with-bg" href="/tags/ThinkPHP/">ThinkPHP</a>
+                    
+                  </div>
+                
+              </div>
               
-                <a href="/2020/03/15/PHP/PHP学习笔记/" rel="next" title="PHP学习笔记">
-                  <i class="fa fa-chevron-left"></i> PHP学习笔记
-                </a>
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/04/02/服务端/搭建网站时遇到的问题与解决方案/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">搭建网站时遇到的问题与解决方案</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/03/15/PHP/PHP学习笔记/">
+                        <span class="hidden-mobile">PHP学习笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2020/04/02/服务端/搭建网站时遇到的问题与解决方案/" rel="prev" title="搭建网站时遇到的问题与解决方案">
-                  搭建网站时遇到的问题与解决方案 <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
-        
-      </footer>
-    
-  </div>
-  
-  
-  
-  </article>
-
-  </div>
-
-
-          </div>
-          
-    
-    
-  <div class="comments" id="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTk4Mi8yMjQ5Mw=="></div>
-  </div>
-  
-  
-
-        </div>
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image"
-      src="https://images.cnblogs.com/cnblogs_com/oeong/1593757/o_191209052450kongaj.jpg"
-      alt="Hongchenglong">
-  <p class="site-author-name" itemprop="name">Hongchenglong</p>
-  <div class="site-description motion-element" itemprop="description">相信过程</div>
-</div>
-  <nav class="site-state motion-element">
-      <div class="site-state-item site-state-posts">
-        
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">16</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-categories">
-        
-          
-            <a href="/categories/">
-          
-        
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">分类</span>
-        </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-tags">
-        
-          
-            <a href="/tags/">
-          
-        
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
-      </div>
-    
-  </nav>
-
-
-  <div class="links-of-blogroll motion-element links-of-blogroll-block">
-    <div class="links-of-blogroll-title">
-      <i class="fa  fa-fw fa-link"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://www.cnblogs.com/oeong" title="https://www.cnblogs.com/oeong" rel="noopener" target="_blank">oeong</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="http://www.zhoushouhao.com/" title="http://www.zhoushouhao.com/" rel="noopener" target="_blank">Shouhao's Notes</a>
-        </li>
-      
-    </ul>
-  </div>
-
+            
+          </article>
         </div>
       </div>
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#序言"><span class="nav-number">1.</span> <span class="nav-text">序言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-number">2.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开发规范"><span class="nav-number">2.1.</span> <span class="nav-text">开发规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构"><span class="nav-number">2.2.</span> <span class="nav-text">目录结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#架构"><span class="nav-number">3.</span> <span class="nav-text">架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#架构总览"><span class="nav-number">3.1.</span> <span class="nav-text">架构总览</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#入口文件"><span class="nav-number">3.1.1.</span> <span class="nav-text">入口文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用"><span class="nav-number">3.1.2.</span> <span class="nav-text">应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块"><span class="nav-number">3.1.3.</span> <span class="nav-text">模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#控制器"><span class="nav-number">3.1.4.</span> <span class="nav-text">控制器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模型"><span class="nav-number">3.1.5.</span> <span class="nav-text">模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#视图"><span class="nav-number">3.1.6.</span> <span class="nav-text">视图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生命周期"><span class="nav-number">3.2.</span> <span class="nav-text">生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#入口文件-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">入口文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引导文件"><span class="nav-number">3.2.2.</span> <span class="nav-text">引导文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URL访问检测"><span class="nav-number">3.2.3.</span> <span class="nav-text">URL访问检测</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#入口文件-2"><span class="nav-number">3.3.</span> <span class="nav-text">入口文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#URL访问"><span class="nav-number">3.4.</span> <span class="nav-text">URL访问</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块设计"><span class="nav-number">3.5.</span> <span class="nav-text">模块设计</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路由"><span class="nav-number">4.</span> <span class="nav-text">路由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#域名路由"><span class="nav-number">4.1.</span> <span class="nav-text">域名路由</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制器-1"><span class="nav-number">5.</span> <span class="nav-text">控制器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#控制器定义"><span class="nav-number">5.1.</span> <span class="nav-text">控制器定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制器初始化"><span class="nav-number">5.2.</span> <span class="nav-text">控制器初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前置操作"><span class="nav-number">5.3.</span> <span class="nav-text">前置操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跳转和重定向"><span class="nav-number">5.4.</span> <span class="nav-text">跳转和重定向</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#页面跳转"><span class="nav-number">5.4.1.</span> <span class="nav-text">页面跳转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重定向"><span class="nav-number">5.4.2.</span> <span class="nav-text">重定向</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请求"><span class="nav-number">6.</span> <span class="nav-text">请求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#请求信息"><span class="nav-number">6.1.</span> <span class="nav-text">请求信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入变量"><span class="nav-number">6.2.</span> <span class="nav-text">输入变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取POST变量"><span class="nav-number">6.2.1.</span> <span class="nav-text">获取POST变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取SESSION变量"><span class="nav-number">6.2.2.</span> <span class="nav-text">获取SESSION变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取Cookie变量"><span class="nav-number">6.2.3.</span> <span class="nav-text">获取Cookie变量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库"><span class="nav-number">7.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#连接数据库"><span class="nav-number">7.1.</span> <span class="nav-text">连接数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本使用"><span class="nav-number">7.2.</span> <span class="nav-text">基本使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询构造器"><span class="nav-number">7.3.</span> <span class="nav-text">查询构造器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查询数据"><span class="nav-number">7.3.1.</span> <span class="nav-text">查询数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加数据"><span class="nav-number">7.3.2.</span> <span class="nav-text">添加数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新数据"><span class="nav-number">7.3.3.</span> <span class="nav-text">更新数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除数据"><span class="nav-number">7.3.4.</span> <span class="nav-text">删除数据</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视图-1"><span class="nav-number">8.</span> <span class="nav-text">视图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模板渲染"><span class="nav-number">8.1.</span> <span class="nav-text">模板渲染</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板"><span class="nav-number">9.</span> <span class="nav-text">模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#包含文件"><span class="nav-number">9.1.</span> <span class="nav-text">包含文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内置标签"><span class="nav-number">9.2.</span> <span class="nav-text">内置标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#资源文件加载"><span class="nav-number">9.3.</span> <span class="nav-text">资源文件加载</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2021</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Hongchenglong</span>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
 </div>
 
-        
-
-
-
-
-
-
-
-
-        
       </div>
-    </footer>
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-      </div>
-
     
-
   </div>
+</div>
 
-  
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-<script src="/js/utils.js?v=7.3.0"></script>
-  <script src="/js/motion.js?v=7.3.0"></script>
-
-
-  <script src="/js/affix.js?v=7.3.0"></script>
-  <script src="/js/schemes/pisces.js?v=7.3.0"></script>
-
-
-<script src="/js/next-boot.js?v=7.3.0"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-
-  
-  <script src="/js/scrollspy.js?v=7.3.0"></script>
-<script src="/js/post-details.js?v=7.3.0"></script>
+<!-- Custom -->
 
 
     
-<script>
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-</script>
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
 
 </body>
 </html>

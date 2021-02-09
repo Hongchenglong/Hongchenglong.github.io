@@ -1,303 +1,228 @@
+
+
 <!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
 
 
 
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
-<meta name="generator" content="Hexo 3.9.0">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=7.3.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="相信过程">
+  <meta name="author" content="Hongchenglong">
+  <meta name="keywords" content>
+  <title>Java_notes - 匡山读书处</title>
 
-<link rel="stylesheet" href="/css/main.css?v=7.3.0">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.3.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    save_scroll: false,
-    copycode: {"enable":false,"show_result":false,"style":null},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    }
-  };
-</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 
 
-  <script>
-  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
-  daovoice('init', {
-      app_id: "d7dbba2c"
-    });
-  daovoice('update');
-  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css">
+  <link rel="stylesheet" href="/lib/hint/hint.min.css">
 
-  <meta name="keywords" content="Java">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Java_notes">
-<meta property="og:url" content="http://yoursite.com/2021/01/23/Java/Java-notes/index.html">
-<meta property="og:site_name" content="匡山读书处">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-02-09T12:49:10.992Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java_notes">
-  <link rel="canonical" href="http://yoursite.com/2021/01/23/Java/Java-notes/">
+  
+    
+    
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css">
+    
+  
 
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
-  };
-</script>
-
-  <title>Java_notes | 匡山读书处</title>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   
 
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- 自定义样式保持在最底部 -->
 
 
-
-
-
-  <noscript>
-  <style>
-  .use-motion .motion-element,
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
-
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/color-schema.js"></script>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-  <div class="container sidebar-position-left">
-    <div class="headband"></div>
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">匡山读书处</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <p class="site-subtitle">世即用我，而我奚以为用</p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
     </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
   </div>
-</div>
-
-
-<nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
-        <li class="menu-item menu-item-home">
-      
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-archives">
-      
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-tags">
-      
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-categories">
-      
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-  </ul>
-
 </nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Java_notes">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-01-23 11:06" pubdate>
+        2021年1月23日 上午
+      </time>
+    </span>
+  
 </div>
-    </header>
 
+<div class="mt-1">
+  
     
-
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-            
-
-          <div id="content" class="content page-post-detail">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/01/23/Java/Java-notes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongchenglong">
-      <meta itemprop="description" content="相信过程">
-      <meta itemprop="image" content="https://images.cnblogs.com/cnblogs_com/oeong/1593757/o_191209052450kongaj.jpg">
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      11.4k 字
     </span>
+  
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="匡山读书处">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">Java_notes
-
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2021-01-23 11:06:35" itemprop="dateCreated datePublished" datetime="2021-01-23T11:06:35+08:00">2021-01-23</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-09 20:49:10" itemprop="dateModified" datetime="2021-02-09T20:49:10+08:00">2021-02-09</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
+  
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
       
-        <meta name="referrer" content="no-referrer">
+      
+      124
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Java_notes</h1>
+            
+            <div class="markdown-body">
+              <meta name="referrer" content="no-referrer">
 <a id="more"></a>
 
 
@@ -308,22 +233,22 @@
 </ul>
 <p>简单地说，JRE就是运行Java字节码的<strong>虚拟机</strong>。但是，如果只有Java源码，要编译成Java字节码，就需要JDK，因为JDK除了<strong>包含</strong>JRE，还提供了编译器、调试器等开发工具。</p>
 <p>  二者关系如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"> ┌─    ┌──────────────────────────────────┐</span><br><span class="line"> │     │     Compiler, debugger, etc.     │</span><br><span class="line"> │     └──────────────────────────────────┘</span><br><span class="line">JDK ┌─ ┌──────────────────────────────────┐</span><br><span class="line"> │  │  │                                  │</span><br><span class="line"> │ JRE │      JVM + Runtime Library       │</span><br><span class="line"> │  │  │                                  │</span><br><span class="line"> └─ └─ └──────────────────────────────────┘</span><br><span class="line">       ┌───────┐┌───────┐┌───────┐┌───────┐</span><br><span class="line">       │Windows││ Linux ││ macOS ││others │</span><br><span class="line">       └───────┘└───────┘└───────┘└───────┘</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs ascii"> ┌─    ┌──────────────────────────────────┐<br> │     │     Compiler, debugger, etc.     │<br> │     └──────────────────────────────────┘<br>JDK ┌─ ┌──────────────────────────────────┐<br> │  │  │                                  │<br> │ JRE │      JVM + Runtime Library       │<br> │  │  │                                  │<br> └─ └─ └──────────────────────────────────┘<br>       ┌───────┐┌───────┐┌───────┐┌───────┐<br>       │Windows││ Linux ││ macOS ││others │<br>       └───────┘└───────┘└───────┘└───────┘<br></code></pre></td></tr></table></figure>
 
 <h2 id="Java程序基础"><a href="#Java程序基础" class="headerlink" title="Java程序基础"></a>Java程序基础</h2><p><code>int[] ns = new int[5];</code></p>
 <p>对象、数组都是引用数据类型。</p>
 <h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><h4 id="if判断"><a href="#if判断" class="headerlink" title="if判断"></a>if判断</h4><p><code>==</code>表示“引用的<strong>对象</strong>是否相等”，浮点数判断相等不能直接用</p>
 <p>使用<code>equals()</code>判断引用类型<strong>内容</strong>相等，注意避免<code>NullPointerException</code>。</p>
 <h4 id="for-each循环"><a href="#for-each循环" class="headerlink" title="for each循环"></a>for each循环</h4><p><code>for each</code>循环可以直接遍历数组的每个元素；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int[] ns = &#123; 1, 4, 9, 16, 25 &#125;;</span><br><span class="line">for (int n : ns) &#123;</span><br><span class="line">	System.out.println(n);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-keyword">int</span>[] ns = &#123; <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span> &#125;;<br><span class="hljs-built_in">for</span> (<span class="hljs-keyword">int</span> n : ns) &#123;<br>	System.out.<span class="hljs-built_in">println</span>(n);<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h2 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h2><h4 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h4><p>遍历数组可以使用<code>for</code>循环，<code>for</code>循环可以访问数组索引，<code>for each</code>循环直接迭代每个数组元素，但无法获取索引；</p>
 <p>使用<code>Arrays.toString()</code>可以快速获取数组内容。</p>
 <h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><p>排序前</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">                   ┌──────────────────────────────────┐</span><br><span class="line">               ┌───┼──────────────────────┐           │</span><br><span class="line">               │   │                      ▼           ▼</span><br><span class="line">         ┌───┬─┴─┬─┴─┬───┬────────┬───┬───────┬───┬──────┬───┐</span><br><span class="line">ns ─────&gt;│░░░│░░░│░░░│   │&quot;banana&quot;│   │&quot;apple&quot;│   │&quot;pear&quot;│   │</span><br><span class="line">         └─┬─┴───┴───┴───┴────────┴───┴───────┴───┴──────┴───┘</span><br><span class="line">           │                 ▲</span><br><span class="line">           └─────────────────┘</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs ascii">                   ┌──────────────────────────────────┐<br>               ┌───┼──────────────────────┐           │<br>               │   │                      ▼           ▼<br>         ┌───┬─┴─┬─┴─┬───┬────────┬───┬───────┬───┬──────┬───┐<br>ns ─────&gt;│░░░│░░░│░░░│   │&quot;banana&quot;│   │&quot;apple&quot;│   │&quot;pear&quot;│   │<br>         └─┬─┴───┴───┴───┴────────┴───┴───────┴───┴──────┴───┘<br>           │                 ▲<br>           └─────────────────┘<br></code></pre></td></tr></table></figure>
 
 <p>排序后，原来的3个字符串在<strong>内存</strong>中均没有任何变化，但是<code>ns</code>数组的每个元素<strong>指向</strong>变化了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">                   ┌──────────────────────────────────┐</span><br><span class="line">               ┌───┼──────────┐                       │</span><br><span class="line">               │   │          ▼                       ▼</span><br><span class="line">         ┌───┬─┴─┬─┴─┬───┬────────┬───┬───────┬───┬──────┬───┐</span><br><span class="line">ns ─────&gt;│░░░│░░░│░░░│   │&quot;banana&quot;│   │&quot;apple&quot;│   │&quot;pear&quot;│   │</span><br><span class="line">         └─┬─┴───┴───┴───┴────────┴───┴───────┴───┴──────┴───┘</span><br><span class="line">           │                              ▲</span><br><span class="line">           └──────────────────────────────┘</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs ascii">                   ┌──────────────────────────────────┐<br>               ┌───┼──────────┐                       │<br>               │   │          ▼                       ▼<br>         ┌───┬─┴─┬─┴─┬───┬────────┬───┬───────┬───┬──────┬───┐<br>ns ─────&gt;│░░░│░░░│░░░│   │&quot;banana&quot;│   │&quot;apple&quot;│   │&quot;pear&quot;│   │<br>         └─┬─┴───┴───┴───┴────────┴───┴───────┴───┴──────┴───┘<br>           │                              ▲<br>           └──────────────────────────────┘<br></code></pre></td></tr></table></figure>
 
 <h1 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h1><p>Java是一种面向对象的编程语言。面向对象编程，英文是Object-Oriented Programming，简称OOP。</p>
 <h2 id="面向对象基础"><a href="#面向对象基础" class="headerlink" title="面向对象基础"></a>面向对象基础</h2><p>在OOP中，<code>class</code>和<code>instance</code>是“模版”和“实例”的关系；</p>
@@ -406,7 +331,7 @@
 <p>可以为<code>enum</code>编写构造方法、字段和方法</p>
 <p><code>enum</code>的构造方法要声明为<code>private</code>，字段强烈建议声明为<code>final</code>；</p>
 <p><code>enum</code>适合用在<code>switch</code>语句中。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Weekday &#123;</span><br><span class="line">    MON(<span class="number">1</span>), TUE(<span class="number">2</span>), WED(<span class="number">3</span>), THU(<span class="number">4</span>), FRI(<span class="number">5</span>), SAT(<span class="number">6</span>), SUN(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">enum</span> Weekday &#123;<br>    MON(<span class="hljs-number">1</span>), TUE(<span class="hljs-number">2</span>), WED(<span class="hljs-number">3</span>), THU(<span class="hljs-number">4</span>), FRI(<span class="hljs-number">5</span>), SAT(<span class="hljs-number">6</span>), SUN(<span class="hljs-number">0</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h3 id="纪录类"><a href="#纪录类" class="headerlink" title="纪录类"></a>纪录类</h3><p>使用<code>String</code>、<code>Integer</code>等类型的时候，这些类型都是<strong>不变类</strong>，一个不变类具有以下特点：</p>
 <ol>
@@ -488,7 +413,7 @@
 <h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1><h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p>Java的集合类定义在<code>java.util</code>包中，支持泛型，主要提供了3种集合类，包括<code>List</code>，<code>Set</code>和<code>Map</code>。Java集合使用统一的<code>Iterator</code>遍历，尽量不要使用遗留接口。</p>
 <h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p><code>List</code>的行为和数组几乎完全相同。 List是一个接口，而ArrayList是List接口的一个实现类。 </p>
 <p><code>List</code>是按索引顺序访问的长度可变的有序表，优先使用<code>ArrayList</code>而不是<code>LinkedList</code>；</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">List&lt;String&gt; list = List.of(<span class="string">"apple"</span>, <span class="string">"pear"</span>, <span class="string">"banana"</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">List&lt;String&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>List&lt;String&gt; list = List.of(<span class="hljs-string">"apple"</span>, <span class="hljs-string">"pear"</span>, <span class="hljs-string">"banana"</span>);<br></code></pre></td></tr></table></figure>
 
 <p>通过<code>Iterator</code>遍历<code>List</code>永远是最高效的方式。并且，由于<code>Iterator</code>遍历是如此常用，所以，Java的<code>for each</code>循环本身就可以帮我们使用<code>Iterator</code>遍历。</p>
 <p><code>List</code>可以和<code>Array</code>相互转换。</p>
@@ -508,7 +433,7 @@
 <p>如果不调用<code>List</code>的<code>contains()</code>、<code>indexOf()</code>这些方法，就不必覆写<code>equals()</code>方法。</p>
 <h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p><code>Map</code>是一种映射表，可以通过<code>key</code>快速查找<code>value</code>。无序。</p>
 <p>可以通过<code>for each</code>遍历<code>keySet()</code>，也可以通过<code>for each</code>遍历<code>entrySet()</code>，直接获取<code>key-value</code>。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (String key : map.keySet())</span><br><span class="line"><span class="keyword">for</span> (Map.Entry&lt;String, Integer&gt; entry : map.entrySet())</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span> (String key : map.keySet())<br><span class="hljs-keyword">for</span> (Map.Entry&lt;String, Integer&gt; entry : map.entrySet())<br></code></pre></td></tr></table></figure>
 
 <p>最常用的一种<code>Map</code>实现是<code>HashMap</code>。</p>
 <h2 id="编写equals和hashCode"><a href="#编写equals和hashCode" class="headerlink" title="编写equals和hashCode"></a>编写equals和hashCode</h2><p><code>HashMap</code>之所以能根据<code>key</code>直接拿到<code>value</code>，原因是它内部通过空间换时间的方法，用一个大数组存储所有<code>value</code>，并根据key直接计算出<code>value</code>应该存储在哪个索引</p>
@@ -521,10 +446,10 @@
 <p>实现<code>hashCode()</code>方法可以通过<code>Objects.hashCode()</code>辅助方法实现。</p>
 <h2 id="EnumMap"><a href="#EnumMap" class="headerlink" title="EnumMap"></a>EnumMap</h2><p>如果<code>Map</code>的key是<code>enum</code>类型，推荐使用<code>EnumMap</code>，既保证速度，也不浪费空间。</p>
 <p>使用<code>EnumMap</code>的时候，根据面向抽象编程的原则，应持有<code>Map</code>接口。</p>
-<h2 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">       ┌───┐</span><br><span class="line">       │Map│</span><br><span class="line">       └───┘</span><br><span class="line">         ▲</span><br><span class="line">    ┌────┴─────┐</span><br><span class="line">    │          │</span><br><span class="line">┌───────┐ ┌─────────┐</span><br><span class="line">│HashMap│ │SortedMap│</span><br><span class="line">└───────┘ └─────────┘</span><br><span class="line">               ▲</span><br><span class="line">               │</span><br><span class="line">          ┌─────────┐</span><br><span class="line">          │ TreeMap │</span><br><span class="line">          └─────────┘</span><br></pre></td></tr></table></figure>
+<h2 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs ascii">       ┌───┐<br>       │Map│<br>       └───┘<br>         ▲<br>    ┌────┴─────┐<br>    │          │<br>┌───────┐ ┌─────────┐<br>│HashMap│ │SortedMap│<br>└───────┘ └─────────┘<br>               ▲<br>               │<br>          ┌─────────┐<br>          │ TreeMap │<br>          └─────────┘<br></code></pre></td></tr></table></figure>
 
 <p><code>SortedMap</code>是接口，它的实现类是<code>TreeMap</code>。创建<code>TreeMap</code>时同时指定一个自定义排序算法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;Person, Integer&gt; map = <span class="keyword">new</span> TreeMap&lt;&gt;(<span class="keyword">new</span> Comparator&lt;Person&gt;() &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Person p1, Person p2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> p1.name.compareTo(p2.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">Map&lt;Person, Integer&gt; map = <span class="hljs-keyword">new</span> TreeMap&lt;&gt;(<span class="hljs-keyword">new</span> Comparator&lt;Person&gt;() &#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(Person p1, Person p2)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> p1.name.compareTo(p2.name);<br>    &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
 
 <p><code>SortedMap</code>在遍历时严格按照Key的<strong>顺序</strong>遍历，最常用的实现类是<code>TreeMap</code>；</p>
 <p>作为<code>SortedMap</code>的Key必须实现<code>Comparable</code>接口，或者传入<code>Comparator</code>；</p>
@@ -603,7 +528,7 @@
 <li>字符流接口：<code>Reader</code>/<code>Writer</code>。</li>
 </ul>
 <h2 id="File"><a href="#File" class="headerlink" title="File"></a>File</h2><p>传入相对路径时，相对路径前面加上当前目录就是绝对路径：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设当前目录是C:\Docs</span></span><br><span class="line">File f1 = <span class="keyword">new</span> File(<span class="string">"sub\\javac"</span>); <span class="comment">// 绝对路径是C:\Docs\sub\javac</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 假设当前目录是C:\Docs</span><br>File f1 = <span class="hljs-keyword">new</span> File(<span class="hljs-string">"sub\\javac"</span>); <span class="hljs-comment">// 绝对路径是C:\Docs\sub\javac</span><br></code></pre></td></tr></table></figure>
 
 <p>Java标准库的<code>java.io.File</code>对象表示一个文件或者目录：</p>
 <ul>
@@ -763,7 +688,7 @@
 <p>使用<code>ThreadLocal</code>要用<code>try ... finally</code>结构，并在<code>finally</code>中清除。</p>
 <h1 id="Maven基础"><a href="#Maven基础" class="headerlink" title="Maven基础"></a>Maven基础</h1><p>Maven是一个Java项目管理和构建工具，它可以定义项目结构、项目依赖，并使用统一的方式进行自动化构建。</p>
 <h2 id="Maven介绍"><a href="#Maven介绍" class="headerlink" title="Maven介绍"></a>Maven介绍</h2><p>项目结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a-maven-project</span><br><span class="line">├── pom.xml  // 项目描述文件</span><br><span class="line">├── src</span><br><span class="line">│   ├── main</span><br><span class="line">│   │   ├── java  // Java源码目录</span><br><span class="line">│   │   └── resources  // 资源文件</span><br><span class="line">│   └── test</span><br><span class="line">│       ├── java  // 测试源码</span><br><span class="line">│       └── resources</span><br><span class="line">└── target  // 所有编译、打包生成的文件都放在target目录里</span><br></pre></td></tr></table></figure>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs undefined">a-maven-project<br>├── pom.xml  <span class="hljs-comment">// 项目描述文件</span><br>├── src<br>│   ├── main<br>│   │   ├── java  <span class="hljs-comment">// Java源码目录</span><br>│   │   └── <span class="hljs-built_in">resources</span>  <span class="hljs-comment">// 资源文件</span><br>│   └── test<br>│       ├── java  <span class="hljs-comment">// 测试源码</span><br>│       └── <span class="hljs-built_in">resources</span><br>└── target  <span class="hljs-comment">// 所有编译、打包生成的文件都放在target目录里</span><br></code></pre></td></tr></table></figure>
 
 <p>一个Java项目的管理和构建工具：</p>
 <ul>
@@ -891,325 +816,217 @@
 <p>数据库连接池是一种复用<code>Connection</code>的组件，它可以避免反复创建新连接，提高JDBC代码的运行效率；</p>
 <p>可以配置连接池的详细参数并监控连接池。</p>
 
-    </div>
-
-    
-    
-    
-        
-      
-
-      <footer class="post-footer">
-          
-            
-          
-          <div class="post-tags">
-            
-              <a href="/tags/Java/" rel="tag"># Java</a>
-            
-          </div>
-        
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Java/">Java</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Java/">Java</a>
+                    
+                  </div>
+                
+              </div>
               
-                <a href="/2021/01/19/服务端/Apache配置https/" rel="next" title="Apache配置https">
-                  <i class="fa fa-chevron-left"></i> Apache配置https
-                </a>
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/01/23/tools/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">收藏夹</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/01/19/服务端/Apache配置https/">
+                        <span class="hidden-mobile">Apache配置https</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2021/01/23/tools/" rel="prev" title="收藏夹">
-                  收藏夹 <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
-        
-      </footer>
-    
-  </div>
-  
-  
-  
-  </article>
-
-  </div>
-
-
-          </div>
-          
-    
-    
-  <div class="comments" id="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTk4Mi8yMjQ5Mw=="></div>
-  </div>
-  
-  
-
-        </div>
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image"
-      src="https://images.cnblogs.com/cnblogs_com/oeong/1593757/o_191209052450kongaj.jpg"
-      alt="Hongchenglong">
-  <p class="site-author-name" itemprop="name">Hongchenglong</p>
-  <div class="site-description motion-element" itemprop="description">相信过程</div>
-</div>
-  <nav class="site-state motion-element">
-      <div class="site-state-item site-state-posts">
-        
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">16</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-categories">
-        
-          
-            <a href="/categories/">
-          
-        
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">分类</span>
-        </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-tags">
-        
-          
-            <a href="/tags/">
-          
-        
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
-      </div>
-    
-  </nav>
-
-
-  <div class="links-of-blogroll motion-element links-of-blogroll-block">
-    <div class="links-of-blogroll-title">
-      <i class="fa  fa-fw fa-link"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://www.cnblogs.com/oeong" title="https://www.cnblogs.com/oeong" rel="noopener" target="_blank">oeong</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="http://www.zhoushouhao.com/" title="http://www.zhoushouhao.com/" rel="noopener" target="_blank">Shouhao's Notes</a>
-        </li>
-      
-    </ul>
-  </div>
-
+            
+          </article>
         </div>
       </div>
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java快速入门"><span class="nav-number">1.</span> <span class="nav-text">Java快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java简介"><span class="nav-number">1.1.</span> <span class="nav-text">Java简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java程序基础"><span class="nav-number">1.2.</span> <span class="nav-text">Java程序基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程控制"><span class="nav-number">1.3.</span> <span class="nav-text">流程控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#if判断"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">if判断</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#for-each循环"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">for each循环</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组操作"><span class="nav-number">1.4.</span> <span class="nav-text">数组操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历数组"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">遍历数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#排序"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">排序</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面向对象编程"><span class="nav-number">2.</span> <span class="nav-text">面向对象编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象基础"><span class="nav-number">2.1.</span> <span class="nav-text">面向对象基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法"><span class="nav-number">2.1.1.</span> <span class="nav-text">方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法重载"><span class="nav-number">2.1.2.</span> <span class="nav-text">方法重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#继承"><span class="nav-number">2.1.3.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#区分继承和组合"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">区分继承和组合</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多态"><span class="nav-number">2.1.4.</span> <span class="nav-text">多态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象类"><span class="nav-number">2.1.5.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口"><span class="nav-number">2.1.6.</span> <span class="nav-text">接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态字段和静态方法"><span class="nav-number">2.1.7.</span> <span class="nav-text">静态字段和静态方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包"><span class="nav-number">2.1.8.</span> <span class="nav-text">包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用域"><span class="nav-number">2.1.9.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#classpath和jar"><span class="nav-number">2.1.10.</span> <span class="nav-text">classpath和jar</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#小结"><span class="nav-number">2.1.10.1.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java核心类"><span class="nav-number">2.2.</span> <span class="nav-text">Java核心类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串和编码"><span class="nav-number">2.2.1.</span> <span class="nav-text">字符串和编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#StringBuilder"><span class="nav-number">2.2.2.</span> <span class="nav-text">StringBuilder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#StringJoiner"><span class="nav-number">2.2.3.</span> <span class="nav-text">StringJoiner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包装类型"><span class="nav-number">2.2.4.</span> <span class="nav-text">包装类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaBean"><span class="nav-number">2.2.5.</span> <span class="nav-text">JavaBean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举类"><span class="nav-number">2.2.6.</span> <span class="nav-text">枚举类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#纪录类"><span class="nav-number">2.2.7.</span> <span class="nav-text">纪录类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BigInteger"><span class="nav-number">2.2.8.</span> <span class="nav-text">BigInteger</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BigDecimal"><span class="nav-number">2.2.9.</span> <span class="nav-text">BigDecimal</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用工具类"><span class="nav-number">2.2.10.</span> <span class="nav-text">常用工具类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Math"><span class="nav-number">2.2.10.1.</span> <span class="nav-text">Math</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Random"><span class="nav-number">2.2.10.2.</span> <span class="nav-text">Random</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SecureRandom"><span class="nav-number">2.2.10.3.</span> <span class="nav-text">SecureRandom</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异常处理"><span class="nav-number">3.</span> <span class="nav-text">异常处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java的异常"><span class="nav-number">3.1.</span> <span class="nav-text">Java的异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#捕获异常"><span class="nav-number">3.2.</span> <span class="nav-text">捕获异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抛出异常"><span class="nav-number">3.3.</span> <span class="nav-text">抛出异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义异常"><span class="nav-number">3.4.</span> <span class="nav-text">自定义异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NullPointerException"><span class="nav-number">3.5.</span> <span class="nav-text">NullPointerException</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#断言"><span class="nav-number">3.6.</span> <span class="nav-text">断言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDK-Logging"><span class="nav-number">3.7.</span> <span class="nav-text">JDK Logging</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Commons-Logging"><span class="nav-number">3.8.</span> <span class="nav-text">Commons Logging</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反射"><span class="nav-number">4.</span> <span class="nav-text">反射</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Class类"><span class="nav-number">4.1.</span> <span class="nav-text">Class类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问字段"><span class="nav-number">4.2.</span> <span class="nav-text">访问字段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用方法"><span class="nav-number">4.3.</span> <span class="nav-text">调用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用构造方法"><span class="nav-number">4.4.</span> <span class="nav-text">调用构造方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取继承关系"><span class="nav-number">4.5.</span> <span class="nav-text">获取继承关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态代理"><span class="nav-number">4.6.</span> <span class="nav-text">动态代理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注解"><span class="nav-number">5.</span> <span class="nav-text">注解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#泛型"><span class="nav-number">6.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合"><span class="nav-number">7.</span> <span class="nav-text">集合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#List"><span class="nav-number">7.1.</span> <span class="nav-text">List</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写equals方法"><span class="nav-number">7.2.</span> <span class="nav-text">编写equals方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map"><span class="nav-number">7.3.</span> <span class="nav-text">Map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写equals和hashCode"><span class="nav-number">7.4.</span> <span class="nav-text">编写equals和hashCode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EnumMap"><span class="nav-number">7.5.</span> <span class="nav-text">EnumMap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TreeMap"><span class="nav-number">7.6.</span> <span class="nav-text">TreeMap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Properties"><span class="nav-number">7.7.</span> <span class="nav-text">Properties</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set"><span class="nav-number">7.8.</span> <span class="nav-text">Set</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Queue"><span class="nav-number">7.9.</span> <span class="nav-text">Queue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PriorityQueue"><span class="nav-number">7.10.</span> <span class="nav-text">PriorityQueue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deque"><span class="nav-number">7.11.</span> <span class="nav-text">Deque</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Stack"><span class="nav-number">7.12.</span> <span class="nav-text">Stack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Iterator"><span class="nav-number">7.13.</span> <span class="nav-text">Iterator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collections"><span class="nav-number">7.14.</span> <span class="nav-text">Collections</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IO"><span class="nav-number">8.</span> <span class="nav-text">IO</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#同步和异步"><span class="nav-number">8.0.0.1.</span> <span class="nav-text">同步和异步</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小结-1"><span class="nav-number">8.0.0.2.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#File"><span class="nav-number">8.1.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#InputStream"><span class="nav-number">8.2.</span> <span class="nav-text">InputStream</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OutputStream"><span class="nav-number">8.3.</span> <span class="nav-text">OutputStream</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Filter"><span class="nav-number">8.4.</span> <span class="nav-text">Filter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作Zip"><span class="nav-number">8.5.</span> <span class="nav-text">操作Zip</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读取classpath资源"><span class="nav-number">8.6.</span> <span class="nav-text">读取classpath资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#序列化"><span class="nav-number">8.7.</span> <span class="nav-text">序列化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reader"><span class="nav-number">8.8.</span> <span class="nav-text">Reader</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Writer"><span class="nav-number">8.9.</span> <span class="nav-text">Writer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PrintStream和PrintWriter"><span class="nav-number">8.10.</span> <span class="nav-text">PrintStream和PrintWriter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Files"><span class="nav-number">8.11.</span> <span class="nav-text">使用Files</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多线程"><span class="nav-number">9.</span> <span class="nav-text">多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多线程基础"><span class="nav-number">9.1.</span> <span class="nav-text">多线程基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建新线程"><span class="nav-number">9.2.</span> <span class="nav-text">创建新线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程的状态"><span class="nav-number">9.3.</span> <span class="nav-text">线程的状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中断线程"><span class="nav-number">9.4.</span> <span class="nav-text">中断线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#守护线程"><span class="nav-number">9.5.</span> <span class="nav-text">守护线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程同步"><span class="nav-number">9.6.</span> <span class="nav-text">线程同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同步方法"><span class="nav-number">9.7.</span> <span class="nav-text">同步方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#死锁"><span class="nav-number">9.8.</span> <span class="nav-text">死锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wait和notify"><span class="nav-number">9.9.</span> <span class="nav-text">wait和notify</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ReentrantLock"><span class="nav-number">9.10.</span> <span class="nav-text">ReentrantLock</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Condition"><span class="nav-number">9.11.</span> <span class="nav-text">Condition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ReadWriteLock"><span class="nav-number">9.12.</span> <span class="nav-text">ReadWriteLock</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#StampedLock"><span class="nav-number">9.13.</span> <span class="nav-text">StampedLock</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Concurrent集合"><span class="nav-number">9.14.</span> <span class="nav-text">Concurrent集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Atomic"><span class="nav-number">9.15.</span> <span class="nav-text">Atomic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程池"><span class="nav-number">9.16.</span> <span class="nav-text">线程池</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Future"><span class="nav-number">9.17.</span> <span class="nav-text">Future</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CompletableFuture"><span class="nav-number">9.18.</span> <span class="nav-text">CompletableFuture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ForkJoin"><span class="nav-number">9.19.</span> <span class="nav-text">ForkJoin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ThreadLocal"><span class="nav-number">9.20.</span> <span class="nav-text">ThreadLocal</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven基础"><span class="nav-number">10.</span> <span class="nav-text">Maven基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven介绍"><span class="nav-number">10.1.</span> <span class="nav-text">Maven介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖管理"><span class="nav-number">10.2.</span> <span class="nav-text">依赖管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构建流程"><span class="nav-number">10.3.</span> <span class="nav-text">构建流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用插件"><span class="nav-number">10.4.</span> <span class="nav-text">使用插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块管理"><span class="nav-number">10.5.</span> <span class="nav-text">模块管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mvnw"><span class="nav-number">10.6.</span> <span class="nav-text">mvnw</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布Artifact"><span class="nav-number">10.7.</span> <span class="nav-text">发布Artifact</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络编程"><span class="nav-number">11.</span> <span class="nav-text">网络编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络编程基础"><span class="nav-number">11.1.</span> <span class="nav-text">网络编程基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP编程"><span class="nav-number">11.2.</span> <span class="nav-text">TCP编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UDP编程"><span class="nav-number">11.3.</span> <span class="nav-text">UDP编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发生Email"><span class="nav-number">11.4.</span> <span class="nav-text">发生Email</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#接收Email"><span class="nav-number">11.5.</span> <span class="nav-text">接收Email</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP编程"><span class="nav-number">11.6.</span> <span class="nav-text">HTTP编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RMI远程调用"><span class="nav-number">11.7.</span> <span class="nav-text">RMI远程调用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XML与JSON"><span class="nav-number">12.</span> <span class="nav-text">XML与JSON</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#XML简介"><span class="nav-number">12.1.</span> <span class="nav-text">XML简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM"><span class="nav-number">12.2.</span> <span class="nav-text">DOM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SAX"><span class="nav-number">12.3.</span> <span class="nav-text">SAX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jackson"><span class="nav-number">12.4.</span> <span class="nav-text">Jackson</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON"><span class="nav-number">12.5.</span> <span class="nav-text">JSON</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JDBC编程"><span class="nav-number">13.</span> <span class="nav-text">JDBC编程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC简介"><span class="nav-number">13.1.</span> <span class="nav-text">JDBC简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC查询"><span class="nav-number">13.2.</span> <span class="nav-text">JDBC查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC-更新"><span class="nav-number">13.3.</span> <span class="nav-text">JDBC 更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC事务"><span class="nav-number">13.4.</span> <span class="nav-text">JDBC事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC-Batch"><span class="nav-number">13.5.</span> <span class="nav-text">JDBC Batch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JDBC-连接池"><span class="nav-number">13.6.</span> <span class="nav-text">JDBC 连接池</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2021</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Hongchenglong</span>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
 </div>
 
-        
-
-
-
-
-
-
-
-
-        
       </div>
-    </footer>
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-      </div>
-
     
-
   </div>
+</div>
 
-  
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-<script src="/js/utils.js?v=7.3.0"></script>
-  <script src="/js/motion.js?v=7.3.0"></script>
-
-
-  <script src="/js/affix.js?v=7.3.0"></script>
-  <script src="/js/schemes/pisces.js?v=7.3.0"></script>
-
-
-<script src="/js/next-boot.js?v=7.3.0"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-
-  
-  <script src="/js/scrollspy.js?v=7.3.0"></script>
-<script src="/js/post-details.js?v=7.3.0"></script>
+<!-- Custom -->
 
 
     
-<script>
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-</script>
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
 
 </body>
 </html>

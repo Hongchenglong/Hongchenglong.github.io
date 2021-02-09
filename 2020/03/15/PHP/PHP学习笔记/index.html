@@ -1,306 +1,228 @@
+
+
 <!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
 
 
 
-
-
-<html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
-<meta name="generator" content="Hexo 3.9.0">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=7.3.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="相信过程">
+  <meta name="author" content="Hongchenglong">
+  <meta name="keywords" content>
+  <title>PHP学习笔记 - 匡山读书处</title>
 
-<link rel="stylesheet" href="/css/main.css?v=7.3.0">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.3.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    save_scroll: false,
-    copycode: {"enable":false,"show_result":false,"style":null},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    }
-  };
-</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 
 
-  <script>
-  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
-  daovoice('init', {
-      app_id: "d7dbba2c"
-    });
-  daovoice('update');
-  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css">
+  <link rel="stylesheet" href="/lib/hint/hint.min.css">
 
-  <meta name="description" content="学习菜鸟教程所做的PHP笔记。">
-<meta name="keywords" content="PHP">
-<meta property="og:type" content="article">
-<meta property="og:title" content="PHP学习笔记">
-<meta property="og:url" content="http://yoursite.com/2020/03/15/PHP/PHP学习笔记/index.html">
-<meta property="og:site_name" content="匡山读书处">
-<meta property="og:description" content="学习菜鸟教程所做的PHP笔记。">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-01-25T05:20:36.932Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PHP学习笔记">
-<meta name="twitter:description" content="学习菜鸟教程所做的PHP笔记。">
-  <link rel="canonical" href="http://yoursite.com/2020/03/15/PHP/PHP学习笔记/">
+  
+    
+    
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css">
+    
+  
 
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
-  };
-</script>
-
-  <title>PHP学习笔记 | 匡山读书处</title>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   
 
 
 
+<!-- 主题依赖的图标库，不要自行修改 -->
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- 自定义样式保持在最底部 -->
 
 
-
-
-
-  <noscript>
-  <style>
-  .use-motion .motion-element,
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
-
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script src="/js/utils.js"></script>
+  <script src="/js/color-schema.js"></script>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
-  <div class="container sidebar-position-left">
-    <div class="headband"></div>
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">匡山读书处</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-        <p class="site-subtitle">世即用我，而我奚以为用</p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
     </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
   </div>
-</div>
-
-
-<nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
-        <li class="menu-item menu-item-home">
-      
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-archives">
-      
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-tags">
-      
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-categories">
-      
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-  </ul>
-
 </nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="PHP学习笔记">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-03-15 09:00" pubdate>
+        2020年3月15日 上午
+      </time>
+    </span>
+  
 </div>
-    </header>
 
+<div class="mt-1">
+  
     
-
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-            
-
-          <div id="content" class="content page-post-detail">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/15/PHP/PHP学习笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hongchenglong">
-      <meta itemprop="description" content="相信过程">
-      <meta itemprop="image" content="https://images.cnblogs.com/cnblogs_com/oeong/1593757/o_191209052450kongaj.jpg">
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      3.3k 字
     </span>
+  
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="匡山读书处">
-    </span>
-      <header class="post-header">
-
-        
-          <h1 class="post-title" itemprop="name headline">PHP学习笔记
-
-            
-          </h1>
-        
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-03-15 09:00:00" itemprop="dateCreated datePublished" datetime="2020-03-15T09:00:00+08:00">2020-03-15</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-25 13:20:36" itemprop="dateModified" datetime="2021-01-25T13:20:36+08:00">2021-01-25</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
+  
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
       
-        <p>学习<a href="https://www.runoob.com/php/php-tutorial.html" target="_blank" rel="noopener">菜鸟教程</a>所做的PHP笔记。</p>
+      
+      44
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">PHP学习笔记</h1>
+            
+            <div class="markdown-body">
+              <p>学习<a href="https://www.runoob.com/php/php-tutorial.html" target="_blank" rel="noopener">菜鸟教程</a>所做的PHP笔记。</p>
 <a id="more"></a>
 <h1 id="PHP基础"><a href="#PHP基础" class="headerlink" title="PHP基础"></a>PHP基础</h1><h2 id="PHP简介"><a href="#PHP简介" class="headerlink" title="PHP简介"></a>PHP简介</h2><p>PHP（全称：PHP：Hypertext Preprocessor，即”PHP：超文本预处理器”）是一种通用开源脚本语言。<br>PHP 代码在服务器上执行，结果以纯 HTML 形式返回给浏览器。</p>
 <h3 id="PHP能做什么？"><a href="#PHP能做什么？" class="headerlink" title="PHP能做什么？"></a>PHP能做什么？</h3><ul>
@@ -309,7 +231,7 @@
 <li>PHP 可以添加、删除、修改您的数据库中的数据</li>
 </ul>
 <h2 id="PHP语法"><a href="#PHP语法" class="headerlink" title="PHP语法"></a>PHP语法</h2><p>PHP 脚本以 <?php 开始，以 ?> 结束。<br>PHP 中的每个代码行都必须以分号结束。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &quot;Hello World!&quot;;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-keyword">echo</span> <span class="hljs-string">"Hello World!"</span>;<br><span class="hljs-meta">?&gt;</span></span><br></code></pre></td></tr></table></figure>
 
 <h2 id="PHP语法-1"><a href="#PHP语法-1" class="headerlink" title="PHP语法"></a>PHP语法</h2><ol>
 <li>定义在函数外部的就是全局变量，它的作用域从定义处一直到文件结尾。</li>
@@ -318,43 +240,43 @@
 <li>函数内访问全局变量需要 <code>global</code> 关键字或者使用 <code>$GLOBALS[index]</code> 数组</li>
 <li><code>static</code> 关键字使某个局部变量不被删除。</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$x=5;</span><br><span class="line">$y=10;</span><br><span class="line"> </span><br><span class="line">function myTest() &#123;</span><br><span class="line">    global $x,$y;</span><br><span class="line">    $y=$x+$y;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">myTest();</span><br><span class="line">echo $y; // 输出 15</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br>$x=<span class="hljs-number">5</span>;<br>$y=<span class="hljs-number">10</span>;<br> <br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">myTest</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">global</span> $x,$y;<br>    $y=$x+$y;<br>&#125;<br> <br>myTest();<br><span class="hljs-keyword">echo</span> $y; <span class="hljs-comment">// 输出 15</span><br><span class="hljs-meta">?&gt;</span></span><br></code></pre></td></tr></table></figure>
 
 <h2 id="echo-和-print-语句"><a href="#echo-和-print-语句" class="headerlink" title="echo 和 print 语句"></a>echo 和 print 语句</h2><h2 id="EOF-heredoc-使用说明"><a href="#EOF-heredoc-使用说明" class="headerlink" title="EOF(heredoc) 使用说明"></a>EOF(heredoc) 使用说明</h2><p>PHP 定界符<code>EOF</code> 中是会解析 html 格式内容的，并且在双引号内的内容也有转义效果。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$name=&quot;runoob&quot;;</span><br><span class="line">$a= &lt;&lt;&lt;EOF</span><br><span class="line">		&lt;h1&gt;EOF&lt;/h1&gt;</span><br><span class="line">        &quot;abc&quot;$name</span><br><span class="line">        &quot;123&quot;</span><br><span class="line">EOF;</span><br><span class="line">// 结束需要独立一行且前后不能空格</span><br><span class="line">echo $a;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br>$name=<span class="hljs-string">"runoob"</span>;<br>$a= <span class="hljs-string">&lt;&lt;&lt;EOF<br>		&lt;h1&gt;EOF&lt;/h1&gt;<br>        "abc"<span class="hljs-subst">$name</span><br>        "123"<br>EOF;</span><br><span class="hljs-comment">// 结束需要独立一行且前后不能空格</span><br><span class="hljs-keyword">echo</span> $a;<br><span class="hljs-meta">?&gt;</span></span><br></code></pre></td></tr></table></figure>
 
 <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p><code>var_dump()</code> 函数返回变量的数据类型和值</p>
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;Toyota&quot;); // 数组</span><br><span class="line">class Car &#123;</span><br><span class="line">  var $color;</span><br><span class="line">  function __construct($color=&quot;green&quot;) &#123;</span><br><span class="line">    $this-&gt;color = $color;</span><br><span class="line">  &#125;</span><br><span class="line">  function what_color() &#123;</span><br><span class="line">    return $this-&gt;color;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br>$cars=<span class="hljs-keyword">array</span>(<span class="hljs-string">"Volvo"</span>,<span class="hljs-string">"BMW"</span>,<span class="hljs-string">"Toyota"</span>); <span class="hljs-comment">// 数组</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> </span>&#123;<br>  <span class="hljs-keyword">var</span> $color;<br>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__construct</span><span class="hljs-params">($color=<span class="hljs-string">"green"</span>)</span> </span>&#123;<br>    <span class="hljs-keyword">$this</span>-&gt;color = $color;<br>  &#125;<br>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">what_color</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">$this</span>-&gt;color;<br>  &#125;<br>&#125;<br><span class="hljs-meta">?&gt;</span></span><br></code></pre></td></tr></table></figure>
 
 <h2 id="类型比较"><a href="#类型比较" class="headerlink" title="类型比较"></a>类型比较</h2><ul>
 <li>松散比较：使用两个等号 == 比较，只比较值，不比较类型。</li>
 <li>严格比较：用三个等号 === 比较，除了比较值，也比较类型。</li>
 </ul>
 <h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><p>常量值被定义后，在脚本的其他任何地方都不能被改变。<br>bool define ( string $name , mixed $value [, bool $case_insensitive = false ] )</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// true 不区分大小写的常量名</span><br><span class="line">define(&quot;GREETING&quot;, &quot;欢迎&quot;, true);</span><br><span class="line">echo greeting;  // 输出 &quot;欢迎&quot;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-comment">// true 不区分大小写的常量名</span><br>define(<span class="hljs-string">"GREETING"</span>, <span class="hljs-string">"欢迎"</span>, <span class="hljs-keyword">true</span>);<br><span class="hljs-keyword">echo</span> greeting;  <span class="hljs-comment">// 输出 "欢迎"</span><br><span class="hljs-meta">?&gt;</span></span><br></code></pre></td></tr></table></figure>
 
 <h2 id="字符串变量"><a href="#字符串变量" class="headerlink" title="字符串变量"></a>字符串变量</h2><p>*<em>并置运算符 *</em>(.) 用于把两个字符串值连接起来。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$txt1=&quot;Hello world!&quot;;</span><br><span class="line">$txt2=&quot;What a nice day!&quot;;</span><br><span class="line">echo $txt1 . &quot; &quot; . $txt2;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br>$txt1=<span class="hljs-string">"Hello world!"</span>;<br>$txt2=<span class="hljs-string">"What a nice day!"</span>;<br><span class="hljs-keyword">echo</span> $txt1 . <span class="hljs-string">" "</span> . $txt2;<br><span class="hljs-meta">?&gt;</span></span><br></code></pre></td></tr></table></figure>
 
 <p>strlen() 函数返回字符串的长度（字节数）。</p>
 <p>strpos() 函数用于在字符串内查找一个字符或一段指定的文本。<br><code>echo strpos(&quot;Hello world!&quot;,&quot;world&quot;);</code></p>
 <h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>运算符优先级中，or 和 ||，&amp;&amp; 和 and 都是逻辑运算符，效果一样，但是其优先级却不一样。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// 优先级： &amp;&amp;  &gt;  =  &gt;  and</span><br><span class="line">// 优先级： ||  &gt;  =  &gt;  or</span><br><span class="line"> </span><br><span class="line">$a = 3;</span><br><span class="line">$b = false;</span><br><span class="line">$c = $a or $b;</span><br><span class="line">var_dump($c);          // 这里的 $c 为 int 值3，而不是 boolean 值 true</span><br><span class="line">$d = $a || $b;</span><br><span class="line">var_dump($d);          //这里的 $d 就是 boolean 值 true </span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs undefined">&lt;?php<br>// 优先级： &amp;&amp;  &gt;  =  &gt;  <span class="hljs-keyword">and</span><br>// 优先级： ||  &gt;  =  &gt;  <span class="hljs-keyword">or</span><br> <br><span class="hljs-variable">$a</span> = <span class="hljs-number">3</span>;<br><span class="hljs-variable">$b</span> =<span class="hljs-built_in"> false</span>;<br><span class="hljs-variable">$c</span> = <span class="hljs-variable">$a</span> <span class="hljs-keyword">or</span> <span class="hljs-variable">$b</span>;<br>var_dump(<span class="hljs-variable">$c</span>);          // 这里的 <span class="hljs-variable">$c</span> 为 int 值<span class="hljs-number">3</span>，而不是<span class="hljs-built_in"> boolean</span> 值<span class="hljs-built_in"> true</span><br><span class="hljs-variable">$d</span> = <span class="hljs-variable">$a</span> || <span class="hljs-variable">$b</span>;<br>var_dump(<span class="hljs-variable">$d</span>);          //这里的 <span class="hljs-variable">$d</span> 就是<span class="hljs-built_in"> boolean</span> 值<span class="hljs-built_in"> true</span> <br>?&gt;<br></code></pre></td></tr></table></figure>
 
-<h2 id="If…Else"><a href="#If…Else" class="headerlink" title="If…Else"></a>If…Else</h2><h2 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h2><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;Toyota&quot;);</span><br><span class="line">echo &quot;I like &quot; . $cars[0] . &quot;, &quot; . $cars[1] . &quot; and &quot; . $cars[2] . &quot;.&lt;br&gt;&quot;;</span><br><span class="line">echo count($cars);	// 数组长度</span><br><span class="line"></span><br><span class="line">// 关联数组</span><br><span class="line">$age=array(&quot;Peter&quot;=&gt;&quot;35&quot;,&quot;Ben&quot;=&gt;&quot;37&quot;,&quot;Joe&quot;=&gt;&quot;43&quot;);</span><br><span class="line">echo &quot;&lt;br&gt;Peter is &quot; . $age[&apos;Peter&apos;] . &quot; years old.&quot;;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="If…Else"><a href="#If…Else" class="headerlink" title="If…Else"></a>If…Else</h2><h2 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h2><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br>$cars=<span class="hljs-keyword">array</span>(<span class="hljs-string">"Volvo"</span>,<span class="hljs-string">"BMW"</span>,<span class="hljs-string">"Toyota"</span>);<br><span class="hljs-keyword">echo</span> <span class="hljs-string">"I like "</span> . $cars[<span class="hljs-number">0</span>] . <span class="hljs-string">", "</span> . $cars[<span class="hljs-number">1</span>] . <span class="hljs-string">" and "</span> . $cars[<span class="hljs-number">2</span>] . <span class="hljs-string">".&lt;br&gt;"</span>;<br><span class="hljs-keyword">echo</span> count($cars);	<span class="hljs-comment">// 数组长度</span><br><br><span class="hljs-comment">// 关联数组</span><br>$age=<span class="hljs-keyword">array</span>(<span class="hljs-string">"Peter"</span>=&gt;<span class="hljs-string">"35"</span>,<span class="hljs-string">"Ben"</span>=&gt;<span class="hljs-string">"37"</span>,<span class="hljs-string">"Joe"</span>=&gt;<span class="hljs-string">"43"</span>);<br><span class="hljs-keyword">echo</span> <span class="hljs-string">"&lt;br&gt;Peter is "</span> . $age[<span class="hljs-string">'Peter'</span>] . <span class="hljs-string">" years old."</span>;<br><span class="hljs-meta">?&gt;</span></span><br></code></pre></td></tr></table></figure>
 
 <h2 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h2><p>sort() - 对数组进行升序排列<br>rsort() - 对数组进行降序排列<br>asort() - 根据关联数组的值，对数组进行升序排列<br>ksort() - 根据关联数组的键，对数组进行升序排列</p>
 <h2 id="超级全局变量"><a href="#超级全局变量" class="headerlink" title="超级全局变量"></a>超级全局变量</h2><p>超级全局变量在PHP 4.1.0之后被启用, 是PHP系统中自带的变量，在一个脚本的全部作用域中都可用。<br><code>$GLOBALS</code> 是PHP的一个超级全局变量组，在一个PHP脚本的全部作用域中都可以访问。<br>$_SERVER 是一个包含了诸如头信息(header)、路径(path)、以及脚本位置(script locations)等等信息的数组。</p>
 <h3 id="REQUEST"><a href="#REQUEST" class="headerlink" title="$_REQUEST"></a>$_REQUEST</h3><p><code>$_REQUEST</code> 用于收集HTML表单提交的数据。<br>当用户通过点击 “Submit” 按钮提交表单数据时, 表单数据将发送至<form>标签中 action 属性中指定的脚本文件。</form></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- $_SERVER[&apos;PHP_SELF&apos;] 获取 当前执行脚本的文件名 --&gt;</span><br><span class="line">&lt;form method=&quot;post&quot; action=&quot;&lt;?php echo $_SERVER[&apos;PHP_SELF&apos;];?&gt;&quot;&gt; </span><br><span class="line">Name: &lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"> </span><br><span class="line">&lt;?php </span><br><span class="line">$name = $_REQUEST[&apos;fname&apos;]; </span><br><span class="line">echo $name; </span><br><span class="line">?&gt;</span><br><span class="line"> </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br><br><span class="hljs-comment">&lt;!-- $_SERVER['PHP_SELF'] 获取 当前执行脚本的文件名 --&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"&lt;?php echo $_SERVER['PHP_SELF'];?&gt;"</span>&gt;</span> <br>Name: <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"fname"</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span><br> <br><span class="php"><span class="hljs-meta">&lt;?php</span> <br>$name = $_REQUEST[<span class="hljs-string">'fname'</span>]; <br><span class="hljs-keyword">echo</span> $name; <br><span class="hljs-meta">?&gt;</span></span><br> <br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
 <p><code>$_POST</code>、<code>$_GET</code>同样被广泛应用于收集表单数据。</p>
 <h2 id="While-循环"><a href="#While-循环" class="headerlink" title="While 循环"></a>While 循环</h2><h2 id="For-循环"><a href="#For-循环" class="headerlink" title="For 循环"></a>For 循环</h2><h3 id="foreach-循环"><a href="#foreach-循环" class="headerlink" title="foreach 循环"></a>foreach 循环</h3><p>冒泡排序</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">	$arr = array(9,8,7,6,5,4,3,2,1);</span><br><span class="line">	for ($i=count($arr)-1; $i&gt;=0; $i--) &#123;</span><br><span class="line">		for ($j= 0; $j&lt;$i; $j++) &#123;</span><br><span class="line">			if($arr[$j] &gt; $arr[$j+1]) &#123;</span><br><span class="line">				$temp = $arr[$j];</span><br><span class="line">				$arr[$j] = $arr[$j+1];</span><br><span class="line">				$arr[$j+1] = $temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	print_r($arr[4]);</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br>	$arr = <span class="hljs-keyword">array</span>(<span class="hljs-number">9</span>,<span class="hljs-number">8</span>,<span class="hljs-number">7</span>,<span class="hljs-number">6</span>,<span class="hljs-number">5</span>,<span class="hljs-number">4</span>,<span class="hljs-number">3</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>);<br>	<span class="hljs-keyword">for</span> ($i=count($arr)<span class="hljs-number">-1</span>; $i&gt;=<span class="hljs-number">0</span>; $i--) &#123;<br>		<span class="hljs-keyword">for</span> ($j= <span class="hljs-number">0</span>; $j&lt;$i; $j++) &#123;<br>			<span class="hljs-keyword">if</span>($arr[$j] &gt; $arr[$j+<span class="hljs-number">1</span>]) &#123;<br>				$temp = $arr[$j];<br>				$arr[$j] = $arr[$j+<span class="hljs-number">1</span>];<br>				$arr[$j+<span class="hljs-number">1</span>] = $temp;<br>			&#125;<br>		&#125;<br>	&#125;<br>	print_r($arr[<span class="hljs-number">4</span>]);</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">function add($x, $y) &#123;</span><br><span class="line">	return $x + $y;</span><br><span class="line">&#125;</span><br><span class="line">echo &apos;14 + 12 = &apos; . add(14, 12);</span><br></pre></td></tr></table></figure>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span><span class="hljs-params">($x, $y)</span> </span>&#123;<br>	<span class="hljs-keyword">return</span> $x + $y;<br>&#125;<br><span class="hljs-keyword">echo</span> <span class="hljs-string">'14 + 12 = '</span> . add(<span class="hljs-number">14</span>, <span class="hljs-number">12</span>);</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="魔法常量"><a href="#魔法常量" class="headerlink" title="魔法常量"></a>魔法常量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &apos;该文件位于 &quot; &apos;  . __FILE__ . &apos; &quot; &lt;br&gt;&apos;;</span><br><span class="line">class test &#123;</span><br><span class="line">    function _print() &#123;</span><br><span class="line">        echo &apos;类名为：&apos;  . __CLASS__ . &quot;&lt;br&gt;&quot;;</span><br><span class="line">        echo &apos;函数名为：&apos; . __FUNCTION__ ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">$t = new test();</span><br><span class="line">$t-&gt;_print();</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="魔法常量"><a href="#魔法常量" class="headerlink" title="魔法常量"></a>魔法常量</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-keyword">echo</span> <span class="hljs-string">'该文件位于 " '</span>  . <span class="hljs-keyword">__FILE__</span> . <span class="hljs-string">' " &lt;br&gt;'</span>;<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">test</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_print</span><span class="hljs-params">()</span> </span>&#123;<br>        <span class="hljs-keyword">echo</span> <span class="hljs-string">'类名为：'</span>  . <span class="hljs-keyword">__CLASS__</span> . <span class="hljs-string">"&lt;br&gt;"</span>;<br>        <span class="hljs-keyword">echo</span> <span class="hljs-string">'函数名为：'</span> . <span class="hljs-keyword">__FUNCTION__</span> ;<br>    &#125;<br>&#125;<br>$t = <span class="hljs-keyword">new</span> test();<br>$t-&gt;_print();<br><span class="hljs-meta">?&gt;</span></span><br></code></pre></td></tr></table></figure>
 
 <h2 id="命名空间-namespace"><a href="#命名空间-namespace" class="headerlink" title="命名空间(namespace)"></a>命名空间(namespace)</h2><p>PHP 命名空间可以解决以下两类问题：</p>
 <ul>
@@ -370,19 +292,19 @@
 <li>&gt; （大于） 成为 &gt;</li>
 </ul>
 <p><code>$_SERVER[&quot;PHP_SELF&quot;]</code> 变量有可能会被黑客使用！可以通过 htmlspecialchars() 函数来避免被利用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// 定义变量并默认设置为空值</span><br><span class="line">$name = $email = $gender = $comment = $website = &quot;&quot;;</span><br><span class="line">// 通过$_SERVER[&quot;REQUEST_METHOD&quot;]来检测表单是否被提交</span><br><span class="line">if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;)</span><br><span class="line">&#123;</span><br><span class="line">   $name = test_input($_POST[&quot;name&quot;]);</span><br><span class="line">   $gender = test_input($_POST[&quot;gender&quot;]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function test_input($data)</span><br><span class="line">&#123;</span><br><span class="line">   $data = trim($data);  // 去除用户输入数据中不必要的字符 (如：空格，tab，换行)。</span><br><span class="line">   $data = stripslashes($data);  // 去除用户输入数据中的反斜杠 (\)</span><br><span class="line">   $data = htmlspecialchars($data);  // 把一些预定义的字符转换为 HTML 实体。</span><br><span class="line">   return $data;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-comment">// 定义变量并默认设置为空值</span><br>$name = $email = $gender = $comment = $website = <span class="hljs-string">""</span>;<br><span class="hljs-comment">// 通过$_SERVER["REQUEST_METHOD"]来检测表单是否被提交</span><br><span class="hljs-keyword">if</span> ($_SERVER[<span class="hljs-string">"REQUEST_METHOD"</span>] == <span class="hljs-string">"POST"</span>)<br>&#123;<br>   $name = test_input($_POST[<span class="hljs-string">"name"</span>]);<br>   $gender = test_input($_POST[<span class="hljs-string">"gender"</span>]);<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">test_input</span><span class="hljs-params">($data)</span><br></span>&#123;<br>   $data = trim($data);  <span class="hljs-comment">// 去除用户输入数据中不必要的字符 (如：空格，tab，换行)。</span><br>   $data = stripslashes($data);  <span class="hljs-comment">// 去除用户输入数据中的反斜杠 (\)</span><br>   $data = htmlspecialchars($data);  <span class="hljs-comment">// 把一些预定义的字符转换为 HTML 实体。</span><br>   <span class="hljs-keyword">return</span> $data;<br>&#125;<br><span class="hljs-meta">?&gt;</span></span><br></code></pre></td></tr></table></figure>
 
-<h2 id="必须字段"><a href="#必须字段" class="headerlink" title="必须字段"></a>必须字段</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// 定义变量并默认设为空值</span><br><span class="line">$nameErr = $name = &quot;&quot;;</span><br><span class="line">if ($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;POST&quot;) &#123;</span><br><span class="line">  if (empty($_POST[&quot;name&quot;])) &#123;</span><br><span class="line">    $nameErr = &quot;名字是必需的。&quot;;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    $name = test_input($_POST[&quot;name&quot;]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br><span class="line">&lt;form method=&quot;post&quot; action=&quot;&lt;?php echo htmlspecialchars($_SERVER[&apos;PHP_SELF&apos;]);?&gt;&quot;&gt; </span><br><span class="line">   名字: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;</span><br><span class="line">   &lt;span class=&quot;error&quot;&gt;* &lt;?php echo $nameErr;?&gt;&lt;/span&gt;</span><br><span class="line">   &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Submit&quot;&gt; </span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="必须字段"><a href="#必须字段" class="headerlink" title="必须字段"></a>必须字段</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-comment">// 定义变量并默认设为空值</span><br>$nameErr = $name = <span class="hljs-string">""</span>;<br><span class="hljs-keyword">if</span> ($_SERVER[<span class="hljs-string">"REQUEST_METHOD"</span>] == <span class="hljs-string">"POST"</span>) &#123;<br>  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">empty</span>($_POST[<span class="hljs-string">"name"</span>])) &#123;<br>    $nameErr = <span class="hljs-string">"名字是必需的。"</span>;<br>  &#125; <span class="hljs-keyword">else</span> &#123;<br>    $name = test_input($_POST[<span class="hljs-string">"name"</span>]);<br>  &#125;<br>&#125;<br><span class="hljs-meta">?&gt;</span></span><br><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"post"</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"&lt;?php echo htmlspecialchars($_SERVER['PHP_SELF']);?&gt;"</span>&gt;</span> <br>   名字: <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"name"</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"error"</span>&gt;</span>* <span class="php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">echo</span> $nameErr;<span class="hljs-meta">?&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Submit"</span>&gt;</span> <br><span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="验证邮件和URL"><a href="#验证邮件和URL" class="headerlink" title="验证邮件和URL"></a>验证邮件和URL</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if (empty($_POST[&quot;name&quot;])) &#123;</span><br><span class="line">  $nameErr = &quot;Name is required&quot;;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">	 $name = test_input($_POST[&quot;name&quot;]);</span><br><span class="line">	 // 检测名字是否只包含字母跟空格</span><br><span class="line">	 if (!preg_match(&quot;/^[a-zA-Z ]*$/&quot;,$name)) &#123;</span><br><span class="line">	 $nameErr = &quot;只允许字母和空格&quot;; </span><br><span class="line">	 &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="验证邮件和URL"><a href="#验证邮件和URL" class="headerlink" title="验证邮件和URL"></a>验证邮件和URL</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-keyword">if</span> (<span class="hljs-keyword">empty</span>($_POST[<span class="hljs-string">"name"</span>])) &#123;<br>  $nameErr = <span class="hljs-string">"Name is required"</span>;<br>  &#125; <span class="hljs-keyword">else</span> &#123;<br>	 $name = test_input($_POST[<span class="hljs-string">"name"</span>]);<br>	 <span class="hljs-comment">// 检测名字是否只包含字母跟空格</span><br>	 <span class="hljs-keyword">if</span> (!preg_match(<span class="hljs-string">"/^[a-zA-Z ]*$/"</span>,$name)) &#123;<br>	 $nameErr = <span class="hljs-string">"只允许字母和空格"</span>; <br>	 &#125;<br> &#125;<br></code></pre></td></tr></table></figure>
 
 <h2 id="GET-变量"><a href="#GET-变量" class="headerlink" title="$_GET 变量"></a>$_GET 变量</h2><p>预定义的<code>$_GET</code> 变量用于收集来自 <code>method=&quot;get&quot;</code>的表单中的值。</p>
 <p>从带有 GET 方法的表单发送的信息，对任何人都是可见的（会显示在浏览器的地址栏），并且对发送信息的量也有限制。</p>
 <h2 id="POST-变量"><a href="#POST-变量" class="headerlink" title="$_POST 变量"></a>$_POST 变量</h2><p>预定义的 <code>$_POST</code> 变量用于收集来自 <code>method=&quot;post&quot;</code>的表单中的值。</p>
 <p>从带有 POST 方法的表单发送的信息，对任何人都是不可见的（不会显示在浏览器的地址栏），并且对发送信息的量也没有限制。</p>
-<h1 id="PHP高级教程"><a href="#PHP高级教程" class="headerlink" title="PHP高级教程"></a>PHP高级教程</h1><h2 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$sites = array</span><br><span class="line">(</span><br><span class="line">    array(&quot;Volvo&quot;,100,96),</span><br><span class="line">    &quot;taobao&quot;=&gt;array</span><br><span class="line">    (</span><br><span class="line">        &quot;淘宝&quot;,</span><br><span class="line">        &quot;http://www.taobao.com&quot;</span><br><span class="line">    )</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h1 id="PHP高级教程"><a href="#PHP高级教程" class="headerlink" title="PHP高级教程"></a>PHP高级教程</h1><h2 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h2><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs undefined">$sites =<span class="hljs-built_in"> array<br></span>(<br>    array(<span class="hljs-string">"Volvo"</span>,100,96),<br>    <span class="hljs-string">"taobao"</span>=&gt;array<br>    (<br>        <span class="hljs-string">"淘宝"</span>,<br>        <span class="hljs-string">"http://www.taobao.com"</span><br>    )<br>);<br></code></pre></td></tr></table></figure>
 
-<h2 id="date-函数"><a href="#date-函数" class="headerlink" title="date() 函数"></a>date() 函数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">date_default_timezone_set(&apos;PRC&apos;); </span><br><span class="line">echo date(&quot;Y/m/d&quot;) . &quot;&lt;br&gt;&quot;;</span><br><span class="line">echo date(&quot;Y.m.d&quot;) . &quot;&lt;br&gt;&quot;;</span><br><span class="line">echo date(&quot;Y-m-d H:i:s&quot;);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="date-函数"><a href="#date-函数" class="headerlink" title="date() 函数"></a>date() 函数</h2><figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs undefined">&lt;?php<br>date_default_timezone_set(<span class="hljs-string">'PRC'</span>); <br><span class="hljs-built_in">echo</span> <span class="hljs-built_in">date</span>(<span class="hljs-string">"Y/m/d"</span>) . <span class="hljs-string">"&lt;br&gt;"</span>;<br><span class="hljs-built_in">echo</span> <span class="hljs-built_in">date</span>(<span class="hljs-string">"Y.m.d"</span>) . <span class="hljs-string">"&lt;br&gt;"</span>;<br><span class="hljs-built_in">echo</span> <span class="hljs-built_in">date</span>(<span class="hljs-string">"Y-m-d H:i:s"</span>);<br>?&gt;<br></code></pre></td></tr></table></figure>
 
 <h2 id="包含文件"><a href="#包含文件" class="headerlink" title="包含文件"></a>包含文件</h2><p>include 和 require 语句用于在执行流中插入写在其他文件中的有用的代码。<br>处理错误方式不同：</p>
 <ul>
@@ -392,350 +314,242 @@
 <h2 id="文件处理"><a href="#文件处理" class="headerlink" title="文件处理"></a>文件处理</h2><p>fopen()、fclose()、feof()</p>
 <h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><p>允许用户上传文件是一个巨大的安全风险。请仅仅允许可信的用户执行文件上传操作。<br><a href="https://www.cnblogs.com/54chensongxia/p/11662252.html#2409458956" target="_blank" rel="noopener">https://www.cnblogs.com/54chensongxia/p/11662252.html#2409458956</a></p>
 <h3 id="上传限制"><a href="#上传限制" class="headerlink" title="上传限制"></a>上传限制</h3><p>用户只能上传 .gif、.jpeg、.jpg、.png 文件，文件大小必须小于 200 kB</p>
-<h3 id="保存被上传的文件"><a href="#保存被上传的文件" class="headerlink" title="保存被上传的文件"></a>保存被上传的文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// 允许上传的图片后缀</span><br><span class="line">$allowedExts = array(&quot;gif&quot;, &quot;jpeg&quot;, &quot;jpg&quot;, &quot;png&quot;);</span><br><span class="line">$temp = explode(&quot;.&quot;, $_FILES[&quot;file&quot;][&quot;name&quot;]);</span><br><span class="line">echo $_FILES[&quot;file&quot;][&quot;size&quot;];</span><br><span class="line">$extension = end($temp);     // 获取文件后缀名</span><br><span class="line">if ((($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/gif&quot;)</span><br><span class="line">|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/jpeg&quot;)</span><br><span class="line">|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/jpg&quot;)</span><br><span class="line">|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/pjpeg&quot;)</span><br><span class="line">|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/x-png&quot;)</span><br><span class="line">|| ($_FILES[&quot;file&quot;][&quot;type&quot;] == &quot;image/png&quot;))</span><br><span class="line">&amp;&amp; ($_FILES[&quot;file&quot;][&quot;size&quot;] &lt; 204800)   // 小于 200 kb</span><br><span class="line">&amp;&amp; in_array($extension, $allowedExts))</span><br><span class="line">&#123;</span><br><span class="line">    if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)</span><br><span class="line">    &#123;</span><br><span class="line">        echo &quot;错误：: &quot; . $_FILES[&quot;file&quot;][&quot;error&quot;] . &quot;&lt;br&gt;&quot;;</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        echo &quot;上传文件名: &quot; . $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;&lt;br&gt;&quot;;</span><br><span class="line">        echo &quot;文件类型: &quot; . $_FILES[&quot;file&quot;][&quot;type&quot;] . &quot;&lt;br&gt;&quot;;</span><br><span class="line">        echo &quot;文件大小: &quot; . ($_FILES[&quot;file&quot;][&quot;size&quot;] / 1024) . &quot; kB&lt;br&gt;&quot;;</span><br><span class="line">        echo &quot;文件临时存储的位置: &quot; . $_FILES[&quot;file&quot;][&quot;tmp_name&quot;] . &quot;&lt;br&gt;&quot;;</span><br><span class="line">        </span><br><span class="line">        // 判断当期目录下的 upload 目录是否存在该文件</span><br><span class="line">        // 如果没有 upload 目录，你需要创建它，upload 目录权限为 777</span><br><span class="line">        if (file_exists(&quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]))</span><br><span class="line">        &#123;</span><br><span class="line">            echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot; 文件已经存在。 &quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            // 如果 upload 目录不存在该文件则将文件上传到 upload 目录下</span><br><span class="line">            move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;], &quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]);</span><br><span class="line">            echo &quot;文件存储在: &quot; . &quot;upload/&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">    echo &quot;非法的文件格式&quot;;</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="保存被上传的文件"><a href="#保存被上传的文件" class="headerlink" title="保存被上传的文件"></a>保存被上传的文件</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-comment">// 允许上传的图片后缀</span><br>$allowedExts = <span class="hljs-keyword">array</span>(<span class="hljs-string">"gif"</span>, <span class="hljs-string">"jpeg"</span>, <span class="hljs-string">"jpg"</span>, <span class="hljs-string">"png"</span>);<br>$temp = explode(<span class="hljs-string">"."</span>, $_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"name"</span>]);<br><span class="hljs-keyword">echo</span> $_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"size"</span>];<br>$extension = end($temp);     <span class="hljs-comment">// 获取文件后缀名</span><br><span class="hljs-keyword">if</span> ((($_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"type"</span>] == <span class="hljs-string">"image/gif"</span>)<br>|| ($_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"type"</span>] == <span class="hljs-string">"image/jpeg"</span>)<br>|| ($_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"type"</span>] == <span class="hljs-string">"image/jpg"</span>)<br>|| ($_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"type"</span>] == <span class="hljs-string">"image/pjpeg"</span>)<br>|| ($_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"type"</span>] == <span class="hljs-string">"image/x-png"</span>)<br>|| ($_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"type"</span>] == <span class="hljs-string">"image/png"</span>))<br>&amp;&amp; ($_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"size"</span>] &lt; <span class="hljs-number">204800</span>)   <span class="hljs-comment">// 小于 200 kb</span><br>&amp;&amp; in_array($extension, $allowedExts))<br>&#123;<br>    <span class="hljs-keyword">if</span> ($_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"error"</span>] &gt; <span class="hljs-number">0</span>)<br>    &#123;<br>        <span class="hljs-keyword">echo</span> <span class="hljs-string">"错误：: "</span> . $_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"error"</span>] . <span class="hljs-string">"&lt;br&gt;"</span>;<br>    &#125;<br>    <span class="hljs-keyword">else</span><br>    &#123;<br>        <span class="hljs-keyword">echo</span> <span class="hljs-string">"上传文件名: "</span> . $_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"name"</span>] . <span class="hljs-string">"&lt;br&gt;"</span>;<br>        <span class="hljs-keyword">echo</span> <span class="hljs-string">"文件类型: "</span> . $_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"type"</span>] . <span class="hljs-string">"&lt;br&gt;"</span>;<br>        <span class="hljs-keyword">echo</span> <span class="hljs-string">"文件大小: "</span> . ($_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"size"</span>] / <span class="hljs-number">1024</span>) . <span class="hljs-string">" kB&lt;br&gt;"</span>;<br>        <span class="hljs-keyword">echo</span> <span class="hljs-string">"文件临时存储的位置: "</span> . $_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"tmp_name"</span>] . <span class="hljs-string">"&lt;br&gt;"</span>;<br>        <br>        <span class="hljs-comment">// 判断当期目录下的 upload 目录是否存在该文件</span><br>        <span class="hljs-comment">// 如果没有 upload 目录，你需要创建它，upload 目录权限为 777</span><br>        <span class="hljs-keyword">if</span> (file_exists(<span class="hljs-string">"upload/"</span> . $_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"name"</span>]))<br>        &#123;<br>            <span class="hljs-keyword">echo</span> $_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"name"</span>] . <span class="hljs-string">" 文件已经存在。 "</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span><br>        &#123;<br>            <span class="hljs-comment">// 如果 upload 目录不存在该文件则将文件上传到 upload 目录下</span><br>            move_uploaded_file($_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"tmp_name"</span>], <span class="hljs-string">"upload/"</span> . $_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"name"</span>]);<br>            <span class="hljs-keyword">echo</span> <span class="hljs-string">"文件存储在: "</span> . <span class="hljs-string">"upload/"</span> . $_FILES[<span class="hljs-string">"file"</span>][<span class="hljs-string">"name"</span>];<br>        &#125;<br>    &#125;<br>&#125;<br><span class="hljs-keyword">else</span><br>&#123;<br>    <span class="hljs-keyword">echo</span> <span class="hljs-string">"非法的文件格式"</span>;<br>&#125;<br><span class="hljs-meta">?&gt;</span></span><br></code></pre></td></tr></table></figure>
 
 <h2 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h2><p>cookie 常用于<strong>识别用户</strong>。cookie 是一种服务器留在用户计算机上的小文件。每当同一台计算机通过浏览器请求页面时，这台计算机将会发送 cookie。通过 PHP，您能够创建并取回 cookie 的值。</p>
 <h2 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h2><p>session 变量用于存储关于用户会话（session）的信息，或者更改用户会话（session）的设置。Session 变量存储单一用户的信息，并且对于应用程序中的所有页面都是可用的。</p>
 <h2 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h2><p>PHP 允许您从脚本直接发送电子邮件。</p>
 <h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><p>在 PHP 中，默认的错误处理很简单。一条错误消息会被发送到浏览器，这条消息带有文件名、行号以及描述错误的消息。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">if(!file_exists(&quot;welcome.txt&quot;)) &#123;</span><br><span class="line">    die(&quot;文件不存在&quot;);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    $file=fopen(&quot;welcome.txt&quot;,&quot;r&quot;);</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-keyword">if</span>(!file_exists(<span class="hljs-string">"welcome.txt"</span>)) &#123;<br>    <span class="hljs-keyword">die</span>(<span class="hljs-string">"文件不存在"</span>);<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    $file=fopen(<span class="hljs-string">"welcome.txt"</span>,<span class="hljs-string">"r"</span>);<br>&#125;<br><span class="hljs-meta">?&gt;</span></span><br></code></pre></td></tr></table></figure>
 
 <h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><p>异常用于在指定的错误发生时改变脚本的正常流程。</p>
 <h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><p>PHP 过滤器用于验证和过滤来自非安全来源的数据，比如用户的输入。</p>
 <h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><p>json_encode: 对变量进行 JSON 编码<br>json_decode: 对 JSON 格式的字符串进行解码，转换为 PHP 变量</p>
 <h1 id="PHP数据库"><a href="#PHP数据库" class="headerlink" title="PHP数据库"></a>PHP数据库</h1><h2 id="MySQL简介"><a href="#MySQL简介" class="headerlink" title="MySQL简介"></a>MySQL简介</h2><p>MySQL 是一种在 Web、服务器 上使用的数据库系统。</p>
-<h2 id="连接MySQL"><a href="#连接MySQL" class="headerlink" title="连接MySQL"></a>连接MySQL</h2><h3 id="实例-MySQLi-面向对象"><a href="#实例-MySQLi-面向对象" class="headerlink" title="实例 (MySQLi - 面向对象)"></a>实例 (MySQLi - 面向对象)</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$servername = <span class="string">"localhost"</span>;</span><br><span class="line">$username = <span class="string">"username"</span>;</span><br><span class="line">$password = <span class="string">"password"</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 创建连接</span></span><br><span class="line">$conn = <span class="keyword">new</span> mysqli($servername, $username, $password);</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 检测连接</span></span><br><span class="line"><span class="keyword">if</span> ($conn-&gt;connect_error) &#123;</span><br><span class="line">    <span class="keyword">die</span>(<span class="string">"连接失败: "</span> . $conn-&gt;connect_error);</span><br><span class="line">&#125; </span><br><span class="line"><span class="keyword">echo</span> <span class="string">"连接成功"</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="连接MySQL"><a href="#连接MySQL" class="headerlink" title="连接MySQL"></a>连接MySQL</h2><h3 id="实例-MySQLi-面向对象"><a href="#实例-MySQLi-面向对象" class="headerlink" title="实例 (MySQLi - 面向对象)"></a>实例 (MySQLi - 面向对象)</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br>$servername = <span class="hljs-string">"localhost"</span>;<br>$username = <span class="hljs-string">"username"</span>;<br>$password = <span class="hljs-string">"password"</span>;<br> <br><span class="hljs-comment">// 创建连接</span><br>$conn = <span class="hljs-keyword">new</span> mysqli($servername, $username, $password);<br> <br><span class="hljs-comment">// 检测连接</span><br><span class="hljs-keyword">if</span> ($conn-&gt;connect_error) &#123;<br>    <span class="hljs-keyword">die</span>(<span class="hljs-string">"连接失败: "</span> . $conn-&gt;connect_error);<br>&#125; <br><span class="hljs-keyword">echo</span> <span class="hljs-string">"连接成功"</span>;<br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
 
-<h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建数据库</span></span><br><span class="line">$sql = <span class="string">"CREATE DATABASE myDB"</span>;</span><br><span class="line"><span class="keyword">if</span> ($conn-&gt;query($sql) === <span class="keyword">TRUE</span>) &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"数据库创建成功"</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"Error creating database: "</span> . $conn-&gt;error;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">$conn-&gt;close();</span><br></pre></td></tr></table></figure>
+<h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">// 创建数据库</span><br>$sql = <span class="hljs-string">"CREATE DATABASE myDB"</span>;<br><span class="hljs-keyword">if</span> ($conn-&gt;query($sql) === <span class="hljs-keyword">TRUE</span>) &#123;<br>    <span class="hljs-keyword">echo</span> <span class="hljs-string">"数据库创建成功"</span>;<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-keyword">echo</span> <span class="hljs-string">"Error creating database: "</span> . $conn-&gt;error;<br>&#125;<br> <br>$conn-&gt;close();<br></code></pre></td></tr></table></figure>
 
-<h2 id="创建数据表"><a href="#创建数据表" class="headerlink" title="创建数据表"></a>创建数据表</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用 sql 创建数据表</span></span><br><span class="line">$sql = <span class="string">"CREATE TABLE MyGuests (</span></span><br><span class="line"><span class="string">id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, </span></span><br><span class="line"><span class="string">firstname VARCHAR(30) NOT NULL,</span></span><br><span class="line"><span class="string">lastname VARCHAR(30) NOT NULL,</span></span><br><span class="line"><span class="string">email VARCHAR(50),</span></span><br><span class="line"><span class="string">reg_date TIMESTAMP</span></span><br><span class="line"><span class="string">)"</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> ($conn-&gt;query($sql) === <span class="keyword">TRUE</span>) &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"Table MyGuests created successfully"</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"创建数据表错误: "</span> . $conn-&gt;error;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">$conn-&gt;close();</span><br></pre></td></tr></table></figure>
+<h2 id="创建数据表"><a href="#创建数据表" class="headerlink" title="创建数据表"></a>创建数据表</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">// 使用 sql 创建数据表</span><br>$sql = <span class="hljs-string">"CREATE TABLE MyGuests (<br>id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, <br>firstname VARCHAR(30) NOT NULL,<br>lastname VARCHAR(30) NOT NULL,<br>email VARCHAR(50),<br>reg_date TIMESTAMP<br>)"</span>;<br> <br><span class="hljs-keyword">if</span> ($conn-&gt;query($sql) === <span class="hljs-keyword">TRUE</span>) &#123;<br>    <span class="hljs-keyword">echo</span> <span class="hljs-string">"Table MyGuests created successfully"</span>;<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-keyword">echo</span> <span class="hljs-string">"创建数据表错误: "</span> . $conn-&gt;error;<br>&#125;<br> <br>$conn-&gt;close();<br></code></pre></td></tr></table></figure>
 
 <h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><p>预处理语句对于防止 MySQL 注入是非常有用的。<br>预处理语句用于执行多个相同的 SQL 语句，并且执行效率更高。</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$servername = <span class="string">"localhost"</span>;</span><br><span class="line">$username = <span class="string">"username"</span>;</span><br><span class="line">$password = <span class="string">"password"</span>;</span><br><span class="line">$dbname = <span class="string">"myDB"</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 创建连接</span></span><br><span class="line">$conn = <span class="keyword">new</span> mysqli($servername, $username, $password, $dbname);</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 检测连接</span></span><br><span class="line"><span class="keyword">if</span> ($conn-&gt;connect_error) &#123;</span><br><span class="line">    <span class="keyword">die</span>(<span class="string">"连接失败: "</span> . $conn-&gt;connect_error);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 预处理及绑定</span></span><br><span class="line">$stmt = $conn-&gt;prepare(<span class="string">"INSERT INTO MyGuests (firstname, lastname, email) VALUES (?, ?, ?)"</span>);</span><br><span class="line">$stmt-&gt;bind_param(<span class="string">"sss"</span>, $firstname, $lastname, $email);</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 设置参数并执行</span></span><br><span class="line">$firstname = <span class="string">"John"</span>;</span><br><span class="line">$lastname = <span class="string">"Doe"</span>;</span><br><span class="line">$email = <span class="string">"john@example.com"</span>;</span><br><span class="line">$stmt-&gt;execute();</span><br><span class="line"> </span><br><span class="line">$firstname = <span class="string">"Julie"</span>;</span><br><span class="line">$lastname = <span class="string">"Dooley"</span>;</span><br><span class="line">$email = <span class="string">"julie@example.com"</span>;</span><br><span class="line">$stmt-&gt;execute();</span><br><span class="line"> </span><br><span class="line"><span class="keyword">echo</span> <span class="string">"新记录插入成功"</span>;</span><br><span class="line"> </span><br><span class="line">$stmt-&gt;close();</span><br><span class="line">$conn-&gt;close();</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br>$servername = <span class="hljs-string">"localhost"</span>;<br>$username = <span class="hljs-string">"username"</span>;<br>$password = <span class="hljs-string">"password"</span>;<br>$dbname = <span class="hljs-string">"myDB"</span>;<br> <br><span class="hljs-comment">// 创建连接</span><br>$conn = <span class="hljs-keyword">new</span> mysqli($servername, $username, $password, $dbname);<br> <br><span class="hljs-comment">// 检测连接</span><br><span class="hljs-keyword">if</span> ($conn-&gt;connect_error) &#123;<br>    <span class="hljs-keyword">die</span>(<span class="hljs-string">"连接失败: "</span> . $conn-&gt;connect_error);<br>&#125;<br> <br><span class="hljs-comment">// 预处理及绑定</span><br>$stmt = $conn-&gt;prepare(<span class="hljs-string">"INSERT INTO MyGuests (firstname, lastname, email) VALUES (?, ?, ?)"</span>);<br>$stmt-&gt;bind_param(<span class="hljs-string">"sss"</span>, $firstname, $lastname, $email);<br> <br><span class="hljs-comment">// 设置参数并执行</span><br>$firstname = <span class="hljs-string">"John"</span>;<br>$lastname = <span class="hljs-string">"Doe"</span>;<br>$email = <span class="hljs-string">"john@example.com"</span>;<br>$stmt-&gt;execute();<br> <br>$firstname = <span class="hljs-string">"Julie"</span>;<br>$lastname = <span class="hljs-string">"Dooley"</span>;<br>$email = <span class="hljs-string">"julie@example.com"</span>;<br>$stmt-&gt;execute();<br> <br><span class="hljs-keyword">echo</span> <span class="hljs-string">"新记录插入成功"</span>;<br> <br>$stmt-&gt;close();<br>$conn-&gt;close();<br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
 
 <p><code>$stmt-&gt;bind_param(&quot;sss&quot;, $firstname, $lastname, $email);</code><br>bind_param函数绑定了 SQL 的参数，且告诉数据库参数的值。 “sss” 参数列处理其余参数的数据类型。s 字符告诉数据库该参数为字符串。</p>
 <p>参数有以下四种类型:</p>
 <p>i - integer（整型）<br>d - double（双精度浮点型）<br>s - string（字符串）<br>b - BLOB（binary large object:二进制大对象）<br>每个参数都需要指定类型。通过告诉数据库参数的数据类型，可以降低 SQL 注入的风险。</p>
-<h2 id="读取数据"><a href="#读取数据" class="headerlink" title="读取数据"></a>读取数据</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$servername = <span class="string">"localhost"</span>;</span><br><span class="line">$username = <span class="string">"username"</span>;</span><br><span class="line">$password = <span class="string">"password"</span>;</span><br><span class="line">$dbname = <span class="string">"myDB"</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment">// 创建连接</span></span><br><span class="line">$conn = <span class="keyword">new</span> mysqli($servername, $username, $password, $dbname);</span><br><span class="line"><span class="comment">// Check connection</span></span><br><span class="line"><span class="keyword">if</span> ($conn-&gt;connect_error) &#123;</span><br><span class="line">    <span class="keyword">die</span>(<span class="string">"连接失败: "</span> . $conn-&gt;connect_error);</span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line">$sql = <span class="string">"SELECT id, firstname, lastname FROM MyGuests"</span>;</span><br><span class="line">$result = $conn-&gt;query($sql);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> ($result-&gt;num_rows &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="comment">// 输出数据</span></span><br><span class="line">    <span class="keyword">while</span>($row = $result-&gt;fetch_assoc()) &#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">"id: "</span> . $row[<span class="string">"id"</span>]. <span class="string">" - Name: "</span> . $row[<span class="string">"firstname"</span>]. <span class="string">" "</span> . $row[<span class="string">"lastname"</span>]. <span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"0 结果"</span>;</span><br><span class="line">&#125;</span><br><span class="line">$conn-&gt;close();</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-    </div>
-
-    
-    
-    
-        
-      
-
-      <footer class="post-footer">
-          
-            
-          
-          <div class="post-tags">
-            
-              <a href="/tags/PHP/" rel="tag"># PHP</a>
-            
-          </div>
-        
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
+<h2 id="读取数据"><a href="#读取数据" class="headerlink" title="读取数据"></a>读取数据</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br>$servername = <span class="hljs-string">"localhost"</span>;<br>$username = <span class="hljs-string">"username"</span>;<br>$password = <span class="hljs-string">"password"</span>;<br>$dbname = <span class="hljs-string">"myDB"</span>;<br> <br><span class="hljs-comment">// 创建连接</span><br>$conn = <span class="hljs-keyword">new</span> mysqli($servername, $username, $password, $dbname);<br><span class="hljs-comment">// Check connection</span><br><span class="hljs-keyword">if</span> ($conn-&gt;connect_error) &#123;<br>    <span class="hljs-keyword">die</span>(<span class="hljs-string">"连接失败: "</span> . $conn-&gt;connect_error);<br>&#125; <br> <br>$sql = <span class="hljs-string">"SELECT id, firstname, lastname FROM MyGuests"</span>;<br>$result = $conn-&gt;query($sql);<br> <br><span class="hljs-keyword">if</span> ($result-&gt;num_rows &gt; <span class="hljs-number">0</span>) &#123;<br>    <span class="hljs-comment">// 输出数据</span><br>    <span class="hljs-keyword">while</span>($row = $result-&gt;fetch_assoc()) &#123;<br>        <span class="hljs-keyword">echo</span> <span class="hljs-string">"id: "</span> . $row[<span class="hljs-string">"id"</span>]. <span class="hljs-string">" - Name: "</span> . $row[<span class="hljs-string">"firstname"</span>]. <span class="hljs-string">" "</span> . $row[<span class="hljs-string">"lastname"</span>]. <span class="hljs-string">"&lt;br&gt;"</span>;<br>    &#125;<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    <span class="hljs-keyword">echo</span> <span class="hljs-string">"0 结果"</span>;<br>&#125;<br>$conn-&gt;close();<br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/PHP/">PHP</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/PHP/">PHP</a>
+                    
+                  </div>
+                
+              </div>
               
-                <a href="/2020/03/13/服务端/crontab定时任务/" rel="next" title="crontab定时任务">
-                  <i class="fa fa-chevron-left"></i> crontab定时任务
-                </a>
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/04/02/PHP/ThinkPHP5-0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ThinkPHP5.0</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/03/13/服务端/crontab定时任务/">
+                        <span class="hidden-mobile">crontab定时任务</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
               
             </div>
 
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2020/04/02/PHP/ThinkPHP5-0/" rel="prev" title="ThinkPHP5.0">
-                  ThinkPHP5.0 <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
-        
-      </footer>
-    
-  </div>
-  
-  
-  
-  </article>
-
-  </div>
-
-
-          </div>
-          
-    
-    
-  <div class="comments" id="comments">
-    <div id="lv-container" data-id="city" data-uid="MTAyMC80NTk4Mi8yMjQ5Mw=="></div>
-  </div>
-  
-  
-
-        </div>
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image"
-      src="https://images.cnblogs.com/cnblogs_com/oeong/1593757/o_191209052450kongaj.jpg"
-      alt="Hongchenglong">
-  <p class="site-author-name" itemprop="name">Hongchenglong</p>
-  <div class="site-description motion-element" itemprop="description">相信过程</div>
-</div>
-  <nav class="site-state motion-element">
-      <div class="site-state-item site-state-posts">
-        
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">16</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-categories">
-        
-          
-            <a href="/categories/">
-          
-        
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">7</span>
-        <span class="site-state-item-name">分类</span>
-        </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-tags">
-        
-          
-            <a href="/tags/">
-          
-        
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
-      </div>
-    
-  </nav>
-
-
-  <div class="links-of-blogroll motion-element links-of-blogroll-block">
-    <div class="links-of-blogroll-title">
-      <i class="fa  fa-fw fa-link"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://www.cnblogs.com/oeong" title="https://www.cnblogs.com/oeong" rel="noopener" target="_blank">oeong</a>
-        </li>
-      
-        <li class="links-of-blogroll-item">
-          <a href="http://www.zhoushouhao.com/" title="http://www.zhoushouhao.com/" rel="noopener" target="_blank">Shouhao's Notes</a>
-        </li>
-      
-    </ul>
-  </div>
-
+            
+          </article>
         </div>
       </div>
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP基础"><span class="nav-number">1.</span> <span class="nav-text">PHP基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP简介"><span class="nav-number">1.1.</span> <span class="nav-text">PHP简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP能做什么？"><span class="nav-number">1.1.1.</span> <span class="nav-text">PHP能做什么？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP语法"><span class="nav-number">1.2.</span> <span class="nav-text">PHP语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP语法-1"><span class="nav-number">1.3.</span> <span class="nav-text">PHP语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#echo-和-print-语句"><span class="nav-number">1.4.</span> <span class="nav-text">echo 和 print 语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EOF-heredoc-使用说明"><span class="nav-number">1.5.</span> <span class="nav-text">EOF(heredoc) 使用说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">1.6.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#对象"><span class="nav-number">1.6.1.</span> <span class="nav-text">对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型比较"><span class="nav-number">1.7.</span> <span class="nav-text">类型比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量"><span class="nav-number">1.8.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串变量"><span class="nav-number">1.9.</span> <span class="nav-text">字符串变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符"><span class="nav-number">1.10.</span> <span class="nav-text">运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#If…Else"><span class="nav-number">1.11.</span> <span class="nav-text">If…Else</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switch"><span class="nav-number">1.12.</span> <span class="nav-text">Switch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-number">1.13.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组排序"><span class="nav-number">1.14.</span> <span class="nav-text">数组排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超级全局变量"><span class="nav-number">1.15.</span> <span class="nav-text">超级全局变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#REQUEST"><span class="nav-number">1.15.1.</span> <span class="nav-text">$_REQUEST</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#While-循环"><span class="nav-number">1.16.</span> <span class="nav-text">While 循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#For-循环"><span class="nav-number">1.17.</span> <span class="nav-text">For 循环</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#foreach-循环"><span class="nav-number">1.17.1.</span> <span class="nav-text">foreach 循环</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">1.18.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#魔法常量"><span class="nav-number">1.19.</span> <span class="nav-text">魔法常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名空间-namespace"><span class="nav-number">1.20.</span> <span class="nav-text">命名空间(namespace)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象"><span class="nav-number">1.21.</span> <span class="nav-text">面向对象</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP表单"><span class="nav-number">2.</span> <span class="nav-text">PHP表单</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表单验证"><span class="nav-number">2.1.</span> <span class="nav-text">表单验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#必须字段"><span class="nav-number">2.2.</span> <span class="nav-text">必须字段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#验证邮件和URL"><span class="nav-number">2.3.</span> <span class="nav-text">验证邮件和URL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GET-变量"><span class="nav-number">2.4.</span> <span class="nav-text">$_GET 变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POST-变量"><span class="nav-number">2.5.</span> <span class="nav-text">$_POST 变量</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP高级教程"><span class="nav-number">3.</span> <span class="nav-text">PHP高级教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#多维数组"><span class="nav-number">3.1.</span> <span class="nav-text">多维数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#date-函数"><span class="nav-number">3.2.</span> <span class="nav-text">date() 函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#包含文件"><span class="nav-number">3.3.</span> <span class="nav-text">包含文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件处理"><span class="nav-number">3.4.</span> <span class="nav-text">文件处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件上传"><span class="nav-number">3.5.</span> <span class="nav-text">文件上传</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#上传限制"><span class="nav-number">3.5.1.</span> <span class="nav-text">上传限制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保存被上传的文件"><span class="nav-number">3.5.2.</span> <span class="nav-text">保存被上传的文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie"><span class="nav-number">3.6.</span> <span class="nav-text">Cookie</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Session"><span class="nav-number">3.7.</span> <span class="nav-text">Session</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Email"><span class="nav-number">3.8.</span> <span class="nav-text">Email</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误处理"><span class="nav-number">3.9.</span> <span class="nav-text">错误处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常处理"><span class="nav-number">3.10.</span> <span class="nav-text">异常处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过滤器"><span class="nav-number">3.11.</span> <span class="nav-text">过滤器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSON"><span class="nav-number">3.12.</span> <span class="nav-text">JSON</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#PHP数据库"><span class="nav-number">4.</span> <span class="nav-text">PHP数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL简介"><span class="nav-number">4.1.</span> <span class="nav-text">MySQL简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接MySQL"><span class="nav-number">4.2.</span> <span class="nav-text">连接MySQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实例-MySQLi-面向对象"><span class="nav-number">4.2.1.</span> <span class="nav-text">实例 (MySQLi - 面向对象)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建数据库"><span class="nav-number">4.3.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建数据表"><span class="nav-number">4.4.</span> <span class="nav-text">创建数据表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据预处理"><span class="nav-number">4.5.</span> <span class="nav-text">数据预处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#读取数据"><span class="nav-number">4.6.</span> <span class="nav-text">读取数据</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
-
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2021</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Hongchenglong</span>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
 </div>
 
-        
-
-
-
-
-
-
-
-
-        
       </div>
-    </footer>
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-      </div>
-
     
-
   </div>
+</div>
 
-  
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-<script src="/js/utils.js?v=7.3.0"></script>
-  <script src="/js/motion.js?v=7.3.0"></script>
-
-
-  <script src="/js/affix.js?v=7.3.0"></script>
-  <script src="/js/schemes/pisces.js?v=7.3.0"></script>
-
-
-<script src="/js/next-boot.js?v=7.3.0"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-
-  
-  <script src="/js/scrollspy.js?v=7.3.0"></script>
-<script src="/js/post-details.js?v=7.3.0"></script>
+<!-- Custom -->
 
 
     
-<script>
-  window.livereOptions = {
-    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
-  };
-  (function(d, s) {
-    var j, e = d.getElementsByTagName(s)[0];
-    if (typeof LivereTower === 'function') { return; }
-    j = d.createElement(s);
-    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-    j.async = true;
-    e.parentNode.insertBefore(j, e);
-  })(document, 'script');
-</script>
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
 
 </body>
 </html>
