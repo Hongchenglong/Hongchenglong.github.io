@@ -5,45 +5,50 @@
 
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
   <link rel="icon" type="image/png" href="/img/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="相信过程">
   <meta name="author" content="Hongchenglong">
-  <meta name="keywords" content>
+  <meta name="keywords" content="">
   <title>Git学习笔记 - 匡山读书处</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css">
-  <link rel="stylesheet" href="/lib/hint/hint.min.css">
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
     
     
       
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css">
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
     
   
 
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   
 
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
 
-<link rel="stylesheet" href="/css/main.css">
+
+<link  rel="stylesheet" href="/css/main.css" />
 
 <!-- 自定义样式保持在最底部 -->
 
@@ -52,9 +57,9 @@
     var Fluid = window.Fluid || {};
     var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
   </script>
-  <script src="/js/utils.js"></script>
-  <script src="/js/color-schema.js"></script>
-</head>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 <body>
@@ -222,9 +227,9 @@
             <h1 style="display: none">Git学习笔记</h1>
             
             <div class="markdown-body">
-              <p>学习<a href="https://www.liaoxuefeng.com/wiki/896043488029600" target="_blank" rel="noopener">廖雪峰的Git教程</a>所做笔记。</p>
-<p><a href="https://backlog.com/git-tutorial/cn/intro/intro1_1.html" target="_blank" rel="noopener">猴子都能懂的GIT入门</a>、<a href="http://git-scm.com" target="_blank" rel="noopener">Git的官方网站</a></p>
-<p>外国网友制作的<a href="https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf" target="_blank" rel="noopener">Git Cheat Sheet</a></p>
+              <p>学习<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">廖雪峰的Git教程</a>所做笔记。</p>
+<p><a target="_blank" rel="noopener" href="https://backlog.com/git-tutorial/cn/intro/intro1_1.html">猴子都能懂的GIT入门</a>、<a target="_blank" rel="noopener" href="http://git-scm.com">Git的官方网站</a></p>
+<p>外国网友制作的<a target="_blank" rel="noopener" href="https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf">Git Cheat Sheet</a></p>
 <meta name="referrer" content="no-referrer">
 <a id="more"></a>
 
@@ -261,8 +266,7 @@
 <li>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，使用命令<code>git reset --hard</code>，不过前提是没有推送到远程库。</li>
 </ul>
 <h2 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h2><p>想要在github上面删除，但又不想在本地删除</p>
-<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-symbol">$</span> git rm -r --cached &lt;<span class="hljs-keyword">file</span>&gt;  # --cached不会删除本地的<span class="hljs-keyword">file</span><br><span class="hljs-symbol">$</span> git commit -m <span class="hljs-string">'delete &lt;file&gt;'</span><br><span class="hljs-symbol">$</span> git push -u origin master<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs gams"><span class="hljs-symbol">$</span> git rm -r --cached &lt;<span class="hljs-keyword">file</span>&gt;  # --cached不会删除本地的<span class="hljs-keyword">file</span><br><span class="hljs-symbol">$</span> git commit -m <span class="hljs-string">&#x27;delete &lt;file&gt;&#x27;</span><br><span class="hljs-symbol">$</span> git push -u origin master<br></code></pre></td></tr></table></figure>
 <h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
 <li><code>git checkout --</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</li>
 <li>命令<code>git rm</code>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失最近一次提交后你修改的内容。</li>
@@ -300,8 +304,7 @@
 </ul>
 <h2 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h2><p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200215033101385-1093798650.png" srcset="/img/loading.gif" alt="img"></p>
 <p>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。<br>解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。<br>用<code>git log --graph</code>命令可以看到分支合并图。</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs undefined">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br><span class="hljs-section">本地代码<br>=======</span><br>远程仓库代码<br>&gt;&gt;&gt;&gt;&gt;&gt;&gt; commmit id<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br>本地代码<br>=======<br>远程仓库代码<br>&gt;&gt;&gt;&gt;&gt;&gt;&gt; commmit id<br></code></pre></td></tr></table></figure>
 <p>Git用<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>，<code>=======</code>，<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>标记出不同分支的内容，==分割线上方是本地数据库的内容，下方是远程数据库的编辑内容。</p>
 <h2 id="分支管理策略"><a href="#分支管理策略" class="headerlink" title="分支管理策略"></a>分支管理策略</h2><p>在实际开发中，我们应该按照几个基本原则进行分支管理：</p>
 <p>首先，<code>master</code>分支应该是非常稳定的，也就是仅用来发布新版本，平时不能在上面干活；</p>
@@ -321,10 +324,8 @@
 </ul>
 <h2 id="多人协作"><a href="#多人协作" class="headerlink" title="多人协作"></a>多人协作</h2><p>当你的小伙伴从远程库clone时，默认情况下，你的小伙伴只能看到本地的<code>master</code>分支。可以用<code>git branch</code>命令看看：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git branch<br>* master<br></code></pre></td></tr></table></figure>
-
 <p>现在，你的小伙伴要在<code>dev</code>分支上开发，就必须创建远程<code>origin</code>的<code>dev</code>分支到本地，于是他用这个命令创建本地<code>dev</code>分支：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git checkout -b dev origin/dev<br></code></pre></td></tr></table></figure>
-
 <p>因此，多人协作的工作模式通常是这样：</p>
 <ol>
 <li>首先，可以试图用<code>git push origin</code>推送自己的修改；</li>
@@ -359,7 +360,7 @@
 <li>命令<code>git tag -d</code>可以删除一个本地标签；</li>
 <li>命令<code>git push origin: refs/tags/</code>可以删除一个远程标签。</li>
 </ul>
-<h1 id="使用GitHub"><a href="#使用GitHub" class="headerlink" title="使用GitHub"></a>使用GitHub</h1><p>点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone：<br><code>git clone git@github.com:/bootstrap.git</code><br>一定要从自己的账号下clone仓库，这样你才能推送修改。如果从bootstrap的作者的仓库地址<a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:twbs/bootstrap.git克隆，因为没有权限，你将不能推送修改。</p>
+<h1 id="使用GitHub"><a href="#使用GitHub" class="headerlink" title="使用GitHub"></a>使用GitHub</h1><p>点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone：<br><code>git clone git@github.com:/bootstrap.git</code><br>一定要从自己的账号下clone仓库，这样你才能推送修改。如果从bootstrap的作者的仓库地址<a href="mailto:git@github.com">git@github.com</a>:twbs/bootstrap.git克隆，因为没有权限，你将不能推送修改。</p>
 <p>当你提交一个 Pull Request 的时候，你做的事情是 请求（request） 另一个开发者（比如项目维护者）来 拉取（pull） 你仓库中的一个分支到他们的仓库。</p>
 <p>你的仓库会被默认设置为<strong>源仓库</strong>（head fork），被询问指定源分支（compare）、目标仓库（base fork）和目标分支（base）。</p>
 <h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><ul>
@@ -369,16 +370,12 @@
 </ul>
 <h1 id="使用Gitee"><a href="#使用Gitee" class="headerlink" title="使用Gitee"></a>使用Gitee</h1><p>如果我们希望体验Git飞一般的速度，可以使用国内的Git托管服务——Gitee（gitee.com）。<br>用<code>git remote -v</code>查看远程库信息。<br>由于远程库不能同名，要先删除已有的GitHub远程库。<code>git remote rm origin</code><br>再分别关联GitHub和Gitee：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git remote add github git@github.com:&lt;server-name&gt;/&lt;repo-name&gt;.git<br>$ git remote add gitee git@gitee.com:&lt;server-name&gt;/&lt;repo-name&gt;.git<br></code></pre></td></tr></table></figure>
-
 <p>或修改远程仓库名:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git remote rename origin github<br></code></pre></td></tr></table></figure>
-
 <p>之后推送，使用命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git push github master<br>$ git push gitee master<br></code></pre></td></tr></table></figure>
-
 <h1 id="自定义Git"><a href="#自定义Git" class="headerlink" title="自定义Git"></a>自定义Git</h1><p><code>$ git config --global color.ui true</code>让Git显示颜色</p>
-<h2 id="忽略特殊文件"><a href="#忽略特殊文件" class="headerlink" title="忽略特殊文件"></a>忽略特殊文件</h2><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">/*<br><span class="hljs-addition">!.gitignore</span><br></code></pre></td></tr></table></figure>
-
+<h2 id="忽略特殊文件"><a href="#忽略特殊文件" class="headerlink" title="忽略特殊文件"></a>忽略特殊文件</h2><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs diff">/*<br><span class="hljs-addition">!.gitignore</span><br></code></pre></td></tr></table></figure>
 <p>忽略根目录下所有文件，除了<code>.gitignore</code></p>
 <ul>
 <li>忽略某些文件时，需要编写<code>.gitignore</code>；</li>
@@ -386,17 +383,16 @@
 </ul>
 <h2 id="配置别名"><a href="#配置别名" class="headerlink" title="配置别名"></a>配置别名</h2><p>用st表示status：<code>$ git config --global alias.st status</code><br>很多人都用co表示checkout，ci表示commit，br表示branch：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git config --global alias.co checkout<br>$ git config --global alias.ci commit<br>$ git config --global alias.br branch<br></code></pre></td></tr></table></figure>
-
 <p>配置一个git last，让其显示最后一次提交信息：<br><code>$ git config --global alias.last &#39;log -1&#39;</code><br><code>--global</code>参数是全局参数，也就是这些命令在这台电脑的所有Git仓库下都有用。</p>
-<h2 id="搭建Git服务器"><a href="#搭建Git服务器" class="headerlink" title="搭建Git服务器"></a>搭建Git服务器</h2><h1 id="使用Source-Tree"><a href="#使用Source-Tree" class="headerlink" title="使用Source Tree"></a>使用Source Tree</h1><h1 id="QUESTION"><a href="#QUESTION" class="headerlink" title="QUESTION"></a>QUESTION</h1><p><a href="https://gitee.com/help/articles/4110#article-header0" target="_blank" rel="noopener">Git的基本概念/常用命令及实例</a></p>
-<p><a href="https://blog.csdn.net/qq1332479771/article/details/56087333" target="_blank" rel="noopener">Git Fork后与源作者同步更新</a></p>
-<p><a href="https://gitee.com/help/articles/4194" target="_blank" rel="noopener">如何解决代码冲突</a></p>
-<p><a href="https://blog.csdn.net/ShuSheng0007/article/details/80791849" target="_blank" rel="noopener">实际项目中如何使用Git做分支管理</a></p>
+<h2 id="搭建Git服务器"><a href="#搭建Git服务器" class="headerlink" title="搭建Git服务器"></a>搭建Git服务器</h2><h1 id="使用Source-Tree"><a href="#使用Source-Tree" class="headerlink" title="使用Source Tree"></a>使用Source Tree</h1><h1 id="QUESTION"><a href="#QUESTION" class="headerlink" title="QUESTION"></a>QUESTION</h1><p><a target="_blank" rel="noopener" href="https://gitee.com/help/articles/4110#article-header0">Git的基本概念/常用命令及实例</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq1332479771/article/details/56087333">Git Fork后与源作者同步更新</a></p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/help/articles/4194">如何解决代码冲突</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ShuSheng0007/article/details/80791849">实际项目中如何使用Git做分支管理</a></p>
 <p><a href>git merge：删除我要保留的文件！</a><br>切换到dev分支时，删除master分支想保留的文件，需注意，修改master分支中的文件，以便与dev主干中的删除发生合并冲突。</p>
 <p><span style="color:red">删除时，需注意<code>.gitignore</code>里写的文件</span>。</p>
-<p><a href="https://www.jianshu.com/p/80542dc3164e" target="_blank" rel="noopener">git diff 命令详解</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/80542dc3164e">git diff 命令详解</a></p>
 <p>github提交代码却没有显示绿格子</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git config user.email<br>$ git config --global user.email <span class="hljs-string">"oeong@foxmail.com"</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ git config user.email<br>$ git config --global user.email <span class="hljs-string">&quot;oeong@foxmail.com&quot;</span><br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
@@ -419,7 +415,7 @@
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
               
               
                 <div class="post-prevnext">

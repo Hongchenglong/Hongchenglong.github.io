@@ -5,45 +5,50 @@
 
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
   <link rel="icon" type="image/png" href="/img/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="相信过程">
   <meta name="author" content="Hongchenglong">
-  <meta name="keywords" content>
+  <meta name="keywords" content="">
   <title>JavaScript - 匡山读书处</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css">
-  <link rel="stylesheet" href="/lib/hint/hint.min.css">
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
     
     
       
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css">
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
     
   
 
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   
 
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
 
-<link rel="stylesheet" href="/css/main.css">
+
+<link  rel="stylesheet" href="/css/main.css" />
 
 <!-- 自定义样式保持在最底部 -->
 
@@ -52,9 +57,9 @@
     var Fluid = window.Fluid || {};
     var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
   </script>
-  <script src="/js/utils.js"></script>
-  <script src="/js/color-schema.js"></script>
-</head>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 <body>
@@ -179,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      754 字
+      822 字
     </span>
   
 
@@ -189,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      9
+      10
        分钟
     </span>
   
@@ -234,17 +239,16 @@
 <p>第二种是<code>===</code>比较，它不会自动转换数据类型，如果数据类型不一致，返回<code>false</code>，如果一致，再比较。</p>
 <p>由于JavaScript这个设计缺陷，不要使用<code>==</code>比较，始终坚持使用<code>===</code>比较。</p>
 <p>这种变量本身类型不固定的语言称之为动态语言，与之对应的是静态语言，Java是静态语言。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">123</span>; <span class="hljs-comment">// a的值是整数123</span><br>a = <span class="hljs-string">'ABC'</span>; <span class="hljs-comment">// a变为字符串</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">123</span>; <span class="hljs-comment">// a的值是整数123</span><br>a = <span class="hljs-string">&#x27;ABC&#x27;</span>; <span class="hljs-comment">// a变为字符串</span><br></code></pre></td></tr></table></figure>
+
 
 <p>alert()</p>
 <p>console.log()</p>
 <h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>多行字符串：反引号``</p>
 <p>模板字符串</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> name = <span class="hljs-string">"world"</span>;<br><span class="hljs-keyword">var</span> message = <span class="hljs-string">`hello <span class="hljs-subst">$&#123;name&#125;</span>`</span>; <span class="hljs-comment">// 反引号</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> name = <span class="hljs-string">&quot;world&quot;</span>;<br><span class="hljs-keyword">var</span> message = <span class="hljs-string">`hello <span class="hljs-subst">$&#123;name&#125;</span>`</span>; <span class="hljs-comment">// 反引号</span><br></code></pre></td></tr></table></figure>
 <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>JavaScript的<code>Array</code>可以包含任意数据类型，并通过索引来访问每个元素。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3.14</span>, <span class="hljs-string">'Hello'</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">true</span>];<br>arr.length = <span class="hljs-number">2</span>; <span class="hljs-comment">// arr变为[1, 2]</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3.14</span>, <span class="hljs-string">&#x27;Hello&#x27;</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">true</span>];<br>arr.length = <span class="hljs-number">2</span>; <span class="hljs-comment">// arr变为[1, 2]</span><br></code></pre></td></tr></table></figure>
 <p>indexOf</p>
 <p>slice: 对应String的<code>substring()</code></p>
 <p>push和pop: <code>pop()</code>则把<code>Array</code>的最后一个元素删除掉</p>
@@ -253,24 +257,18 @@
 <p>reverse</p>
 <p>splice</p>
 <p><code>splice()</code>方法是修改<code>Array</code>的“万能方法”，它可以从指定的索引开始删除若干元素，然后再从该位置添加若干元素：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">'Microsoft'</span>, <span class="hljs-string">'Apple'</span>, <span class="hljs-string">'Yahoo'</span>, <span class="hljs-string">'AOL'</span>, <span class="hljs-string">'Excite'</span>, <span class="hljs-string">'Oracle'</span>];<br><span class="hljs-comment">// 从索引2开始删除3个元素,然后再添加两个元素:</span><br>arr.splice(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-string">'Google'</span>, <span class="hljs-string">'Facebook'</span>); <span class="hljs-comment">// 返回删除的元素 ['Yahoo', 'AOL', 'Excite']</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&#x27;Microsoft&#x27;</span>, <span class="hljs-string">&#x27;Apple&#x27;</span>, <span class="hljs-string">&#x27;Yahoo&#x27;</span>, <span class="hljs-string">&#x27;AOL&#x27;</span>, <span class="hljs-string">&#x27;Excite&#x27;</span>, <span class="hljs-string">&#x27;Oracle&#x27;</span>];<br><span class="hljs-comment">// 从索引2开始删除3个元素,然后再添加两个元素:</span><br>arr.splice(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-string">&#x27;Google&#x27;</span>, <span class="hljs-string">&#x27;Facebook&#x27;</span>); <span class="hljs-comment">// 返回删除的元素 [&#x27;Yahoo&#x27;, &#x27;AOL&#x27;, &#x27;Excite&#x27;]</span><br></code></pre></td></tr></table></figure>
 <p>concat: 拼接Array</p>
 <p>join：把当前<code>Array</code>的每个元素都用指定的字符串连接起来，然后返回连接后的字符串</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">'A'</span>, <span class="hljs-string">'B'</span>, <span class="hljs-string">'C'</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br>arr.join(<span class="hljs-string">'-'</span>); <span class="hljs-comment">// 'A-B-C-1-2-3'</span><br><br>alert(<span class="hljs-string">`欢迎<span class="hljs-subst">$&#123;arr.slice(<span class="hljs-number">0</span>,<span class="hljs-number">3</span>)&#125;</span>和<span class="hljs-subst">$&#123;arr[<span class="hljs-number">3</span>]&#125;</span>同学！`</span>);<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&#x27;A&#x27;</span>, <span class="hljs-string">&#x27;B&#x27;</span>, <span class="hljs-string">&#x27;C&#x27;</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br>arr.join(<span class="hljs-string">&#x27;-&#x27;</span>); <span class="hljs-comment">// &#x27;A-B-C-1-2-3&#x27;</span><br><br>alert(<span class="hljs-string">`欢迎<span class="hljs-subst">$&#123;arr.slice(<span class="hljs-number">0</span>,<span class="hljs-number">3</span>)&#125;</span>和<span class="hljs-subst">$&#123;arr[<span class="hljs-number">3</span>]&#125;</span>同学！`</span>);<br></code></pre></td></tr></table></figure>
 <h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p>JavaScript的对象是动态类型，可以自由地给一个对象添加或删除属性</p>
 <p>检测<code>xiaoming</code>是否拥有某一属性，可以用<code>in</code>操作符</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> xiaoming = &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-string">'小明'</span><br>&#125;;<br><span class="hljs-keyword">delete</span> xiaoming.age;<br><span class="hljs-string">'toString'</span> <span class="hljs-keyword">in</span> xiaoming<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> xiaoming = &#123;<br>    name: <span class="hljs-string">&#x27;小明&#x27;</span><br>&#125;;<br><span class="hljs-keyword">delete</span> xiaoming.age;<br><span class="hljs-string">&#x27;toString&#x27;</span> <span class="hljs-keyword">in</span> xiaoming<br></code></pre></td></tr></table></figure>
 <h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><p><code>for ... in</code>对<code>Array</code>的循环得到的是<code>String</code>而不是<code>Number</code>。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">'A'</span>, <span class="hljs-string">'B'</span>, <span class="hljs-string">'C'</span>];<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i <span class="hljs-keyword">in</span> arr) &#123;<br>    <span class="hljs-built_in">console</span>.log(i); <span class="hljs-comment">// '0', '1', '2'</span><br>    <span class="hljs-built_in">console</span>.log(arr[i]); <span class="hljs-comment">// 'A', 'B', 'C'</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h2 id="Map和Set"><a href="#Map和Set" class="headerlink" title="Map和Set"></a>Map和Set</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> m = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([[<span class="hljs-string">'Michael'</span>, <span class="hljs-number">95</span>], [<span class="hljs-string">'Bob'</span>, <span class="hljs-number">75</span>], [<span class="hljs-string">'Tracy'</span>, <span class="hljs-number">85</span>]]);<br><span class="hljs-keyword">var</span> s = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-string">'3'</span>]);<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&#x27;A&#x27;</span>, <span class="hljs-string">&#x27;B&#x27;</span>, <span class="hljs-string">&#x27;C&#x27;</span>];<br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i <span class="hljs-keyword">in</span> arr) &#123;<br>    <span class="hljs-built_in">console</span>.log(i); <span class="hljs-comment">// &#x27;0&#x27;, &#x27;1&#x27;, &#x27;2&#x27;</span><br>    <span class="hljs-built_in">console</span>.log(arr[i]); <span class="hljs-comment">// &#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="Map和Set"><a href="#Map和Set" class="headerlink" title="Map和Set"></a>Map和Set</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> m = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([[<span class="hljs-string">&#x27;Michael&#x27;</span>, <span class="hljs-number">95</span>], [<span class="hljs-string">&#x27;Bob&#x27;</span>, <span class="hljs-number">75</span>], [<span class="hljs-string">&#x27;Tracy&#x27;</span>, <span class="hljs-number">85</span>]]);<br><span class="hljs-keyword">var</span> s = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-string">&#x27;3&#x27;</span>]);<br></code></pre></td></tr></table></figure>
 <h2 id="iterable"><a href="#iterable" class="headerlink" title="iterable"></a>iterable</h2><p>遍历<code>Array</code>可以采用下标循环，遍历<code>Map</code>和<code>Set</code>就无法使用下标。为了统一集合类型，ES6标准引入了新的<code>iterable</code>类型，<code>Array</code>、<code>Map</code>和<code>Set</code>都属于<code>iterable</code>类型。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> x <span class="hljs-keyword">of</span> arr)<br>    <br>arr.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">element, index, array</span>)</span><br></code></pre></td></tr></table></figure>
-
 <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1>
             </div>
             <hr>
@@ -280,7 +278,7 @@
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
               
               
                 <div class="post-prevnext">
@@ -291,7 +289,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/02/09/Java/Java面试宝典/">
+                      <a href="/2021/02/09/Java/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/">
                         <span class="hidden-mobile">Java面试宝典</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>

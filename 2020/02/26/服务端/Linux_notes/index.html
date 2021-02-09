@@ -5,45 +5,50 @@
 
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
   <link rel="icon" type="image/png" href="/img/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="相信过程">
   <meta name="author" content="Hongchenglong">
-  <meta name="keywords" content>
+  <meta name="keywords" content="">
   <title>Linux学习笔记 - 匡山读书处</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css">
-  <link rel="stylesheet" href="/lib/hint/hint.min.css">
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
     
     
       
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css">
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
     
   
 
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   
 
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
 
-<link rel="stylesheet" href="/css/main.css">
+
+<link  rel="stylesheet" href="/css/main.css" />
 
 <!-- 自定义样式保持在最底部 -->
 
@@ -52,9 +57,9 @@
     var Fluid = window.Fluid || {};
     var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
   </script>
-  <script src="/js/utils.js"></script>
-  <script src="/js/color-schema.js"></script>
-</head>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 <body>
@@ -245,11 +250,9 @@
 <h2 id="文件和目录"><a href="#文件和目录" class="headerlink" title="文件和目录"></a>文件和目录</h2><p>文件和文件夹的创建删除<br><code>mkdir -p &lt;dir/subdir&gt;</code>  创建多级目录<br><code>rm -r &lt;file&gt;</code>   删除多级文件<br><code>mv &lt;old&gt; &lt;new&gt;</code>  移动和文件更名<br><code>pwd</code> 查看当前绝对路径<br><code>cp &lt;file&gt; &lt;file&gt;.bak</code>  复制、备份文件</p>
 <h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><p>cat，more，less，grep，wc –l<br>cd - 返回上一次目录<br>more 命令类似 cat ，不过会以一页一页的形式显示，更方便使用者逐页阅读</p>
 <p>文件的打包和解压： tar cvfz以及对应的tar xvfz<br>c ：创建一个新归档；x ： 从归档中抽取文件。<br>v ：显示文件的归档进度；z ：使用 gzip 来压缩 tar 文件。<br>f ：当与 -c 选项一起使用时，创建的 tar 文件使用该选项指定的文件名；当与 -x 选项<br>一起使用时，则解除该选项指定的归档。</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">$ tar cvfz share<span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.gz</span> /usr/local/share/<br>$ tar xvfz share<span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.gz</span> -C ./tmp<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">$ tar cvfz share.tar.gz <span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/share/</span><br>$ tar xvfz share.tar.gz -C ./tmp<br></code></pre></td></tr></table></figure>
 <p>打包指的是将多个文件和目录集中存储在一个文件中；<br>而压缩则指的是利用算法对文件进行处理，从而达到缩减占用磁盘空间的目的。</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs undefined">echo  <span class="hljs-comment">// 用于字符串的输出</span><br>ls -l f*  <span class="hljs-comment">// 查看虚拟机上以f开头的设备文件</span><br><span class="hljs-keyword">find</span> &lt;dir&gt; -name &lt;文件名&gt; <span class="hljs-number">2</span>&gt;<span class="hljs-regexp">/dev/</span><span class="hljs-keyword">null</span>  <span class="hljs-comment">// 查找文件</span><br><span class="hljs-keyword">grep</span> &lt;查找内容&gt; &lt;文件名&gt;  <span class="hljs-comment">// 搜索文件内容</span><br><span class="hljs-keyword">find</span> . | <span class="hljs-keyword">grep</span> passwd<br>ls | <span class="hljs-keyword">grep</span> *.txt<br>tail -n &lt;<span class="hljs-keyword">file</span>&gt;	<span class="hljs-comment">// 查看某一文件后n行</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs gradle">echo  <span class="hljs-comment">// 用于字符串的输出</span><br>ls -l f*  <span class="hljs-comment">// 查看虚拟机上以f开头的设备文件</span><br><span class="hljs-keyword">find</span> &lt;dir&gt; -name &lt;文件名&gt; <span class="hljs-number">2</span>&gt;<span class="hljs-regexp">/dev/</span><span class="hljs-keyword">null</span>  <span class="hljs-comment">// 查找文件</span><br><span class="hljs-keyword">grep</span> &lt;查找内容&gt; &lt;文件名&gt;  <span class="hljs-comment">// 搜索文件内容</span><br><span class="hljs-keyword">find</span> . | <span class="hljs-keyword">grep</span> passwd<br>ls | <span class="hljs-keyword">grep</span> *.txt<br>tail -n &lt;<span class="hljs-keyword">file</span>&gt;	<span class="hljs-comment">// 查看某一文件后n行</span><br></code></pre></td></tr></table></figure>
 <p>创建软链接<br><code>ln -s &lt;source&gt; &lt;target&gt;</code><br>如<code>ln -s /root/htdocs/cqcq/application/index/controller/ ~/controller</code><br>注意，删除软链接用<code>rm -rf ~/controller</code>，而不是<code>rm -rf ~/controller/</code></p>
 <h3 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h3><p>Ubuntu用<code>apt-get</code>，Centos用<code>yum</code>。<br>加上<code>-y</code>遇到询问时自动yes。</p>
 <h2 id="重定向和管道"><a href="#重定向和管道" class="headerlink" title="重定向和管道"></a>重定向和管道</h2><p>重定向的符号有两个：&gt;或&gt;&gt;。<br>两者的区别是：<br>前者会先清空文件，然后再写入内容；<br>后者会将重定向的内容追加到现有文件的尾部。</p>
@@ -261,22 +264,18 @@
 </ul>
 <p>最典型的比如<code>ls –l | wc –l</code>计算数量。<br><code>cat &lt;file&gt; | wc -l</code>统计file的行数，file的内容输出连接到wc -l的输入。</p>
 <h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><p>创建用户，修改用户密码</p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">sudo adduser &lt;<span class="hljs-keyword">new</span><span class="hljs-type">user</span>&gt;     <br>sudo passwd &lt;<span class="hljs-keyword">new</span><span class="hljs-type">user</span>&gt;<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs haxe">sudo adduser &lt;<span class="hljs-keyword">new</span><span class="hljs-type">user</span>&gt;     <br>sudo passwd &lt;<span class="hljs-keyword">new</span><span class="hljs-type">user</span>&gt;<br></code></pre></td></tr></table></figure>
 <p>su — Switch User<br>切换到指定用户，并且在该用户的家目录中创建文件，再退出这个用户。</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs undefined">su newuser <br>touch &lt;file&gt;<br><span class="hljs-keyword">exit</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">su newuser <br>touch &lt;file&gt;<br><span class="hljs-keyword">exit</span> <br></code></pre></td></tr></table></figure>
 <p>用su来切换root用户和普通用户，注意切换用户后还在原来的路径上<br>改主机名：<code>hostnamectl set-hostname &lt;newname&gt;</code></p>
 <p>可以使用chmod为文件增加可执行权限。</p>
-<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">chmod +x &lt;<span class="hljs-keyword">file</span>&gt;  <span class="hljs-comment">// 加操作权限</span><br>chmod <span class="hljs-number">777</span> &lt;<span class="hljs-keyword">file</span>&gt;  <span class="hljs-comment">// 8进制加满权限</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">chmod +x &lt;file&gt;  <span class="hljs-regexp">//</span> 加操作权限<br>chmod <span class="hljs-number">777</span> &lt;file&gt;  <span class="hljs-regexp">//</span> <span class="hljs-number">8</span>进制加满权限<br></code></pre></td></tr></table></figure>
 <p><code>chown -R &lt;user&gt;:&lt;group&gt; *</code></p>
 <h2 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h2><p>编译.c程序，并且将其放在后台进程运行。<br>ps命令用于显示当前进程 (process) 的状态。<br><code>ps -ef</code>   // 显示所有命令，连带命令行<br><code>kill &lt;id&gt;</code>  // 杀死进程<br>后台进程的启动是用户在输入命令行后加上“&amp;”字符，常用于进程耗时长、用户不着急得到结果的场合。<br>PPID：父进程的进程号。TTY：启动进程的终端号。<br>NI：nice的优先级。PRI：进程的优先级。<br>PRI -&gt; 进程的优先级，大部分系统都是数字越低优先级越高，进程就优先运行 。</p>
 <p>在shell上启动了两个test_loop程序（使用<code>test_loop &amp;</code>），这两个程序都是shell（bash）“生”出来的，即属于shell的子进程。<br>BASH是SHELL的一种，是大多数LINUX发行版默认的SHELL。</p>
 <h2 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h2><p>Shell俗称壳（用来区别于内核），是指“提供使用者使用界面”的软件，就是一个<strong>命令行解释器</strong>。</p>
 <p>定义简单变量并且打印，可以运行脚本。<br><code>chmod + x &lt;file.sh&gt;</code><br>If条件判断，字符串是否相等的比较</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs undefined">result=$(…)<br><span class="hljs-keyword">if</span> [ “<span class="hljs-variable">$result</span>” = “<span class="hljs-variable">$1</span>” ]; <span class="hljs-keyword">then</span><br><span class="hljs-keyword">elif</span> [ “” = “” ]; <span class="hljs-keyword">then</span><br><span class="hljs-keyword">else</span><br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">result=$(…)<br><span class="hljs-keyword">if</span> [ “<span class="hljs-variable">$result</span>” = “<span class="hljs-variable">$1</span>” ]; <span class="hljs-keyword">then</span><br><span class="hljs-keyword">elif</span> [ “” = “” ]; <span class="hljs-keyword">then</span><br><span class="hljs-keyword">else</span><br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure>
 <p>读入清单，批量创建清单上的文件目录</p>
 <p>shell中，<br>== 可用于判断变量是否相等。<br>= 除了可用于判断变量是否相等外，还可以表示赋值。<br>= 与 == 在 [ ] 中表示判断(字符串比较)时是等价的。</p>
 <h2 id="Linux目录"><a href="#Linux目录" class="headerlink" title="Linux目录"></a>Linux目录</h2><p>/boot：存放Linux内核、引导配置等<strong>启动</strong>文件。<br>/dev：存放硬盘、键盘、鼠标、光驱等各种<strong>设备</strong>文件。<br>/etc：存放各种<strong>配置</strong>文件、配置目录。<br>/home：存放普通用户的默认工作文件夹（即宿主目录、家目录）。<br>/var：存放日志文件、用户邮箱目录、进程运行数据等<strong>变化</strong>的文档。<br>/tmp：存放系统运行过程中使用的一些<strong>临时</strong>文件。</p>
@@ -319,14 +318,14 @@
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
               
               
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/03/13/服务端/crontab定时任务/">
+                      <a href="/2020/03/13/%E6%9C%8D%E5%8A%A1%E7%AB%AF/crontab%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">crontab定时任务</span>
                         <span class="visible-mobile">上一篇</span>
@@ -336,7 +335,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/02/18/Hexo/git分支进行多终端工作/">
+                      <a href="/2020/02/18/Hexo/git%E5%88%86%E6%94%AF%E8%BF%9B%E8%A1%8C%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%B7%A5%E4%BD%9C/">
                         <span class="hidden-mobile">Git分支进行多终端工作</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>

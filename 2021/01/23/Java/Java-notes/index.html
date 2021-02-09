@@ -5,45 +5,50 @@
 
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
   <link rel="icon" type="image/png" href="/img/favicon.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
   <meta name="description" content="相信过程">
   <meta name="author" content="Hongchenglong">
-  <meta name="keywords" content>
+  <meta name="keywords" content="">
   <title>Java_notes - 匡山读书处</title>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css">
-  <link rel="stylesheet" href="/lib/hint/hint.min.css">
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
   
     
     
       
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css">
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
     
   
 
   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
   
 
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
 
-<link rel="stylesheet" href="/css/main.css">
+
+<link  rel="stylesheet" href="/css/main.css" />
 
 <!-- 自定义样式保持在最底部 -->
 
@@ -52,9 +57,9 @@
     var Fluid = window.Fluid || {};
     var CONFIG = {"hostname":"yoursite.com","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
   </script>
-  <script src="/js/utils.js"></script>
-  <script src="/js/color-schema.js"></script>
-</head>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 <body>
@@ -234,22 +239,18 @@
 <p>简单地说，JRE就是运行Java字节码的<strong>虚拟机</strong>。但是，如果只有Java源码，要编译成Java字节码，就需要JDK，因为JDK除了<strong>包含</strong>JRE，还提供了编译器、调试器等开发工具。</p>
 <p>  二者关系如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs ascii"> ┌─    ┌──────────────────────────────────┐<br> │     │     Compiler, debugger, etc.     │<br> │     └──────────────────────────────────┘<br>JDK ┌─ ┌──────────────────────────────────┐<br> │  │  │                                  │<br> │ JRE │      JVM + Runtime Library       │<br> │  │  │                                  │<br> └─ └─ └──────────────────────────────────┘<br>       ┌───────┐┌───────┐┌───────┐┌───────┐<br>       │Windows││ Linux ││ macOS ││others │<br>       └───────┘└───────┘└───────┘└───────┘<br></code></pre></td></tr></table></figure>
-
 <h2 id="Java程序基础"><a href="#Java程序基础" class="headerlink" title="Java程序基础"></a>Java程序基础</h2><p><code>int[] ns = new int[5];</code></p>
 <p>对象、数组都是引用数据类型。</p>
 <h2 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h2><h4 id="if判断"><a href="#if判断" class="headerlink" title="if判断"></a>if判断</h4><p><code>==</code>表示“引用的<strong>对象</strong>是否相等”，浮点数判断相等不能直接用</p>
 <p>使用<code>equals()</code>判断引用类型<strong>内容</strong>相等，注意避免<code>NullPointerException</code>。</p>
 <h4 id="for-each循环"><a href="#for-each循环" class="headerlink" title="for each循环"></a>for each循环</h4><p><code>for each</code>循环可以直接遍历数组的每个元素；</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-keyword">int</span>[] ns = &#123; <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span> &#125;;<br><span class="hljs-built_in">for</span> (<span class="hljs-keyword">int</span> n : ns) &#123;<br>	System.out.<span class="hljs-built_in">println</span>(n);<br>&#125;<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs excel"><span class="hljs-built_in">int</span>[] ns = &#123; <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">9</span>, <span class="hljs-number">16</span>, <span class="hljs-number">25</span> &#125;;<br>for (<span class="hljs-built_in">int</span> <span class="hljs-built_in">n</span> <span class="hljs-symbol">:</span> ns) &#123;<br>	System.out.println(<span class="hljs-built_in">n</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 <h2 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h2><h4 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h4><p>遍历数组可以使用<code>for</code>循环，<code>for</code>循环可以访问数组索引，<code>for each</code>循环直接迭代每个数组元素，但无法获取索引；</p>
 <p>使用<code>Arrays.toString()</code>可以快速获取数组内容。</p>
 <h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><p>排序前</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs ascii">                   ┌──────────────────────────────────┐<br>               ┌───┼──────────────────────┐           │<br>               │   │                      ▼           ▼<br>         ┌───┬─┴─┬─┴─┬───┬────────┬───┬───────┬───┬──────┬───┐<br>ns ─────&gt;│░░░│░░░│░░░│   │&quot;banana&quot;│   │&quot;apple&quot;│   │&quot;pear&quot;│   │<br>         └─┬─┴───┴───┴───┴────────┴───┴───────┴───┴──────┴───┘<br>           │                 ▲<br>           └─────────────────┘<br></code></pre></td></tr></table></figure>
-
 <p>排序后，原来的3个字符串在<strong>内存</strong>中均没有任何变化，但是<code>ns</code>数组的每个元素<strong>指向</strong>变化了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs ascii">                   ┌──────────────────────────────────┐<br>               ┌───┼──────────┐                       │<br>               │   │          ▼                       ▼<br>         ┌───┬─┴─┬─┴─┬───┬────────┬───┬───────┬───┬──────┬───┐<br>ns ─────&gt;│░░░│░░░│░░░│   │&quot;banana&quot;│   │&quot;apple&quot;│   │&quot;pear&quot;│   │<br>         └─┬─┴───┴───┴───┴────────┴───┴───────┴───┴──────┴───┘<br>           │                              ▲<br>           └──────────────────────────────┘<br></code></pre></td></tr></table></figure>
-
 <h1 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h1><p>Java是一种面向对象的编程语言。面向对象编程，英文是Object-Oriented Programming，简称OOP。</p>
 <h2 id="面向对象基础"><a href="#面向对象基础" class="headerlink" title="面向对象基础"></a>面向对象基础</h2><p>在OOP中，<code>class</code>和<code>instance</code>是“模版”和“实例”的关系；</p>
 <h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>在方法内部，可以使用一个隐含的变量<code>this</code>，它始终指向当前实例。因此，通过<code>this.field</code>就可以访问当前实例的字段。</p>
@@ -325,20 +326,19 @@
 <p>可以利用IDE快速生成<code>getter</code>和<code>setter</code>；</p>
 <p>属性是一种通用的叫法，并非Java语法规定；</p>
 <p>使用<code>Introspector.getBeanInfo()</code>可以获取属性列表。</p>
-<h3 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h3><p>Java使用<code>enum</code>定义枚举类型，它被编译器编译为<code>final class Xxx extends Enum { … }</code>；</p>
+<h3 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h3><p>Java使用<code>enum</code>定义枚举类型，它被编译器编译为<code>final class Xxx extends Enum &#123; … &#125;</code>；</p>
 <p>通过<code>name()</code>获取常量定义的字符串，注意不要使用<code>toString()</code>；</p>
 <p>通过<code>ordinal()</code>返回常量定义的顺序（无实质意义）；</p>
 <p>可以为<code>enum</code>编写构造方法、字段和方法</p>
 <p><code>enum</code>的构造方法要声明为<code>private</code>，字段强烈建议声明为<code>final</code>；</p>
 <p><code>enum</code>适合用在<code>switch</code>语句中。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">enum</span> Weekday &#123;<br>    MON(<span class="hljs-number">1</span>), TUE(<span class="hljs-number">2</span>), WED(<span class="hljs-number">3</span>), THU(<span class="hljs-number">4</span>), FRI(<span class="hljs-number">5</span>), SAT(<span class="hljs-number">6</span>), SUN(<span class="hljs-number">0</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">enum</span> <span class="hljs-title">Weekday</span> </span>&#123;<br>    MON(<span class="hljs-number">1</span>), TUE(<span class="hljs-number">2</span>), WED(<span class="hljs-number">3</span>), THU(<span class="hljs-number">4</span>), FRI(<span class="hljs-number">5</span>), SAT(<span class="hljs-number">6</span>), SUN(<span class="hljs-number">0</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
 <h3 id="纪录类"><a href="#纪录类" class="headerlink" title="纪录类"></a>纪录类</h3><p>使用<code>String</code>、<code>Integer</code>等类型的时候，这些类型都是<strong>不变类</strong>，一个不变类具有以下特点：</p>
 <ol>
 <li>定义class时使用<code>final</code>，无法派生子类；</li>
 <li>每个字段使用<code>final</code>，保证创建实例后无法修改任何字段。</li>
 </ol>
-<p><code>public record Point(int x, int y) {}</code></p>
+<p><code>public record Point(int x, int y) &#123;&#125;</code></p>
 <p>从Java 14开始，提供新的<code>record</code>关键字，可以非常方便地定义Data Class：</p>
 <ul>
 <li>使用<code>record</code>定义的是不变类；</li>
@@ -413,8 +413,7 @@
 <h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1><h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p>Java的集合类定义在<code>java.util</code>包中，支持泛型，主要提供了3种集合类，包括<code>List</code>，<code>Set</code>和<code>Map</code>。Java集合使用统一的<code>Iterator</code>遍历，尽量不要使用遗留接口。</p>
 <h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p><code>List</code>的行为和数组几乎完全相同。 List是一个接口，而ArrayList是List接口的一个实现类。 </p>
 <p><code>List</code>是按索引顺序访问的长度可变的有序表，优先使用<code>ArrayList</code>而不是<code>LinkedList</code>；</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">List&lt;String&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>List&lt;String&gt; list = List.of(<span class="hljs-string">"apple"</span>, <span class="hljs-string">"pear"</span>, <span class="hljs-string">"banana"</span>);<br></code></pre></td></tr></table></figure>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">List&lt;String&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>List&lt;String&gt; list = List.of(<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;pear&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>);<br></code></pre></td></tr></table></figure>
 <p>通过<code>Iterator</code>遍历<code>List</code>永远是最高效的方式。并且，由于<code>Iterator</code>遍历是如此常用，所以，Java的<code>for each</code>循环本身就可以帮我们使用<code>Iterator</code>遍历。</p>
 <p><code>List</code>可以和<code>Array</code>相互转换。</p>
 <p>List和Array的区别是什么？</p>
@@ -434,7 +433,6 @@
 <h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p><code>Map</code>是一种映射表，可以通过<code>key</code>快速查找<code>value</code>。无序。</p>
 <p>可以通过<code>for each</code>遍历<code>keySet()</code>，也可以通过<code>for each</code>遍历<code>entrySet()</code>，直接获取<code>key-value</code>。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span> (String key : map.keySet())<br><span class="hljs-keyword">for</span> (Map.Entry&lt;String, Integer&gt; entry : map.entrySet())<br></code></pre></td></tr></table></figure>
-
 <p>最常用的一种<code>Map</code>实现是<code>HashMap</code>。</p>
 <h2 id="编写equals和hashCode"><a href="#编写equals和hashCode" class="headerlink" title="编写equals和hashCode"></a>编写equals和hashCode</h2><p><code>HashMap</code>之所以能根据<code>key</code>直接拿到<code>value</code>，原因是它内部通过空间换时间的方法，用一个大数组存储所有<code>value</code>，并根据key直接计算出<code>value</code>应该存储在哪个索引</p>
 <p>要正确使用<code>HashMap</code>，作为<code>key</code>的类必须正确覆写<code>equals()</code>和<code>hashCode()</code>方法；</p>
@@ -447,10 +445,8 @@
 <h2 id="EnumMap"><a href="#EnumMap" class="headerlink" title="EnumMap"></a>EnumMap</h2><p>如果<code>Map</code>的key是<code>enum</code>类型，推荐使用<code>EnumMap</code>，既保证速度，也不浪费空间。</p>
 <p>使用<code>EnumMap</code>的时候，根据面向抽象编程的原则，应持有<code>Map</code>接口。</p>
 <h2 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs ascii">       ┌───┐<br>       │Map│<br>       └───┘<br>         ▲<br>    ┌────┴─────┐<br>    │          │<br>┌───────┐ ┌─────────┐<br>│HashMap│ │SortedMap│<br>└───────┘ └─────────┘<br>               ▲<br>               │<br>          ┌─────────┐<br>          │ TreeMap │<br>          └─────────┘<br></code></pre></td></tr></table></figure>
-
 <p><code>SortedMap</code>是接口，它的实现类是<code>TreeMap</code>。创建<code>TreeMap</code>时同时指定一个自定义排序算法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">Map&lt;Person, Integer&gt; map = <span class="hljs-keyword">new</span> TreeMap&lt;&gt;(<span class="hljs-keyword">new</span> Comparator&lt;Person&gt;() &#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(Person p1, Person p2)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> p1.name.compareTo(p2.name);<br>    &#125;<br>&#125;);<br></code></pre></td></tr></table></figure>
-
 <p><code>SortedMap</code>在遍历时严格按照Key的<strong>顺序</strong>遍历，最常用的实现类是<code>TreeMap</code>；</p>
 <p>作为<code>SortedMap</code>的Key必须实现<code>Comparable</code>接口，或者传入<code>Comparator</code>；</p>
 <p>要严格按照<code>compare()</code>规范实现比较逻辑，否则，<code>TreeMap</code>将不能正常工作。</p>
@@ -528,8 +524,7 @@
 <li>字符流接口：<code>Reader</code>/<code>Writer</code>。</li>
 </ul>
 <h2 id="File"><a href="#File" class="headerlink" title="File"></a>File</h2><p>传入相对路径时，相对路径前面加上当前目录就是绝对路径：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 假设当前目录是C:\Docs</span><br>File f1 = <span class="hljs-keyword">new</span> File(<span class="hljs-string">"sub\\javac"</span>); <span class="hljs-comment">// 绝对路径是C:\Docs\sub\javac</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 假设当前目录是C:\Docs</span><br>File f1 = <span class="hljs-keyword">new</span> File(<span class="hljs-string">&quot;sub\\javac&quot;</span>); <span class="hljs-comment">// 绝对路径是C:\Docs\sub\javac</span><br></code></pre></td></tr></table></figure>
 <p>Java标准库的<code>java.io.File</code>对象表示一个文件或者目录：</p>
 <ul>
 <li>创建<code>File</code>对象本身不涉及IO操作；</li>
@@ -642,7 +637,7 @@
 </ul>
 <h2 id="ReentrantLock"><a href="#ReentrantLock" class="headerlink" title="ReentrantLock"></a>ReentrantLock</h2><p><code>ReentrantLock</code>可以替代<code>synchronized</code>进行同步；</p>
 <p><code>ReentrantLock</code>获取锁更安全；</p>
-<p>必须先获取到锁，再进入<code>try {...}</code>代码块，最后使用<code>finally</code>保证释放锁；</p>
+<p>必须先获取到锁，再进入<code>try &#123;...&#125;</code>代码块，最后使用<code>finally</code>保证释放锁；</p>
 <p>可以使用<code>tryLock()</code>尝试获取锁。</p>
 <h2 id="Condition"><a href="#Condition" class="headerlink" title="Condition"></a>Condition</h2><p><code>Condition</code>可以替代<code>wait</code>和<code>notify</code>；</p>
 <p><code>Condition</code>对象必须从<code>Lock</code>对象获取。</p>
@@ -688,8 +683,7 @@
 <p>使用<code>ThreadLocal</code>要用<code>try ... finally</code>结构，并在<code>finally</code>中清除。</p>
 <h1 id="Maven基础"><a href="#Maven基础" class="headerlink" title="Maven基础"></a>Maven基础</h1><p>Maven是一个Java项目管理和构建工具，它可以定义项目结构、项目依赖，并使用统一的方式进行自动化构建。</p>
 <h2 id="Maven介绍"><a href="#Maven介绍" class="headerlink" title="Maven介绍"></a>Maven介绍</h2><p>项目结构</p>
-<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs undefined">a-maven-project<br>├── pom.xml  <span class="hljs-comment">// 项目描述文件</span><br>├── src<br>│   ├── main<br>│   │   ├── java  <span class="hljs-comment">// Java源码目录</span><br>│   │   └── <span class="hljs-built_in">resources</span>  <span class="hljs-comment">// 资源文件</span><br>│   └── test<br>│       ├── java  <span class="hljs-comment">// 测试源码</span><br>│       └── <span class="hljs-built_in">resources</span><br>└── target  <span class="hljs-comment">// 所有编译、打包生成的文件都放在target目录里</span><br></code></pre></td></tr></table></figure>
-
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs awk">a-maven-project<br>├── pom.xml  <span class="hljs-regexp">//</span> 项目描述文件<br>├── src<br>│   ├── main<br>│   │   ├── java  <span class="hljs-regexp">//</span> Java源码目录<br>│   │   └── resources  <span class="hljs-regexp">//</span> 资源文件<br>│   └── test<br>│       ├── java  <span class="hljs-regexp">//</span> 测试源码<br>│       └── resources<br>└── target  <span class="hljs-regexp">//</span> 所有编译、打包生成的文件都放在target目录里<br></code></pre></td></tr></table></figure>
 <p>一个Java项目的管理和构建工具：</p>
 <ul>
 <li>Maven使用<code>pom.xml</code>定义项目内容，并使用预设的目录结构；</li>
@@ -720,7 +714,7 @@
 <h2 id="发布Artifact"><a href="#发布Artifact" class="headerlink" title="发布Artifact"></a>发布Artifact</h2><p>使用Maven发布一个Artifact时：</p>
 <ul>
 <li>可以发布到本地，然后由静态服务器提供repo服务，使用方必须声明repo地址；</li>
-<li>可以发布到<a href="https://central.sonatype.org/" target="_blank" rel="noopener">central.sonatype.org</a>，并自动同步到Maven中央仓库，需要前期申请账号以及本地配置；</li>
+<li>可以发布到<a target="_blank" rel="noopener" href="https://central.sonatype.org/">central.sonatype.org</a>，并自动同步到Maven中央仓库，需要前期申请账号以及本地配置；</li>
 <li>可以发布到GitHub Packages作为私有仓库使用，必须提供Token以及正确的权限才能发布和使用。</li>
 </ul>
 <h1 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h1><h2 id="网络编程基础"><a href="#网络编程基础" class="headerlink" title="网络编程基础"></a>网络编程基础</h2><p>计算机网络是指两台或更多的计算机组成的网络，在同一个网络中，任意两台计算机都可以直接通信，因为所有计算机都需要遵循同一种网络协议。</p>
@@ -838,7 +832,7 @@
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
               
               
                 <div class="post-prevnext">
@@ -855,7 +849,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/01/19/服务端/Apache配置https/">
+                      <a href="/2021/01/19/%E6%9C%8D%E5%8A%A1%E7%AB%AF/Apache%E9%85%8D%E7%BD%AEhttps/">
                         <span class="hidden-mobile">Apache配置https</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
