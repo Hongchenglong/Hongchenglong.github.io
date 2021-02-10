@@ -20,7 +20,7 @@ top: true
 3. `hexo s` (hexo server)，用于启动服务器，主要用来本地预览；完成后打开浏览器输入 `localhost:4000`
 4. `hexo d` (hexo deploy)，用于将本地文件发布到github等git仓库上
 5. 2、4步简写 `hexo g -d`
-6. `hexo clean && hexo g && hexo d`
+6. `hexo clean && hexo g -d`
 
 ## 显示不出分类、标签问题
 
@@ -74,6 +74,16 @@ https://www.jianshu.com/p/82c1d33420ba
 
 ## hexo在添加新文章的时候添加categories
 修改`/scaffolds/post.md`，这是文章模板
+
+## 绑定自定义域名
+在`/_config.yml`将`url: yoursite.com`修改为`url: http://hexo.oeong.com`
+并在域名控制台添加解析
+
+| 主机记录 | 记录类型 | 记录值 |
+| -------- | -------- | ------ |
+|   hexo       |     CNAME     |     hongchenglong.github.io   |
+
+
 
 ## NOTE
 

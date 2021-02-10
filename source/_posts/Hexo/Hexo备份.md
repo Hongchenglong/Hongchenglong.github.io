@@ -5,11 +5,14 @@ tags: [Hexo,Git]
 categories: Hexo
 ---
 
-最近把原本部署在GitHub上的hexo同时部署到码云上，速度快到飞起。
-可做对比，我的[GitHub Pages](https://hongchenglong.github.io)像乌龟一样慢吞吞，我的[Gitee Pages](https://hongchenglong.gitee.io)像兔子一样敏捷。
+`hexo d`只将编译后的文件`public`上传到gitee的`master`分支，因此我们新建一个分支`hexo`用于备份网站的源文件。
+
 
 <meta name="referrer" content="no-referrer"/>
 <!-- more -->
+
+最近把原本部署在GitHub上的hexo同时部署到码云上，速度快到飞起。
+可做对比，我的[GitHub Pages](https://hongchenglong.github.io)像乌龟一样慢吞吞，我的[Gitee Pages](https://oeong.gitee.io)像兔子一样敏捷。
 
 > 使用hexo，如果换了电脑怎么更新博客？
 
@@ -47,6 +50,9 @@ db.json
 
 
 
+#### 总结
+
+`hexo d`只将编译后的文件`public`上传到gitee的`master`分支，因此我们新建一个分支`hexo`用于备份网站的源文件。
 
 
 参考知乎回答：https://www.zhihu.com/question/21193762/answer/489124966
