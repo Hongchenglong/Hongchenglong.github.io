@@ -5,6 +5,7 @@ tags: [Maven]
 categories: Java
 ---
 
+<meta name="referrer" content="no-referrer"/>
 <!-- more -->
 
 ## Maven是什么

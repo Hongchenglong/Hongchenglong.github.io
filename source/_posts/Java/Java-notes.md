@@ -5,7 +5,11 @@ tags: [Java]
 categories: Java
 ---
 
+
+<meta name="referrer" content="no-referrer"/>
 <!-- more -->
+
+
 
 # Java快速入门
 
@@ -311,6 +315,7 @@ enum Weekday {
 
 安全的随机数，真随机数。种子是通过CPU的热噪声、读写磁盘的字节、网络流量等各种随机事件产生的“熵”。
 
+
 # 异常处理
 
 ## Java的异常
@@ -380,6 +385,71 @@ Commons Logging是使用最广泛的日志模块；
 Commons Logging的API非常简单；
 
 Commons Logging可以自动检测并使用其他日志模块。
+# 反射
+
+反射就是Reflection，Java的反射是指程序在运行期可以拿到一个对象的所有信息。
+
+## Class类
+JVM为每个加载的class及interface创建了对应的Class实例来保存class及interface的所有信息；
+
+获取一个class对应的Class实例后，就可以获取该class的所有信息；
+
+通过Class实例获取class信息的方法称为反射（Reflection）；
+
+JVM总是动态加载class，可以在运行期根据条件来控制加载class。
+## 访问字段
+
+Java的反射API提供的`Field`类封装了字段的所有信息：
+
+通过`Class`实例的方法可以获取`Field`实例：`getField()`，`getFields()`，`getDeclaredField()`，`getDeclaredFields()`；
+
+通过Field实例可以获取字段信息：`getName()`，`getType()`，`getModifiers()`；
+
+通过Field实例可以读取或设置某个对象的字段，如果存在访问限制，要首先调用`setAccessible(true)`来访问非`public`字段。
+
+通过反射读写字段是一种非常规方法，它会破坏对象的封装。
+
+## 调用方法
+
+Java的反射API提供的Method对象封装了方法的所有信息：
+
+通过`Class`实例的方法可以获取`Method`实例：`getMethod()`，`getMethods()`，`getDeclaredMethod()`，`getDeclaredMethods()`；
+
+通过`Method`实例可以获取方法信息：`getName()`，`getReturnType()`，`getParameterTypes()`，`getModifiers()`；
+
+通过`Method`实例可以调用某个对象的方法：`Object invoke(Object instance, Object... parameters)`；
+
+通过设置`setAccessible(true)`来访问非`public`方法；
+
+通过反射调用方法时，仍然遵循多态原则。
+
+## 调用构造方法
+
+`Constructor`对象封装了构造方法的所有信息；
+
+通过`Class`实例的方法可以获取`Constructor`实例：`getConstructor()`，`getConstructors()`，`getDeclaredConstructor()`，`getDeclaredConstructors()`；
+
+通过`Constructor`实例可以创建一个实例对象：`newInstance(Object... parameters)`； 通过设置`setAccessible(true)`来访问非`public`构造方法。
+
+## 获取继承关系
+
+通过`Class`对象可以获取继承关系：
+
+- `Class getSuperclass()`：获取父类类型；
+- `Class[] getInterfaces()`：获取当前类实现的所有接口。
+
+通过`Class`对象的`isAssignableFrom()`方法可以判断一个向上转型是否可以实现。
+
+## 动态代理
+
+Java标准库提供了动态代理功能，允许在运行期动态创建一个接口的实例；
+
+动态代理是通过`Proxy`创建代理对象，然后将接口方法“代理”给`InvocationHandler`完成的。
+
+# 注解
+
+# 泛型
+
 
 # 集合
 
@@ -1101,3 +1171,52 @@ Jackson可以实现JavaBean和JSON之间的转换；
 可以通过Module扩展Jackson能处理的数据类型；
 
 可以自定义`JsonSerializer`和`JsonDeserializer`来定制序列化和反序列化。
+
+# JDBC编程
+
+Java为关系数据库定义了一套标准的访问接口：JDBC（Java Database Connectivity）
+
+## JDBC简介
+
+使用JDBC的好处是：
+
+- 各数据库厂商使用相同的接口，Java代码不需要针对不同数据库分别开发；
+- Java程序编译期仅依赖java.sql包，不依赖具体数据库的jar包；
+- 可随时替换底层数据库，访问数据库的Java代码基本不变。
+
+## JDBC查询
+
+JDBC接口的`Connection`代表一个JDBC连接；
+
+使用JDBC查询时，总是使用`PreparedStatement`进行查询而不是`Statement`；
+
+查询结果总是`ResultSet`，即使使用聚合查询也不例外。
+
+## JDBC 更新
+
+使用JDBC执行`INSERT`、`UPDATE`和`DELETE`都可视为更新操作；
+
+更新操作使用`PreparedStatement`的`executeUpdate()`进行，返回受影响的行数。
+
+## JDBC事务
+
+数据库事务（Transaction）是由若干个SQL语句构成的一个**操作序列**，有点类似于Java的`synchronized`同步。数据库系统保证在一个事务中的所有SQL要么**全部**执行成功，要么全部不执行，即数据库事务具有ACID特性：
+
+- Atomicity：原子性
+- Consistency：一致性
+- Isolation：隔离性
+- Durability：持久性
+
+JDBC提供了事务的支持，使用Connection可以开启、提交或回滚事务。
+
+## JDBC Batch
+
+使用JDBC的batch操作会大大提高执行效率，对内容相同，参数不同的SQL，要优先考虑batch操作。
+
+## JDBC 连接池
+
+创建线程是一个昂贵的操作，如果有大量的小任务需要执行，并且频繁地创建和销毁线程，实际上会消耗大量的系统资源，往往创建和消耗线程所耗费的时间比执行任务的时间还长，所以，为了提高效率，可以用线程池。
+
+数据库连接池是一种复用`Connection`的组件，它可以避免反复创建新连接，提高JDBC代码的运行效率；
+
+可以配置连接池的详细参数并监控连接池。

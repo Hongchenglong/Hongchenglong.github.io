@@ -1,5 +1,5 @@
 ---
-title: Git分支进行多终端工作
+title: Hexo备份
 date: 2020-02-18 15:42:15
 tags: [Hexo,Git]
 categories: Hexo
@@ -13,46 +13,34 @@ categories: Hexo
 
 > 使用hexo，如果换了电脑怎么更新博客？
 
-一个分支**hexo**用来存放Hexo生成的网站**原始的文件**，另一个分支**master**用来存放生成的**静态网页**。
+新建一个分支**hexo**用来存放Hexo生成的网站**原始文件**，而主分支**master**用来存放生成的**静态网页**，即`hexo d`编译后的文件。
 
 我以操作码云为例。
 
 1. 上传分支
 新建一个hexo分支，点击**管理**，并设为**默认**分支。
 ![](https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154619708-1227810824.png)
-
-![](https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154951236-1568229660.png)
-
-
-
-
 2. 克隆仓库到本地
 `git clone git@gitee.com:hongchenglong/Hongchenglong.git`
 3. 将博客源文件全部复制过来，除了`.deploy_git`，因为`hexo d`上传部署到github的其实是hexo编译后的文件，是用来生成网页的，即`.deploy_git`里面的文件。
-
 在`.gitignore`中加入以下文件，这些文件在别的电脑上需要重新输入命令安装 。
 ```
+public
+node_modules
+.deploy_git
 .DS_Store
 Thumbs.db
 db.json
 *.log
-node_modules/
-public/
-.deploy*/
 ```
-
 注意，如果之前克隆过theme中的主题文件，那么应该把主题文件中的`.git`文件夹删掉，因为**git不能嵌套上传**。
-
-
 4. 上传源文件到码云上
     ```
     git add .
     git commit –m "xxxx"
     git push 
     ```
-
 5. 发布博客`hexo g -d`
-
 6. 最后手动更新部署<span style="color:red">master</span>分支
 
 ![](https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218161451693-906408523.png)
