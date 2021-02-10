@@ -17,7 +17,7 @@
   <meta name="description" content="相信过程">
   <meta name="author" content="Hongchenglong">
   <meta name="keywords" content="">
-  <title>Git分支进行多终端工作 - 匡山读书处</title>
+  <title>Hexo备份 - 匡山读书处</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -174,7 +174,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Git分支进行多终端工作">
+            <span class="h2" id="subtitle" title="Hexo备份">
               
             </span>
 
@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      326 字
+      410 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3
+      4
        分钟
     </span>
   
@@ -236,38 +236,30 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Git分支进行多终端工作</h1>
+            <h1 style="display: none">Hexo备份</h1>
             
             <div class="markdown-body">
-              <p>最近把原本部署在GitHub上的hexo同时部署到码云上，速度快到飞起。<br>可做对比，我的<a target="_blank" rel="noopener" href="https://hongchenglong.github.io">GitHub Pages</a>像乌龟一样慢吞吞，我的<a target="_blank" rel="noopener" href="https://hongchenglong.gitee.io">Gitee Pages</a>像兔子一样敏捷。</p>
+              <p><code>hexo d</code>只将编译后的文件<code>public</code>上传到gitee的<code>master</code>分支，因此我们新建一个分支<code>hexo</code>用于备份网站的源文件。</p>
 <meta name="referrer" content="no-referrer">
 <a id="more"></a>
 
+<p>最近把原本部署在GitHub上的hexo同时部署到码云上，速度快到飞起。<br>可做对比，我的<a target="_blank" rel="noopener" href="https://hongchenglong.github.io">GitHub Pages</a>像乌龟一样慢吞吞，我的<a target="_blank" rel="noopener" href="https://oeong.gitee.io">Gitee Pages</a>像兔子一样敏捷。</p>
 <blockquote>
 <p>使用hexo，如果换了电脑怎么更新博客？</p>
 </blockquote>
-<p>一个分支<strong>hexo</strong>用来存放Hexo生成的网站<strong>原始的文件</strong>，另一个分支<strong>master</strong>用来存放生成的<strong>静态网页</strong>。</p>
+<p>新建一个分支<strong>hexo</strong>用来存放Hexo生成的网站<strong>原始文件</strong>，而主分支<strong>master</strong>用来存放生成的<strong>静态网页</strong>，即<code>hexo d</code>编译后的文件。</p>
 <p>我以操作码云为例。</p>
 <ol>
 <li>上传分支<br>新建一个hexo分支，点击<strong>管理</strong>，并设为<strong>默认</strong>分支。<br><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154619708-1227810824.png" srcset="/img/loading.gif" alt></li>
-</ol>
-<p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218154951236-1568229660.png" srcset="/img/loading.gif" alt></p>
-<ol start="2">
 <li>克隆仓库到本地<br><code>git clone git@gitee.com:hongchenglong/Hongchenglong.git</code></li>
-<li>将博客源文件全部复制过来，除了<code>.deploy_git</code>，因为<code>hexo d</code>上传部署到github的其实是hexo编译后的文件，是用来生成网页的，即<code>.deploy_git</code>里面的文件。</li>
-</ol>
-<p>在<code>.gitignore</code>中加入以下文件，这些文件在别的电脑上需要重新输入命令安装 。</p>
-<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs x86asm"><span class="hljs-meta">.DS_Store</span><br>Thumbs<span class="hljs-number">.</span><span class="hljs-built_in">db</span><br><span class="hljs-built_in">db</span><span class="hljs-number">.</span>json<br>*.log<br>node_modules/<br><span class="hljs-meta">public</span>/<br><span class="hljs-meta">.deploy</span>*/<br></code></pre></td></tr></table></figure>
-<p>注意，如果之前克隆过theme中的主题文件，那么应该把主题文件中的<code>.git</code>文件夹删掉，因为<strong>git不能嵌套上传</strong>。</p>
-<ol start="4">
-<li><p>上传源文件到码云上</p>
- <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">git</span> <span class="hljs-keyword">add</span> .<br><span class="hljs-symbol">git</span> commit –m <span class="hljs-string">&quot;xxxx&quot;</span><br><span class="hljs-symbol">git</span> <span class="hljs-keyword">push</span> <br></code></pre></td></tr></table></figure></li>
-<li><p>发布博客<code>hexo g -d</code></p>
-</li>
-<li><p>最后手动更新部署<span style="color:red">master</span>分支</p>
-</li>
+<li>将博客源文件全部复制过来，除了<code>.deploy_git</code>，因为<code>hexo d</code>上传部署到github的其实是hexo编译后的文件，是用来生成网页的，即<code>.deploy_git</code>里面的文件。<br>在<code>.gitignore</code>中加入以下文件，这些文件在别的电脑上需要重新输入命令安装 。<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs x86asm"><span class="hljs-meta">public</span><br>node_modules<br><span class="hljs-meta">.deploy_git</span><br><span class="hljs-meta">.DS_Store</span><br>Thumbs<span class="hljs-number">.</span><span class="hljs-built_in">db</span><br><span class="hljs-built_in">db</span><span class="hljs-number">.</span>json<br>*.log<br></code></pre></td></tr></table></figure>
+注意，如果之前克隆过theme中的主题文件，那么应该把主题文件中的<code>.git</code>文件夹删掉，因为<strong>git不能嵌套上传</strong>。</li>
+<li>上传源文件到码云上 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">git</span> <span class="hljs-keyword">add</span> .<br><span class="hljs-symbol">git</span> commit –m <span class="hljs-string">&quot;xxxx&quot;</span><br><span class="hljs-symbol">git</span> <span class="hljs-keyword">push</span> <br></code></pre></td></tr></table></figure></li>
+<li>发布博客<code>hexo g -d</code></li>
+<li>最后手动更新部署<span style="color:red">master</span>分支</li>
 </ol>
 <p><img src="https://img2018.cnblogs.com/blog/1677222/202002/1677222-20200218161451693-906408523.png" srcset="/img/loading.gif" alt></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><code>hexo d</code>只将编译后的文件<code>public</code>上传到gitee的<code>master</code>分支，因此我们新建一个分支<code>hexo</code>用于备份网站的源文件。</p>
 <p>参考知乎回答：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21193762/answer/489124966">https://www.zhihu.com/question/21193762/answer/489124966</a></p>
 
             </div>
