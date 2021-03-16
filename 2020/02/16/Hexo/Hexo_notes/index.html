@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      638 字
+      685 字
     </span>
   
 
@@ -268,6 +268,21 @@
 <h2 id="hexo同时部署到码云Gitee"><a href="#hexo同时部署到码云Gitee" class="headerlink" title="hexo同时部署到码云Gitee"></a>hexo同时部署到码云Gitee</h2><p>如何创建一个首页访问地址不带二级目录的 pages，如hongchenglong.gitee.io？<br><strong>需要建立一个与自己个性地址同名的项目</strong>，<br>我的<strong>个性地址</strong>就是<code>https://gitee.com/hongchenglong</code>里的<code>hongchenglong</code><br>参考码云帮助文档：<a target="_blank" rel="noopener" href="http://git.mydoc.io/?t=154714&amp;tdsourcetag=s_pctim_aiomsg">http://git.mydoc.io/?t=154714&amp;tdsourcetag=s_pctim_aiomsg</a><br>码云的速度很快，缺点是每次部署都要去码云Pages手动<strong>更新</strong></p>
 <h2 id="设置网站的图标Favicon"><a href="#设置网站的图标Favicon" class="headerlink" title="设置网站的图标Favicon"></a>设置网站的图标Favicon</h2><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/82c1d33420ba">https://www.jianshu.com/p/82c1d33420ba</a></p>
 <h2 id="hexo在添加新文章的时候添加categories"><a href="#hexo在添加新文章的时候添加categories" class="headerlink" title="hexo在添加新文章的时候添加categories"></a>hexo在添加新文章的时候添加categories</h2><p>修改<code>/scaffolds/post.md</code>，这是文章模板</p>
+<h2 id="绑定自定义域名"><a href="#绑定自定义域名" class="headerlink" title="绑定自定义域名"></a>绑定自定义域名</h2><p>在<code>/_config.yml</code>将<code>url: yoursite.com</code>修改为<code>url: http://hexo.oeong.com</code><br>并在域名控制台添加解析</p>
+<table>
+<thead>
+<tr>
+<th>主机记录</th>
+<th>记录类型</th>
+<th>记录值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hexo</td>
+<td>CNAME</td>
+<td>hongchenglong.github.io</td>
+</tr>
+</tbody></table>
 <h2 id="NOTE"><a href="#NOTE" class="headerlink" title="NOTE"></a>NOTE</h2><ol>
 <li>语句含义<br><code>home: / || home</code>中的<code>|| home</code>表示会到自带库里找到home这个图标并展示。</li>
 <li>改成中文<br>主目录下的配置文件<code>_config.yml</code>中修改language的值，改成<code>language: zh-CN</code></li>

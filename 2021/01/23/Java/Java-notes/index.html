@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      11.4k 字
+      11.7k 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      124
+      128
        分钟
     </span>
   
@@ -422,7 +422,21 @@
 <p>通过<code>Class</code>对象的<code>isAssignableFrom()</code>方法可以判断一个向上转型是否可以实现。</p>
 <h2 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h2><p>Java标准库提供了动态代理功能，允许在运行期动态创建一个接口的实例；</p>
 <p>动态代理是通过<code>Proxy</code>创建代理对象，然后将接口方法“代理”给<code>InvocationHandler</code>完成的。</p>
-<h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1><h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p>Java的集合类定义在<code>java.util</code>包中，支持泛型，主要提供了3种集合类，包括<code>List</code>，<code>Set</code>和<code>Map</code>。Java集合使用统一的<code>Iterator</code>遍历，尽量不要使用遗留接口。</p>
+<h1 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h1><h2 id="使用注解"><a href="#使用注解" class="headerlink" title="使用注解"></a>使用注解</h2><p>注解是放在Java源码的类、方法、字段、参数前的一种特殊“注释”。<br>注释会被编译器直接忽略，注解则可以被编译器打包进入class文件，因此，注解是一种用作标注的“元数据”。</p>
+<p>注解（Annotation）是Java语言用于工具处理的标注：</p>
+<p>注解可以配置参数，没有指定配置的参数使用默认值；</p>
+<p>如果参数名称是<code>value</code>，且只有一个参数，那么可以省略参数名称。</p>
+<h2 id="定义注解"><a href="#定义注解" class="headerlink" title="定义注解"></a>定义注解</h2><p>Java使用<code>@interface</code>定义注解：</p>
+<p>可定义多个参数和默认值，核心参数使用<code>value</code>名称；</p>
+<p>必须设置<code>@Target</code>来指定<code>Annotation</code>可以应用的范围；</p>
+<p>应当设置<code>@Retention(RetentionPolicy.RUNTIME)</code>便于运行期读取该<code>Annotation</code>。</p>
+<h2 id="处理注解"><a href="#处理注解" class="headerlink" title="处理注解"></a>处理注解</h2><p>可以在运行期通过反射读取<code>RUNTIME</code>类型的注解，注意千万不要漏写<code>@Retention(RetentionPolicy.RUNTIME)</code>，否则运行期无法读取到该注解。</p>
+<p>可以通过程序处理注解来实现相应的功能：</p>
+<ul>
+<li>对JavaBean的属性值按规则进行检查；</li>
+<li>JUnit会自动运行<code>@Test</code>标记的测试方法。</li>
+</ul>
+<h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p>Java的集合类定义在<code>java.util</code>包中，支持泛型，主要提供了3种集合类，包括<code>List</code>，<code>Set</code>和<code>Map</code>。Java集合使用统一的<code>Iterator</code>遍历，尽量不要使用遗留接口。</p>
 <h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p><code>List</code>的行为和数组几乎完全相同。 List是一个接口，而ArrayList是List接口的一个实现类。 </p>
 <p><code>List</code>是按索引顺序访问的长度可变的有序表，优先使用<code>ArrayList</code>而不是<code>LinkedList</code>；</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">List&lt;String&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br>List&lt;String&gt; list = List.of(<span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;pear&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>);<br></code></pre></td></tr></table></figure>
@@ -821,6 +835,8 @@
 <h2 id="JDBC-连接池"><a href="#JDBC-连接池" class="headerlink" title="JDBC 连接池"></a>JDBC 连接池</h2><p>创建线程是一个昂贵的操作，如果有大量的小任务需要执行，并且频繁地创建和销毁线程，实际上会消耗大量的系统资源，往往创建和消耗线程所耗费的时间比执行任务的时间还长，所以，为了提高效率，可以用线程池。</p>
 <p>数据库连接池是一种复用<code>Connection</code>的组件，它可以避免反复创建新连接，提高JDBC代码的运行效率；</p>
 <p>可以配置连接池的详细参数并监控连接池。</p>
+<h1 id="Spring开发"><a href="#Spring开发" class="headerlink" title="Spring开发"></a>Spring开发</h1><p>Spring是一个支持快速开发Java EE应用程序的框架。</p>
+<h2 id="IoC容器"><a href="#IoC容器" class="headerlink" title="IoC容器"></a>IoC容器</h2><p>容器是一种为某种特定组件的运行提供必要支持的一个软件环境。</p>
 
             </div>
             <hr>

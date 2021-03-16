@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      822 字
+      1.5k 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10
+      19
        分钟
     </span>
   
@@ -243,7 +243,7 @@
 <a id="more"></a>
 
 <p>为什么起名叫JavaScript？原因是当时Java语言非常红火，所以网景公司希望<strong>借Java的名气来推广</strong>，但事实上JavaScript除了语法上有点像Java，其他部分基本上没啥关系。</p>
-<p>JavaScript语言是在10天时间内设计出来的，有很多设计缺陷。</p>
+<p>JavaScript语言是在10天时间内设计出来的，虽然语言的设计者水平非常NB，但谁也架不住“时间紧，任务重”，所以，JavaScript有很多设计缺陷</p>
 <h1 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h1><p>JavaScript<strong>严格区分大小写</strong>，如果弄错了大小写，程序将报错或者运行不正常。</p>
 <h2 id="数据类型和变量"><a href="#数据类型和变量" class="headerlink" title="数据类型和变量"></a>数据类型和变量</h2><p>JavaScript不区分整数和浮点数，统一用<strong>Number</strong>表示。</p>
 <p><strong>比较运算符</strong></p>
@@ -281,11 +281,45 @@
 <h2 id="Map和Set"><a href="#Map和Set" class="headerlink" title="Map和Set"></a>Map和Set</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> m = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>([[<span class="hljs-string">&#x27;Michael&#x27;</span>, <span class="hljs-number">95</span>], [<span class="hljs-string">&#x27;Bob&#x27;</span>, <span class="hljs-number">75</span>], [<span class="hljs-string">&#x27;Tracy&#x27;</span>, <span class="hljs-number">85</span>]]);<br><span class="hljs-keyword">var</span> s = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">3</span>, <span class="hljs-string">&#x27;3&#x27;</span>]);<br></code></pre></td></tr></table></figure>
 <h2 id="iterable"><a href="#iterable" class="headerlink" title="iterable"></a>iterable</h2><p>遍历<code>Array</code>可以采用下标循环，遍历<code>Map</code>和<code>Set</code>就无法使用下标。为了统一集合类型，ES6标准引入了新的<code>iterable</code>类型，<code>Array</code>、<code>Map</code>和<code>Set</code>都属于<code>iterable</code>类型。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> x <span class="hljs-keyword">of</span> arr)<br>    <br>arr.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">element, index, array</span>)</span><br></code></pre></td></tr></table></figure>
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>借助抽象，我们才能不关心底层的具体计算过程，而直接在更高的层次上思考问题。</p>
+<h2 id="函数定义和调用"><a href="#函数定义和调用" class="headerlink" title="函数定义和调用"></a>函数定义和调用</h2><p><code>function abs(x)&#123;&#125;</code>等价于<code>var abs = function(x)&#123;&#125;;</code></p>
+<p>arguments</p>
+<p>它只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数。</p>
+<p>JavaScript引擎有一个在行末自动添加分号;的机制</p>
+<h2 id="变量作用域与解构赋值"><a href="#变量作用域与解构赋值" class="headerlink" title="变量作用域与解构赋值"></a>变量作用域与解构赋值</h2><p>全局作用域</p>
+<p>不在任何函数内定义的变量就具有全局作用域。实际上，JavaScript默认有一个全局对象<code>window</code>，全局作用域的变量被绑定到<code>window</code>的一个属性。如<code>window.alert()</code></p>
+<p>名字空间</p>
+<p>全局变量会绑定到<code>window</code>上，不同的JavaScript文件如果使用了相同的全局变量，或者定义了相同名字的顶层函数，都会造成命名冲突，并且很难被发现。</p>
+<p>减少冲突的一个方法是把自己的所有变量和函数全部绑定到一个全局变量中。如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 唯一的全局变量MYAPP:</span><br><span class="hljs-keyword">var</span> MYAPP = &#123;&#125;;<br><br><span class="hljs-comment">// 其他变量:</span><br>MYAPP.name = <span class="hljs-string">&#x27;myapp&#x27;</span>;<br>MYAPP.version = <span class="hljs-number">1.0</span>;<br><br><span class="hljs-comment">// 其他函数:</span><br>MYAPP.foo = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;foo&#x27;</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>解构赋值：直接对多个变量同时赋值</p>
+<p><code>let [x, [y, z]] = [&#39;hello&#39;, [&#39;JavaScript&#39;, &#39;ES6&#39;]];</code></p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>在一个对象中绑定函数，称为这个对象的方法。</p>
+<h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><p>JavaScript的函数其实都指向某个变量。既然变量可以指向函数，函数的参数能接收变量，那么<strong>一个函数就可以接收另一个函数作为参数</strong>，这种函数就称之为高阶函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y, f</span>) </span>&#123;<br>    <span class="hljs-keyword">return</span> f(x) + f(y);<br>&#125;<br><span class="hljs-keyword">var</span> x = add(-<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-built_in">Math</span>.abs); <span class="hljs-comment">// 11</span><br></code></pre></td></tr></table></figure>
+<p>map/reduce</p>
+<p>map是对数组的每个元素分别计算。</p>
+<p>Array的<code>reduce()</code>把一个函数作用在这个<code>Array</code>的<code>[x1, x2, x3...]</code>上，这个函数必须接收两个参数，<code>reduce()</code>把结果继续和<strong>序列的下一个元素</strong>做<strong>累积</strong>计算。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">[x1, x2, x3, x4].reduce(f) = f(f(f(x1, x2), x3), x4)<br></code></pre></td></tr></table></figure>
+<p>filter</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">15</span>];<br><span class="hljs-keyword">var</span> r = arr.filter(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">x</span>) </span>&#123;<br>    <span class="hljs-keyword">return</span> x % <span class="hljs-number">2</span> !== <span class="hljs-number">0</span>;  <span class="hljs-comment">// 保留奇数</span><br>&#125;);<br></code></pre></td></tr></table></figure>
+<p>sort</p>
+<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><p><code>every()</code>方法可以判断数组的所有元素是否满足测试条件。</p>
+<p><code>find()</code>方法用于查找符合条件的第一个元素，如果找到了，返回这个元素，否则，返回undefined</p>
+<p><code>findIndex()</code>返回符合条件的第一个元素的索引</p>
+<p><code>forEach()</code>和<code>map()</code>类似，它也把每个元素依次作用于传入的函数，但不会返回新的数组。<code>forEach()</code>常用于遍历数组，因此，传入的函数不需要返回值。<code>arr.forEach(console.log);</code></p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2>
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/JavaScript/">JavaScript</a>
+                    
+                  </div>
                 
                 
               </div>
@@ -296,6 +330,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2021/02/10/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/SVN/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">SVN</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
