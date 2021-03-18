@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      11.7k 字
+      12.2k 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      128
+      133
        分钟
     </span>
   
@@ -835,6 +835,30 @@
 <h2 id="JDBC-连接池"><a href="#JDBC-连接池" class="headerlink" title="JDBC 连接池"></a>JDBC 连接池</h2><p>创建线程是一个昂贵的操作，如果有大量的小任务需要执行，并且频繁地创建和销毁线程，实际上会消耗大量的系统资源，往往创建和消耗线程所耗费的时间比执行任务的时间还长，所以，为了提高效率，可以用线程池。</p>
 <p>数据库连接池是一种复用<code>Connection</code>的组件，它可以避免反复创建新连接，提高JDBC代码的运行效率；</p>
 <p>可以配置连接池的详细参数并监控连接池。</p>
+<h1 id="Web开发"><a href="#Web开发" class="headerlink" title="Web开发"></a>Web开发</h1><p>什么是JavaEE？JavaEE是Java Platform Enterprise Edition的缩写，即Java企业平台。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs ascii">┌────────────────┐<br>│     JavaEE     │<br>│┌──────────────┐│<br>││    JavaSE    ││<br>││┌────────────┐││<br>│││   JavaME   │││<br>││└────────────┘││<br>│└──────────────┘│<br>└────────────────┘<br></code></pre></td></tr></table></figure>
+<h2 id="Web基础"><a href="#Web基础" class="headerlink" title="Web基础"></a>Web基础</h2><p>访问网站，使用App时，都是基于Web这种Browser/Server模式，简称BS架构，它的特点是，客户端只需要浏览器，应用程序的逻辑和数据都存储在服务器端。浏览器只需要请求服务器，获取Web页面，并把Web页面展示给用户即可。</p>
+<p>对于Browser来说，请求页面的流程如下：</p>
+<ol>
+<li><strong>与服务器建立TCP连接</strong>；</li>
+<li>发送HTTP请求；</li>
+<li>收取HTTP响应，然后把网页在浏览器中显示出来。</li>
+</ol>
+<p>使用B/S架构时，总是通过HTTP协议实现通信；</p>
+<h2 id="Servlet"><a href="#Servlet" class="headerlink" title="Servlet"></a>Servlet</h2><p>Java Servlet 是运行在 Web 服务器的程序，用于处理HTTP请求。</p>
+<p>一个Servlet总是继承自<code>HttpServlet</code>，然后覆写<code>doGet()</code>或<code>doPost()</code>方法。</p>
+<p>编写Web应用程序就是编写Servlet处理HTTP请求；</p>
+<p>Servlet API提供了<code>HttpServletRequest</code>和<code>HttpServletResponse</code>两个高级接口来封装HTTP请求和响应；</p>
+<p>Web应用程序必须按固定结构组织并打包为<code>.war</code>文件；</p>
+<p>需要启动Web服务器来加载我们的war包来运行Servlet。</p>
+<h2 id="Servlet进阶"><a href="#Servlet进阶" class="headerlink" title="Servlet进阶"></a>Servlet进阶</h2><p>一个Webapp中的多个Servlet依靠路径映射来处理不同的请求；</p>
+<p>映射为<code>/</code>的Servlet可处理所有“未匹配”的请求；</p>
+<p>如何处理请求取决于Servlet覆写的对应方法；</p>
+<p>Web服务器通过多线程处理HTTP请求，一个Servlet的处理方法可以由多线程并发执行。</p>
+<h3 id="重定向与转发"><a href="#重定向与转发" class="headerlink" title="重定向与转发"></a>重定向与转发</h3><p>使用重定向时，浏览器知道重定向规则，并且会自动发起新的HTTP请求；</p>
+<p>使用转发时，浏览器并不知道服务器内部的转发逻辑。</p>
+<h3 id="Session和Cookie"><a href="#Session和Cookie" class="headerlink" title="Session和Cookie"></a>Session和Cookie</h3><p>基于唯一ID识别用户身份的机制称为Session。</p>
+<p>…</p>
 <h1 id="Spring开发"><a href="#Spring开发" class="headerlink" title="Spring开发"></a>Spring开发</h1><p>Spring是一个支持快速开发Java EE应用程序的框架。</p>
 <h2 id="IoC容器"><a href="#IoC容器" class="headerlink" title="IoC容器"></a>IoC容器</h2><p>容器是一种为某种特定组件的运行提供必要支持的一个软件环境。</p>
 

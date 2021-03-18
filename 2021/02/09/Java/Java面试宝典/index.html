@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      4.4k 字
+      7.4k 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      46
+      79
        分钟
     </span>
   
@@ -306,7 +306,7 @@
 <h3 id="什么是构造函数？什么是构造函数重载？什么是复制构造函数？"><a href="#什么是构造函数？什么是构造函数重载？什么是复制构造函数？" class="headerlink" title="什么是构造函数？什么是构造函数重载？什么是复制构造函数？"></a>什么是构造函数？什么是构造函数重载？什么是复制构造函数？</h3><p>构造函数,即构造方法，Java中一种特殊的函数。与函数同名,无返回值。用于创建对象时初始化对象。</p>
 <p>构造函数重载：可以为一个类创建多个构造函数，每个构造函数必须有它自己唯一的参数列表。</p>
 <p>…</p>
-<h3 id="方法覆盖-Overriding-和方法重载-Overloading-是什么意思？"><a href="#方法覆盖-Overriding-和方法重载-Overloading-是什么意思？" class="headerlink" title="方法覆盖(Overriding)和方法重载(Overloading)是什么意思？"></a>方法覆盖(Overriding)和方法重载(Overloading)是什么意思？</h3><p>方法重载：同一个类里面两个或者是多个方法的<strong>方法名相同但是参数不同</strong>的情况。</p>
+<h3 id="方法重载-Overloading-和方法覆盖-Overriding-是什么意思？"><a href="#方法重载-Overloading-和方法覆盖-Overriding-是什么意思？" class="headerlink" title="方法重载(Overloading)和方法覆盖(Overriding)是什么意思？"></a>方法重载(Overloading)和方法覆盖(Overriding)是什么意思？</h3><p>方法重载：同一个类里面两个或者是多个方法的<strong>方法名相同但是参数不同</strong>的情况。</p>
 <p>方法覆盖是说子类重新定义了父类的方法。方法覆盖必须有相同的方法名，返回类型和参数列表。覆盖者可能不会限制它所覆盖的方法的访问。</p>
 <h3 id="请说明Query接口的list方法和iterate方法有什么区别？"><a href="#请说明Query接口的list方法和iterate方法有什么区别？" class="headerlink" title="请说明Query接口的list方法和iterate方法有什么区别？"></a>请说明Query接口的list方法和iterate方法有什么区别？</h3><p>…</p>
 <h3 id="面向对象的”六原则一法则”"><a href="#面向对象的”六原则一法则”" class="headerlink" title="面向对象的”六原则一法则”"></a>面向对象的”六原则一法则”</h3><ol>
@@ -318,7 +318,88 @@
 <li>合成聚合复用原则：优先使用聚合或合成关系复用代码。</li>
 <li>迪米特法则：迪米特法则又叫最少知识原则，一个对象应当对其他对象有尽可能少的了解。</li>
 </ol>
-<h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h2 id="网络概述"><a href="#网络概述" class="headerlink" title="网络概述"></a>网络概述</h2><h3 id="TCP协议、IP协议、HTTP协议分别在哪一层？"><a href="#TCP协议、IP协议、HTTP协议分别在哪一层？" class="headerlink" title="TCP协议、IP协议、HTTP协议分别在哪一层？"></a>TCP协议、IP协议、HTTP协议分别在哪一层？</h3><p>运输层，网络层，应用层。</p>
+<h3 id="如何通过反射获取和设置对象私有字段的值？"><a href="#如何通过反射获取和设置对象私有字段的值？" class="headerlink" title="如何通过反射获取和设置对象私有字段的值？"></a>如何通过反射获取和设置对象私有字段的值？</h3><p>…</p>
+<h3 id="说明重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？"><a href="#说明重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？" class="headerlink" title="说明重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？"></a>说明重载（Overload）和重写（Override）的区别。重载的方法能否根据返回类型进行区分？</h3><p>方法的重载和重写都是实现多态的方式，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。</p>
+<p>重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写（覆盖）发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的返回类型，比父类被重写方法更好访问，不能比父类被重写方法声明更多的异常（里氏代换原则）。</p>
+<p>重载对返回类型没有特殊的要求。</p>
+<h3 id="两个对象值相同-x-equals-y-true-，但却可有不同的hash-code，该说法是否正确，为什么？"><a href="#两个对象值相同-x-equals-y-true-，但却可有不同的hash-code，该说法是否正确，为什么？" class="headerlink" title="两个对象值相同(x.equals(y) == true)，但却可有不同的hash code，该说法是否正确，为什么？"></a>两个对象值相同(x.equals(y) == true)，但却可有不同的hash code，该说法是否正确，为什么？</h3><p>不对，如果两个对象x和y满足x.equals(y) == true，它们的哈希码（hash code）应当相同。Java对于eqauls方法和hashCode方法是这样规定的：(1)如果两个对象相同（equals方法返回true），那么它们的hashCode值一定要相同；(2)如果两个对象的hashCode相同，它们并不一定相同。</p>
+<p>当然，你未必要按照要求去做，但是如果你违背了上述原则就会发现在使用容器时，相同的对象可以出现在Set集合中，同时增加新元素的效率会大大下降（对于使用哈希存储的系统，如果哈希码频繁的冲突将会造成存取性能急剧下降）。</p>
+<h3 id="内部类可以引用他包含类的成员吗，如果可以，有没有什么限制吗？"><a href="#内部类可以引用他包含类的成员吗，如果可以，有没有什么限制吗？" class="headerlink" title="内部类可以引用他包含类的成员吗，如果可以，有没有什么限制吗？"></a>内部类可以引用他包含类的成员吗，如果可以，有没有什么限制吗？</h3><p>一个内部类对象可以访问创建它的外部类对象的内容。</p>
+<p>类如果不是static的，那么它可以访问创建它的外部类对象的所有属性内部类；如果是static的，即为nested class，那么它只可以访问创建它的外部类对象的所有static属性一般普通类。</p>
+<h3 id="Java语言如何进行异常处理，关键字：throws-throw-try-catch-finally分别代表什么意义？在try块中可以抛出异常吗？"><a href="#Java语言如何进行异常处理，关键字：throws-throw-try-catch-finally分别代表什么意义？在try块中可以抛出异常吗？" class="headerlink" title="Java语言如何进行异常处理，关键字：throws,throw,try,catch,finally分别代表什么意义？在try块中可以抛出异常吗？"></a>Java语言如何进行异常处理，关键字：throws,throw,try,catch,finally分别代表什么意义？在try块中可以抛出异常吗？</h3><p>一般情况下是用try来执行一段程序，如果出现异常，系统会抛出（throws）一个异常，这时候你可以通过它的类型来捕捉（catch）它，或最后（finally）由缺省处理器来处理。</p>
+<p>用try来指定一块预防所有”异常”的程序。紧跟在try程序后面，应包含一个catch子句来指定你想要捕捉的”异常”的类型。throw语句用来明确地抛出一个”异常”。throws用来标明一个成员函数可能抛出的各种”异常”。finally为确保一段代码不管发生什么”异常”都被执行一段代码。</p>
+<h3 id="说明Java的接口和C-的虚类的相同和不同处。"><a href="#说明Java的接口和C-的虚类的相同和不同处。" class="headerlink" title="说明Java的接口和C++的虚类的相同和不同处。"></a>说明Java的接口和C++的虚类的相同和不同处。</h3><p>…</p>
+<h3 id="判断当一个对象被当作参数传递给一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递"><a href="#判断当一个对象被当作参数传递给一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递" class="headerlink" title="判断当一个对象被当作参数传递给一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递?"></a>判断当一个对象被当作参数传递给一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递?</h3><p>???</p>
+<p>值传递。Java只有值传递参数。当一个对象实例作为一个参数被传递到方法中时，参数的值就是对该对象的引用。对象的内容可以在被调用的方法中改变，但对象的引用是永远不会改变的。</p>
+<p>Java永远只有值传递，引用传递其实也是一个值传递，传递是一个地址的副本，</p>
+<h2 id="面向对象（二）"><a href="#面向对象（二）" class="headerlink" title="面向对象（二）"></a>面向对象（二）</h2><h2 id="面向对象（三）"><a href="#面向对象（三）" class="headerlink" title="面向对象（三）"></a>面向对象（三）</h2><p>…</p>
+<h1 id="Java-Web"><a href="#Java-Web" class="headerlink" title="Java Web"></a>Java Web</h1><h2 id="Web编程基础"><a href="#Web编程基础" class="headerlink" title="Web编程基础"></a>Web编程基础</h2><h3 id="JAVA应用服务器都有哪些？"><a href="#JAVA应用服务器都有哪些？" class="headerlink" title="JAVA应用服务器都有哪些？"></a>JAVA应用服务器都有哪些？</h3><p>Web服务器：Tomcat、Jetty</p>
+<p>Java EE服务器：Bea Weblogic、JBoss</p>
+<h3 id="在什么情况下会使用assert？"><a href="#在什么情况下会使用assert？" class="headerlink" title="在什么情况下会使用assert？"></a>在什么情况下会使用assert？</h3><p>assertion (断言)在软件开发中是一种常用的调试方式。</p>
+<p>assertion检查通常在开发和测试时开启。在实现中，assertion就是在程序中的一条语句，它对一个 boolean表达式进行检查，一个正确程序必须保证这个boolean表达式的值为true。</p>
+<h3 id="1分钟之内只能处理1000个请求，你怎么实现，手撕代码"><a href="#1分钟之内只能处理1000个请求，你怎么实现，手撕代码" class="headerlink" title="1分钟之内只能处理1000个请求，你怎么实现，手撕代码?"></a>1分钟之内只能处理1000个请求，你怎么实现，手撕代码?</h3><p>限流的几种方法：计数器，滑动窗口、漏桶法、令牌桶</p>
+<h3 id="如何在链接里不输入项目名称的情况下启动项目？"><a href="#如何在链接里不输入项目名称的情况下启动项目？" class="headerlink" title="如何在链接里不输入项目名称的情况下启动项目？"></a>如何在链接里不输入项目名称的情况下启动项目？</h3><p>在taomcat配置虚拟目录。</p>
+<h3 id="JSP中的静态包含和动态包含的有哪些区别？"><a href="#JSP中的静态包含和动态包含的有哪些区别？" class="headerlink" title="JSP中的静态包含和动态包含的有哪些区别？"></a>JSP中的静态包含和动态包含的有哪些区别？</h3><p>静态包含是通过JSP的include指令包含页面，动态包含是通过JSP标准动作<a href="jsp:forward">jsp:forward</a>包含页面。</p>
+<p>静态包含是编译时包含，动态包含是运行时包含。</p>
+<h3 id="表达式语言（EL）的隐式对象以及该对象的作用"><a href="#表达式语言（EL）的隐式对象以及该对象的作用" class="headerlink" title="表达式语言（EL）的隐式对象以及该对象的作用"></a>表达式语言（EL）的隐式对象以及该对象的作用</h3><p>EL的隐式对象包括：pageContext、initParam（访问上下文参数）、param（访问请求参数）</p>
+<h3 id="JSP有哪些内置对象？以及这些对象的作用分别是什么？"><a href="#JSP有哪些内置对象？以及这些对象的作用分别是什么？" class="headerlink" title="JSP有哪些内置对象？以及这些对象的作用分别是什么？"></a>JSP有哪些内置对象？以及这些对象的作用分别是什么？</h3><p>JSP有9个内置对象：</p>
+<ul>
+<li>request：封装客户端的请求，其中包含来自GET或POST请求的参数；</li>
+<li>response：封装服务器对客户端的响应；</li>
+<li>pageContext：通过该对象可以获取其他对象；</li>
+<li>session：封装用户会话的对象；</li>
+<li>application：封装服务器运行环境的对象；</li>
+<li>application：封装服务器运行环境的对象；</li>
+<li>out：输出服务器响应的输出流对象；</li>
+<li>config：Web应用的配置对象；</li>
+<li>page：JSP页面本身（相当于Java程序中的this）；</li>
+<li>exception：封装页面抛出异常的对象。</li>
+</ul>
+<h3 id="说说weblogic中一个Domain的缺省目录结构-比如要将一个简单的helloWorld-jsp放入何目录下-然后在浏览器上就可打入主机？"><a href="#说说weblogic中一个Domain的缺省目录结构-比如要将一个简单的helloWorld-jsp放入何目录下-然后在浏览器上就可打入主机？" class="headerlink" title="说说weblogic中一个Domain的缺省目录结构?比如要将一个简单的helloWorld.jsp放入何目录下,然后在浏览器上就可打入主机？"></a>说说weblogic中一个Domain的缺省目录结构?比如要将一个简单的helloWorld.jsp放入何目录下,然后在浏览器上就可打入主机？</h3><p>…</p>
+<h3 id="JSP有哪些动作-这些动作的作用又分别是什么"><a href="#JSP有哪些动作-这些动作的作用又分别是什么" class="headerlink" title="JSP有哪些动作? 这些动作的作用又分别是什么?"></a>JSP有哪些动作? 这些动作的作用又分别是什么?</h3><p>JSP 共有以下6种基本动作<br>jsp:include：在页面被请求的时候引入一个文件。<br>jsp:forward：把请求转到一个新的页面。<br>jsp:useBean：寻找或者实例化一个JavaBean。<br>jsp:setProperty：设置JavaBean的属性。<br>jsp:getProperty：输出某个JavaBean的属性。<br>jsp:plugin：根据浏览器类型为Java插件生成OBJECT或EMBED标记。</p>
+<h3 id="详细说明一下Request对象的主要方法是什么？"><a href="#详细说明一下Request对象的主要方法是什么？" class="headerlink" title="详细说明一下Request对象的主要方法是什么？"></a>详细说明一下Request对象的主要方法是什么？</h3><p>setAttribute(String name,Object)：设置名字为name的request的参数值<br>getAttribute(String name)：返回由name指定的属性值<br>getAttributeNames()：返回request对象所有属性的名字集合，结果是一个枚举的实例<br>removeAttribute(String name)：删除请求中的一个属性</p>
+<h3 id="JSP四种会话跟踪技术分别是什么？"><a href="#JSP四种会话跟踪技术分别是什么？" class="headerlink" title="JSP四种会话跟踪技术分别是什么？"></a>JSP四种会话跟踪技术分别是什么？</h3><p>page域 数据在一个<strong>页面</strong>范围内有效，通过pageContext对象访问<br>request域 数据在一个<strong>服务器</strong>请求范围内有效，通过request对象访问<br>session域 数据在一次<strong>会话</strong>范围内容有效，通过session对象访问<br>application域 数据在一个<strong>应用服务器</strong>范围内有效，通过application对象访问</p>
+<h3 id="JSP和Servlet有哪些相同点和不同点？另外他们之间的联系又是什么呢？"><a href="#JSP和Servlet有哪些相同点和不同点？另外他们之间的联系又是什么呢？" class="headerlink" title="JSP和Servlet有哪些相同点和不同点？另外他们之间的联系又是什么呢？"></a>JSP和Servlet有哪些相同点和不同点？另外他们之间的联系又是什么呢？</h3><p>JSP全称Java Server Pages，是一种动态网页开发技术。它使用JSP标签在HTML网页中插入Java代码。标签通常以&lt;%开头以%&gt;结束。</p>
+<p>Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。</p>
+<p>JSP是Servlet技术的扩展，本质上是Servlet的简易方式，更强调应用的外表表达。JSP编译后是”类servlet”。</p>
+<p>Servlet和JSP最主要的不同点在于，Servlet的应用逻辑是在Java文件中，并且完全从表示层中的HTML里分离开来。而JSP的情况是Java和HTML可以组合成一个扩展名为.jsp的文件。<strong>JSP侧重于视图，Servlet主要用于控制逻辑。</strong></p>
+<h3 id="JSP的内置对象以及该对象的使用方法。"><a href="#JSP的内置对象以及该对象的使用方法。" class="headerlink" title="JSP的内置对象以及该对象的使用方法。"></a>JSP的内置对象以及该对象的使用方法。</h3><p>request表示HttpServletRequest对象。它包含了有关浏览器请求的信息，并且提供了几个用于获取cookie, header, 和session数据的有用的方法。<br>response表示HttpServletResponse对象，并提供了几个用于设置送回浏览器的响应的方法（如cookies,头信息等）</p>
+<h3 id="web-xml文件中可以配置哪些内容？"><a href="#web-xml文件中可以配置哪些内容？" class="headerlink" title="web.xml文件中可以配置哪些内容？"></a>web.xml文件中可以配置哪些内容？</h3><p>web.xml用于配置Web应用的相关信息，如：监听器（listener）、过滤器（filter）、Servlet、相关参数、会话超时时间、安全验证方式、错误页面等。</p>
+<h3 id="对Javaweb开发中的监听器的理解？"><a href="#对Javaweb开发中的监听器的理解？" class="headerlink" title="对Javaweb开发中的监听器的理解？"></a>对Javaweb开发中的监听器的理解？</h3><p>Java Web开发中的监听器（listener）就是application、session、request三个对象创建、销毁或者往其中添加修改删除属性时自动执行代码的功能组件。</p>
+<h3 id="过滤器有哪些作用？以及过滤器的用法又是什么呢"><a href="#过滤器有哪些作用？以及过滤器的用法又是什么呢" class="headerlink" title="过滤器有哪些作用？以及过滤器的用法又是什么呢?"></a>过滤器有哪些作用？以及过滤器的用法又是什么呢?</h3><p>过滤器是一个驻留在服务器端的Web组件，它可以截取客户端和服务器之间的请求与响应信息，并对这些信息进行过滤。</p>
+<p>常见的过滤器用途主要包括：对用户请求进行统一认证、对用户的访问请求进行记录和审核、对用户发送的数据进行过滤或替换、转换图象格式。</p>
+<h2 id="Web编程原理"><a href="#Web编程原理" class="headerlink" title="Web编程原理"></a>Web编程原理</h2><h3 id="get和post请求，并且说说它们之间的区别？"><a href="#get和post请求，并且说说它们之间的区别？" class="headerlink" title="get和post请求，并且说说它们之间的区别？"></a>get和post请求，并且说说它们之间的区别？</h3><p>①get请求用来从服务器上获得资源，而post是用来向服务器提交数据；<br>②get将表单中数据按照name=value的形式，添加到action所指向的URL 后面，并且两者使用”?”连接，而各个变量之间使用”&amp;”连接；post是将表单中的数据放在<strong>HTTP协议的请求头或消息体</strong>中，传递到action所指向URL；<br>③get传输的数据要受到URL长度限制（1024字节）；而post可以传输大量的数据，上传文件通常要使用post方式；<br>④使用get时参数会显示在地址栏上，如果这些数据不是敏感数据，那么可以使用get；对于敏感数据还是应用使用post；</p>
+<h3 id="转发和重定向之间的区别？"><a href="#转发和重定向之间的区别？" class="headerlink" title="转发和重定向之间的区别？"></a>转发和重定向之间的区别？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// servlet</span><br>request.getRequestDispatcher(<span class="hljs-string">&quot;new.jsp&quot;</span>).forward(request, response); <span class="hljs-comment">//转发到new.jsp</span><br>response.sendRedirect(<span class="hljs-string">&quot;new.jsp&quot;</span>); <span class="hljs-comment">//重定向到new.jsp</span><br><br><span class="hljs-comment">// jsp</span><br>&lt;jsp:forward page=<span class="hljs-string">&quot;apage.jsp&quot;</span> /&gt;<br>&lt;%response.sendRedirect(<span class="hljs-string">&quot;new.jsp&quot;</span>);<br></code></pre></td></tr></table></figure>
+<p>转发是服务器行为，重定向是客户端行为。</p>
+<p>重定向，其实是两次request。</p>
+<p>转发：以前的request中存放的变量不会失效，就像把两个页面拼到了一起。</p>
+<p>重定向：以前的request中存放的变量全部失效，并进入一个新的request作用域。</p>
+<h3 id="forward-和redirect的区别？"><a href="#forward-和redirect的区别？" class="headerlink" title="forward 和redirect的区别？"></a>forward 和redirect的区别？</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_37766296/article/details/80375106">https://blog.csdn.net/weixin_37766296/article/details/80375106</a></p>
+<ol>
+<li><p>本质</p>
+<p> <strong>forword转发是服务器上的行为，而redirect重定向是客户端的行为</strong></p>
+</li>
+<li><p>地址栏</p>
+<p> forward：转发，从服务器转发。因此在客户端的浏览器地址里看不出url的变化<br> redirect：重定向，在客户端重新定向了一次，因此在客户端能看出url的变化。</p>
+</li>
+<li><p>数据共享<br>由于在整个定向的过程中用的是同一个request，因此forward会将request的信息带到被重定向的jsp或者servlet中使用。即可以共享数据</p>
+</li>
+</ol>
+<p>redirect不能共享  </p>
+<ol start="4">
+<li><p>运用</p>
+<p> forword：登录</p>
+<p> redirect：注销或跳转其他网站</p>
+</li>
+</ol>
+<h3 id="cookie-和-session-的区别？"><a href="#cookie-和-session-的区别？" class="headerlink" title="cookie 和 session 的区别？"></a>cookie 和 session 的区别？</h3><p>Cookie 用于存储 Web 页面的用户信息，如账号、密码。</p>
+<p>Session 用于存储关于用户会话（session）的信息。</p>
+<p>1、cookie数据存放在客户的浏览器上，session数据放在服务器上。</p>
+<p>2、cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗</p>
+<p>考虑到安全应当使用session。</p>
+<p>3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能，考虑到减轻服务器性能方面，应当使用COOKIE。</p>
+<p>4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</p>
+<h2 id="网络概述"><a href="#网络概述" class="headerlink" title="网络概述"></a>网络概述</h2><h3 id="TCP协议、IP协议、HTTP协议分别在哪一层？"><a href="#TCP协议、IP协议、HTTP协议分别在哪一层？" class="headerlink" title="TCP协议、IP协议、HTTP协议分别在哪一层？"></a>TCP协议、IP协议、HTTP协议分别在哪一层？</h3><p>运输层，网络层，应用层。</p>
 <hr>
 <p>网络七层模型：</p>
 <p>  物理层，数据链路层，网络层，运输层，会话层，表示层，应用层</p>
