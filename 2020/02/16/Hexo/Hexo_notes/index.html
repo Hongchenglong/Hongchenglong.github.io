@@ -255,7 +255,7 @@
 <li><code>hexo clean &amp;&amp; hexo g -d</code></li>
 </ol>
 <h2 id="显示不出分类、标签问题"><a href="#显示不出分类、标签问题" class="headerlink" title="显示不出分类、标签问题"></a>显示不出分类、标签问题</h2><p>在<code>./source/tags/index.md</code>中添加<code>type: tags</code>字段。<br><code>categories</code>同理。<br>参考博客：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Wonz5130/article/details/84666519">https://blog.csdn.net/Wonz5130/article/details/84666519</a></p>
-<h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p>npm 出现 <code>operation not permitted, mkdir...</code>问题<br>解决办法：以管理员身份运行cmd输入<code>npm -v</code>，然后在git bash中就没问题了。</p>
+<h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><p>npm 出现 <code>operation not permitted, mkdir...</code>问题<br>解决办法：以管理员身份运行cmd输入<code>npm -v</code>，然后在git bash中就没问题了。</p>
 <h2 id="主题加载不出"><a href="#主题加载不出" class="headerlink" title="主题加载不出"></a>主题加载不出</h2><p>我是因为配置文件url配错了，改成原有的配置就OK了。</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">url:</span> http:<span class="hljs-comment">//yoursite.com</span><br><span class="hljs-symbol">root:</span> /<br></code></pre></td></tr></table></figure>
 <h2 id="图片加载不出"><a href="#图片加载不出" class="headerlink" title="图片加载不出"></a>图片加载不出</h2><p>我是引用cnblog的图片链接，刚刚上传那会还能显示图片，过几天就发现图片加载不出。<br>解决方法：<br>在文章头部加上<code>&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;</code>，解决防盗链问题。</p>
