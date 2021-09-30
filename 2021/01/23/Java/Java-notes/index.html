@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      12.2k 字
+      12.1k 字
     </span>
   
 
@@ -531,26 +531,22 @@
 </ul>
 <h1 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h1><p>IO是指Input/Output，即输入和输出。以<strong>内存</strong>为中心：</p>
 <ul>
-<li>Input指从外部读入数据到内存，例如，把文件从磁盘读取到内存，从网络读取数据到内存等等。</li>
-<li>Output指把数据从内存输出到外部，例如，把数据从内存写入到文件，把数据从内存输出到网络等等。</li>
+<li>Input指从外部读入数据到内存</li>
+<li>Output指把数据从内存输出到外部</li>
 </ul>
 <p>IO流是一种顺序读写数据的模式，它的特点是单向流动。数据类似自来水一样在水管中流动，所以我们把它称为IO流。</p>
 <p>IO流以<code>byte</code>（字节）为最小单位，因此也称为<em>字节流</em>。</p>
 <p>如果我们需要读写的是字符，并且字符不全是单字节表示的ASCII字符，那么，按照<code>char</code>来读写显然更方便，这种流称为<em>字符流</em>。</p>
-<h4 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h4><p>同步IO是指，读写IO时代码必须等待数据返回后才继续执行后续代码，它的优点是代码编写简单，缺点是CPU执行效率低。</p>
-<p>而异步IO是指，读写IO时仅发出请求，然后立刻执行后续代码，它的优点是CPU执行效率高，缺点是代码编写复杂。</p>
+<h4 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h4><p>同步IO是指，读写IO时代码<strong>必须等待数据返回后才继续执行后续代码</strong>，它的优点是代码编写简单，缺点是CPU执行效率低。</p>
+<p>而异步IO是指，读写IO时<strong>仅发出请求，然后立刻执行后续代码</strong>，它的优点是CPU执行效率高，缺点是代码编写复杂。</p>
 <h4 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h4><p>IO流是一种流式的数据输入/输出模型：</p>
 <ul>
-<li>二进制数据以<code>byte</code>为最小单位在<code>InputStream</code>/<code>OutputStream</code>中单向流动；</li>
-<li>字符数据以<code>char</code>为最小单位在<code>Reader</code>/<code>Writer</code>中单向流动。</li>
-</ul>
-<p>Java标准库的<code>java.io</code>包提供了同步IO功能：</p>
-<ul>
-<li>字节流接口：<code>InputStream</code>/<code>OutputStream</code>；</li>
-<li>字符流接口：<code>Reader</code>/<code>Writer</code>。</li>
+<li>字节流，二进制数据以<code>byte</code>为最小单位在<code>InputStream</code>/<code>OutputStream</code>中单向流动；</li>
+<li>字符流，字符数据以<code>char</code>为最小单位在<code>Reader</code>/<code>Writer</code>中单向流动。</li>
 </ul>
 <h2 id="File"><a href="#File" class="headerlink" title="File"></a>File</h2><p>传入相对路径时，相对路径前面加上当前目录就是绝对路径：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 假设当前目录是C:\Docs</span><br>File f1 = <span class="hljs-keyword">new</span> File(<span class="hljs-string">&quot;sub\\javac&quot;</span>); <span class="hljs-comment">// 绝对路径是C:\Docs\sub\javac</span><br></code></pre></td></tr></table></figure>
+<p><code>File</code>对象既可以表示文件，<strong>也可以表示目录</strong>。</p>
 <p>Java标准库的<code>java.io.File</code>对象表示一个文件或者目录：</p>
 <ul>
 <li>创建<code>File</code>对象本身不涉及IO操作；</li>
@@ -558,7 +554,8 @@
 <li>可以获取目录的文件和子目录：<code>list()</code>/<code>listFiles()</code>；</li>
 <li>可以创建或删除文件和目录。</li>
 </ul>
-<h2 id="InputStream"><a href="#InputStream" class="headerlink" title="InputStream"></a>InputStream</h2><p>Java标准库的<code>java.io.InputStream</code>定义了所有输入流的超类：</p>
+<h2 id="InputStream"><a href="#InputStream" class="headerlink" title="InputStream"></a>InputStream</h2><p>用<code>try ... finally</code>来保证<code>InputStream</code>在无论是否发生IO错误的时候都能够正确地关闭</p>
+<p>Java标准库的<code>java.io.InputStream</code>定义了所有输入流的超类：</p>
 <ul>
 <li><code>FileInputStream</code>实现了文件流输入；</li>
 <li><code>ByteArrayInputStream</code>在内存中模拟一个字节流输入。</li>

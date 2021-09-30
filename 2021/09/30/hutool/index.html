@@ -17,9 +17,25 @@
   <meta name="description" content="相信过程">
   <meta name="author" content="Hongchenglong">
   <meta name="keywords" content="">
-  <title>归档 - 匡山读书处</title>
+  <title>Hutool - 匡山读书处</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -47,7 +63,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -158,9 +174,46 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="归档">
+            <span class="h2" id="subtitle" title="Hutool">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-09-30 09:55" pubdate>
+        2021年9月30日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      477 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      5
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -173,58 +226,178 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 19 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2020</p>
-    
-    <a href="/2020/02/26/%E6%9C%8D%E5%8A%A1%E7%AB%AF/Linux_notes/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Linux学习笔记</span>
-      <time style="float: right;">02-26</time>
-    </a>
-  
-    
-    <a href="/2020/02/18/Hexo/Hexo%E5%A4%87%E4%BB%BD/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Hexo备份</span>
-      <time style="float: right;">02-18</time>
-    </a>
-  
-    
-    <a href="/2020/02/16/Hexo/Hexo_notes/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Hexo学习笔记</span>
-      <time style="float: right;">02-16</time>
-    </a>
-  
-    
-    <a href="/2020/02/02/Git_notes/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Git学习笔记</span>
-      <time style="float: right;">02-02</time>
-    </a>
-  
-</div>
 
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Hutool</h1>
+            
+            <div class="markdown-body">
+              <meta name="referrer" content="no-referrer">
+Hutool是一个小而全的Java工具类库，通过静态方法封装，降低相关API的学习成本，提高工作效率，使Java拥有函数式语言般的优雅，让Java语言也可以“甜甜的”。
 
+<a id="more"></a>
 
+<h1 id="Hutool"><a href="#Hutool" class="headerlink" title="Hutool"></a>Hutool</h1><blockquote>
+<p>A set of tools that keep Java sweet.</p>
+</blockquote>
+<p>Hutool是一个Java工具包类库，对文件、流、加密解密、转码、正则、线程、XML等JDK方法进行封装，组成各种Util工具类。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.hutool.cn/">官网</a></li>
+<li><a target="_blank" rel="noopener" href="https://apidoc.gitee.com/dromara/hutool/">API</a></li>
+</ul>
+<h2 id="Validator"><a href="#Validator" class="headerlink" title="Validator"></a>Validator</h2><p>字段验证器（验证器），分两种类型的验证：</p>
+<ul>
+<li>isXXX：通过返回boolean值判断是否满足给定格式。</li>
+<li>validateXXX：通过抛出异常ValidateException检查是否满足给定格式。</li>
+</ul>
+<p>主要验证字段非空、是否为满足指定格式等（如是否为Email、电话等）</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>isCitizenId(CharSequence value)</td>
+<td align="center">验证是否为身份证号码（支持18位、15位和港澳台的10位）</td>
+</tr>
+<tr>
+<td>isEmail(CharSequence value)</td>
+<td align="center">验证是否为可用邮箱地址</td>
+</tr>
+<tr>
+<td>isEmpty(Object value)</td>
+<td align="center">验证是否为空，对于String类型判定是否为empty(null 或 “”)</td>
+</tr>
+<tr>
+<td>isMobile(CharSequence value)</td>
+<td align="center">验证是否为手机号码（中国）</td>
+</tr>
+</tbody></table>
+<h2 id="PhoneUtil"><a href="#PhoneUtil" class="headerlink" title="PhoneUtil"></a>PhoneUtil</h2><p>电话号码工具类，包括：</p>
+<ul>
+<li>手机号码</li>
+<li>400、800号码</li>
+<li>座机号码</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>isMobile(CharSequence value)</td>
+<td>验证是否为手机号码（中国）</td>
+</tr>
+<tr>
+<td>isPhone(CharSequence value)</td>
+<td>验证是否为座机号码+手机号码（CharUtil中国）+ 400 + 800电话 + 手机号号码（香港）</td>
+</tr>
+</tbody></table>
+<h2 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h2><p>RSA公钥/私钥/签名加密解密</p>
+<p>罗纳德·李维斯特（Ron [R]ivest）、阿迪·萨莫尔（Adi [S]hamir）和伦纳德·阿德曼（Leonard [A]dleman）</p>
+<p>由于非对称加密速度极其缓慢，一般文件不使用它来加密而是使用对称加密，<br>非对称加密算法可以用来对对称加密的密钥加密，这样保证密钥的安全也就保证了数据的安全</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>decrypt(byte[] bytes, KeyType keyType)</td>
+<td>解密</td>
+</tr>
+<tr>
+<td>encrypt(byte[] data, KeyType keyType)</td>
+<td>加密</td>
+</tr>
+</tbody></table>
+<p>byte[]转String，通过构造方法String(byte bytes[])</p>
 
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Java/">Java</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/15/Java/Java%E9%9D%A2%E8%AF%95%E9%A2%98/">
+                        <span class="hidden-mobile">Java面试题</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div id="lv-container" data-id="city" data-uid="MTAyMC81MjcxOS8yOTE5Ng==">
+    <script type="text/javascript">
+      Fluid.utils.waitElementVisible('lv-container', function() {
+        Fluid.utils.createScript('https://cdn-city.livere.com/js/embed.dist.js');
+      });
+    </script>
+    <noscript>为正常使用来必力评论功能请允许 JavaScript 运行</noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -304,9 +477,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
