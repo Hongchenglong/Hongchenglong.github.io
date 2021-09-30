@@ -1,13 +1,11 @@
 ---
-title: Hexo学习笔记
+title: Hexo笔记
 date: 2020-02-16 14:50:14
 tags: [Hexo]
 categories: Hexo
 top: true
 ---
-记录我在使用Hexo时遇到的问题和解决方法。
-
-> Hexo is a fast, simple & powerful blog framework.
+> Hexo is a fast, simple and powerful blog framework. You write posts in [Markdown](http://daringfireball.net/projects/markdown/) (or other markup languages) and Hexo generates static files with a beautiful theme in seconds.
 
 <!-- more -->
 
@@ -28,7 +26,7 @@ top: true
 `categories`同理。
 参考博客：https://blog.csdn.net/Wonz5130/article/details/84666519
 
-## npm
+## NPM
 
 npm 出现 `operation not permitted, mkdir...`问题
 解决办法：以管理员身份运行cmd输入`npm -v`，然后在git bash中就没问题了。
@@ -82,8 +80,6 @@ https://www.jianshu.com/p/82c1d33420ba
 | 主机记录 | 记录类型 | 记录值 |
 | -------- | -------- | ------ |
 |   hexo       |     CNAME     |     hongchenglong.github.io   |
-
-
 
 ## NOTE
 

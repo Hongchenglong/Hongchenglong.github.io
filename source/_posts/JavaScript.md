@@ -2,15 +2,17 @@
 title: JavaScript
 date: 2021-02-09 18:53:06
 tags:
-categories:
+categories: JavaScript
 ---
 
 <meta name="referrer" content="no-referrer"/>
+JavaScript 是互联网上最流行的脚本语言，这门语言可用于 HTML 和 web，更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。
+
 <!-- more -->
 
 为什么起名叫JavaScript？原因是当时Java语言非常红火，所以网景公司希望**借Java的名气来推广**，但事实上JavaScript除了语法上有点像Java，其他部分基本上没啥关系。
 
-JavaScript语言是在10天时间内设计出来的，有很多设计缺陷。
+JavaScript语言是在10天时间内设计出来的，虽然语言的设计者水平非常NB，但谁也架不住“时间紧，任务重”，所以，JavaScript有很多设计缺陷
 
 # 快速入门
 
@@ -141,5 +143,93 @@ arr.forEach(function (element, index, array)
 
 # 函数
 
+借助抽象，我们才能不关心底层的具体计算过程，而直接在更高的层次上思考问题。
 
+## 函数定义和调用
+
+`function abs(x){}`等价于`var abs = function(x){};`
+
+arguments
+
+它只在函数内部起作用，并且永远指向当前函数的调用者传入的所有参数。
+
+JavaScript引擎有一个在行末自动添加分号;的机制
+
+## 变量作用域与解构赋值
+
+全局作用域
+
+不在任何函数内定义的变量就具有全局作用域。实际上，JavaScript默认有一个全局对象`window`，全局作用域的变量被绑定到`window`的一个属性。如`window.alert()`
+
+名字空间
+
+全局变量会绑定到`window`上，不同的JavaScript文件如果使用了相同的全局变量，或者定义了相同名字的顶层函数，都会造成命名冲突，并且很难被发现。
+
+减少冲突的一个方法是把自己的所有变量和函数全部绑定到一个全局变量中。如：
+
+```javascript
+// 唯一的全局变量MYAPP:
+var MYAPP = {};
+
+// 其他变量:
+MYAPP.name = 'myapp';
+MYAPP.version = 1.0;
+
+// 其他函数:
+MYAPP.foo = function () {
+    return 'foo';
+}
+```
+
+解构赋值：直接对多个变量同时赋值
+
+`let [x, [y, z]] = ['hello', ['JavaScript', 'ES6']];`
+
+## 方法
+
+在一个对象中绑定函数，称为这个对象的方法。
+
+## 高阶函数
+
+JavaScript的函数其实都指向某个变量。既然变量可以指向函数，函数的参数能接收变量，那么**一个函数就可以接收另一个函数作为参数**，这种函数就称之为高阶函数。
+
+```javascript
+function add(x, y, f) {
+    return f(x) + f(y);
+}
+var x = add(-5, 6, Math.abs); // 11
+```
+
+map/reduce
+
+map是对数组的每个元素分别计算。
+
+Array的`reduce()`把一个函数作用在这个`Array`的`[x1, x2, x3...]`上，这个函数必须接收两个参数，`reduce()`把结果继续和**序列的下一个元素**做**累积**计算。
+
+```javascript
+[x1, x2, x3, x4].reduce(f) = f(f(f(x1, x2), x3), x4)
+```
+
+filter
+
+```javascript
+var arr = [1, 2, 4, 5, 6, 9, 10, 15];
+var r = arr.filter(function (x) {
+    return x % 2 !== 0;  // 保留奇数
+});
+```
+
+sort
+
+### Array
+
+`every()`方法可以判断数组的所有元素是否满足测试条件。
+
+`find()`方法用于查找符合条件的第一个元素，如果找到了，返回这个元素，否则，返回undefined
+
+`findIndex()`返回符合条件的第一个元素的索引
+
+`forEach()`和`map()`类似，它也把每个元素依次作用于传入的函数，但不会返回新的数组。`forEach()`常用于遍历数组，因此，传入的函数不需要返回值。`arr.forEach(console.log);`
+
+## 闭包
 

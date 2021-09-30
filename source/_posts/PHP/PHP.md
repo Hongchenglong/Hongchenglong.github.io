@@ -1,16 +1,23 @@
 ---
-title: PHP学习笔记
+title: PHP笔记
 date: 2020-03-15 9:0:0
 tags: PHP
 categories: PHP
 ---
-学习[菜鸟教程](https://www.runoob.com/php/php-tutorial.html)所做的PHP笔记。
+
+> PHP is a popular general-purpose scripting language that is especially suited to web development.
+
 <!-- more -->
+
 # PHP基础
 ## PHP简介
 
 PHP（全称：PHP：Hypertext Preprocessor，即"PHP：超文本预处理器"）是一种通用开源脚本语言。
 PHP 代码在服务器上执行，结果以纯 HTML 形式返回给浏览器。
+
+- [菜鸟教程](https://www.runoob.com/php/php-tutorial.html)
+- https://www.php.net/
+
 ### PHP能做什么？
 - PHP 可以生成动态页面内容
 - PHP 可以收集表单数据

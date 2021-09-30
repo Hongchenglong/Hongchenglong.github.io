@@ -5,13 +5,14 @@ tags: [PHP,ThinkPHP]
 categories: PHP
 ---
 
-[ThinkPHP5.0官方手册](https://www.kancloud.cn/manual/thinkphp5/118003)
+ThinkPHP是一个免费开源的，快速、简单的面向对象的轻量级PHP开发框架，是为了敏捷WEB应用开发和简化企业应用开发而诞生的。
 
 <!-- more -->
 
 ## 序言
 ThinkPHP是一个免费开源的，快速、简单的面向对象的轻量级PHP开发框架，是为了敏捷WEB应用开发和简化企业应用开发而诞生的。
 
+- [ThinkPHP5.0官方手册](https://www.kancloud.cn/manual/thinkphp5/118003)
 ## 基础
 ### 开发规范
 函数和类、属性命名

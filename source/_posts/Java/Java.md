@@ -1,15 +1,15 @@
 ---
-title: Java_notes
+title: Java笔记
 date: 2021-01-23 11:06:35
 tags: [Java]
 categories: Java
 ---
 
-
 <meta name="referrer" content="no-referrer"/>
+
+Java是一门面向对象编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难以理解的多继承、指针等概念，因此Java语言具有功能强大和简单易用两个特征。Java语言作为静态面向对象编程语言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程 。
+
 <!-- more -->
-
-
 
 # Java快速入门
 
@@ -670,8 +670,8 @@ Java提供了标准的迭代器模型，即集合类实现`java.util.Iterable`�
 
 IO是指Input/Output，即输入和输出。以**内存**为中心：
 
-- Input指从外部读入数据到内存，例如，把文件从磁盘读取到内存，从网络读取数据到内存等等。
-- Output指把数据从内存输出到外部，例如，把数据从内存写入到文件，把数据从内存输出到网络等等。
+- Input指从外部读入数据到内存
+- Output指把数据从内存输出到外部
 
 IO流是一种顺序读写数据的模式，它的特点是单向流动。数据类似自来水一样在水管中流动，所以我们把它称为IO流。
 
@@ -681,20 +681,15 @@ IO流以`byte`（字节）为最小单位，因此也称为*字节流*。
 
 #### 同步和异步
 
-同步IO是指，读写IO时代码必须等待数据返回后才继续执行后续代码，它的优点是代码编写简单，缺点是CPU执行效率低。
+同步IO是指，读写IO时代码**必须等待数据返回后才继续执行后续代码**，它的优点是代码编写简单，缺点是CPU执行效率低。
 
-而异步IO是指，读写IO时仅发出请求，然后立刻执行后续代码，它的优点是CPU执行效率高，缺点是代码编写复杂。
+而异步IO是指，读写IO时**仅发出请求，然后立刻执行后续代码**，它的优点是CPU执行效率高，缺点是代码编写复杂。
 
 #### 小结
 IO流是一种流式的数据输入/输出模型：
 
-- 二进制数据以`byte`为最小单位在`InputStream`/`OutputStream`中单向流动；
-- 字符数据以`char`为最小单位在`Reader`/`Writer`中单向流动。
-
-Java标准库的`java.io`包提供了同步IO功能：
-
-- 字节流接口：`InputStream`/`OutputStream`；
-- 字符流接口：`Reader`/`Writer`。
+- 字节流，二进制数据以`byte`为最小单位在`InputStream`/`OutputStream`中单向流动；
+- 字符流，字符数据以`char`为最小单位在`Reader`/`Writer`中单向流动。
 
 ## File
 
@@ -705,6 +700,8 @@ Java标准库的`java.io`包提供了同步IO功能：
 File f1 = new File("sub\\javac"); // 绝对路径是C:\Docs\sub\javac
 ```
 
+`File`对象既可以表示文件，**也可以表示目录**。
+
 Java标准库的`java.io.File`对象表示一个文件或者目录：
 
 - 创建`File`对象本身不涉及IO操作；
@@ -713,6 +710,8 @@ Java标准库的`java.io.File`对象表示一个文件或者目录：
 - 可以创建或删除文件和目录。
 
 ## InputStream
+
+用`try ... finally`来保证`InputStream`在无论是否发生IO错误的时候都能够正确地关闭
 
 Java标准库的`java.io.InputStream`定义了所有输入流的超类：
 
@@ -1250,7 +1249,69 @@ JDBC提供了事务的支持，使用Connection可以开启、提交或回滚事
 
 可以配置连接池的详细参数并监控连接池。
 
+# Web开发
 
+什么是JavaEE？JavaEE是Java Platform Enterprise Edition的缩写，即Java企业平台。
+
+```ascii
+┌────────────────┐
+│     JavaEE     │
+│┌──────────────┐│
+││    JavaSE    ││
+││┌────────────┐││
+│││   JavaME   │││
+││└────────────┘││
+│└──────────────┘│
+└────────────────┘
+```
+
+## Web基础
+
+访问网站，使用App时，都是基于Web这种Browser/Server模式，简称BS架构，它的特点是，客户端只需要浏览器，应用程序的逻辑和数据都存储在服务器端。浏览器只需要请求服务器，获取Web页面，并把Web页面展示给用户即可。
+
+对于Browser来说，请求页面的流程如下：
+
+1. **与服务器建立TCP连接**；
+2. 发送HTTP请求；
+3. 收取HTTP响应，然后把网页在浏览器中显示出来。
+
+使用B/S架构时，总是通过HTTP协议实现通信；
+
+## Servlet
+
+Java Servlet 是运行在 Web 服务器的程序，用于处理HTTP请求。
+
+一个Servlet总是继承自`HttpServlet`，然后覆写`doGet()`或`doPost()`方法。
+
+编写Web应用程序就是编写Servlet处理HTTP请求；
+
+Servlet API提供了`HttpServletRequest`和`HttpServletResponse`两个高级接口来封装HTTP请求和响应；
+
+Web应用程序必须按固定结构组织并打包为`.war`文件；
+
+需要启动Web服务器来加载我们的war包来运行Servlet。
+
+## Servlet进阶
+
+一个Webapp中的多个Servlet依靠路径映射来处理不同的请求；
+
+映射为`/`的Servlet可处理所有“未匹配”的请求；
+
+如何处理请求取决于Servlet覆写的对应方法；
+
+Web服务器通过多线程处理HTTP请求，一个Servlet的处理方法可以由多线程并发执行。
+
+### 重定向与转发
+
+使用重定向时，浏览器知道重定向规则，并且会自动发起新的HTTP请求；
+
+使用转发时，浏览器并不知道服务器内部的转发逻辑。
+
+### Session和Cookie
+
+基于唯一ID识别用户身份的机制称为Session。
+
+...
 
 # Spring开发
 
