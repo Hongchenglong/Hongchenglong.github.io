@@ -196,7 +196,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      260 字
+      317 字
     </span>
   
 
@@ -206,7 +206,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3
+      4
        分钟
     </span>
   
@@ -260,9 +260,14 @@ conda是一个通用的包管理器，即任何语言的包都可以用其进行
 <h2 id="管理包"><a href="#管理包" class="headerlink" title="管理包"></a>管理包</h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># 检查pip安装</span><br><span class="hljs-attribute">conda</span> list<br><span class="hljs-comment"># 安装</span><br><span class="hljs-attribute">conda</span> install numpy<br><span class="hljs-attribute">pip</span> install matplotlib==<span class="hljs-number">2</span>.<span class="hljs-number">2</span>.<span class="hljs-number">3</span> --trusted-host pypi.douban.com --user<br></code></pre></td></tr></table></figure>
 <p>更换Jupyter Notebook内核Python版本</p>
 <ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/shanger/p/12006322.html">https://www.cnblogs.com/shanger/p/12006322.html</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/taijiedi13/article/details/59483763">https://blog.csdn.net/taijiedi13/article/details/59483763</a></li>
 <li><a target="_blank" rel="noopener" href="https://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernel-install">https://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernel-install</a></li>
 </ul>
+<p>当conda install找不到包时，可以使用该环境下的pip</p>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs taggerscript">(CertifiableBayesianInference) C:<span class="hljs-symbol">\U</span>sers<span class="hljs-symbol">\T</span>470&gt;D:<span class="hljs-symbol">\U</span>sers<span class="hljs-symbol">\T</span>470<span class="hljs-symbol">\A</span>naconda3<span class="hljs-symbol">\e</span>nvs<span class="hljs-symbol">\C</span>ertifiableBayesianInference<span class="hljs-symbol">\S</span>cripts<span class="hljs-symbol">\p</span>ip install tensorflow-probability==0.15.0<br></code></pre></td></tr></table></figure>
+<p>指定豆瓣源</p>
+<p><code>-i https://pypi.douban.com/simple</code></p>
 <h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><ul>
 <li>pip与conda的区别？</li>
 </ul>
