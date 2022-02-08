@@ -246,7 +246,7 @@
 <h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>DCNN在图像分类上带来一系列突破。但是随着神经网络层数越深，训练误差越大，因此测试误差越大。</p>
 <img src="https://gitee.com/oeong/picgo/raw/master/images/20220202190314.png" srcset="/img/loading.gif" alt="image-20220202190303077" style="zoom: 80%;">
 
-<p><code>Is learning better networks as easy as stacking more layers?</code> 堆叠更多的层数以后网络是否学习效果更好？但是堆叠更多的层后往往会遇到<code>vanishing/exploding gradients</code>问题，会从一开始就阻止收敛。好在这个问题可以通过<code>normalized initialization and intermediate normalization layers</code>来解决。</p>
+<p><code>Is learning better networks as easy as stacking more layers?</code> 堆叠更多的层数以后网络是否学习效果更好？但是堆叠更多的层后往往会遇到<code>vanishing/exploding gradients</code>梯度问题，会从一开始就阻止收敛。好在这个问题可以通过初始归一化<code>normalized initialization</code>和中间层归一化<code>intermediate normalization layers</code>来解决。</p>
 <p>当网络开始收敛时，往往会出现退化<code>degradation</code>现象。随着网络深度的增加，准确率趋近饱和，然后迅速下降。意外的是，这不是由于过拟合<code>overfitting</code>造成的，更深的模型反而会有更高的训练误差。</p>
 <p>为了==解决深度学习的退化问题==，作者提出了深度残差学习框架，让网络层去拟合残差映射。如果我们想要得到的映射为 $\mathcal{H}(\mathbf{x})$，则我们让添加的非线性网络层去拟合残差映射 $\mathcal{F}(\mathbf{x}):=\mathcal{H}(\mathbf{x})-\mathbf{x}$，则原始的映射就可以写成 $\mathcal{F}(\mathbf{x})+\mathbf{x}$。残差映射的实现可以通过图2所示的连接块实现，跳跃连接是一个<strong>恒等映射</strong>，没有引入额外的参数和计算复杂度，整个网络很容易实现。</p>
 <img src="https://gitee.com/oeong/picgo/raw/master/images/20220202194810.png" srcset="/img/loading.gif" alt="image-20220202194803965" style="zoom:80%;">
