@@ -239,16 +239,16 @@
             <h1 style="display: none">精读论文——《Deep Residual Learning for Image Recognition》</h1>
             
             <div class="markdown-body">
-              <h1 id="Deep-Residual-Learning-for-Image-Recognition"><a href="#Deep-Residual-Learning-for-Image-Recognition" class="headerlink" title="Deep Residual Learning for Image Recognition"></a>Deep Residual Learning for Image Recognition</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>更深层的神经网络更难训练。作者提出了一个残差学习框架，对输入层的残差函数进行学习。</p>
+              <p>为了解决深度学习的退化问题，作者提出了深度残差学习框架，让网络层去拟合残差映射。</p>
+<a id="more"></a>
+
+<h1 id="Deep-Residual-Learning-for-Image-Recognition"><a href="#Deep-Residual-Learning-for-Image-Recognition" class="headerlink" title="Deep Residual Learning for Image Recognition"></a>Deep Residual Learning for Image Recognition</h1><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>更深层的神经网络更难训练。作者提出了一个残差学习框架，对输入层的残差函数进行学习。</p>
 <h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>DCNN在图像分类上带来一系列突破。但是随着神经网络层数越深，训练误差越大，因此测试误差越大。</p>
 <img src="https://gitee.com/oeong/picgo/raw/master/images/20220202190314.png" srcset="/img/loading.gif" alt="image-20220202190303077" style="zoom: 80%;">
 
 <p><code>Is learning better networks as easy as stacking more layers?</code> 堆叠更多的层数以后网络是否学习效果更好？但是堆叠更多的层后往往会遇到<code>vanishing/exploding gradients</code>问题，会从一开始就阻止收敛。好在这个问题可以通过<code>normalized initialization and intermediate normalization layers</code>来解决。</p>
 <p>当网络开始收敛时，往往会出现退化<code>degradation</code>现象。随着网络深度的增加，准确率趋近饱和，然后迅速下降。意外的是，这不是由于过拟合<code>overfitting</code>造成的，更深的模型反而会有更高的训练误差。</p>
 <p>为了==解决深度学习的退化问题==，作者提出了深度残差学习框架，让网络层去拟合残差映射。如果我们想要得到的映射为 $\mathcal{H}(\mathbf{x})$，则我们让添加的非线性网络层去拟合残差映射 $\mathcal{F}(\mathbf{x}):=\mathcal{H}(\mathbf{x})-\mathbf{x}$，则原始的映射就可以写成 $\mathcal{F}(\mathbf{x})+\mathbf{x}$。残差映射的实现可以通过图2所示的连接块实现，跳跃连接是一个<strong>恒等映射</strong>，没有引入额外的参数和计算复杂度，整个网络很容易实现。</p>
-<blockquote>
-<p>反向传播时，由于层数过深，很容易出现梯度问题。ResNet将BP过程中梯度相乘变成相加，便解决了梯度问题。</p>
-</blockquote>
 <img src="https://gitee.com/oeong/picgo/raw/master/images/20220202194810.png" srcset="/img/loading.gif" alt="image-20220202194803965" style="zoom:80%;">
 
 <p>在<code>ImageNet</code>、<code>CIFAR-10</code>、<code>COCO</code>数据集上，大量的实验结果表明作者设计的<code>残差学习框架</code>的通用性，一方面不仅使得网络更容易优化，另一方面随着网络深度的增加，网络复杂度并没有明显增加，准确率却会提高很多。</p>
@@ -272,7 +272,8 @@
 <p>Res Net：加入了skip connection 结构，此时 building block 的任务：F(x) := H(x)-x</p>
 <p><strong>残差结构为什么比传统结构更好优化？</strong></p>
 <p>提升了对梯度与损失的相关性，进而使网络的学习能力增强，解决退化问题。</p>
-<p>比如把5映射到5.1，那么引入残差前是F’(5)=H(5)=5.1，引入残差后是H(5)=F(5)+5=5.1, F(5)=0.1。这里的F’和F都表示网络参数映射，引入残差后的映射对输出的变化更敏感。比如输出从5.1变到5.2，映射F’的输出增加了1/51=2%，而对于残差结构输出从5.1到5.2，映射F是从0.1到0.2，增加了100%。明显后者输出变化对权重的调整作用更大，所以效果更好。<strong>训练残差的思想是去掉相同的主体部分，从而突出微小的变化，残差网络可以看做是差分放大器。</strong></p>
+<p>比如把5映射到5.1，那么引入残差前是F’(5)=H(5)=5.1，引入残差后是H(5)=F(5)+5=5.1, F(5)=0.1。这里的F’和F都表示网络参数映射，引入残差后的映射对输出的变化更敏感。</p>
+<p>比如输出从5.1变到5.2，映射F’的输出增加了1/51=2%，而对于残差结构输出从5.1到5.2，映射F是从0.1到0.2，增加了100%。明显后者输出变化对权重的调整作用更大，所以效果更好。<strong>训练残差的思想是去掉相同的主体部分，从而突出微小的变化，残差网络可以看做是差分放大器。</strong></p>
 <p><strong>为什么残差网络可以进一步解决梯度消失？</strong></p>
 <p>反向传播时，由于层数过深，很容易出现梯度问题。ResNet将BP过程中梯度相乘变成相加，便解决了梯度问题。</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
