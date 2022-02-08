@@ -264,20 +264,20 @@
 <p>torch就是PyTorch的核心库，torchvision包是服务于PyTorch深度学习框架的，用来生成图片、视频数据集、一些流行的模型类和预训练模型。</p>
 <h3 id="2-2-张量"><a href="#2-2-张量" class="headerlink" title="2.2 张量"></a>2.2 张量</h3><p>张量（tensor）是PyTorch里基础的运算单位，即多维数组。类似Numpy的数组，但是张量可以在GPU上运算。</p>
 <p>PyTorch中的张量与NumPy数组可以互相转化，而且两者共享内存位置，如果一个发生改变，另一个也随之改变。</p>
-<p>新建的张量默认保存在CPU里，如果安装了GPU版本的PyTorch，就可以将张量移动到GPU里。</p>
+<p><strong>新建的张量默认保存在CPU里</strong>，如果安装了GPU版本的PyTorch，就可以将张量移动到GPU里。</p>
 <p>反向传播求导数，自动求导(autograd)模块可以为张量自动提供微分，<code>tensor.requires_grad=True</code></p>
 <h3 id="2-3-torch-nn和torch-optim"><a href="#2-3-torch-nn和torch-optim" class="headerlink" title="2.3 torch.nn和torch.optim"></a>2.3 torch.nn和torch.optim</h3><p>PyTorch中，训练神经网络离不开两个重要的包：torch.nn和torch.optim。</p>
 <ul>
 <li><p>torch.nn是专门为神经网络设计的模块化接口，构建于自动求导模块的基础上，可用来定义和运行神经网络。</p>
 </li>
-<li><p>torch.optim是一个实现了各种优化算法的库，包括最简单的梯度下降（Gradient Descent，GD）、随机梯度下降（Stochastic Gradient Descent，SGD）及其他更复杂的优化算法。</p>
+<li><p>torch.optim是一个实现了各种优化算法的库，包括最简单的梯度下降（Gradient Descent，GD）、随机梯度下降（<strong>Stochastic</strong> Gradient Descent，SGD）及其他更复杂的优化算法。</p>
 </li>
 </ul>
 <p>损失函数用于计算每个实例的输出与真实样本的标签是否一致，并评估差距的大小。最简单的是均方误差<code>nn.MSELoss()</code>。</p>
 <h3 id="2-4-线性回归"><a href="#2-4-线性回归" class="headerlink" title="2.4 线性回归"></a>2.4 线性回归</h3><p>线性回归一般用于数值预测，线性回归算法就是要找出这样一条拟合线或拟合面，能够<strong>最大限度地拟合真实的数据分布</strong>。</p>
 <p>代价函数是所有样本损失函数的平均。代价函数与损失函数的唯一区别，前者针对整个训练集，后者针对单个样本。</p>
 <p>如何最小化代价函数J呢？最简单的方法就是使用梯度下降算法，其核心思想是在函数曲线上的<strong>某一点</strong>，函数沿梯度方向具有<strong>最大的变化率</strong>，那么<strong>沿着负梯度方向移动会不断逼近最小值</strong>，这样一个迭代的过程可以最终实现代价函数的最小化目标。</p>
-<p>通过model.eval()函数将模型由训练模式变为测试模式</p>
+<p><strong>通过model.eval()函数将模型由训练模式变为测试模式</strong></p>
 <p>.detach()用于停止对张量的梯度跟踪</p>
 <h2 id="3-TensorFlow"><a href="#3-TensorFlow" class="headerlink" title="3 TensorFlow"></a>3 TensorFlow</h2><h3 id="3-1-TensorFlow概述"><a href="#3-1-TensorFlow概述" class="headerlink" title="3.1 TensorFlow概述"></a>3.1 TensorFlow概述</h3><p>TensorFlow也可以拆分成两部分：Tensor+Flow。Tensor即张量，可以在GPU中运行的多维数组；Flow是流，TensorFlow是一个<strong>采用数据流图进行数值计算</strong>的开源软件库。</p>
 <p>TensorFlow的基本原理是基于图运算，而且可以将一个计算图划分成多个子图，然后在多个CPU或者GPU上并行地执行。</p>
@@ -289,7 +289,7 @@
 <p>tf.Variable创建变量</p>
 <h3 id="3-4-会话"><a href="#3-4-会话" class="headerlink" title="3.4 会话"></a>3.4 会话</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs applescript">init = tf.global_variables_initializer()  <span class="hljs-comment"># 定义全局初始化节点</span><br><span class="hljs-keyword">with</span> tf.Session() <span class="hljs-keyword">as</span> sess:￼<br>	init.<span class="hljs-built_in">run</span>()	<span class="hljs-comment"># 初始化所有变量</span><br>	<span class="hljs-literal">result</span> = f.eval()<br></code></pre></td></tr></table></figure>
 <p>一个TensorFlow程序通常可以分成两部分：第一部分用来<strong>构建一个数据流图</strong>，称为构建阶段；第二部分用来<strong>执行这个图</strong>，称为执行阶段。</p>
-<p>从外部传入数据，例如训练集，那就需要使用TensorFlow中的占位符来表示，写成tf.placeholder()。</p>
+<p>从外部传入数据，例如训练集，那就需要使用TensorFlow中的占位符来表示，写成<code>tf.placeholder()</code>。</p>
 <h3 id="3-5-线性回归"><a href="#3-5-线性回归" class="headerlink" title="3.5 线性回归"></a>3.5 线性回归</h3><p>均方误差（Mean Squared Error, MSE）均方误差是各数据偏离真实值的距离平方和的平均数，也即<strong>误差平方和的平均数</strong>。</p>
 <p>均方误差（MSE）定义为其损失函数，使用tf.reduce_mean()来计算均方误差</p>
 <p>loss = tf.reduce_mean(tf.square(y_hat - y))</p>
@@ -298,8 +298,8 @@
 <h2 id="4-神经网络基础知识"><a href="#4-神经网络基础知识" class="headerlink" title="4 神经网络基础知识"></a>4 神经网络基础知识</h2><h3 id="4-1-感知机"><a href="#4-1-感知机" class="headerlink" title="4.1 感知机"></a>4.1 感知机</h3><p>感知机是一种最简单的线性二分类模型，是神经网络的基础。</p>
 <p>神经元计算所有<strong>输入信号的加权和</strong>之后，与固定偏置参数b做比较。当输入信号的加权和大于这个阈值时，神经元通路打开，输出为1，否则输出为0。</p>
 <p>将偏置b移到不等式左边。因为b是常数，变换正负号对最终得到的值并无影响。</p>
-<h3 id="4-2-多层感知机"><a href="#4-2-多层感知机" class="headerlink" title="4.2 多层感知机"></a>4.2 多层感知机</h3><p>对于稍微复杂一点的逻辑电路，线性感知机是无法处理的，此时就需要使用多层感知机。</p>
-<p>感知机无法处理异或问题，无法在二维平面上找到一条直线进行完全正确的分类</p>
+<h3 id="4-2-多层感知机"><a href="#4-2-多层感知机" class="headerlink" title="4.2 多层感知机"></a>4.2 多层感知机</h3><p>对于稍微复杂一点的逻辑电路，线性感知机是无法处理的，此时就需要使用多层感知机MLP。</p>
+<p><strong>感知机无法处理异或问题</strong>，无法在二维平面上找到一条直线进行完全正确的分类</p>
 <p>异或门可以由与门和或门搭建</p>
 <p>两层感知机可实现对非线性异或逻辑的划分，得到的分类线不再是一条直线，而是一条曲线</p>
 <p>通过叠加感知机能够进行非线性的表示，神经网络就是由多层感知机发展并优化而来的</p>
@@ -308,21 +308,21 @@
 <p>使用Sigmoid函数代替阶跃函数，不仅让函数连续，可利用梯度下降算法，而且引入了概率来表示预测为正类的把握有多大。</p>
 <p>最大化问题转换为最小化问题。最终的目标，即最小化-log(P(y|x))。通常把-log(P(y|x))称为损失函数</p>
 <p>交叉熵损失，实际反映了真实标签y与预测值￼之间的差距</p>
-<img src="../../../../images/image-20220111082848154.png" srcset="/img/loading.gif" alt="image-20220111082848154" style="zoom:33%;">
+<img src="https://gitee.com/oeong/picgo/raw/master/images/20220119000630.png" srcset="/img/loading.gif" alt="image-20220111082848154" style="zoom:33%;">
 
 <p>代价函数：所有损失函数的均值</p>
-<img src="../../../../images/image-20220111082731335.png" srcset="/img/loading.gif" alt="image-20220111082731335" style="zoom:33%;">
+<img src="https://gitee.com/oeong/picgo/raw/master/images/20220119000634.png" srcset="/img/loading.gif" alt="image-20220111082731335" style="zoom:33%;">
 
 <p><strong>逻辑回归的目标就是最小化代价函数J，并计算出此时对应的模型参数w和b。</strong></p>
 <p>梯度下降，下山的方向就是梯度的负方向。梯度就是某一个函数在该点处的方向导数沿着该方向取得的最大值，即函数在当前位置的导数。</p>
-<h2 id="5-神经网络"><a href="#5-神经网络" class="headerlink" title="5 神经网络"></a>5 神经网络</h2><p>神经网络是多层感知机MLP与逻辑回归结合和优化的模型，MLP用于拟合函数，逻辑回归用于更新权重。</p>
+<h2 id="5-神经网络"><a href="#5-神经网络" class="headerlink" title="5 神经网络"></a>5 神经网络</h2><p><strong>神经网络是多层感知机MLP与逻辑回归结合和优化的模型，MLP用于拟合函数，逻辑回归用于更新权重。</strong></p>
 <h3 id="5-1-基本结构"><a href="#5-1-基本结构" class="headerlink" title="5.1 基本结构"></a>5.1 基本结构</h3><p>之所以称之为两层神经网络，是因为一般不把输入层考虑在内。</p>
 <p><strong>神经元是一个非线性单元</strong>，它的结构类似于一个逻辑回归模型，<strong>由线性单元和非线性单元组成</strong>。</p>
-<p>z=w1x1+w2x2+b表示线性运算，a=g(z)表示非线性运算。</p>
+<p>z=$w_1x_1$+$w_2x_2$+$b$表示线性运算，a=g(z)表示非线性运算。</p>
 <h3 id="5-2-前向传播"><a href="#5-2-前向传播" class="headerlink" title="5.2 前向传播"></a>5.2 前向传播</h3><p>前向传播过程，即神经网络从输入层到输出层的计算过程。</p>
 <h3 id="5-3-激活函数"><a href="#5-3-激活函数" class="headerlink" title="5.3 激活函数"></a>5.3 激活函数</h3><p>神经元包含了非线性计算，用g(•)来表示</p>
 <p>单个神经元实现的功能就相当于逻辑回归。</p>
-<p>ReLU（Rectified Linear Unit，修正线性单元），z&gt;0时梯度恒为1</p>
+<p>ReLU（Rectified Linear Unit，<strong>修正线性单元</strong>），z&gt;0时梯度恒为1</p>
 <p>Leaky ReLU函数与ReLU函数的区别仅在于当z≤0时，<strong>a不恒为0，而是有一个较小的梯度</strong>，此处为0.01，不唯一。这样做的好处是始终保持梯度不为0。</p>
 <p>对于隐藏层的激活函数，一般来说，tanh函数要比Sigmoid函数的表现更好一些</p>
 <p>而对于输出层的激活函数，因为二分类问题的输出取值为{0, 1}，所以一般会选择Sigmoid作为激活函数。就是<strong>当激活值|z|很大的时候，激活函数的斜率（梯度）很小</strong></p>
@@ -331,7 +331,7 @@
 <h3 id="5-4-反向传播"><a href="#5-4-反向传播" class="headerlink" title="5.4 反向传播"></a>5.4 反向传播</h3><p>神经网络经过前向传播之后，接下来就可以计算其损失函数。<strong>反向传播是对神经网络输出层、隐藏层的参数W和b计算偏导数的过程。</strong></p>
 <p>点乘要求参与运算的两个量两必须是维数相同，是对应元素的相乘。</p>
 <p>矩阵相乘要求内维相同，也即前一个矩阵的列的维数等于后一个矩阵的行的维数。</p>
-<h3 id="5-5-更新参数"><a href="#5-5-更新参数" class="headerlink" title="5.5 更新参数"></a>5.5 更新参数</h3><p>神经网络完成反向传播之后，得到了各层的参数梯度dW和db。需要根据梯度下降算法对参数W和b进行更新。</p>
+<h3 id="5-5-更新参数"><a href="#5-5-更新参数" class="headerlink" title="5.5 更新参数"></a>5.5 更新参数</h3><p>神经网络完成反向传播之后，得到了各层的参数梯度$d_W$和$d_b$。需要根据梯度下降算法对参数W和b进行更新。</p>
 <p>经过前向传播、反向传播、更新参数之后，神经网络的一次训练就完成了。经过N次迭代训练，参数W和b会不断更新，并接近全局最优解。</p>
 <h3 id="5-6-初始化"><a href="#5-6-初始化" class="headerlink" title="5.6 初始化"></a>5.6 初始化</h3><p>神经网络中的参数W不能初始化为0，b可以。</p>
 <p>隐藏层3个神经元完全对称，效果相同。这样的话，隐藏层设置多个神经元就没有任何意义了</p>
@@ -352,12 +352,12 @@
 
 <h3 id="6-4-多分类函数Softmax"><a href="#6-4-多分类函数Softmax" class="headerlink" title="6.4 多分类函数Softmax"></a>6.4 多分类函数Softmax</h3><p>二分类模型的输出层只有一个神经元，而多分类模型的输出层有多个神经元。</p>
 <p>二分类使用Sigmoid函数，将Z[L]映射到预测概率上。</p>
-<p>Softmax就是处理多分类问题的函数。Softmax函数的功能是将Z[L]映射到区间[0,1]，将其看成概率。各神经元输出概率之和为1</p>
+<p>多分类使用Softmax函数，将Z[L]映射到区间[0,1]，将其看成概率，各神经元输出概率之和为1。</p>
 <h3 id="6-5-深层神经网络的Python实现"><a href="#6-5-深层神经网络的Python实现" class="headerlink" title="6.5 深层神经网络的Python实现"></a>6.5 深层神经网络的Python实现</h3><p>在<strong>浅层</strong>神经网络中，隐藏层的激活函数选择<strong>tanh</strong>函数，但如果是深层神经网络，隐藏层的激活函数一般选择ReLU函数。</p>
 <p>使用tanh函数，当|Z|很大的时候，激活函数的斜率（梯度）很小。因此，在这个区域内，梯度下降算法会运行得比较慢。而ReLU激活函数在Z&gt;0时梯度始终为1，从而提高梯度下降算法的运算速度。</p>
 <p>参数初始化，权重W随机；前向传播，z=g(Wx+b)，在输出层计算损失；反向传播，对损失loss分别求w和b的偏导，一次性得到所有的梯度，使用梯度下降的思想更新权重W=W-lr*dW</p>
 <h2 id="7-优化神经网络"><a href="#7-优化神经网络" class="headerlink" title="7 优化神经网络"></a>7 优化神经网络</h2><h3 id="7-1-正则化"><a href="#7-1-正则化" class="headerlink" title="7.1 正则化"></a>7.1 正则化</h3><p>欠拟合、适拟合和过拟合</p>
-<p>虽然预测值与样本实际值完全吻合，但是该模型在训练样本之外的数据上拟合的效果可能很差，该模型很可能<strong>把噪声也学习了</strong>，这种情况称为过拟合</p>
+<p>虽然<strong>预测值与样本实际值完全吻合</strong>，但是该模型在训练样本之外的数据上拟合的效果可能很差，该模型很可能<strong>把噪声也学习了</strong>，这种情况称为过拟合</p>
 <p>欠拟合和过拟合分别对应高偏差和高方差</p>
 <p>偏差度量了算法的期望预测与真实结果的偏离程度；方差度量了训练集的变化导致学习性能的变化，描述了数据扰动造成的影响；噪声则表示任何学习算法的泛化能力的下界</p>
 <p>误差 = 偏差 + 方差 + 噪声</p>
@@ -478,6 +478,12 @@
                 <div class="post-prevnext">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2022/02/08/DeepLearning/ResNet/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ResNet</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
