@@ -394,7 +394,7 @@ Adam实际上是把动量梯度下降和RMSprop结合起来的一种算法。
 
 卷积层→池化层→卷积层→池化层→**卷积层→卷积层→卷积层**→池化层→全连接层→全连接层→输出层
 
-<img src="https://gitee.com/oeong/picgo/raw/master/images/20220117163519.png" alt="image-20220117163457116" style="zoom:80%;" />
+<img src="https://gitee.com/oeong/	picgo/raw/master/images/20220117163519.png" alt="image-20220117163457116" style="zoom:80%;" />
 
 ## 9 循环神经网络
 

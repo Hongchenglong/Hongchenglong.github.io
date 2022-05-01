@@ -1,7 +1,11 @@
 ---
-title: ResNet
-tags:
+title: 精读论文《Deep Residual Learning for Image Recognition》
+tags: [Deep Learning]
 ---
+
+为了解决深度学习的退化问题，作者提出了深度残差学习框架，让网络层去拟合残差映射。
+
+<!-- more -->
 
 # Deep Residual Learning for Image Recognition
 
@@ -15,13 +19,11 @@ DCNN在图像分类上带来一系列突破。但是随着神经网络层数越�
 
 <img src="https://gitee.com/oeong/picgo/raw/master/images/20220202190314.png" alt="image-20220202190303077" style="zoom: 80%;" />
 
-`Is learning better networks as easy as stacking more layers?` 堆叠更多的层数以后网络是否学习效果更好？但是堆叠更多的层后往往会遇到`vanishing/exploding gradients`问题，会从一开始就阻止收敛。好在这个问题可以通过`normalized initialization and intermediate normalization layers`来解决。
+`Is learning better networks as easy as stacking more layers?` 堆叠更多的层数以后网络是否学习效果更好？但是堆叠更多的层后往往会遇到`vanishing/exploding gradients`梯度问题，会从一开始就阻止收敛。好在这个问题可以通过初始归一化`normalized initialization`和中间层归一化`intermediate normalization layers`来解决。
 
 当网络开始收敛时，往往会出现退化`degradation`现象。随着网络深度的增加，准确率趋近饱和，然后迅速下降。意外的是，这不是由于过拟合`overfitting`造成的，更深的模型反而会有更高的训练误差。
 
 为了==解决深度学习的退化问题==，作者提出了深度残差学习框架，让网络层去拟合残差映射。如果我们想要得到的映射为 $\mathcal{H}(\mathbf{x})$，则我们让添加的非线性网络层去拟合残差映射 $\mathcal{F}(\mathbf{x}):=\mathcal{H}(\mathbf{x})-\mathbf{x}$，则原始的映射就可以写成 $\mathcal{F}(\mathbf{x})+\mathbf{x}$。残差映射的实现可以通过图2所示的连接块实现，跳跃连接是一个**恒等映射**，没有引入额外的参数和计算复杂度，整个网络很容易实现。
-
-> 反向传播时，由于层数过深，很容易出现梯度问题。ResNet将BP过程中梯度相乘变成相加，便解决了梯度问题。
 
 <img src="https://gitee.com/oeong/picgo/raw/master/images/20220202194810.png" alt="image-20220202194803965" style="zoom:80%;" />
 
@@ -92,9 +94,11 @@ Res Net：加入了skip connection 结构，此时 building block 的任务：F(
 
 **残差结构为什么比传统结构更好优化？**
 
-提升了对梯度与损失的相关性，进而使网络的学习能力增强，解决退化问题。
+提升了梯度与损失的相关性，进而使网络的学习能力增强，解决退化问题。
 
-比如把5映射到5.1，那么引入残差前是F'(5)=H(5)=5.1，引入残差后是H(5)=F(5)+5=5.1, F(5)=0.1。这里的F'和F都表示网络参数映射，引入残差后的映射对输出的变化更敏感。比如输出从5.1变到5.2，映射F'的输出增加了1/51=2%，而对于残差结构输出从5.1到5.2，映射F是从0.1到0.2，增加了100%。明显后者输出变化对权重的调整作用更大，所以效果更好。**训练残差的思想是去掉相同的主体部分，从而突出微小的变化，残差网络可以看做是差分放大器。**
+比如把5映射到5.1，那么引入残差前是F'(5)=H(5)=5.1，引入残差后是H(5)=F(5)+5=5.1, F(5)=0.1。这里的F'和F都表示网络参数映射，引入残差后的映射对输出的变化更敏感。
+
+比如输出从5.1变到5.2，映射F'的输出增加了1/51=2%，而对于残差结构输出从5.1到5.2，映射F是从0.1到0.2，增加了100%。明显后者输出变化对权重的调整作用更大，所以效果更好。**训练残差的思想是去掉相同的主体部分，从而突出微小的变化，残差网络可以看做是差分放大器。**
 
 **为什么残差网络可以进一步解决梯度消失？**
 
